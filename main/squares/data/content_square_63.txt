@@ -1,0 +1,83 @@
+________________________________
+$LEFTPANEL_HEADING$
+Time & Confusion
+https://open.spotify.com/track/5ddIiLHEnKR8jOQEzQUiUf
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+If we were to think of the days of the week as a ^list^, we'd start on Sunday and end on Saturday, which is simple enough. However, sometimes such lists and patterns are cyclical and repeat. 
+In other words, if we were to add two days to Monday, we'd end up with Wednesday. However, if we were to add two days to Friday, we'd be back at Sunday.
+________________________________
+$LEFTPANEL_QUESTION$
+Define a function, <def>addToMonths</def>(), which takes a ^str^ <var>month</var> and an ^int^ <var>number_of_months</var>, and returns the month if you were to add <var>number_of_months</var> to <var>month</var>. 
+
+For example, a call to <def>addToMonths</def>('October', 3) should return exactly the following ^str^:
+<outputcodeline>January</outputcodeline>
+
+________________________________
+$LEFTPANEL_EDITOR$
+def addToMonths(month, number_of_months):
+________________________________
+$LEFTPANEL_HINTS$
+Declare a dictionary mapping month numbers (1,2,3, etc.) to their string equivalents ('January', 'February', 'March'). Then, use the modulus (%) operator.
+________________________________
+$RIGHTPANEL_QUESTIONS$
+Can you solve this question without the use of a modulus operator?
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$ALLPANES_SUBMITCASES$
+print ""
+print "INPUT     | 'October', 3"
+print "OUTPUT    |", addToMonths('October', 3)
+print "EXPECTED  | January"
+if addToMonths('October', 3) == 'January':
+    print "PASSED!"
+else: 
+    print "FAILED"
+
+print ""
+print "INPUT     | 'December', 1"
+print "OUTPUT    |", addToMonths('December', 1)
+print "EXPECTED  | January"
+if addToMonths('December', 1) == 'January':
+    print "PASSED!"
+else: 
+    print "FAILED"
+
+print ""
+print "INPUT     | 'March', -1"
+print "OUTPUT    |", addToMonths('March', -1)
+print "EXPECTED  | February"
+if addToMonths('March', -1) == 'February':
+    print "PASSED!"
+else: 
+    print "FAILED"
+
+print ""
+print "INPUT     | 'June', 0"
+print "OUTPUT    |", addToMonths('June', 0)
+print "EXPECTED  | June"
+if addToMonths('June', 0) == 'June':
+    print "PASSED!"
+else: 
+    print "FAILED"
+
+print ""
+print "INPUT     | 'April', 4"
+print "OUTPUT    |", addToMonths('April', 4)
+print "EXPECTED  | August"
+if addToMonths('April', 4) == 'August':
+    print "PASSED!"
+else: 
+    print "FAILED"
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+$RIGHTPANEL_SOLUTION$
+def addToMonths(month, number_of_months):
+    Months_Num_to_Str = {1:'January', 2:'February', 3:'March', 4:'April', 5:'May', 6:'June', 7:'July', 8:'August', 9:'September', 10:'October', 11:'November', 12:'December'}
+    Months_Str_to_Num = dict((Months_Num_to_Str[k], k) for k in Months_Num_to_Str)
+    Ans = Months_Str_to_Num[month] + number_of_months-1
+    return Months_Num_to_Str[ Ans % 12 + 1 ]
+________________________________
+FIN

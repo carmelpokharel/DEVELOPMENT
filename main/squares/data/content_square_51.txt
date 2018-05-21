@@ -1,0 +1,60 @@
+________________________________
+$LEFTPANEL_HEADING$
+Capital M-E
+https://open.spotify.com/track/1VppmZKCjqa8qqkdHV76Iu
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+________________________________
+$LEFTPANEL_QUESTION$
+In the previous square, your input to the <def>reverse</def>() function was 'Lisa' and your output was 'asiL'. Now, update <def>reverse</def>(), but this time, capitalize the first letter. 
+You may assume your input ^str^ will only contain alphabetic characters (i.e. no punctuation, numbers, special characters, etc.)
+________________________________
+$LEFTPANEL_EDITOR$
+def reverse(given_string):
+________________________________
+$LEFTPANEL_HINTS$
+There's a built-in .^capitalize^() method in Python.
+________________________________
+$RIGHTPANEL_QUESTIONS$
+If your input ^str^ contains more than one word, how would you capitalize the first letter of each word?
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$ALLPANES_SUBMITCASES$
+print ""
+print "INPUT     |''"
+print "OUTPUT    |", reverse("")
+print "EXPECTED  | "
+if reverse("") == "":
+	print "PASSED!"
+else: 
+	print "FAILED"
+
+print ""
+print "INPUT     |'a'"
+print "OUTPUT    |", reverse("a")
+print "EXPECTED  | A"
+if reverse("a") == "A":
+	print "PASSED!"
+else: 
+	print "FAILED"
+
+print ""
+print "INPUT     |'Lisa'"
+print "OUTPUT    |", reverse("Lisa")
+print "EXPECTED  | Asil"
+if reverse("Lisa") == "Asil":
+	print "PASSED!"
+else: 
+	print "FAILED"
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+$RIGHTPANEL_SOLUTION$
+def reverse(given_string):
+    reversed_word = ''
+    for letter in given_string:
+        reversed_word = letter + reversed_word
+    return reversed_word.capitalize()
+________________________________
+FIN

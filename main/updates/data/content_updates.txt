@@ -1,0 +1,169 @@
+________________________________
+$VERSION$
+1.1.7.12
+________________________________
+$LEFTPANEL_RECENTUPDATES$
+2018-04-15
+Content revisions to square <a href="http://pythonsandladders.com/main/squares/pages/square_59.html">59</a>
+2018-02-13
+Content revisions to squares <a href="http://pythonsandladders.com/main/squares/pages/square_93.html">93</a> and <a href="http://pythonsandladders.com/main/squares/pages/square_99.html">99</a>
+2017-12-14
+Added square <a href="http://pythonsandladders.com/main/squares/pages/square_76.html">76</a>
+Modified square <a href="http://pythonsandladders.com/main/squares/pages/square_75.html">75</a> with an alternate version
+2017-11-07
+Added an alternate version to square <a href="http://pythonsandladders.com/main/squares/pages/square_64.html">64</a>
+2017-10-09
+Minor content updates and revisions
+Added an alternate version to square <a href="http://pythonsandladders.com/main/squares/pages/square_44.html">44</a>
+2017-04-21
+Minor content updates and revisions
+Added alternate versions to squares <a href="http://pythonsandladders.com/main/squares/pages/square_29.html">29</a> and <a href="http://pythonsandladders.com/main/squares/pages/square_52.html">52</a>
+2017-03-30
+Minor content updates and revisions
+Added alternate versions to squares <a href="http://pythonsandladders.com/main/squares/pages/square_73.html">73</a> and <a href="http://pythonsandladders.com/main/squares/pages/square_84.html">84</a>
+Added an aesthetic refinement to help distinguish squares with easy/hard alternatives on the gameboard
+2017-03-20
+Minor release: Added architecture for easy & hard versions of selected squares (see <a href="http://pythonsandladders.com/main/squares/pages/square_8.html">8</a> or <a href="http://pythonsandladders.com/main/squares/pages/square_21.html">21</a>)
+2016-12-15
+Minor content updates and revisions
+Changelog is now accessible via the version number on desktop resolutions
+2016-11-29
+Optimizations for JS on page load
+Optimizations for CSS on page load (minify)
+Submit button colour changed to green
+Content revisions in the Tutorial and FAQ pages
+2016-11-24
+Run button now returns relevant error messages when syntax errors are encountered
+Save button updated to download file with square number in filename
+Added px-based CSS for resolutions >1920px
+2016-11-23
+Reviewed and added content until square 100
+Submit button now returns a SemanticError when logical issues are encountered
+Tutorial pages updated with additional content and formatting revisions
+2016-11-20
+Major release: Official launch!
+Reviewed and added content until square 92
+Removed recursion exercises from gameboard
+2016-11-19
+Reviewed and added content until square 87
+Logged solutions for squares 42-80
+HTML is now fully minified across all pages
+Removed px references in responsive elements
+Removed support for devices >2670px and <320px (1:1 ratio)
+2016-11-15
+Reviewed and added content until square 80
+Added solutions to questions with functions
+Added support for large screen devices >1280px
+2016-11-14
+Fixed bug which caused the Output box to overflow into adjacent divs when strings exceeded the max-width
+Reviewed content from 42-70 for Submit cases
+Renamed 'Test Cases' section to 'Notes'
+2016-11-13
+Added a Submit button for squares which need to test user-defined functions
+Reviewed and added content until square 70
+Added recursion-related material to gameboard
+2016-11-10
+Updated variable typeface to Lucida Bright
+Reviewed and added content until square 50
+Added CodeMirror JS for syntax highlighting in the Editor
+2016-11-09
+Editor now is using the Ubunto Mono typeface
+Increased font size in the Output box
+Added support for the tab (\t) character in the Editor; no longer switches to the next hyperlink
+2016-11-08
+Minor release: BETA launch!
+Now supporting lower-resolution devices (min screen width 320px)
+Hyperlinks are now distinguishable from headers
+Added support for a Test Cases section in squares which deal with boundary cases
+Edited interface element spacing to now rank 100/100 on PageSpeed Insights' UX section
+2016-11-06
+Reviewed and added content until square 40
+Added navigation element to all square pages on larger screen devices
+Updated interface elements to be touchscreen-appropriate
+2016-11-05
+Re-coded website to now generate a fully responsive design, with PageSpeed Insights rating it 99/100 in User Experience
+Mobile-friendly test is approved and passed by Google, so this should help with SEO
+Moved Questions for You section to an area above the editor for smaller screen devices
+Added a new navigation board/system for devices smaller than 667px, whose individual squares would be less than 48x48px
+2016-11-04
+Added support for devices >320 px
+Completed FAQ section design
+Removed all superfluous button-related CSS
+2016-11-03
+Added onclick="" to all mini-board links
+Completed dual-pane responsive design for tablet form factors
+Redesigned homepage to feature a more refined visual feel, with less overall text
+Added a CSS background blend mode with opacity and overlay throughout website
+2016-11-01
+Updated website sans-serif font to Roboto
+Fixed position of left navigation on desktop
+Added opacity and high z-index to header (fixed)
+2016-10-31
+Updated fixed-width font to Ubuntu Mono
+Updated HTML generation code to auto-format keywords, terms, and monospace code blocks
+Added content for squares 11-30
+Tested for responsiveness on resolutions 375px to 1920px
+2016-10-27
+Removed Python shell and all its references from the website--feature is not ready for deployment
+Added a mini-grid navigation feature to all squares (hidden on smaller resolutions/devices)
+Added the ability to support Python-squares and Ladder-squares on larger resolutions
+2016-10-25
+Added onclick="" and :active to replace hover effects on touch-enabled devices
+Reduced mobile website font size by 5% for readability on devices < 375px in width
+Added keyword coloring feature for important terms
+Removed references to Python shell throughout website, particularly in the mobile versions
+2016-10-24
+Removed the editor's "Save" feature for mobile devices
+Added slide-out navigation menu to all resolutions < 1280px
+Added card-based design for device resolutions >= 1024px and < 1280px
+2016-10-23
+Updated website with responsive design, currently tested on and supporting mobile devices with widths >= 375px and < 1024px
+Updated button CSS & tested on Windows (IE, Chrome)
+Removed the option to request guidance on squares
+2016-10-12
+Added social media buttons (Facebook and Twitter)
+Introduced a versioning system in the form of [major].[minor].[release].[build]
+Restructured backend of website to generate pages in organized folders
+2016-10-09
+Changed the updates section to auto-generate new pages when the length of the page exceeds 17 rows (need to still test on various lengths)
+Added a popover containing a hint for each square, with backend code to support the feature
+2016-10-05
+Added a 5-step tutorial as a prequel to the gameboard
+Reduced content width from 1400 to 1280 (min width)
+Moved location of footer to be in the main content div
+Created a static-height right panel on the home page
+2016-10-04
+Added a red feedback button bottom right corner
+Updated logo to change on mouse hover (Javascript)
+Increased responsiveness for left navigation bar
+Added a search engine feature for in-site queries
+Centre-justified the entire webpage and reduced the content width from 1470 to 1400
+Added a subtle gradient to the header bar for color differentiation
+2016-09-26
+Added a 'Profile' section to the homepage in the right panel
+Re-designed the navigation and look of each square; using divs now instead of images
+Narrowed the width and reduced font size in the right panel
+Updated date headings in recent updates to be champagne gold
+Decreased height of header bar
+2016-09-25
+Site is now updated with Google Fonts Antic and Source Sans Pro
+CSS div tags are now being used throughout the website instead of hidden table tags
+Changed colour theme from multicolour to tricolour with a champagne accent
+Completed contents of manual page, and changed name to "Overview"
+Added the option to request solutions
+Added content to questions 6, 7, 8, 9, and 10
+2016-09-17
+Updated color palette to include off-white and grey for background and text, respectively
+Added hyperlinks to all squares and nagivation items
+Completed reference manual
+Created a 'Page Not Found' page for missing URLs
+2016-09-16
+Added left navigation
+Designed and updated logo
+________________________________
+$RIGHTPANEL_SPONSORED$
+Sponsored1 $LINK$ www.stringsinpython.com
+Sponsored2 $LINK$ www.newlinecharacters.com
+Sponsored3 $LINK$ www.printstatements.com
+________________________________
+FIN

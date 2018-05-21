@@ -1,0 +1,57 @@
+________________________________
+$LEFTPANEL_HEADING$
+Erase This
+https://open.spotify.com/track/7xiZGclYWXgBpFjmr3ziMz
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+________________________________
+$LEFTPANEL_QUESTION$
+Define a function, <def>removeFromDict</def>(), whose input is a ^dict^ and a ^str^. Your task is to check inside this dictionary, and whenever the input ^str^ is encountered (in either the key or value), remove the entire key:value entry.
+
+For example, with an input of ^dict^ {5: 0, '5': [5], 1: '5', 'Hello': 1, '3': ['1', '5', '0']} and ^str^ '5', your output should be exactly the following:
+<outputcodeline>{'Hello': 1, 5: 0}</outputcodeline>
+________________________________
+$LEFTPANEL_EDITOR$
+def removeFromDict(input_dict, remove_string):
+________________________________
+$LEFTPANEL_HINTS$
+Is .^pop^() your ^type^() of music?
+________________________________
+$RIGHTPANEL_QUESTIONS$
+There are multiple ways to solve this square--have you Googled what they are?
+As a rule of thumb, you should <i>never</i> remove keys when iterating through a ^dict^ or ^list^. Instead, populate a list of things to delete, then perform the removals in a separate loop. Why is this important?
+________________________________
+$RIGHTPANEL_TESTCASES$
+Always remember--a function must ^return^ a value!
+Try to solve this problem one step at a time. There are some sticky areas which aren't immediately evident.
+You should be checking inside the keys, inside the values, and also within values which are ^list^ datatypes.
+________________________________
+$ALLPANES_SUBMITCASES$
+print ""
+print "INPUT     | {5: 0, '5': [5], 1: '5', 'Hello': 1, '3': ['1', '5', '0']}, '5'"
+print "OUTPUT    |", removeFromDict({5: 0, '5': [5], 1: '5', 'Hello': 1, '3': ['1', '5', '0']}, '5')
+print "EXPECTED  | {'Hello': 1, 5: 0}"
+if removeFromDict({5: 0, '5': [5], 1: '5', 'Hello': 1, '3': ['1', '5', '0']}, '5') == {5: 0, 'Hello': 1}:
+    print "PASSED!"
+else: 
+    print "FAILED"
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+$RIGHTPANEL_SOLUTION$
+def removeFromDict(input_dict, remove_string):
+	if remove_string in input_dict:
+		input_dict.pop(remove_string)
+	delete_list = []
+	for key in input_dict:
+		if type(input_dict[key]) is str:
+			if remove_string == input_dict[key]:
+				delete_list.append(key)
+		elif type(input_dict[key]) is list:
+			if remove_string in input_dict[key]:
+				delete_list.append(key)
+	for key in delete_list:
+		input_dict.pop(key)
+	return input_dict
+________________________________
+FIN

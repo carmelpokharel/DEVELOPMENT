@@ -1,0 +1,82 @@
+________________________________
+$LEFTPANEL_HEADING$
+Dear Maria, Count Me In
+https://open.spotify.com/track/16BwcRV9FduBgNIXqN0zp6 
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+________________________________
+$LEFTPANEL_QUESTION$
+Define a function, <def>countSpecificLength</def>(), which uses a ^for^ loop to return the length of a given ^str^, but ignores any embedded space, number, and punctuation characters.
+For an input of ^str^ '01. I got your picture, I'm coming with you!', your output should be exactly:
+<outputcodeline>30</outputcodeline>
+________________________________
+$LEFTPANEL_EDITOR$
+def countSpecificLength(given_string):
+________________________________
+$LEFTPANEL_HINTS$
+Using a ^for^ loop, try checking if each character falls in the 'ignore' list.
+________________________________
+$RIGHTPANEL_QUESTIONS$
+________________________________
+$RIGHTPANEL_NOTES$
+Here is a list of all punctuation characters to be ignored in this task: apostrophe, colon, comma, hyphen, exclamation mark, parentheses, period, question mark, quotation mark, semicolon
+________________________________
+$ALLPANES_SUBMITCASES$
+print ""
+print "INPUT     | ''"
+print "OUTPUT    |", countSpecificLength("")
+print "EXPECTED  | 0"
+if countSpecificLength("") == 0:
+    print "PASSED!"
+else: 
+    print "FAILED"
+
+print ""
+print "INPUT     | ' '"
+print "OUTPUT    |", countSpecificLength(" ")
+print "EXPECTED  | 0"
+if countSpecificLength(" ") == 0:
+    print "PASSED!"
+else: 
+    print "FAILED"
+
+print ""
+print "INPUT     | 'Eiffel 65'"
+print "OUTPUT    |", countSpecificLength("Eiffel 65")
+print "EXPECTED  | 6"
+if countSpecificLength("Eiffel 65") == 6:
+    print "PASSED!"
+else: 
+    print "FAILED"
+
+print ""
+print "INPUT     | ':,-!( ).?;'"
+print "OUTPUT    |", countSpecificLength(":,-!( ).?;")
+print "EXPECTED  | 0"
+if countSpecificLength(":,-!( ).?;") == 0:
+    print "PASSED!"
+else: 
+    print "FAILED"
+
+print ""
+print "INPUT     | '01. I got your picture, I'm coming with you!'"
+print "OUTPUT    |", countSpecificLength("01. I got your picture, I'm coming with you!")
+print "EXPECTED  | 30"
+if countSpecificLength("01. I got your picture, I'm coming with you!") == 30:
+    print "PASSED!"
+else: 
+    print "FAILED"
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+$RIGHTPANEL_SOLUTION$
+punctuation_list = [' ','\'', ':', ',','-','!','(',')','.','?','"',';']
+number_list = ['0','1','2','3','4','5','6','7','8','9']
+def countSpecificLength(given_string):
+    counter = 0
+    for letter in given_string:
+        if letter not in punctuation_list + number_list:
+            counter += 1
+    return counter
+________________________________
+FIN

@@ -1,0 +1,48 @@
+________________________________
+$LEFTPANEL_HEADING$
+Get Up, Stand Up
+https://open.spotify.com/track/1Bh3GMDtYN2FB4jWp7VlrZ
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+Let's now plot data in a "vertical" format:
+<democodeblock>
+<code>20|<tab>U<2sp><2sp><2sp><2sp><tab><tab><tab><tab><tab><tab></code>
+<code>18|<tab>U<2sp><2sp><2sp><2sp><tab><tab><tab><tab><tab><tab></code>
+<code>16|<tab>U<2sp><2sp><2sp><2sp><tab><tab><tab><tab><tab><tab></code>
+<code>14|<tab>U<2sp><3sp>P U<2sp><3sp>P<2sp><2sp><tab><tab><tab><2sp></code>
+<code>12|<tab>U<2sp><3sp>P U<2sp><3sp>P<2sp><2sp><tab><tab><tab><2sp></code>
+<code>10|<tab>U<2sp><3sp>P U<2sp><3sp>P<2sp><2sp><tab><tab><tab><1sp>U</code>
+<code>8 |<tab>U<2sp><3sp>P U<2sp><3sp>P<2sp><2sp><tab><tab><tab><1sp>U</code>
+<code>6 |<tab>U<2sp><3sp>P U<2sp><3sp>P<2sp><2sp><tab><tab><3sp>P U</code>
+<code>4 |<2sp>P U<2sp><3sp>P U<2sp><3sp>P<2sp><2sp><tab><tab><3sp>P U</code>
+<code>2 |<2sp>P U<2sp><3sp>P U<2sp><3sp>P U<2sp><3sp>P<2sp><tab><1sp>P U</code>
+<code>__________________________________________</code>
+<code>0<3sp>Danica<2sp>Daniel<2sp>Jaymie<2sp>Madiha<2sp>Putera</code>
+</democodeblock>
+Note that the y-axis is incremented in even numbers, and all <i>odd</i> data points are rounded up (i.e. Danica's 3 days of unpaid leave rounds up to 4 days).
+________________________________
+$LEFTPANEL_QUESTION$
+Define a function, <def>plotVerticalAttendance</def>(), which takes in an attendance ^dict^ and returns a vertical plot of its data, like in the given example. As always, your output should be a single ^str^, with rows separated by ^\n^.
+________________________________
+$LEFTPANEL_EDITOR$
+def plotVerticalAttendance(attendance_records):
+________________________________
+$LEFTPANEL_HINTS$
+Start by plotting a smaller dataset, then build upon that foundation.
+________________________________
+$RIGHTPANEL_QUESTIONS$
+Are you using ^str^ multiplication to account for your spaces?
+________________________________
+$RIGHTPANEL_TESTCASES$
+This square does not have a Submit button, as the results are self-explanatory. However, make sure to test your function on the example ^dict^ from the previous square.
+<def>plotVerticalAttendance</def>() is much more complex than <def>plotAttendance</def>()--make sure to break your problem down into smaller steps, and run your code often.
+________________________________
+$ALLPANES_SUBMITCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+$RIGHTPANEL_SOLUTION$
+________________________________
+FIN
+
+

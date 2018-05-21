@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html> 
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- **************** -->
+    <!--      SCRIPTS     -->
+    <!-- **************** -->
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href="./css/variables.css">
+    <!-- JAVASCRIPT -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" ></script> 
+    <script type="text/javascript" src="http://www.skulpt.org/static/skulpt.min.js"></script>
+    <script type="text/javascript" src="http://www.skulpt.org/static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="./js/mail.js"></script>
+    <!-- JAVASCRIPT: GOOGLE ANALYTICS -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-85355151-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </head> 
+
+  <body>
+    <div id="wrapper">
+      <header>
+        <!-- SLIDE OUT NAV FOR MOBILE -->
+        <div class="slideoutnav">
+          <input type="checkbox" id="menuToggle">
+          <label for="menuToggle" class="menuicon">&equiv;</label>
+          <nav class="menu">
+            <div class="sidenavlogo">
+              <a href="./index.html">
+                <img src="./images/headingtitle.png" alt="Pythons and Ladders" style="width: 75%; height: 18%;">
+              </a>
+            </div><!-- sidenavlogo -->
+            <p><a href="./index.html">home</a></p>
+            <p><a href="./overview.html">overview</a></p>
+            <p><a href="./faq.html">questions</a></p>
+            <p><a href="./main/updates/pages/updates_0.html">changelog</a></p>
+            <p><a href="mailto:info@pythonsandladders.com?subject=Attn: [ADMIN] Pythons and Ladders">contact us</a></p>
+          </nav>
+        </div><!-- slideoutnav -->
+        <a href="./index.html" onclick="">pythons and ladders</a>
+      </header>
+      <div class="allpanes_new">
+        <!-- SIDENAV -->
+        <div class="sidenavpane">
+          <div class="sidenavlogo">
+            <a href="index.html">
+              <img src="./images/headingtitle.png" alt="Pythons and Ladders" style="width: 75%; height: 18%;" onmouseover="this.src='./images/headingtitle_snake.png'" onmouseout="this.src='./images/headingtitle.png'">
+            </a>
+          </div><!-- sidenavlogo -->
+          <br>
+          <br>
+          <br>
+          <br>
+          <a href="index.html">home</a>
+          <a href="overview.html">overview</a>
+          <a href="faq.html">questions</a>
+          <!-- <a href="./main/updates/pages/updates_0.html">updates</a> -->
+          <a href="mailto:info@pythonsandladders.com?subject=Attn: [ADMIN] Pythons and Ladders">contact us</a>
+        </div><!-- sidenavpane -->
+        <!-- BANNER -->
+        <div class="bannerpane">
+          <div class="banneritems">
+            <h2 class="bannertitle">o v e r v i e w</h2>
+          </div><!-- banneritems -->
+        </div><!-- bannerpane -->
+        <!-- LEFT PANE -->
+        <div class="leftpane">
+          <div class="leftpaneinner">
+            <p><h4 class="h4gold">AUDIENCE</h4></p>
+            <p>Our intended users are individuals interested in learning how to code, with the ability to motivate and pace themselves. More advanced users will likely not find this resource useful.</p>
+            <p></p>
+            <p><h4 class="h4gold">PREREQUISITES</h4></p>
+            <p>In general, the questions in Pythons and Ladders assume the user has a basic knowledge of elementary algebra and mathematics.</p>
+            <p></p>
+            <p><h4 class="h4gold">USAGE</h4></p>
+            <p>Powered by the Python emulator from <a href="http://www.skulpt.org" target="_blank">Skulpt.org</a>, Pythons and Ladders guides you through a sequence of squares, each containing a task. Your task is to complete each square, each more difficult than the preceding one, until you reach the end. Along the way, you will encounter some "Python" squares, and some "Ladder" squares, representing easier and harder versions of your current task. Use these alternative versions to help consolidate your learning.</p>
+            <p></p>
+            <p>&nbsp;</p>
+            <div class="questions-small-devices">
+              <h4 class="greyheading">RESOURCES</h4>
+              <p>One of the most important skills you can develop as a programmer is your ability to ask and query the right questions.</p>
+              <p></p>
+              We find the following resources especially useful: <p><a href="http://www.stackoverflow.com" target="_blank">StackOverflow.com</a> &#8212; Every Python question you'll ever think of has been asked and answered here.</p>
+              <p><a href="https://docs.python.org/2/" target="_blank">Python web documentation</a> &#8212; Although many things will fly over your head here, try to study the usage-case examples.</p>
+              <p><a href="http://www.python.org/dev/peps/pep-0008" target="_blank">PEP 008: Style guide in Python</a> &#8212; Provides guidelines on how to keep your code clean, simple, and quintessentially "Python."</p>
+              <p><a href="http://www.python.org/dev/peps/pep-0020" target="_blank">PEP 20: The Zen of Python</a> &#8212; An Animal Farm-esque list of principles for Pythonic coding.</p>
+            </div><!-- questions-small-devices -->
+          </div><!-- leftpaneinner -->
+        </div><!-- leftpane -->
+        <!-- RIGHT PANE -->
+        <div class="rightpane">
+          <div class="infocard">
+            <h4 class="greyheading">RESOURCES</h4>
+            <p>One of the most important skills you can develop as a programmer is your ability to ask and query the right questions.</p>
+            <p></p>
+            We find the following resources especially useful: <p><a href="http://www.stackoverflow.com" target="_blank">StackOverflow.com</a> &#8212; Every Python question you'll ever think of has been asked and answered here.</p>
+            <p><a href="https://docs.python.org/2/" target="_blank">Python web documentation</a> &#8212; Although many things will fly over your head here, try to study the usage-case examples.</p>
+            <p><a href="http://www.python.org/dev/peps/pep-0008" target="_blank">PEP 008: Style guide in Python</a> &#8212; Provides guidelines on how to keep your code clean, simple, and quintessentially "Python."</p>
+            <p><a href="http://www.python.org/dev/peps/pep-0020" target="_blank">PEP 20: The Zen of Python</a> &#8212; An Animal Farm-esque list of principles for Pythonic coding.</p>
+          </div><!-- infocard -->
+        </div><!-- rightpane -->
+      </div><!-- allpanes_new -->
+      <title>Overview | Pythons and Ladders</title>
+      <div class="footer">&copy; Pythons and Ladders 2018. All rights reserved.</div><!-- footer -->
+    </div><!-- wrapper -->
+  </body>
+</html>

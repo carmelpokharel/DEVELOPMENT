@@ -1,0 +1,56 @@
+________________________________
+$LEFTPANEL_HEADING$
+Frequency
+https://open.spotify.com/track/0w2XbOzucHH5x7dcP5WkYn
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+________________________________
+$LEFTPANEL_QUESTION$
+Define a function, <def>characterFrequency</def>(), which takes in a ^str^ and builds a ^dict^. The keys of the output should be individual characters in the string, and the values should represent how many times each character occurs in the string.
+
+For example, an input of ^str^ 'abracadabra' should return exactly the following:
+<outputcodeline>{'a': 5, 'b': 2, 'r': 2, 'c': 1, 'd': 1}</outputcodeline>
+________________________________
+$LEFTPANEL_EDITOR$
+def characterFrequency(input_str):
+________________________________
+$LEFTPANEL_HINTS$
+Use a ^for^ loop, and increment the value of each character every time it is encountered.
+________________________________
+$RIGHTPANEL_QUESTIONS$
+Do you notice how the keys in your output are unique? This is an important property of a ^dict^ in Python.
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$ALLPANES_SUBMITCASES$
+print ""
+print "INPUT     | 'abracadabra'"
+print "OUTPUT    |", characterFrequency('abracadabra')
+print "EXPECTED  | {'a': 5, 'b': 2, 'r': 2, 'c': 1, 'd': 1}"
+if characterFrequency('abracadabra') == {'a': 5, 'b': 2, 'r': 2, 'c': 1, 'd': 1}:
+    print "PASSED!"
+else: 
+    print "FAILED"
+
+print ""
+print "INPUT     | 'aabbccdabrrrttaakkjjdfjaqq...{}kjxaadf'"
+print "OUTPUT    |", characterFrequency('aabbccdabrrrttaakkjjdfjaqq...{}kjxaadf')
+print "EXPECTED  | {'a': 8, 'b': 3, 'r': 3, 'c': 2, 'd': 3, 'f': 2, 'k': 3, 'j': 4, '.': 3, 'q': 2, 't': 2, 'x': 1, '{': 1, '}': 1}"
+if characterFrequency('aabbccdabrrrttaakkjjdfjaqq...{}kjxaadf') == {'a': 8, 'b': 3, 'r': 3, 'c': 2, 'd': 3, 'f': 2, 'k': 3, 'j': 4, '.': 3, 'q': 2, 't': 2, 'x': 1, '{': 1, '}': 1}:
+    print "PASSED!"
+else: 
+    print "FAILED"
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+$RIGHTPANEL_SOLUTION$
+def characterFrequency(input_str):
+	output_dict = {}
+	for char in input_str:
+		if char not in output_dict:
+			output_dict[char] = 1
+		else:
+			output_dict[char] += 1
+	return output_dict
+________________________________
+FIN

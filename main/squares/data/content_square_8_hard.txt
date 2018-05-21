@@ -1,0 +1,31 @@
+________________________________
+$LEFTPANEL_HEADING$
+Float
+https://open.spotify.com/track/4MUvaBckjtNGlxX1IuHDPW
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+Sometimes in mathematics, you may want to perform calculations using ^float^ datatypes, but return your answer as an ^int^. In these cases, the ^int^ you return should be the nearest whole number to your ^float^. 
+
+For instance, 5.2 would be rounded to 5, and 6.6 would be rounded to 7.
+________________________________
+$LEFTPANEL_QUESTION$
+Write a statement which calculates and prints the result of the following expression, rounded to the nearest integer:
+<mathexp>( 10 &divide; 2.5 )<sup> -1</sup> &ndash; 1.195</mathexp>
+Your answer should be exactly:
+<outputcodeline>-1</outputcodeline>
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+If we gave you a hint, wouldn't this be the easy version?
+________________________________
+$RIGHTPANEL_QUESTIONS$
+________________________________
+$RIGHTPANEL_NOTES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+$RIGHTPANEL_SOLUTION$
+print int(round((10/2.5)**-1 - 1.195))
+________________________________
+FIN

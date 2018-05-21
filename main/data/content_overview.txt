@@ -1,0 +1,21 @@
+________________________________
+$LEFTPANEL_ABOUT$
+<h4 class="h4gold">AUDIENCE</h4>
+Our intended users are individuals interested in learning how to code, with the ability to motivate and pace themselves. More advanced users will likely not find this resource useful.
+
+<h4 class="h4gold">PREREQUISITES</h4>
+In general, the questions in Pythons and Ladders assume the user has a basic knowledge of elementary algebra and mathematics.
+
+<h4 class="h4gold">USAGE</h4>
+Powered by the Python emulator from <a href="http://www.skulpt.org" target="_blank">Skulpt.org</a>, Pythons and Ladders guides you through a sequence of squares, each containing a task. Your task is to complete each square, each more difficult than the preceding one, until you reach the end. Along the way, you will encounter some "Python" squares, and some "Ladder" squares, representing easier and harder versions of your current task. Use these alternative versions to help consolidate your learning.
+
+________________________________
+$RIGHTPANEL_RESOURCES$
+One of the most important skills you can develop as a programmer is your ability to ask and query the right questions.
+
+We find the following resources especially useful: <p><a href="http://www.stackoverflow.com" target="_blank">StackOverflow.com</a> &#8212; Every Python question you'll ever think of has been asked and answered here.</p>
+<p><a href="https://docs.python.org/2/" target="_blank">Python web documentation</a> &#8212; Although many things will fly over your head here, try to study the usage-case examples.</p>
+<p><a href="http://www.python.org/dev/peps/pep-0008" target="_blank">PEP 008: Style guide in Python</a> &#8212; Provides guidelines on how to keep your code clean, simple, and quintessentially "Python."</p>
+<p><a href="http://www.python.org/dev/peps/pep-0020" target="_blank">PEP 20: The Zen of Python</a> &#8212; An Animal Farm-esque list of principles for Pythonic coding.</p>
+________________________________
+FIN

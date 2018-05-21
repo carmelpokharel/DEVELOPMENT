@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html> 
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- **************** -->
+    <!--      SCRIPTS     -->
+    <!-- **************** -->
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="../../../css/codemirror.css"">
+    <link rel="stylesheet" type="text/css" href="../../../css/popover.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/variables.css">
+    <!-- JAVASCRIPT -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" ></script> 
+    <script type="text/javascript" src="http://www.skulpt.org/static/skulpt.min.js"></script>
+    <script type="text/javascript" src="http://www.skulpt.org/static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../../../js/codemirror.js"></script>
+    <script type="text/javascript" src="../../../js/python.js"></script>
+    <script type="text/javascript" src="../../../js/toolbar.js"></script>
+    <script type="text/javascript" src="../../../js/popover.js"></script>
+    <script type="text/javascript" src="../../../js/mail.js"></script>
+    <!-- JAVASCRIPT: GOOGLE ANALYTICS -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-85355151-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <!-- JAVASCRIPT: SKULPT + CODEMIRROR -->
+    <script type="text/javascript">
+        var editor;
+        function outf(text) {
+            var mypre = document.getElementById("dynamicframe");
+            mypre.innerHTML = mypre.innerHTML + text;
+        }
+        function builtinRead(x) {
+            if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
+                throw "File not found: '" + x + "'";
+            return Sk.builtinFiles["files"][x];
+        }
+        function runit() {
+                var prog = editor.getDoc().getValue();
+                var mypre = document.getElementById("dynamicframe");
+                mypre.innerHTML = '';
+                Sk.pre = "dynamicframe";
+                Sk.configure({
+                    output: outf,
+                    read: builtinRead
+                });
+                (Sk.TurtleGraphics || (Sk.TurtleGraphics = {})).target = 'canvas';
+                var myPromise = Sk.misceval.asyncToPromise(function() {
+                    try {
+                      return Sk.importMainWithBody("<stdin>", false, prog, true);
+                    }
+                    catch(e) {
+                      var errormsg = e.toString()
+                      var errormsg = errormsg.replace(/\</g,"&lt;");
+                      var errormsg = errormsg.replace(/\>/g,"&gt;")
+                      var errormsg = "<span class=keyword-error>" + errormsg + "</span>"
+                      mypre.innerHTML = (errormsg);
+                    }
+                });
+                myPromise.then(function(mod) {
+                        console.log('success');
+                    },
+                    function(err) {
+                        console.log(err.toString());
+                    });
+            }
+        window.onload = function() {
+                editor = CodeMirror.fromTextArea(document.getElementById('textbox'), {
+                    mode: {
+                        name: "python",
+                        version: 2,
+                        singleLineStringErrors: false
+                    },
+                    lineNumbers: true,
+                    indentUnit: 4
+                });
+            }
+    </script>
+  </head> 
+
+  <body>
+    <div id="wrapper">
+      <header>
+        <!-- SLIDE OUT NAV FOR MOBILE -->
+        <div class="slideoutnav">
+          <input type="checkbox" id="menuToggle">
+          <label for="menuToggle" class="menuicon">&equiv;</label>
+          <nav class="menu">
+            <div class="sidenavlogo">
+              <a href="../../../index.html">
+                <img src="../../../images/headingtitle.png" alt="Pythons and Ladders" style="width: 75%; height: 18%;">
+              </a>
+            </div><!-- sidenavlogo -->
+            <p><a href="../../../index.html">home</a></p>
+            <p><a href="../../../overview.html">overview</a></p>
+            <p><a href="../../../faq.html">questions</a></p>
+            <p><a href="../../../main/updates/pages/updates_0.html">changelog</a></p>
+            <p><a href="mailto:info@pythonsandladders.com?subject=Attn: [ADMIN] Pythons and Ladders">contact us</a></p>
+          </nav>
+        </div><!-- slideoutnav -->
+        <a href="../../../index.html" onclick="">pythons and ladders</a>
+      </header>
+      <div class="allpanes_new">
+        <!-- SIDENAV -->
+        <div class="sidenavpane">
+          <div class="sidenavlogo">
+            <a href="../../../index.html">
+              <img src="../../../images/headingtitle.png" alt="Pythons and Ladders" style="width: 75%; height: 18%;" onmouseover="this.src='../../../images/headingtitle_snake.png'" onmouseout="this.src='../../../images/headingtitle.png'">
+            </a>
+          </div><!-- sidenavlogo -->
+          <br>
+          <br>
+          <br>
+          <br>
+          <a href="../../../index.html">home</a>
+          <a href="../../../overview.html">overview</a>
+          <a href="../../../faq.html">questions</a>
+          <!-- <a href="../../../main/updates/pages/updates_0.html">updates</a> -->
+          <a href="mailto:info@pythonsandladders.com?subject=Attn: [ADMIN] Pythons and Ladders">contact us</a>
+        </div><!-- sidenavpane -->
+        <!-- BANNER -->
+        <div class="bannerpane">
+          <div class="banneritems">
+            <h2 class="bannertitle">t u t o r i a l</h2>
+          </div><!-- banneritems -->
+        </div><!-- bannerpane -->
+        <!-- LEFT PANE -->
+        <div class="leftpane">
+          <div class="leftpaneinner">
+            <h3>Terminology</h3>
+            <p>But... wait a minute. What exactly did we do on the previous page?</p>
+            <p></p>
+            <p>In Python, <span class=keyword-orange>print</span> is a command which instructs the computer to "display to the output."</p>
+            <p>Meanwhile, the text we enclosed in quotations is known as a <b>string</b>, i.e. a sequence of characters. A string is type of data, represented in Python as <span class=keyword-teal>str</span>, and is always enclosed in quotation marks. These quotation marks inform Python that you are referring to a <span class=keyword-teal>str</span> datatype, and are mandatory.</p>
+            <p></p>
+            <p>In plain English, we simply asked Python to "display the text <strong>Hello World!</strong> in the output box."</p>
+            <p></p>
+            <p>Now, here is a blank Editor. Click on it, instruct the computer to print your name, and run your code.</p>
+            <p></p>
+            <p><h4 class="h4gold">EDITOR</h4></p>
+            <p></p>
+            <div class="editor">
+              <div class="editortoolbar">
+                <div class="editortoolbaritems" onclick="runit()">RUN</div><!-- editortoolbaritems -->
+                <div class="editortoolbaritems" onclick="clearBox()">CLEAR</div><!-- editortoolbaritems -->
+                <div class="editortoolbarsave">
+                  <div class="editortoolbaritems" id="save" onclick="saveTextAsFile()">SAVE</div><!-- editortoolbaritems -->
+                </div><!-- editortoolbarsave -->
+              </div><!-- editortoolbar -->
+              <form align="left"> 
+            <textarea id="textbox" name="textbox" rows="5">
+</textarea>
+              </form>
+              <p><h4 class="h4gold">OUTPUT</h4></p>
+              <div class="editoroutput">
+                <pre align="left" id="dynamicframe"></pre>
+              </div><!-- editoroutput -->
+            </div><!-- editor -->
+            <div class="questions-small-devices">
+              <h4 class="h4gold">Notes</h4>
+              <p>In passing, you may have heard other programming-related terms like "console", "interface", and "command-line", or acronyms like "IDE." </p>
+              <p>While they may eventually become relevant to you, don't worry about these terms for now&#8212;Pythons and Ladders keeps it simple with an Editor, Toolbar, and Output. That's all you'll need to remember until Square 100.</p>
+            </div><!-- questions-small-devices -->
+            <a style="border-bottom:0px" href="tutorial_3.html">
+              <button>&lang; PREVIOUS</button>
+            </a>
+            <a style="border-bottom:0px" href="tutorial_5.html">
+              <button>NEXT &rang; </button>
+            </a>
+          </div><!-- leftpaneinner -->
+        </div><!-- leftpane -->
+        <!-- RIGHT PANE -->
+        <div class="questions-large-devices">
+          <div class="rightpane">
+            <div class="infocard">
+              <h4 class="greyheading">Notes</h4>
+              <p>In passing, you may have heard other programming-related terms like "console", "interface", and "command-line", or acronyms like "IDE." </p>
+              <p>While they may eventually become relevant to you, don't worry about these terms for now&#8212;Pythons and Ladders keeps it simple with an Editor, Toolbar, and Output. That's all you'll need to remember until Square 100.</p>
+            </div><!-- infocard -->
+          </div><!-- rightpane -->
+        </div><!-- questions-large-devices -->
+      </div><!-- allpanes_new -->
+      <title>Tutorial | Pythons and Ladders</title>
+      <div class="footer">&copy; Pythons and Ladders 2018. All rights reserved.</div><!-- footer -->
+    </div><!-- wrapper -->
+  </body>
+</html>

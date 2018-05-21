@@ -1,0 +1,76 @@
+________________________________
+$LEFTPANEL_HEADING$
+Female Robbery
+https://open.spotify.com/track/4BDnfINTlfJPmLp1UV6CXt
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+R&ouml;varspr&aring;ket (English for "Robber's Language") is a type of Swedish <a href="https://en.wikipedia.org/wiki/Argot" target="_bank">argot</a>, in which words are modified according to a simple rule: for any given word or phrase, each consonant is doubled, and an "o" is placed in between. 
+For example, "Hi" becomes "Hohi", Hey" becomes "Hoheyoy", and "Sweden" becomes "Soswowedodenon."
+________________________________
+$LEFTPANEL_QUESTION$
+Define a function, <def>robbersLanguage</def>(), which translates text into R&ouml;varspr&aring;ket. Both your input and output are ^str^ datatypes.
+
+You may assume that your input strings will only contain alphabetic characters.
+________________________________
+$LEFTPANEL_EDITOR$
+def robbersLanguage(text):
+________________________________
+$LEFTPANEL_HINTS$
+After you let Python know which letters are consonants, use an ^if^/^else^ statement inside a ^for^ loop.
+________________________________
+$RIGHTPANEL_QUESTIONS$
+How would you tweak your function to capitalize only the first letter of your outputs?
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$ALLPANES_SUBMITCASES$
+print ""
+print "INPUT     | 'n'"
+print "OUTPUT    |", robbersLanguage('n')
+print "EXPECTED  | non"
+if robbersLanguage('n') == 'non':
+	print "PASSED!"
+else: 
+	print "FAILED"
+
+print ""
+print "INPUT     | 'Hi'"
+print "OUTPUT    |", robbersLanguage('Hi')
+print "EXPECTED  | HoHi"
+if robbersLanguage('Hi') == 'HoHi':
+	print "PASSED!"
+else: 
+	print "FAILED"
+
+print ""
+print "INPUT     | 'Hey'"
+print "OUTPUT    |", robbersLanguage('Hey')
+print "EXPECTED  | HoHeyoy"
+if robbersLanguage('Hey') == 'HoHeyoy':
+	print "PASSED!"
+else: 
+	print "FAILED"
+
+print ""
+print "INPUT     | 'Sweden'"
+print "OUTPUT    |", robbersLanguage('Sweden')
+print "EXPECTED  | SoSwowedodenon"
+if robbersLanguage('Sweden') == 'SoSwowedodenon':
+	print "PASSED!"
+else: 
+	print "FAILED"
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+$RIGHTPANEL_SOLUTION$
+def robbersLanguage(text):
+    answer = ''
+    vowels = 'aeiouAEIOU'
+    for letter in text:
+        if letter not in vowels:
+            answer += letter + 'o' + letter
+        else:
+            answer += letter
+    return answer
+________________________________
+FIN

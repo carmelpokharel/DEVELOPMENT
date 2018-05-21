@@ -1,0 +1,32 @@
+________________________________
+$LEFTPANEL_HEADING$
+Nothing Special
+https://open.spotify.com/track/5Bm68GvwmiOJOBnnTNElf7
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+Let's explore two more special cases. Run the following code from the Editor:
+<democodeblock>
+<code>^print^ 'First line^\n^Second line'</code>
+<code>^print^ 'Normal line^\n^^\t^Indented line'</code>
+</democodeblock>
+When Python encounters a backslash ^\^ inside a ^str^, it interprets your instruction as: "What follows is a special case. Escape from the normal way of doing things, and execute the special case first."
+________________________________
+$LEFTPANEL_QUESTION$
+Write a single Python ^print^ statement which outputs the following:
+<outputcodeblock>
+<code>This is a normal line</code>
+<code><tab>This\line\has\backslashes</code>
+</outputcodeblock>
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+Google the following: &quot;How to print a backslash in Python&quot; -- this is another special case!
+________________________________
+$RIGHTPANEL_QUESTIONS$
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

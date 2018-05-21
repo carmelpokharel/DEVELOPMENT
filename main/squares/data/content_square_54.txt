@@ -1,0 +1,79 @@
+________________________________
+$LEFTPANEL_HEADING$
+Maths
+https://open.spotify.com/track/5xu7YKEWSljtXXXAB8NVdS
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+________________________________
+$LEFTPANEL_QUESTION$
+Define a function, <def>multiply</def>(), which takes in a ^list^ of numbers and outputs the result of multiplying them together. For example, the input of [1,2,3,4] = 1 &times; 2 &times; 3 &times; 4 = 24. 
+
+Your function must be able to handle both ^int^ and ^float^ datatypes.
+________________________________
+$LEFTPANEL_EDITOR$
+def multiply(input_list):
+________________________________
+$LEFTPANEL_HINTS$
+The structure here is very similar to that of your <def>reverse</def>() functions.
+________________________________
+$RIGHTPANEL_QUESTIONS$
+How would you update your function to work even if your numbers were passed in as strings, as in ['1', '2', '3', '4']?
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$ALLPANES_SUBMITCASES$
+print ""
+print "INPUT     | [0,0]"
+print "OUTPUT    |", multiply([0,0])
+print "EXPECTED  | 0"
+if multiply([0,0]) == 0:
+	print "PASSED!"
+else: 
+	print "FAILED"
+
+print ""
+print "INPUT     | [1,1.2,1]"
+print "OUTPUT    |", multiply([1,1.2,1])
+print "EXPECTED  | 1.2"
+if multiply([1,1.2,1]) == 1.2:
+	print "PASSED!"
+else: 
+	print "FAILED"
+
+print ""
+print "INPUT     | [1,2,3,4]"
+print "OUTPUT    |", multiply([1,2,3,4])
+print "EXPECTED  | 24"
+if multiply([1,2,3,4]) == 24:
+	print "PASSED!"
+else: 
+	print "FAILED"
+
+print ""
+print "INPUT     | [0,1,2,3]"
+print "OUTPUT    |", multiply([0,1,2,3])
+print "EXPECTED  | 0"
+if multiply([0,1,2,3]) == 0:
+	print "PASSED!"
+else: 
+	print "FAILED"
+
+print ""
+print "INPUT     | [-1,1,-1,2]"
+print "OUTPUT    |", multiply([-1,1,-1,2])
+print "EXPECTED  | 2"
+if multiply([-1,1,-1,2]) == 2:
+	print "PASSED!"
+else: 
+	print "FAILED"
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+$RIGHTPANEL_SOLUTION$
+def multiply(input_list):
+    answer = 1
+    for num in input_list:
+        answer *= num
+    return answer
+________________________________
+FIN

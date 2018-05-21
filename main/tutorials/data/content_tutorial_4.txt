@@ -1,0 +1,38 @@
+________________________________
+$LEFTPANEL_MAIN$
+Terminology
+________________________________
+$LEFTPANEL_MAINAREA$
+But... wait a minute. What exactly did we do on the previous page?
+
+In Python, ^print^ is a command which instructs the computer to "display to the output."
+Meanwhile, the text we enclosed in quotations is known as a <b>string</b>, i.e. a sequence of characters. A string is type of data, represented in Python as ^str^, and is always enclosed in quotation marks. These quotation marks inform Python that you are referring to a ^str^ datatype, and are mandatory.
+
+In plain English, we simply asked Python to "display the text <strong>Hello World!</strong> in the output box."
+
+Now, here is a blank Editor. Click on it, instruct the computer to print your name, and run your code.
+
+<h4 class="h4gold">EDITOR</h4>
+________________________________
+$LEFTPANEL_INSTRUCTIONSAREA$
+________________________________
+$LEFTPANEL_TOOLBARAREA$
+________________________________
+$LEFTPANEL_EDITORAREA$
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINT$
+________________________________
+$LEFTPANEL_OUTPUTAREA$
+<h4 class="h4gold">OUTPUT</h4>
+________________________________
+$RIGHTPANEL_PYTHONSHELL$
+________________________________
+$RIGHTPANEL_QUESTIONS$
+In passing, you may have heard other programming-related terms like "console", "interface", and "command-line", or acronyms like "IDE." 
+While they may eventually become relevant to you, don't worry about these terms for now--Pythons and Ladders keeps it simple with an Editor, Toolbar, and Output. That's all you'll need to remember until Square 100.
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+FIN

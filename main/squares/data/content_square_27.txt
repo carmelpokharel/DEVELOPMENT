@@ -1,0 +1,34 @@
+________________________________
+$LEFTPANEL_HEADING$
+Strawberry Fields Forever
+ https://open.spotify.com/track/3Am0IbOxmvlSXro7N5iSfZ
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+You can add elements to the end of a ^list^ using the built-in .^append^() method. Run the following code from your Editor, and observe the outputs:
+<democodeblock>
+<code>fruits = ['apples','pears','oranges']</code>
+<code>fruits.^append^('grapes')</code>
+<code>^print^ fruits</code>
+<code>berries = ['cherries','blueberries']</code>
+<code>fruits.^append^('berries')</code>
+<code>^print^ fruits</code>
+</democodeblock>
+________________________________
+$LEFTPANEL_QUESTION$
+Add 'strawberry' and 'mango' to the end of the <var>fruits</var> ^list^ from above.
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+You'll need to use .^append^() twice.
+________________________________
+$RIGHTPANEL_QUESTIONS$
+Can you append to a ^list^ with several items at once? Try <var>fruits</var>.^append^('peaches', 'mangoes').
+What happens when you use .^append^()</em> to add a ^list^ to an existing ^list^?
+Can you use .^append^() on a ^str^? How about an ^int^?
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

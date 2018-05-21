@@ -1,0 +1,50 @@
+________________________________
+$LEFTPANEL_HEADING$
+Decode
+https://open.spotify.com/track/0Zbm5CKG9HHT9bwgvFc0qI
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+If you receive encrypted data, and know how it was encrypted, the decryption process is quite simple.
+________________________________
+$LEFTPANEL_QUESTION$
+Define a function, <def>transcribe</def>(), which takes in three inputs: a ^str^, an ^int^ <var>n</var>, and an instruction on whether to encode or decode the ^str^. The value of <var>n</var> determines the rotation.
+
+For example, a call to <def>transcribe</def>('Ofqbm', 1, 'Decode') should return the following decoded ^str^:
+<outputcodeline>Nepal</outputcodeline>
+________________________________
+$LEFTPANEL_EDITOR$
+def transcribe(input_string, n, instruction):
+________________________________
+$LEFTPANEL_HINTS$
+Build a mapping ^dict^ for encoding, then re-use code from <def>switchKeys</def>() to build the reverse one. 
+________________________________
+$RIGHTPANEL_QUESTIONS$
+Are you accounting for both uppercase and lowercase representations of your input ^str^?
+________________________________
+$RIGHTPANEL_TESTCASES$
+Think carefully about the given example. Since decoding is essentially a reverse encryption, it is the same thing as encoding with the rotation value multiplied by -1.
+________________________________
+$ALLPANES_SUBMITCASES$
+print ""
+print "INPUT     | 'Nepal', 1, 'Encode'"
+print "OUTPUT    | " + "'" +  transcribe('Nepal', 1, 'Encode') + "'"
+print "EXPECTED  | 'Ofqbm'"
+if  transcribe('Nepal', 1, 'Encode') == 'Ofqbm':
+    print "PASSED!"
+else: 
+    print "FAILED"
+
+print ""
+print "INPUT     | 'Iyrfkylbs Agrw', -2, 'Decode'"
+print "OUTPUT    |", transcribe('Iyrfkylbs Agrw', -2, 'Decode')
+print "EXPECTED  | 'Kathmandu City'"
+if  transcribe('Iyrfkylbs Agrw', -2, 'Decode') == 'Kathmandu City':
+    print "PASSED!"
+else: 
+    print "FAILED"
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+$RIGHTPANEL_SOLUTION$
+________________________________
+FIN

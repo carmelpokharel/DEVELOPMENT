@@ -1,0 +1,32 @@
+________________________________
+$LEFTPANEL_HEADING$
+The Silver String
+https://open.spotify.com/track/1fulFeOm8Zm5QJDSLRpoCc
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+<div class="fullwidth">
+<a href="../../tutorials/pages/tutorial_1.html">
+<button class="red" onclick="">Take the tutorial &rang;</button>
+</a>
+</div>
+________________________________
+$LEFTPANEL_QUESTION$
+For this first square, your task is simple--write a Python statement in the Editor which prints the following string (^str^) to the Output box:
+<outputcodeline>Pythons and Ladders</outputcodeline>
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+Make sure to check out our tutorial!
+________________________________
+$RIGHTPANEL_QUESTIONS$
+Does it matter if you use single or double quotations for your ^str^?
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+$RIGHTPANEL_SOLUTION$
+print 'Pythons and Ladders'
+________________________________
+FIN

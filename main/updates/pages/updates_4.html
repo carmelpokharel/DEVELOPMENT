@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html> 
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- **************** -->
+    <!--      SCRIPTS     -->
+    <!-- **************** -->
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="../../../css/codemirror.css"">
+    <link rel="stylesheet" type="text/css" href="../../../css/popover.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/variables.css">
+    <!-- JAVASCRIPT -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" ></script> 
+    <script type="text/javascript" src="http://www.skulpt.org/static/skulpt.min.js"></script>
+    <script type="text/javascript" src="http://www.skulpt.org/static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../../../js/codemirror.js"></script>
+    <script type="text/javascript" src="../../../js/python.js"></script>
+    <script type="text/javascript" src="../../../js/toolbar.js"></script>
+    <script type="text/javascript" src="../../../js/popover.js"></script>
+    <script type="text/javascript" src="../../../js/mail.js"></script>
+    <!-- JAVASCRIPT: GOOGLE ANALYTICS -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-85355151-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <!-- JAVASCRIPT: SKULPT + CODEMIRROR -->
+    <script type="text/javascript">
+        var editor;
+        function outf(text) {
+            var mypre = document.getElementById("dynamicframe");
+            mypre.innerHTML = mypre.innerHTML + text;
+        }
+        function builtinRead(x) {
+            if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
+                throw "File not found: '" + x + "'";
+            return Sk.builtinFiles["files"][x];
+        }
+        function runit() {
+                var prog = editor.getDoc().getValue();
+                var mypre = document.getElementById("dynamicframe");
+                mypre.innerHTML = '';
+                Sk.pre = "dynamicframe";
+                Sk.configure({
+                    output: outf,
+                    read: builtinRead
+                });
+                (Sk.TurtleGraphics || (Sk.TurtleGraphics = {})).target = 'canvas';
+                var myPromise = Sk.misceval.asyncToPromise(function() {
+                    try {
+                      return Sk.importMainWithBody("<stdin>", false, prog, true);
+                    }
+                    catch(e) {
+                      var errormsg = e.toString()
+                      var errormsg = errormsg.replace(/\</g,"&lt;");
+                      var errormsg = errormsg.replace(/\>/g,"&gt;")
+                      var errormsg = "<span class=keyword-error>" + errormsg + "</span>"
+                      mypre.innerHTML = (errormsg);
+                    }
+                });
+                myPromise.then(function(mod) {
+                        console.log('success');
+                    },
+                    function(err) {
+                        console.log(err.toString());
+                    });
+            }
+        window.onload = function() {
+                editor = CodeMirror.fromTextArea(document.getElementById('textbox'), {
+                    mode: {
+                        name: "python",
+                        version: 2,
+                        singleLineStringErrors: false
+                    },
+                    lineNumbers: true,
+                    indentUnit: 4
+                });
+            }
+    </script>
+  </head> 
+
+  <body>
+    <div id="wrapper">
+      <header>
+        <!-- SLIDE OUT NAV FOR MOBILE -->
+        <div class="slideoutnav">
+          <input type="checkbox" id="menuToggle">
+          <label for="menuToggle" class="menuicon">&equiv;</label>
+          <nav class="menu">
+            <div class="sidenavlogo">
+              <a href="../../../index.html">
+                <img src="../../../images/headingtitle.png" alt="Pythons and Ladders" style="width: 75%; height: 18%;">
+              </a>
+            </div><!-- sidenavlogo -->
+            <p><a href="../../../index.html">home</a></p>
+            <p><a href="../../../overview.html">overview</a></p>
+            <p><a href="../../../faq.html">questions</a></p>
+            <p><a href="../../../main/updates/pages/updates_0.html">changelog</a></p>
+            <p><a href="mailto:info@pythonsandladders.com?subject=Attn: [ADMIN] Pythons and Ladders">contact us</a></p>
+          </nav>
+        </div><!-- slideoutnav -->
+        <a href="../../../index.html" onclick="">pythons and ladders</a>
+      </header>
+      <div class="allpanes_new">
+        <!-- SIDENAV -->
+        <div class="sidenavpane">
+          <div class="sidenavlogo">
+            <a href="../../../index.html">
+              <img src="../../../images/headingtitle.png" alt="Pythons and Ladders" style="width: 75%; height: 18%;" onmouseover="this.src='../../../images/headingtitle_snake.png'" onmouseout="this.src='../../../images/headingtitle.png'">
+            </a>
+          </div><!-- sidenavlogo -->
+          <br>
+          <br>
+          <br>
+          <br>
+          <a href="../../../index.html">home</a>
+          <a href="../../../overview.html">overview</a>
+          <a href="../../../faq.html">questions</a>
+          <!-- <a href="../../../main/updates/pages/updates_0.html">updates</a> -->
+          <a href="mailto:info@pythonsandladders.com?subject=Attn: [ADMIN] Pythons and Ladders">contact us</a>
+        </div><!-- sidenavpane -->
+        <!-- BANNER -->
+        <div class="bannerpane">
+          <div class="banneritems">
+            <h2 class="bannertitle">c h a n g e l o g</h2>
+          </div><!-- banneritems -->
+        </div><!-- bannerpane -->
+        <!-- LEFT PANE -->
+        <div class="leftpane">
+          <div class="leftpaneinner">
+            <p><h4 class="h4gold">October 23, 2016</h4></p>
+            <ul>
+              <li>Updated website with responsive design, currently tested on and supporting mobile devices with widths >= 375px and < 1024px</li>
+              <li>Updated button CSS & tested on Windows (IE, Chrome)</li>
+              <li>Removed the option to request guidance on squares</li>
+            </ul>
+            <hr>
+            <p><h4 class="h4gold">October 12, 2016</h4></p>
+            <ul>
+              <li>Added social media buttons (Facebook and Twitter)</li>
+              <li>Introduced a versioning system in the form of [major].[minor].[release].[build]</li>
+              <li>Restructured backend of website to generate pages in organized folders</li>
+            </ul>
+            <hr>
+            <p><h4 class="h4gold">October 09, 2016</h4></p>
+            <ul>
+              <li>Changed the updates section to auto-generate new pages when the length of the page exceeds 17 rows (need to still test on various lengths)</li>
+              <li>Added a popover containing a hint for each square, with backend code to support the feature</li>
+            </ul>
+            <hr>
+            <p><h4 class="h4gold">October 05, 2016</h4></p>
+            <ul>
+              <li>Added a 5-step tutorial as a prequel to the gameboard</li>
+              <li>Reduced content width from 1400 to 1280 (min width)</li>
+              <li>Moved location of footer to be in the main content div</li>
+              <li>Created a static-height right panel on the home page</li>
+            </ul>
+            <hr>
+            <p><h4 class="h4gold">October 04, 2016</h4></p>
+            <ul>
+              <li>Added a red feedback button bottom right corner</li>
+              <li>Updated logo to change on mouse hover (Javascript)</li>
+              <li>Increased responsiveness for left navigation bar</li>
+              <li>Added a search engine feature for in-site queries</li>
+              <li>Centre-justified the entire webpage and reduced the content width from 1470 to 1400</li>
+              <li>Added a subtle gradient to the header bar for color differentiation</li>
+            </ul>
+            <hr>
+            <p><h4 class="h4gold">September 26, 2016</h4></p>
+            <ul>
+              <li>Added a 'Profile' section to the homepage in the right panel</li>
+              <li>Re-designed the navigation and look of each square; using divs now instead of images</li>
+              <li>Narrowed the width and reduced font size in the right panel</li>
+            </ul>
+            <hr>
+            <a style="border-bottom:0px" href="updates_3.html">
+              <button>&lang; PREVIOUS</button>
+            </a>
+            <a style="border-bottom:0px" href="updates_5.html">
+              <button>NEXT &rang; </button>
+            </a>
+          </div><!-- leftpaneinner -->
+        </div><!-- leftpane -->
+        <div class="middlepane">
+        </div><!-- middlepane -->
+        <!-- RIGHT PANE -->
+        <div class="rightpane-home">
+        </div><!-- rightpane-home -->
+      </div><!-- allpanes_new -->
+      <title>Changelog | Pythons and Ladders</title>
+      <div class="footer">&copy; Pythons and Ladders 2018. All rights reserved.</div><!-- footer -->
+    </div><!-- wrapper -->
+  </body>
+</html>

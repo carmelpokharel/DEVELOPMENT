@@ -1,0 +1,29 @@
+________________________________
+$LEFTPANEL_HEADING$
+Cities of Night
+https://open.spotify.com/track/7g7x4198L8HVckp33Zp5XB
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+Run the following code from your Editor, and observe the output:
+<democodeblock>
+<code>cities = ['Toronto', 'Singapore']</code>
+<code>cities = ['Tokyo'] + cities</code>
+<code>^print^ cities</code>
+</democodeblock>
+________________________________
+$LEFTPANEL_QUESTION$
+Initialize the <var>cities</var> variable exactly as above. Then, add the ^list^ ['Tokyo', 'Seoul'] to the front of <var>cities</var>, and ^return^ it so that your output is exactly the following: 
+<outputcodeline>[['Tokyo','Seoul'], 'Toronto', 'Singapore']</outputcodeline>
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+You can the new items all in one go, or use multiple lines of code.
+________________________________
+$RIGHTPANEL_QUESTIONS$
+________________________________
+$RIGHTPANEL_NOTES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

@@ -1,0 +1,50 @@
+________________________________
+$LEFTPANEL_HEADING$
+Panic Switch
+https://open.spotify.com/track/597i9UhHbW8hHgBUp8Tm54
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+________________________________
+$LEFTPANEL_QUESTION$
+Define a function, <def>switchKeys</def>(), which takes in a ^dict^, and switches its key:value pairs--that is, the keys now become the values, and the values become the keys.
+
+When you encounter cases where there are duplicate keys (formerly values), store their values in a ^list^. You may assume that the keys and values in your input ^dict^ will only comprise of the following types: ^int^, ^float^, and ^str^.
+
+In other words, an input of ^dict^ {'A': 5, 'S': 4, 'Q': 5, 'RS': 7} to your function should return exactly the following:
+<outputcodeline>{4: 'S', 5: ['A', 'Q'], 7: 'RS'}</outputcodeline>
+________________________________
+$LEFTPANEL_EDITOR$
+def switchKeys(input_dict):
+________________________________
+$LEFTPANEL_HINTS$
+This one's pretty easy--use an ^if^/^else^ statement inside a ^for^ loop.
+________________________________
+$RIGHTPANEL_QUESTIONS$
+Can you complete this task without initializing a new ^dict^ in your function to store the "switched" pairs?
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$ALLPANES_SUBMITCASES$
+print ""
+print "INPUT     | {'A': 5, 'S': 4, 'Q': 5, 'RS': 7}"
+print "OUTPUT    |", switchKeys({'A': 5, 'S': 4, 'Q': 5, 'RS': 7})
+print "EXPECTED  | {4: 'S', 5: ['A', 'Q'], 7: 'RS'}"
+if switchKeys({'A': 5, 'S': 4, 'Q': 5, 'RS': 7}) == {4: 'S', 5: ['A', 'Q'], 7: 'RS'}:
+    print "PASSED!"
+else: 
+    print "FAILED"
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+$RIGHTPANEL_SOLUTION$
+def switchKeys(input_dict):
+	output_dict = {}
+	for key in input_dict:
+		if input_dict[key] not in output_dict:
+			output_dict[input_dict[key]] = key
+		else:
+			output_dict[input_dict[key]] = [output_dict[input_dict[key]]]
+			output_dict[input_dict[key]].append(key)
+	return output_dict
+________________________________
+FIN

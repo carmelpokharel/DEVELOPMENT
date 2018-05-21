@@ -1,0 +1,47 @@
+________________________________
+$LEFTPANEL_HEADING$
+Balanced on a Shelf
+https://open.spotify.com/track/39AiF1e0zZQAWrSp02uZLv
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+A ^list^ is yet another datatype. It can be thought of as a shelf, carrying a finite number of items. You can store just about anything in a ^list^&#8212;integers, floats, strings, variables... even another ^list^!
+
+In Python, a ^list^ is enclosed in square brackets, with each of its elements separated by a comma:
+<democodeline>a_list = ['abc', 123, 'xyz']</democodeline>
+Just like you did for strings, you can use the ^in^ keyword to check if a certain element exists in a ^list^:
+
+<democodeblock>
+<code>^print^ 123 ^in^ a_list<tab><comment># is True</comment></code>
+<code>^print^ '123' ^in^ a_list<2sp><comment># is False</comment></code>
+</democodeblock>
+________________________________
+$LEFTPANEL_QUESTION$
+Write three lines of code to do the following:
+<table>
+   <tr>
+      <td class="linecol">Line 1</td>
+      <td class="codecol">Declare a variable, <var>mood</var>, which stores the ^str^ 'relaxed'</td>
+   </tr>
+   <tr>
+      <td class="linecol">Line 2</td>
+      <td class="codecol">Initialize a ^list^ variable, which contains the following elements: your name, your age, and your <var>mood</var> variable from Line 1</td>
+   </tr>
+   <tr>
+      <td class="linecol">Line 3</td>
+      <td class="codecol">Check inside your list to see if it contains your name, and return a ^bool^</td>
+   </tr>
+</table>
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+Your name should be a ^str^, age should be an ^int^, and mood should be the variable you created on the first line.
+________________________________
+$RIGHTPANEL_QUESTIONS$
+Is it possible to have an empty ^list^? What would that look like?
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

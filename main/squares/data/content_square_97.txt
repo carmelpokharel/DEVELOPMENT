@@ -1,0 +1,54 @@
+________________________________
+$LEFTPANEL_HEADING$
+Graphic Violence
+https://open.spotify.com/track/3wmrwlinXOfSt871kjY0vU
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+Although you should never be required to create these in real life, ASCII bar graphs may help you to understand how more complex chart systems may have originally been conceptualized. Take a look at the following data, which keeps track of employee attendance:
+<democodeblock>
+<code><comment># { NAME : [PAID_LEAVE, UNPAID_LEAVE] }</comment></code>
+<code>attendance = { 'Putera' : [5, 10],</code>
+<code><tab><tab><tab><3sp>'Madiha' : [2, 0],</code>
+<code><tab><tab><tab><3sp>'Danica' : [3, 20],</code>
+<code><tab><tab><tab><3sp>'Jaymie' : [13, 1],</code>
+<code><tab><tab><tab><3sp>'Daniel' : [14, 14] }</code>
+</democodeblock>
+If we were to plot this data alphabetically, it would look something like this:
+<democodeblock>
+<code>Danica<tab>PAID<tab>***</code>
+<code><tab><tab>UNPAID<tab>********************</code>
+<code>Daniel<tab>PAID<tab>**************</code>
+<code><tab><tab>UNPAID<tab>**************</code>
+<code>Jaymie<tab>PAID<tab>*************</code>
+<code><tab><tab>UNPAID<tab>*</code>
+<code>Madiha<tab>PAID<tab>**</code>
+<code><tab><tab>UNPAID<tab></code>
+<code>Putera<tab>PAID<tab>*****</code>
+<code><tab><tab>UNPAID<tab>**********</code>
+</democodeblock>
+________________________________
+$LEFTPANEL_QUESTION$
+Define a function, <def>plotAttendance</def>(), which takes in an attendance ^dict^ and returns a plot of its data, like in the given example. As always, your output should be a single ^str^, with rows separated by ^\n^.
+________________________________
+$LEFTPANEL_EDITOR$
+def plotAttendance(attendance_records):
+________________________________
+$LEFTPANEL_HINTS$
+Make sure to carefully account for spacing; you've already tackled most of the other code in Pythons and Ladders!
+________________________________
+$RIGHTPANEL_QUESTIONS$
+How would you modify your algorithm's spacing to account for longer employee names? For instance, "Anastasia"?
+________________________________
+$RIGHTPANEL_TESTCASES$
+This square does not have a Submit button, as the results are self-explanatory. However, make sure to test your function on the example ^dict^.
+________________________________
+$ALLPANES_SUBMITCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+$RIGHTPANEL_SOLUTION$
+
+________________________________
+FIN
+
+

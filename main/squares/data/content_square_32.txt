@@ -1,0 +1,32 @@
+________________________________
+$LEFTPANEL_HEADING$
+Stranger Ways
+https://open.spotify.com/track/289MrJsvmFHhphtxl5rHrs
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+Here are some other ways to access items within a ^list^:
+<democodeblock>
+<code>animals = ['ant','bat','cat','dog']</code>
+<code>^print^ animals[:2]</code>
+<code>^print^ animals[2:]</code>
+</democodeblock>
+________________________________
+$LEFTPANEL_QUESTION$
+Declare the following ^list^: 
+<democodeline>body_parts = ['head', 'shoulders', ['knees', 'toes'], 'eyes', 'ears', 'mouth', 'nose']</democodeline>
+Now, write a ^print^ statement to access <var>body_parts</var> and retrieve:
+<outputcodeline>['head', 'shoulders', ['knees', 'toes']]</outputcodeline>
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+What ^list^ item does your output end on?
+________________________________
+$RIGHTPANEL_QUESTIONS$
+What do you think the colon (:) does? 
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

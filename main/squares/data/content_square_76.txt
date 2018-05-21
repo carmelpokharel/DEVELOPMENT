@@ -1,0 +1,50 @@
+________________________________
+$LEFTPANEL_HEADING$
+Split Needles
+https://open.spotify.com/track/2BUQshu3U5M5nBfuLiBRSH
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+Every once in a while you may find yourself interfacing with markup languages like HTML or XML, which encode their data within tags. For the purpose of this square, imagine a fictional markup language (FML) which is similar to HTML, but uses standard brackets instead of angled ones.
+
+For instance, this would be valid FML code:
+<democodeline>(fml)needles(/fml)</democodeline>
+________________________________
+$LEFTPANEL_QUESTION$
+Define a function <def>splitFML</def>() that takes in an ^str^ <var>fml_string</var> and returns a list of three ^str^ elements: the opening tag, the content, and the closing tag. For example, an input of '(fml)needles(/fml)' should return the following:
+<outputcodeline>['(fml)', 'needles', '(/fml)']</outputcodeline>
+You may assume that your input string will always follow the (openingtag)content(/closingtag) format.
+________________________________
+$LEFTPANEL_EDITOR$
+def splitFML(fml_string):
+________________________________
+$LEFTPANEL_HINTS$
+Try using the .^replace^() method to replace both the &gt; and &lt; characters with a single unique character, then .^split^() the ^str^ on this character.
+________________________________
+$RIGHTPANEL_QUESTIONS$
+How do you use .^split^() to split a ^str^ at multiple characters?
+Can you solve this exercise using <a target="_blank" href="https://docs.python.org/2/library/re.html">regular expressions</a>?
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$ALLPANES_SUBMITCASES$
+print ""
+print "INPUT     | '(fml)needles(/fml)'"
+print "OUTPUT    |", splitFML('(fml)needles(/fml)')
+print "EXPECTED  | True"
+if splitFML('(fml)needles(/fml)') == ['(fml)', 'needles', '(/fml)']:
+    print "PASSED!"
+else: 
+    print "FAILED"
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+$RIGHTPANEL_SOLUTION$
+def splitFML(fml_string):
+	revised_string = fml_string.replace('(', '~')
+	revised_string = revised_string.replace(')', '~')
+	revised_string = revised_string.split('~')
+	revised_string = filter(None, revised_string)
+	output_string = ['('+revised_string[0]+')', revised_string[1], '('+revised_string[2]+')']
+	return output_string
+________________________________
+FIN

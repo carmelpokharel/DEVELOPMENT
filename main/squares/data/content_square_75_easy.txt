@@ -1,0 +1,41 @@
+________________________________
+$LEFTPANEL_HEADING$
+Nesting Dolls
+https://open.spotify.com/track/0B2hCEoIf0kEpuPrXF5ZFW
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+Nested loops are simply another way of referring to multiple levels of loops:
+<democodeblock>
+<code>all_characters = ''</code>
+<code>^for^ element in ['alpha', 'beta', 'gamma']:</code>
+<code><tab>^for^ character in element:</code>
+<code><tab><tab>^print^ character</code>
+</democodeblock>
+________________________________
+$LEFTPANEL_QUESTION$
+Using nested loops, define a function <def>numRectangle</def>() that takes in an ^int^ <var>n</var> > 0 and produces a formatted output. For example, an input of ^int^ 5 should return the following ^str^:
+<outputcodeblock>
+<code>....1</code>
+<code>...22</code>
+<code>..333</code>
+<code>.4444</code>
+<code>55555</code>
+</outputcodeblock>
+Your function should ^return^ a single ^str^, and use ^\n^ characters to separate the rows.
+________________________________
+$LEFTPANEL_EDITOR$
+def numRectangle(n):
+________________________________
+$LEFTPANEL_HINTS$
+You shouldn't be using any more than two ^for^ loops.
+________________________________
+$RIGHTPANEL_QUESTIONS$
+________________________________
+$RIGHTPANEL_NOTES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN
+$RIGHTPANEL_SOLUTION$
+________________________________
+FIN

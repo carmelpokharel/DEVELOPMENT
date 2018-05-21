@@ -1,0 +1,54 @@
+________________________________
+$LEFTPANEL_HEADING$
+88
+https://open.spotify.com/track/41i7tcb5sXCXBfDhXDRo7r
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+Python dictionaries are quite useful for representing graphs, too. 
+Consider the graph below. Each one of the grey circles is called a <b>vertex</b>, labeled from a-f. Connecting these vertices are <b>edges</b>. In this particular graph, there are five edges: a to c, b to c, b to e, c to d, and c to e, which can be shortened to ac, bc, be, cd, and ce.
+<img style="width:80%;height:80%;max-width:300px" src="../../../images/example_graph1.png">
+Here's how you would represent this particular graph in a Python ^dict^. All of the vertices in the graph are keys, and the vertices they connect to are represented in the value, as a ^list^:
+<democodeblock>
+<code>graph1 = {<2sp>'a' : ['c'],</code>
+<code><tab><tab><tab>'b' : ['c', 'e'],</code>
+<code><tab><tab><tab>'c' : ['a', 'b', 'd', 'e'],</code>
+<code><tab><tab><tab>'d' : ['c'],</code>
+<code><tab><tab><tab>'e' : ['c', 'b'],</code>
+<code><tab><tab><tab>'f' : []<3sp>}</code>
+</democodeblock>
+________________________________
+$LEFTPANEL_QUESTION$
+Define a function, <def>findEdges</def>(), whose input is a graph (^dict^), and output is a sorted ^list^ of edges in the graph. For example, with an input of <var>graph1</var>, your output should be exactly the following:
+<outputcodeline>['ac', 'bc', 'be', 'cd', 'ce']</outputcodeline>
+________________________________
+$LEFTPANEL_EDITOR$
+def findEdges(graph):
+________________________________
+$LEFTPANEL_HINTS$
+Use a ^for^ loop to generate a list of all the edges, then reuse some code from <def>reverse</def>() to remove duplicates.
+________________________________
+$RIGHTPANEL_QUESTIONS$
+Have you sorted your output ^list^?
+________________________________
+$RIGHTPANEL_TESTCASES$
+Note how vertex f, which does not connect to anything, is still a key in <var>graph1</var>, but its value is an empty list.
+If you encounter duplicate edges, such as 'bc' and 'cb', keep the one which comes first alphabetically. In this case, you'd keep 'bc', and discard 'cb'.
+________________________________
+$ALLPANES_SUBMITCASES$
+graph1 = {'a' : ['c'], 'b' : ['c', 'e'], 'c' : ['a', 'b', 'd', 'e'], 'd' : ['c'], 'e' : ['c', 'b'], 'f' : []}
+print ""
+print "INPUT     | graph1"
+print "OUTPUT    |", findEdges(graph1)
+print "EXPECTED  | ['ac', 'bc', 'be', 'cd', 'ce']"
+if  findEdges(graph1) == ['ac', 'bc', 'be', 'cd', 'ce']:
+    print "PASSED!"
+else: 
+    print "FAILED"
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+$RIGHTPANEL_SOLUTION$
+________________________________
+FIN
+
+

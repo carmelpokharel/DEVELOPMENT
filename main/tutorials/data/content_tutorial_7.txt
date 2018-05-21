@@ -1,0 +1,34 @@
+________________________________
+$LEFTPANEL_MAIN$
+Interface III
+________________________________
+$LEFTPANEL_MAINAREA$
+We're getting closer to our final interface.
+
+In some squares, you'll be provided with a <strong>Questions for You</strong> section. This section will contain questions to help you research your current task in greater detail. Make sure to examine them, as the answers to some questions may help in completing subsequent squares!
+
+Print the following two strings from the Editor, and examine the Output box.
+________________________________
+$LEFTPANEL_INSTRUCTIONSAREA$
+________________________________
+$LEFTPANEL_TOOLBARAREA$
+________________________________
+$LEFTPANEL_EDITORAREA$
+________________________________
+$LEFTPANEL_EDITOR$
+print "The Fresh Prince of Bel-Air"
+print 'The Fresh Prince of Bel-Air'
+________________________________
+$LEFTPANEL_HINT$
+Run the code, then read the 'Questions for You' section.
+________________________________
+$LEFTPANEL_OUTPUTAREA$
+________________________________
+$RIGHTPANEL_PYTHONSHELL$
+________________________________
+$RIGHTPANEL_QUESTIONS$
+Does it matter if you enclose your ^str^ in single quotations or double quotations?
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+FIN

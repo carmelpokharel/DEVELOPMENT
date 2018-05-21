@@ -1,0 +1,35 @@
+________________________________
+$LEFTPANEL_HEADING$
+Piece of Me
+https://open.spotify.com/track/2EvwLVrnYbCZEG6Kx5DCRy
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+To access particular characters in a ^str^, we call on their <b>index</b>. In a Python ^str^, the index of the first character is always 0 (zero). 
+For example, to print 'c' from the ^str^ 'computer', you'd call on the index 0, using square brackets:
+<democodeline>^print^ 'computer'[0]</democodeline>
+To access other characters, you simply change the index's value:
+<democodeblock>
+<code class="demoblock">
+<code>^print^ 'computer'[2]</code>
+<code>^print^ 'computer'[5]</code>
+</democodeblock>
+________________________________
+$LEFTPANEL_QUESTION$
+Using square brackets, write a print statement which prints the letter 't' from the ^str^ 'Britney'.
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+To print the 'o' in 'computer', you'd have to call 'computer'[1]
+________________________________
+$RIGHTPANEL_QUESTIONS$
+________________________________
+$RIGHTPANEL_NOTES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+$RIGHTPANEL_SOLUTION$
+print 'Britney'[3]
+________________________________
+
+FIN

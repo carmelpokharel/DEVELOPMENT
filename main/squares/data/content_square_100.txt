@@ -1,0 +1,96 @@
+________________________________
+$LEFTPANEL_HEADING$
+(*Fin)
+https://open.spotify.com/track/7fwycbhYngsgYoeQzidkvH
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+For your last square, you'll be developing a natural language calculator, resembling an extremely basic form of <a href="https://www.wolframalpha.com/" target="_blank">Wolfram Alpha</a>.
+________________________________
+$LEFTPANEL_QUESTION$
+Define a function, <def>solve</def>(), whose input is a ^str^ with a mathematical expression, and output is its solution.
+
+Your function will be evaluated on the following expressions:
+<mathexpblock>
+7 &#8211; 4 + 6 &times; 8 &divide; 2
+14 + 8 (6 &divide; 0)
+(5 &#8211; 1) (4 + 7)
+10<sup>2</sup> &#8211; 10 + 3<sup>2</sup>
+30 &#8211; 3 (4.5 &times; 2)<sup>2 + 1</sup>
+</mathexpblock>
+The expressions will be passed to <def>solve</def>() in the following formats:
+<democodeblock>
+<code>'7 - 4 + 6 * 8 / 2'</code>
+<code>'14 + 8(6 / 0)'</code>
+<code>'(5 - 1)(4 + 7)'</code>
+<code>'10^2 - 10 + 3^2'</code>
+<code>'30 - 3(4.5 * 2)^(2 + 1)'</code>
+</democodeblock>
+________________________________
+$LEFTPANEL_EDITOR$
+def solve(expression):
+________________________________
+$LEFTPANEL_HINTS$
+Break your solution into smaller parts, and work through them one by one.
+________________________________
+$RIGHTPANEL_QUESTIONS$
+Do you remember what the "exponent" operator in Python is?
+Are you able to re-use any code from <def>calculate</def>() in this square?
+________________________________
+$RIGHTPANEL_TESTCASES$
+You are expected to understand multiplication is implicit in expressions like 3(4 + 5).
+Spacing might be the first thing you want to remove. Check out Python's built-in .^split^() method for ^str^ datatypes.
+Remember--your function should also adhere to <a href="https://en.wikipedia.org/wiki/Order_of_operations" target="_blank">BEDMAS</a>!
+________________________________
+$ALLPANES_SUBMITCASES$
+print ""
+print "INPUT     | '7 - 4 + 6 * 8 / 2'"
+print "OUTPUT    |", solve('7 - 4 + 6 * 8 / 2')
+print "EXPECTED  | 27"
+if  solve('7 - 4 + 6 * 8 / 2') == 27:
+    print "PASSED!"
+else: 
+    print "FAILED"
+
+print ""
+print "INPUT     | '14 + 8(6 / 0)'"
+print "OUTPUT    |", solve('14 + 8(6 / 0)')
+print "EXPECTED  | Error: Division by 0"
+if  solve('14 + 8(6 / 0)') == 'Error: Division by 0':
+    print "PASSED!"
+else: 
+    print "FAILED"
+
+print ""
+print "INPUT     | '(5 - 1)(4 + 7)'"
+print "OUTPUT    |", solve('(5 - 1)(4 + 7)')
+print "EXPECTED  | 44"
+if  solve('(5 - 1)(4 + 7)') == 44:
+    print "PASSED!"
+else: 
+    print "FAILED"
+
+print ""
+print "INPUT     | '10^2 - 10 + 3^2'"
+print "OUTPUT    |", solve('10^2 - 10 + 3^2')
+print "EXPECTED  | 99"
+if  solve('10^2 - 10 + 3^2') == 99:
+    print "PASSED!"
+else: 
+    print "FAILED"
+
+print ""
+print "INPUT     | '30 - 3(4.5 * 2)^(2 + 1)'"
+print "OUTPUT    |", solve('30 - 3(4.5 * 2)^(2 + 1)')
+print "EXPECTED  | -2157"
+if  solve('30 - 3(4.5 * 2)^(2 + 1)') == -2157:
+    print "PASSED!"
+else: 
+    print "FAILED"
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+$RIGHTPANEL_SOLUTION$
+________________________________
+FIN
+
+

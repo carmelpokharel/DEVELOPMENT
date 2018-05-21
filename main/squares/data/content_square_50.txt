@@ -1,0 +1,73 @@
+________________________________
+$LEFTPANEL_HEADING$
+Reverse
+https://open.spotify.com/track/2ZsGslDSamBJXpI8hF3ui2
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+________________________________
+$LEFTPANEL_QUESTION$
+Define a function, <def>reverse</def>(), which computes the reversal of a ^str^. For example, <def>reverse</def>('Lisa') should return the ^str^ 'asiL'.
+________________________________
+$LEFTPANEL_EDITOR$
+def reverse(given_string):
+    reversed_word = ''
+    for ____ in ____:
+        reversed_word = ____ + ____
+    return ____
+________________________________
+$LEFTPANEL_HINTS$
+You're using a ^for^ loop here to update <var>reversed_word</var>. Remember how to add to a string with the &quot;+&quot; operator?
+________________________________
+$RIGHTPANEL_QUESTIONS$
+Can your function handle a ^list^ datatype, if accidentally provided as a parameter?
+________________________________
+$RIGHTPANEL_TESTCASES$
+The output for the ' 0.1' test case should have a space character at the end when reversed.
+________________________________
+$ALLPANES_SUBMITCASES$
+print ""
+print "INPUT     | 'Lisa'"
+print "OUTPUT    |", reverse('Lisa')
+print "EXPECTED  | asiL"
+if reverse('Lisa') == "asiL":
+	print "PASSED!"
+else: 
+	print "FAILED"
+
+print ""
+print "INPUT     | 'Tweety Bird'"
+print "OUTPUT    |", reverse('Tweety Bird')
+print "EXPECTED  | driB yteewT"
+if reverse('Tweety Bird') == "driB yteewT":
+	print "PASSED!"
+else: 
+	print "FAILED"
+
+print ""
+print "INPUT     | 'Never odd or even'"
+print "OUTPUT    |", reverse('Never odd or even')
+print "EXPECTED  | neve ro ddo reveN"
+if reverse('Never odd or even') == "neve ro ddo reveN":
+	print "PASSED!"
+else: 
+	print "FAILED"
+
+print ""
+print "INPUT     | ' 0.1'"
+print "OUTPUT    |", reverse(' 0.1')
+print "EXPECTED  | 1.0 "
+if reverse(' 0.1') == "1.0 ":
+	print "PASSED!"
+else: 
+	print "FAILED"
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+$RIGHTPANEL_SOLUTION$
+def reverse(given_string):
+    reversed_word = ''
+    for letter in given_string:
+        reversed_word = letter + reversed_word
+    return reversed_word
+________________________________
+FIN

@@ -1,0 +1,44 @@
+________________________________
+$LEFTPANEL_HEADING$
+Panic Switch
+https://open.spotify.com/track/597i9UhHbW8hHgBUp8Tm54
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+________________________________
+$LEFTPANEL_QUESTION$
+Define a function, <def>switchValues</def>(), which takes in a ^dict^, and for each key, reverses the order of its values. For the purposes of this square, you should assume that all the values in your key:value pairs will be of type ^list^.
+
+For example, an input of ^dict^ {'A': [5, 10], (0, 1): ['A', 2, 'Z'], 'Q': [1]} to your function should return exactly the following:
+<outputcodeline>{'A': [10, 5], [0, 1]: ['Z', 2, 'A'], 'Q': [1]}</outputcodeline>
+________________________________
+$LEFTPANEL_EDITOR$
+def switchValues(input_dict):
+________________________________
+$LEFTPANEL_HINTS$
+Use a ^for^ loop, and update your input_dict's key:value pair at each step.
+________________________________
+$RIGHTPANEL_QUESTIONS$
+________________________________
+$RIGHTPANEL_NOTES$
+________________________________
+$ALLPANES_SUBMITCASES$
+print ""
+print "INPUT     | {'A': [5, 10], (0, 1): ['A', 2, 'Z'], 'Q': [1]}"
+print "OUTPUT    |", switchValues({'A': [5, 10], (0, 1): ['A', 2, 'Z'], 'Q': [1]})
+print "EXPECTED  | {'A': [10, 5], (0, 1): ['Z', 2, 'A'], 'Q': [1]}"
+if switchValues({'A': [5, 10], (0, 1): ['A', 2, 'Z'], 'Q': [1]}) == {'A': [10, 5], (0, 1): ['Z', 2, 'A'], 'Q': [1]}:
+    print "PASSED!"
+else: 
+    print "FAILED"
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+$RIGHTPANEL_SOLUTION$
+def switchValues(input_dict):
+    for key in input_dict:
+        val = input_dict[key]
+        val.reverse()
+        input_dict[key] = val
+    return input_dict
+________________________________
+FIN

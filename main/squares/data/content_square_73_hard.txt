@@ -1,0 +1,59 @@
+________________________________
+$LEFTPANEL_HEADING$
+Sort Of
+https://open.spotify.com/track/6n1QJ1UpZbHSVF6nF5LkCc
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+There are instances in programming when you may encounter ^int^ datatypes represented as ^str^ datatypes, but with padded zeroes. For instance, the number 1 may be represented as '01', '001', or even '001.00'.
+________________________________
+$LEFTPANEL_QUESTION$
+Define a function, <def>numericalSort</def>(), which takes in a ^list^ of ^str^ datatypes (with each element representing a number), and rearranges them in numerically ascending order. You may assume that all your ^list^ elements can be converted into numbers.
+
+For example, an input of ['6', '0008.0', '01', '002', '004', '05'] should output the following ^list^:
+<outputcodeline>['01', '002', '004', '05', '6', '0008.0']</outputcodeline>
+________________________________
+$LEFTPANEL_EDITOR$
+def numericalSort(input_list):
+________________________________
+$LEFTPANEL_HINTS$
+One possible solution to this task involves creating new lists, one of which tracks the indexes of the elements.
+________________________________
+$RIGHTPANEL_QUESTIONS$
+________________________________
+$RIGHTPANEL_NOTES$
+________________________________
+$ALLPANES_SUBMITCASES$
+print ""
+print "INPUT     | ['6', '0008.0', '01', '002', '004', '05']"
+print "OUTPUT    |", numericalSort(['6', '0008.0', '01', '002', '004', '05'])
+print "EXPECTED  | ['01', '002', '004', '05', '6', '0008.0']"
+if numericalSort(['6', '0008.0', '01', '002', '004', '05']) == ['01', '002', '004', '05', '6', '0008.0']:
+	print "PASSED!"
+else: 
+	print "FAILED"
+
+print ""
+print "INPUT     | ['7', '06', '005', '00002.2', '000002.2']"
+print "OUTPUT    |", numericalSort(['7', '06', '005', '00002.2', '000002.2'])
+print "EXPECTED  | ['00002.2', '000002.2', '005', '06', '7']"
+if numericalSort(['7', '06', '005', '00002.2', '000002.2']) == ['00002.2', '000002.2', '005', '06', '7']:
+	print "PASSED!"
+else: 
+	print "FAILED"
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+$RIGHTPANEL_SOLUTION$
+def numericalSort(in_list):
+	sorted_list = []
+	elem_index_list = []
+	for elem in in_list: 
+		elem_index = in_list.index(elem)
+		elem_index_list.append(elem_index)
+		sorted_list.append([float(elem), elem_index])
+	return_list = []
+	for (elem, elem_index) in sorted(sorted_list):
+		return_list.append(in_list[elem_index])
+	return return_list
+________________________________
+FIN

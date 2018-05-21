@@ -1,0 +1,32 @@
+________________________________
+$LEFTPANEL_HEADING$
+Clone
+https://open.spotify.com/track/5Ac3ayR8mWH7hE1GYzrgD1
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+That was easy! How about printing ^str^ datatypes on multiple lines?
+________________________________
+$LEFTPANEL_QUESTION$
+Write Python code into the Editor which prints the following two lines to the output box:
+<outputcodeblock>
+<code>This is the first line</code>
+<code>This is the second line<code>
+</outputcodeblock>
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+Try writing two separate ^print^ statements, one on each line.
+________________________________
+$RIGHTPANEL_QUESTIONS$
+Is it possible to have an empty ^str^?
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+$RIGHTPANEL_SOLUTION$
+print 'This is the first line'
+print 'This is the second line'
+________________________________
+FIN

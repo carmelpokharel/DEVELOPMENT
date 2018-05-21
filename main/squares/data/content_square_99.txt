@@ -1,0 +1,100 @@
+________________________________
+$LEFTPANEL_HEADING$
+99 Red Balloons
+https://open.spotify.com/track/5IXeOf1hqORwp8b6c1Asqa
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+Early on in Pythons and Ladders, you processed functions which perform arithmetic. Let's gather all of them into one function.
+________________________________
+$LEFTPANEL_QUESTION$
+Define a function, <def>calculate</def>(), which takes in 3 inputs: a mandatory number <var>x</var>, a ^str^ <var>instruction</var>, and another number <var>y</var>, which is not mandatory. Your function should output the result of performing the instruction on the first and second numbers.
+
+Here are all of the valid ^str^ values for <var>instruction</var>: 'plus', 'minus', 'multiplied by', 'divided by', 'squared', 'cubed', and 'to the power of'.
+
+For example, if you call <def>calculate</def>(99.9, 'divided by', 9), your output should return the ^float^ 11.1. Meanwhile, if you call <def>calculate</def>(2, 'cubed'), you should return ^int^ 8. Remember <a href="http://www.pythonsandladders.com/main/squares/pages/square_53.html" target="_blank">this</a>?
+________________________________
+$LEFTPANEL_EDITOR$
+def calculate(x, instruction, y):
+________________________________
+$LEFTPANEL_HINTS$
+Collect all your functions in the Editor, and call them from <def>calculate</def>() based on the condition.
+________________________________
+$RIGHTPANEL_QUESTIONS$
+Have you accounted for division by zero?
+Do you remember how to assign default values to function parameters?
+________________________________
+$RIGHTPANEL_TESTCASES$
+If your output is a whole number, <i>always</i> return it as an ^int^, not a ^float^.
+The <var>instruction</var> variable may be written in different ways, such as 'Divided by', 'divided By', or even 'DIVIDED BY'. Your function should be able to handle all of these cases.
+________________________________
+$ALLPANES_SUBMITCASES$
+print ""
+print "INPUT     | 41, 'PLUS', 3"
+print "OUTPUT    |", calculate(41, 'plus', 3)
+print "EXPECTED  | 44"
+if  calculate(41, 'plus', 3) == 44:
+    print "PASSED!"
+else: 
+    print "FAILED"
+
+print ""
+print "INPUT     | 25, 'Minus', 5"
+print "OUTPUT    |", calculate(25, 'Minus', 5)
+print "EXPECTED  | 20"
+if  calculate(25, 'Minus', 5) == 20:
+    print "PASSED!"
+else: 
+    print "FAILED"
+
+print ""
+print "INPUT     | 8.0, 'multiplied by', 1"
+print "OUTPUT    |", calculate(8.0, 'multiplied by', 1)
+print "EXPECTED  | 8"
+if  calculate(8.0, 'multiplied by', 1) == 8:
+    print "PASSED!"
+else: 
+    print "FAILED"
+
+print ""
+print "INPUT     | 99.9, 'divided by', 9"
+print "OUTPUT    |", calculate(99.9, 'divided by', 9)
+print "EXPECTED  | 11.1"
+if  calculate(99.9, 'divided by', 9) == 11.1:
+    print "PASSED!"
+else: 
+    print "FAILED"
+
+print ""
+print "INPUT     | 4, 'sQuared'"
+print "OUTPUT    |", calculate(4, 'sQuared')
+print "EXPECTED  | 16"
+if  calculate(4, 'sQuared') == 16:
+    print "PASSED!"
+else: 
+    print "FAILED"
+
+print ""
+print "INPUT     | 2, 'cubed'"
+print "OUTPUT    |", calculate(2, 'cubed')
+print "EXPECTED  | 8"
+if  calculate(2, 'cubed') == 8:
+    print "PASSED!"
+else: 
+    print "FAILED"
+
+print ""
+print "INPUT     | 5, 'to the POWER of', 5.0"
+print "OUTPUT    |", calculate(5, 'to the POWER of', 5.0)
+print "EXPECTED  | 3125"
+if  calculate(5, 'to the POWER of', 5.0) == 3125:
+    print "PASSED!"
+else: 
+    print "FAILED"
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+$RIGHTPANEL_SOLUTION$
+________________________________
+FIN
+
+

@@ -1,0 +1,45 @@
+________________________________
+$LEFTPANEL_MAIN$
+Syntax and Semantics
+________________________________
+$LEFTPANEL_MAINAREA$
+________________________________
+$LEFTPANEL_INSTRUCTIONSAREA$
+In Pythons and Ladders, your Output box may sometimes return an error, or refuse to populate. More often than not, this is a result of improperly written code, broadly known as a <strong>syntax error</strong>.
+In programming, <a href="https://wci.llnl.gov/codes/basis/manual/node53.html" target="_blank">syntax errors</a> include both spelling and grammatical mistakes. These errors can show up in your Output box as a <span class=keyword-error>ParseError</span> or <span class=keyword-error>SyntaxError</span>, and are usually followed by a description. 
+In the Editor below, there are five Python statements with bad syntax. With the help of the Run button, modify the code to generate the following output:
+<outputcodeblock>
+<code>Hello World!</code>
+<code>Hello World!</code>
+<code>Hello World!</code>
+<code>Hello World!</code>
+<code>Hello World!</code>
+</outputcodeblock>
+________________________________
+$LEFTPANEL_TOOLBARAREA$
+________________________________
+$LEFTPANEL_EDITORAREA$
+________________________________
+$LEFTPANEL_HINT$
+Examine each statement, character by character.
+________________________________
+$LEFTPANEL_EDITOR$
+print'Hello World!'
+print ''Hello World!
+prnit "Hello World!"
+print "Hello World!'
+Print "Hello World!"
+________________________________
+$LEFTPANEL_OUTPUTAREA$
+________________________________
+$RIGHTPANEL_TIME$
+What is the output of using two single quotations on either side of your text? Does it work?<p class="small"><code>^print^ ''Hello World''</code><p class="small">&nbsp;</p>
+________________________________
+$RIGHTPANEL_QUESTIONS$
+Sometimes, even with flawless syntax, you may receive a <b>semantic error</b>. Since semantics deals with what a piece of code <i>means</i>, these errors may not be immediately obvious.
+
+Computer languages check for semantic correctness only after they've decided that your code is syntactically valid, so you'll see these errors less frequently. 
+
+In Pythons and Ladders, semantic errors may appear as an <span class=keyword-error>IndexError</span>, <span class=keyword-error>NameError</span>, or the eponymous <span class=keyword-error>SemanticError</span>--keep an eye out for them.
+________________________________
+FIN

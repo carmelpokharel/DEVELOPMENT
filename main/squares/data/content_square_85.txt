@@ -1,0 +1,85 @@
+________________________________
+$LEFTPANEL_HEADING$
+Greater Than 84
+https://open.spotify.com/track/4X2Cl1m6a7NmJkvnlZb5yB
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+One application of the <a href="https://en.wikipedia.org/wiki/NATO_phonetic_alphabet" target="_blank">NATO phonetic alphabet</a> is in the aviation industry, where it helps pilots communicate with air traffic controllers. For each word in the English alphabet, there is a mapping to a word in the phonetic alphabet, which is easy to pronounce, decipher and understand. 
+You may have used it to spell your name over the phone, or your address. <a href="http://www.icao.int/Pages/AlphabetRadiotelephony.aspx" target="_blank">Here are the 26 mappings</a> between the English alphabet and the NATO phonetic alphabet.
+________________________________
+$LEFTPANEL_QUESTION$
+Define a function, <def>convertNATO</def>(), which takes in two ^str^ datatypes: a string to convert, and the alphabet to convert to. You must build your own mapping dictionaries for this square.
+For example, calling <def>convertNATO</def>('AFI', 'NATO') should return the following ^str^:
+<outputcodeline>'Alfa Foxtrot India'</outputcodeline>
+Meanwhile, <def>convertNATO</def>('Delta Alfa Victor Echo Yankee', 'English') should return the following word, with the first letter capitalized:
+<outputcodeline>'Davey'</outputcodeline>
+
+________________________________
+$LEFTPANEL_EDITOR$
+def convertNATO(input_string, convert_to):
+________________________________
+$LEFTPANEL_HINTS$
+First build your mapping dictionary, then use your code from <def>switchKeys</def>() to build the reverse one!
+________________________________
+$RIGHTPANEL_QUESTIONS$
+How could you update the NATO phonetic alphabet to deal with uppercase, lowercase, space, and special characters?
+________________________________
+$RIGHTPANEL_TESTCASES$
+You must account for trailing space characters; for instance, your return ^str^ should be 'Alfa Foxtrot India', and <i>not</i> 'Alfa Foxtrot India ' (which has a space at the end).
+You may assume that you will only convert words to their NATO representations, and never sentences or phrases.
+Study the Submit cases closely to understand the expected outcomes.
+________________________________
+$ALLPANES_SUBMITCASES$
+print ""
+print "INPUT     | 'Delta Alfa Victor Echo Yankee', 'English'"
+print "OUTPUT    | " + "'" +  convertNATO('Delta Alfa Victor Echo Yankee', 'English') + "'"
+print "EXPECTED  | 'Davey'"
+if  convertNATO('Delta Alfa Victor Echo Yankee', 'English') == 'Davey':
+    print "PASSED!"
+else: 
+    print "FAILED"
+
+print ""
+print "INPUT     | 'AFI'"
+print "OUTPUT    | " + "'" + convertNATO('AFI', 'NATO') + "'"
+print "EXPECTED  | 'Alfa Foxtrot India'"
+if convertNATO('AFI', 'NATO') == 'Alfa Foxtrot India':
+    print "PASSED!"
+else: 
+    print "FAILED"
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+$RIGHTPANEL_SOLUTION$
+def switchKeys(input_dict):
+	output_dict = {}
+	for key in input_dict:
+		output_dict[input_dict[key]] = key
+	return output_dict
+
+def convertNATO(input_string, convert_to):
+	E2N = {
+	'A':'Alfa', 'B':'Bravo','C':'Charlie', 
+	'D':'Delta', 'E':'Echo', 'F':'Foxtrot', 
+	'G':'Golf',"H":"Hotel", 'I':'India', 
+	'J':'Juliet', 'K':'Kilo', 'L':'Lima', 
+	'M':'Mike', 'N':'November', 'O':'Oscar', 
+	'P':'Papa', 'Q':'Quebec', 'R':'Romeo', 
+	'S':'Sierra', 'T':'Tango', 'U':'Uniform', 
+	'V':'Victor', 'W':'Whiskey', 'X':'Xray', 
+	'Y':'Yankee', 'Z':'Zulu'
+	}
+	N2E = switchKeys(E2N)
+	if convert_to == 'NATO':
+		returnStr = ''
+		for char in input_string:
+			returnStr += E2N[char] + ' '
+	else:
+		returnStr = ''
+		input_list = input_string.split(' ')
+		for word in input_list:
+			returnStr += N2E[word]
+		returnStr = returnStr.capitalize()
+	return returnStr.rstrip()
+________________________________
+FIN

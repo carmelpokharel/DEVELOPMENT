@@ -1,0 +1,36 @@
+________________________________
+$LEFTPANEL_HEADING$
+My December
+https://open.spotify.com/track/0fxGA5lxrdYNYoE7yJxTNZ
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+Run the following code, and examine its output:
+<democodeblock>
+<code>^for^ month ^in^ ['March', 'April', 'May']:</code>
+<code><tab>^print^ month[2]<tab></code>
+</democodeblock>
+________________________________
+$LEFTPANEL_QUESTION$
+Declare a ^list^ variable, <var>months</var>, which stores twelve ^str^ datatypes, one for each month of the year (i.e. 'January', 'February', ... 'December').
+Now, write a ^for^ loop that iterates through each ^list^ item, and prints the first three letters of each month. Your output should be:
+<outputcodeline>
+<code>Jan</code>
+<code>Feb</code>
+<code>Mar</code>
+</outputcodeline>
+...and so on.
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+First, try to ^print^ every ^str^ from the ^list^, then update your code to access the first three characters from each ^str^.
+________________________________
+$RIGHTPANEL_QUESTIONS$
+What does <var>month</var> represent in the ^for^ loop?
+What does month[2] return in each iteration?
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

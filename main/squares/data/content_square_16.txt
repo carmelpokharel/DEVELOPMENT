@@ -1,0 +1,33 @@
+________________________________
+$LEFTPANEL_HEADING$
+False Pretense
+https://open.spotify.com/track/2ZICF8SFI5tHttaLJKMY1X
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+Can we compare a ^str^ datatype with numerical ones, like ^int^ or ^float^? What about ^bool^?
+<democodeblock>
+<code>^print^ '1' > 1</code>
+<code>^print^ 'a' > 1</code>
+<code>^print^ 'a' > '1'</code>
+<code>^print^ '1.0' > 1</code>
+<code>^print^ ^True^ > 'True'</code>
+</democodeblock>
+________________________________
+$LEFTPANEL_QUESTION$
+Using a comparison operator, write a ^print^ statement which checks if the ^str^ '21.0' is equal to the ^int^ 21.
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+Remember to use the correct comparison operator!
+________________________________
+$RIGHTPANEL_QUESTIONS$
+How does Python compare ^str^ and ^int^ datatypes? Do numbers come before or after letters?
+How is == different from = in Python?
+How is == different from ^is^ in Python? When should you use one over the other?
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

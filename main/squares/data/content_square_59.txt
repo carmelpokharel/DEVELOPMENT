@@ -1,0 +1,73 @@
+________________________________
+$LEFTPANEL_HEADING$
+Lemon Tree
+https://open.spotify.com/track/4fXGWiVhlOLdhwRDP6pIFG
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+________________________________
+$LEFTPANEL_QUESTION$
+Update your palindrome function to <def>isStringPalindrome</def>(), which now also accepts phrase palindromes such as "No lemon, no melon", or "My gym." 
+For this function, numbers, punctuation, capitalization, and spacing should be ignored. The input is a ^str^, and the output is a ^bool^.
+________________________________
+$LEFTPANEL_EDITOR$
+def isStringPalindrome(input_string):
+________________________________
+$LEFTPANEL_HINTS$
+As a first step, iterate through the input ^str^ and remove any non-alphabetic characters.
+________________________________
+$RIGHTPANEL_QUESTIONS$
+How would you extend your function to also handle ^int^ inputs, for example 12321?
+________________________________
+$RIGHTPANEL_TESTCASES$
+Much of your code from the previous square can be re-used here.
+________________________________
+$ALLPANES_SUBMITCASES$
+
+print ""
+print "INPUT     | 'No lemon, no melon'"
+print "OUTPUT    |", isStringPalindrome("No lemon, no melon")
+print "EXPECTED  | True"
+if isStringPalindrome("No lemon, no melon") == True:
+	print "PASSED!"
+else: 
+	print "FAILED"
+
+print ""
+print "INPUT     | 'Revolver'"
+print "OUTPUT    |", isStringPalindrome("Revolver")
+print "EXPECTED  | False"
+if isStringPalindrome("Revolver") == False:
+	print "PASSED!"
+else: 
+	print "FAILED"
+
+print ""
+print "INPUT     | 'Not a palindrome'"
+print "OUTPUT    |", isStringPalindrome("Not a palindrome")
+print "EXPECTED  | False"
+if isStringPalindrome("Not a palindrome") == False:
+	print "PASSED!"
+else: 
+	print "FAILED"
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+$RIGHTPANEL_SOLUTION$
+def isStringPalindrome(input_string):
+    char_list = " '`~!@#$%^&*()-_=\"+[]{}\|;:<,>.?/"
+    updated_string = ''
+    for char in input_string:
+        if char not in char_list:
+            updated_string += char
+    def isPalindrome(word):
+        word = word.lower()
+        reversed_word = ''
+        answer = False
+        for char in word:
+            reversed_word = char + reversed_word
+        if reversed_word not in [' ', '']:
+            answer = (word == reversed_word)
+        return answer
+    return isPalindrome(updated_string)
+________________________________
+FIN

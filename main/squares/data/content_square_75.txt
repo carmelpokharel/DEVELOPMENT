@@ -1,0 +1,45 @@
+________________________________
+$LEFTPANEL_HEADING$
+Pyramids
+https://open.spotify.com/track/4QhWbupniDd44EDtnh2bFJ
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+________________________________
+$LEFTPANEL_QUESTION$
+Using <a target="_blank" href="http://pythonsandladders.com/main/squares/pages/square_75_easy.html">nested loops</a>, define a function <def>numPyramid</def>() that takes in an ^int^ <var>n</var> > 0 and produces a formatted output. For example, an input of ^int^ 5 should return the following ^str^:
+<outputcodeblock>
+<code><tab>1</code>
+<code><3sp>222</code>
+<code><2sp>33333</code>
+<code><1sp>4444444</code>
+<code>555555555</code>
+</outputcodeblock></code>
+Once again, remember that your function should ^return^ a single ^str^, and use ^\n^ characters to separate the rows.
+________________________________
+$LEFTPANEL_EDITOR$
+def numPyramid(n):
+________________________________
+$LEFTPANEL_HINTS$
+How many space characters must you add to the left of each line to keep the pyramid symmetrical?
+________________________________
+$RIGHTPANEL_QUESTIONS$
+How are you removing the space characters at the end of each line?
+Are nested loops the only way to solve this square?
+________________________________
+$RIGHTPANEL_TESTCASES$
+This square does not have a Submit button, as the results are self-explanatory. However, make sure to test your function on the following inputs:
+<cardcodeblock>
+test1 = 10
+test2 = 5
+test3 = 3
+test4 = 1
+test5 = 0
+</cardcodeblock>
+________________________________
+$ALLPANES_SUBMITCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+$RIGHTPANEL_SOLUTION$
+________________________________
+FIN

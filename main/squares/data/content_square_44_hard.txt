@@ -1,0 +1,54 @@
+________________________________
+$LEFTPANEL_HEADING$
+Reduction
+https://open.spotify.com/track/6udiVcpdM64ocfdNl9Bt8L
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+________________________________
+$LEFTPANEL_QUESTION$
+Define a function, <def>reduceList</def>(), which takes in a ^list^ of numbers, <var>input_list</var>, and a number, <var>given_number</var>, and returns the output of decreasing every element in <var>input_list</var> by <var>given_number</var>. 
+
+For example, an input of <def>reduceList</def>([5, 6, 9, 0], 10) should result in exactly the following output:
+<outputcodeline>[-5, -4, -1, -10]</outputcodeline>
+
+You may assume that there will be no ^float^ datatypes for the purposes of this exercise, and that <var>input_list</var> will always contain at least one element.
+________________________________
+$LEFTPANEL_EDITOR$
+def reduceList(input_list, given_num):
+________________________________
+$LEFTPANEL_HINTS$
+Declare an empty output list, then use a ^for^ loop.
+________________________________
+$RIGHTPANEL_QUESTIONS$
+________________________________
+$RIGHTPANEL_NOTES$
+________________________________
+$ALLPANES_SUBMITCASES$
+print ""
+print "INPUT     | [5, 6, 9, 0], 10"
+print "OUTPUT    |", reduceList([5, 6, 9, 0], 10)
+print "EXPECTED  | [-5, -4, -1, -10]"
+if reduceList([5, 6, 9, 0], 10) == [-5, -4, -1, -10]:
+	print "PASSED!"
+else: 
+	print "FAILED"
+
+print ""
+print "INPUT     | [0], -1"
+print "OUTPUT    |", reduceList([0], -1)
+print "EXPECTED  | [1]"
+if reduceList([0], -1) == [1]:
+	print "PASSED!"
+else: 
+	print "FAILED"
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+$RIGHTPANEL_SOLUTION$
+def reduceList(input_list, given_num):
+    output_list = []
+    for element in input_list:
+    	output_list.append(element - given_num)
+    return output_list
+________________________________
+FIN

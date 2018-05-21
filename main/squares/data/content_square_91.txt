@@ -1,0 +1,97 @@
+________________________________
+$LEFTPANEL_HEADING$
+There Is No Mathematics to Love and Loss
+https://open.spotify.com/track/43xqZEtdM1Keyma9cy3rjQ
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+<a href="http://www.mathsisfun.com/pascals-triangle.html" target="_blank">Pascal's Triangle</a>, named after the French mathematician Blaise Pascal, is notable for a number of interesting properties. To build one, we start with three ^int^ 1 values, and arrange them as follows:
+<democodeblock>
+<code>row=0 | <tab> 1</code>
+<code>row=1 | <3sp> 1 1</code>
+</democodeblock>
+The above is considered a Pascal's Triangle of <b>order</b> 1, since it's built until row 1. A Pascal's Triangle of order 2 looks like this:
+<democodeblock>
+<code>row=0 | <tab> 1</code>
+<code>row=1 | <3sp> <span class="keyword-red">1 1</span></code>
+<code>row=2 | <2sp> 1 <span class="keyword-blue">2</span> 1</code>
+</democodeblock>
+The middle number in row 2 comes from adding the two ^int^ 1 values directly above it. In other words, <span class="keyword-red">1</span> + <span class="keyword-red">1</span> = <span class="keyword-blue">2</span>. Now, examine a Pascal's Triangle of order 5, left-justified:
+<democodeblock>
+<code>1</code>
+<code>1 1</code>
+<code>1 2 1</code>
+<code>1 3 3 1</code>
+<code>1 4 6 4 1</code>
+<code>1 5 10 10 5 1</code>
+</democodeblock>
+________________________________
+$LEFTPANEL_QUESTION$
+Define a function, <def>pascalsTriangle</def>(), which takes in a positive ^int^ <var>n</var>, and returns a Pascal's Triangle of order <var>n</var>. Your ^str^ must <i>not</i> end with a space character, a ^\n^, or both.
+________________________________
+$LEFTPANEL_EDITOR$
+def pascalsTriangle(n):
+________________________________
+$LEFTPANEL_HINTS$
+In order to remove any trailing ^\n^ or an extra space characters, look up the .^rstrip^() method, and apply it on your ^return^ statement!
+________________________________
+$RIGHTPANEL_QUESTIONS$
+This square is much more difficult, yet vaguely similar to <def>numRectangle</def>(). How are they different?
+________________________________
+$RIGHTPANEL_TESTCASES$
+You should be returning a single ^str^, with rows separated by ^\n^ characters.
+For the purposes of this square, your output must be left-justified, like in the last example.
+________________________________
+$ALLPANES_SUBMITCASES$
+print ""
+print "INPUT     | 2"
+print "OUTPUT    |", pascalsTriangle(2).split('\\n')[-1], "(last row)"
+print "EXPECTED  | 1 2 1"
+if pascalsTriangle(2).split('\\n')[-1] == '1 2 1':
+    print "PASSED!"
+else: 
+    print "FAILED"
+
+print ""
+print "INPUT     | 5"
+print "OUTPUT    |", pascalsTriangle(5).split('\\n')[-1]
+print "EXPECTED  | 1 5 10 10 5 1"
+if pascalsTriangle(5).split('\\n')[-1] == '1 5 10 10 5 1':
+    print "PASSED!"
+else: 
+    print "FAILED"
+
+print ""
+print "INPUT     | 11"
+print "OUTPUT    |", pascalsTriangle(11).split('\\n')[-1]
+print "EXPECTED  | 1 11 55 165 330 462 462 330 165 55 11 1"
+if pascalsTriangle(11).split('\\n')[-1] == '1 11 55 165 330 462 462 330 165 55 11 1':
+    print "PASSED!"
+else: 
+    print "FAILED"
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+$RIGHTPANEL_SOLUTION$
+def pascalsTriangle(n):
+	triangle = [[1]]
+	answer = ''
+	while n > 0:
+		prevRow 	= triangle[-1]
+		newRow 		= [1]
+		counter 	= 0
+		for item in prevRow[1:]:
+			prevItem = prevRow[counter]
+			newRow.append(item + prevItem)
+			counter += 1
+		newRow.append(1)
+		triangle.append(newRow)
+		n -= 1
+	for row in triangle:
+		for num in row:
+			answer += str(num) + ' '
+		answer += '\n'
+	return answer.rstrip()
+________________________________
+FIN
+
+

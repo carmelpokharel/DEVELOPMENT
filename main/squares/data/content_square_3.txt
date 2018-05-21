@@ -1,0 +1,40 @@
+________________________________
+$LEFTPANEL_HEADING$
+Who's Afraid of 138?
+https://open.spotify.com/track/1kDwbjxdVDdBlozOPFffSC
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+Now for the ^int^ datatype, which represents integers in Python.
+
+If you recall from math class, an integer is any whole number that is positive, negative, or zero. Python's ^int^ datatype is much the same.
+
+Printing an ^int^ is <em>almost</em> like printing a ^str^, but with one difference: unlike strings, integers don't need quotation marks.
+________________________________
+$LEFTPANEL_QUESTION$
+Print the integers 138 and -138 on separate lines, so that the output looks like the following.
+<outputcodeblock>
+<code>138</code>
+<code>-138</code>
+</outputcodeblock>
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+Write the statements as you would for strings, but omit the quotation marks.
+________________________________
+$RIGHTPANEL_QUESTIONS$
+You may have noticed that the outputs from printing 138 and '138' are identical. Try running the following statements from the Editor--what do you see?
+<cardcodeblock>
+<code>^print^ ^type^(138) ^is^ ^int^</code>
+<code>^print^ ^type^('138') ^is^ ^int^</code>
+</cardcodeblock>
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+$RIGHTPANEL_SOLUTION$
+print 138
+print -138
+________________________________
+FIN
