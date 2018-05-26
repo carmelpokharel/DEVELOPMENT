@@ -90,5 +90,5 @@ if __name__ == '__main__':
         if '__default.html' not in html_file_path:
             Utilities_Class.PAL_90_Pretty_Print_HTML_File(html_file_path)
 
-    print 'Development version created successfully'
+    print ('Development version created successfully')
     # cleanCompileFiles(os.getcwd())

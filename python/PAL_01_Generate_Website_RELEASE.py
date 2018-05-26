@@ -151,4 +151,4 @@ if __name__ == '__main__':
 
 
 
-	print 'Release version created successfully'
+	print ('Release version created successfully')

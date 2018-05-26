@@ -106,8 +106,8 @@ class PAL_90_Utilities_Class(object):
     # =================
 
     def PAL_90_Utilities_Internal(self):
-        print 'WARNING: This program is only for use by other modules.'
-        print 'Program terminated without action.\n'
+        print ('WARNING: This program is only for use by other modules.')
+        print ('Program terminated without action.\n')
 
 
     def PAL_90_Spell_Number(self, n):
@@ -235,7 +235,7 @@ class PAL_90_Utilities_Class(object):
         Template_Data = []
 
         if not os.path.isfile(GIVEN_PATH):
-            print "ERROR: TEMPLATE FILE NOT FOUND"
+            print ("ERROR: TEMPLATE FILE NOT FOUND")
 
         fileStream = open(GIVEN_PATH, 'r')
         allLines = fileStream.readlines()
@@ -257,7 +257,7 @@ class PAL_90_Utilities_Class(object):
 
         Content_Info = defaultdict(list)
 
-        current_content_file = GIVEN_PATH + unicode(tutorial_num) + '.txt'
+        current_content_file = GIVEN_PATH + str(tutorial_num) + '.txt'
 
         fileStream = open(current_content_file, 'r')
         allLines = fileStream.readlines()

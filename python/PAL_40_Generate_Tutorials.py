@@ -81,10 +81,10 @@ class PAL_40_Generate_Tutorials(object):
 			else:
 				outFile.write('\n        '+sentence.strip('\n'))
 
-		if unicode(tutorial_num) in ['3','4','5','6','7','8','9']:
+		if str(tutorial_num) in ['3','4','5','6','7','8','9']:
 			
 			# INSTRUCTIONS
-			if unicode(tutorial_num) in ['5','8','9']:
+			if str(tutorial_num) in ['5','8','9']:
 				for sentence in self.Tutorials_Info['$LEFTPANEL_INSTRUCTIONSAREA$\n']:
 					if '<code>' in sentence:
 						outFile.write('\n        <p class="small">'+sentence.strip('\n')+'</p>')
@@ -92,7 +92,7 @@ class PAL_40_Generate_Tutorials(object):
 						outFile.write('\n        <p>'+sentence.strip('\n')+'</p>')
 
 			# TOOLBAR
-			if unicode(tutorial_num) in ['3','4','5','6','7','8','9']:
+			if str(tutorial_num) in ['3','4','5','6','7','8','9']:
 				for sentence in self.Tutorials_Info['$LEFTPANEL_TOOLBARAREA$\n']:
 					outFile.write('\n        <p>'+sentence.strip('\n')+'</p>')
 				outFile.write('\n          <div class="editor">')
@@ -104,7 +104,7 @@ class PAL_40_Generate_Tutorials(object):
 				outFile.write('\n              </div>')
 			
 			# Print hint
-			if unicode(tutorial_num) in ['6','7','8','9']:
+			if str(tutorial_num) in ['6','7','8','9']:
 				titles = ['What gives?', 'Out of ideas?', 'Not your day?', 'Coder\'s block?', 'Dazed and confused?', 'Battered and bruised?', 'Losing hope?', 'Under the weather?', 'Need a little help?']
 				hintcontent = ''
 				outFile.write('\n              <div class="editortoolbaritems">')
@@ -119,9 +119,9 @@ class PAL_40_Generate_Tutorials(object):
 			#outFile.write('\n        <p class="small">&nbsp;</p>')
 
 			# EDITOR
-			if unicode(tutorial_num) in ['3','4','5','6','7','8','9']:
+			if str(tutorial_num) in ['3','4','5','6','7','8','9']:
 				outFile.write('\n          <form align="left"> ')
-				number_of_editor_rows		 = unicode(len(self.Tutorials_Info['$LEFTPANEL_EDITOR$\n'])+4)
+				number_of_editor_rows		 = str(len(self.Tutorials_Info['$LEFTPANEL_EDITOR$\n'])+4)
 				
 				if int(number_of_editor_rows) <= 4:
 					outFile.write('\n            <textarea id="textbox" name="textbox" rows="'+number_of_editor_rows+'">')
@@ -133,7 +133,7 @@ class PAL_40_Generate_Tutorials(object):
 				outFile.write('\n          </form>')
 
 			# OUTPUT
-			if unicode(tutorial_num) in ['3','4','5','6','7','8','9']:
+			if str(tutorial_num) in ['3','4','5','6','7','8','9']:
 				for sentence in self.Tutorials_Info['$LEFTPANEL_OUTPUTAREA$\n']:
 					if sentence != '':
 						outFile.write('\n        <p>'+sentence.strip('\n')+'</p>')
@@ -165,8 +165,8 @@ class PAL_40_Generate_Tutorials(object):
 
 
 		# NAVIGATION BUTTONS
-		previous_Tutorial = 'tutorial_'+unicode(tutorial_num-1)+'.html'
-		next_Tutorial 	= 'tutorial_'+unicode(tutorial_num+1)+'.html'
+		previous_Tutorial = 'tutorial_'+str(tutorial_num-1)+'.html'
+		next_Tutorial 	= 'tutorial_'+str(tutorial_num+1)+'.html'
 
 		if previous_Tutorial not in os.listdir(self.LOCAL_PAGES_DIR):
 			if previous_Tutorial == 'tutorial_0.html':
@@ -237,7 +237,7 @@ class PAL_40_Generate_Tutorials(object):
 		for page_num in range(1,10):
 			
 			# Open web page for writing
-			current_html_file = self.HTML_PATHS + unicode(page_num) + '.html'
+			current_html_file = self.HTML_PATHS + str(page_num) + '.html'
 			outFile = open(current_html_file, 'w')
 
 			# Load the content

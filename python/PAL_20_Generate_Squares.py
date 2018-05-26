@@ -89,9 +89,9 @@ class PAL_20_Generate_Squares(object):
 
 	def PAL_20_Load_Square_Content(self, square_num):
 		
-		current_content_file 	= self.CONTENT_PATHS + unicode(square_num) + '.txt'
-		easy_content_file 		= self.CONTENT_PATHS + unicode(square_num) + '_easy.txt'
-		hard_content_file 		= self.CONTENT_PATHS + unicode(square_num) + '_hard.txt'
+		current_content_file 	= self.CONTENT_PATHS + str(square_num) + '.txt'
+		easy_content_file 		= self.CONTENT_PATHS + str(square_num) + '_easy.txt'
+		hard_content_file 		= self.CONTENT_PATHS + str(square_num) + '_hard.txt'
 
 		if os.path.exists(easy_content_file):
 			self.Easy_Alt_Exists = True
@@ -152,19 +152,19 @@ class PAL_20_Generate_Squares(object):
 
 	# 	end_square = 0
 	# 	for id_num in range(1,6):
-	# 		id_num = unicode(id_num)
+	# 		id_num = str(id_num)
 
 	# 		start_square 	= end_square + 1
 	# 		end_square 		= start_square + 19
 
-	# 		square_string	= unicode(start_square) + ' to ' + unicode(end_square)
+	# 		square_string	= str(start_square) + ' to ' + str(end_square)
 
 	# 		outFile.write('\n          <label class="minigameboard-row" for="_'+id_num+'">Squares '+square_string+'</label>')
 	# 		outFile.write('\n          <input id="_'+id_num+'" type="checkbox">')
 	# 		outFile.write('\n          <div class="minigameboard-box-contain">')
 			
 	# 		for square in range (int(start_square), int(end_square)+1):
-	# 			square = unicode(square)
+	# 			square = str(square)
 	# 			square_link = 'square_' + square + '.html'
 
 	# 			if square_link in os.listdir(self.LOCAL_PAGES_DIR):
@@ -188,10 +188,10 @@ class PAL_20_Generate_Squares(object):
 		outFile.write('\n        <div class="bannerpane">')
 		outFile.write('\n          <div class="banneritems">')
 
-		easy_square 	= 'square_'+unicode(square_num)+'_easy.html'
-		hard_square 	= 'square_'+unicode(square_num)+'_hard.html'
-		previous_square = 'square_'+unicode(square_num-1)+'.html'
-		next_square 	= 'square_'+unicode(square_num+1)+'.html'
+		easy_square 	= 'square_'+str(square_num)+'_easy.html'
+		hard_square 	= 'square_'+str(square_num)+'_hard.html'
+		previous_square = 'square_'+str(square_num-1)+'.html'
+		next_square 	= 'square_'+str(square_num+1)+'.html'
 
 		if previous_square not in os.listdir(self.LOCAL_PAGES_DIR):
 			if previous_square == 'square_0.html':
@@ -206,11 +206,11 @@ class PAL_20_Generate_Squares(object):
 				next_square = '../../../pagenotfound.html'
 
 		outFile.write('\n      <div class="squarenav2">')
-		outFile.write('\n        <a href="square_'+unicode(square_num)+'.html"><div class="box-square2"><div class="box-square-number2" onclick="">'+unicode(square_num)+'</div></div></a>')
+		outFile.write('\n        <a href="square_'+str(square_num)+'.html"><div class="box-square2"><div class="box-square-number2" onclick="">'+str(square_num)+'</div></div></a>')
 
-		if unicode(square_num) != '1':
+		if str(square_num) != '1':
 			outFile.write('\n        <a href="'+previous_square+'"><div class="box-square2"><div class="box-square-arrows2" onclick="">&lang;</div></div></a>')
-		if unicode(square_num) != '100':
+		if str(square_num) != '100':
 			outFile.write('\n        <a href="'+next_square+'"><div class="box-square2"><div class="box-square-arrows2" onclick="">&rang;</div></div></a>')
 
 		# Print link to easy/hard if available
@@ -284,7 +284,7 @@ class PAL_20_Generate_Squares(object):
 
 		# Print editor content
 		outFile.write('\n          <form> ')
-		number_of_editor_rows		 = unicode(len(self.Square_Info['$LEFTPANEL_EDITOR$\n'])+4)
+		number_of_editor_rows		 = str(len(self.Square_Info['$LEFTPANEL_EDITOR$\n'])+4)
 		
 		if int(number_of_editor_rows) <= 4:
 			outFile.write('\n            <textarea id="textbox" name="textbox" rows="'+number_of_editor_rows+'">')
@@ -340,7 +340,7 @@ class PAL_20_Generate_Squares(object):
 			outFile.write('\n          <button>&lang; PREVIOUS</button>')
 		outFile.write('\n        </a>')
 		outFile.write('\n        <a style="border-bottom:0px" href="'+next_square+'">')
-		if unicode(square_num) == '100':
+		if str(square_num) == '100':
 			outFile.write('\n          <button class="start">FINISH!</button>')
 		else:
 			outFile.write('\n          <button>NEXT &rang; </button>')
@@ -404,7 +404,7 @@ class PAL_20_Generate_Squares(object):
 		for page_num in range(1,101):
 			
 			# Open web page for writing
-			current_square_html_file = self.HTML_PATHS + unicode(page_num) + '.html'
+			current_square_html_file = self.HTML_PATHS + str(page_num) + '.html'
 			outFile = open(current_square_html_file, 'w')
 
 			# Load the content to go in this file
@@ -417,7 +417,7 @@ class PAL_20_Generate_Squares(object):
 			self.PAL_20_Print_Body(page_num, outFile)
 
 			# Print the title
-			self.Utilities.PAL_90_Print_Title('Square ' + unicode(page_num), outFile)
+			self.Utilities.PAL_90_Print_Title('Square ' + str(page_num), outFile)
 
 			# Print closing tags
 			self.Utilities.PAL_90_Print_Template(self.Closing_Tags_Data, outFile)

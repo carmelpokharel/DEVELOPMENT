@@ -112,8 +112,8 @@ class PAL_12_Generate_Updates(object):
 			outFile.write('\n            </ul>')
 			outFile.write('\n            <hr>')
 
-		prevupdatepage = 'updates_' + unicode(page_num-1) + '.html'
-		nextupdatepage = 'updates_' + unicode(page_num+1) + '.html'
+		prevupdatepage = 'updates_' + str(page_num-1) + '.html'
+		nextupdatepage = 'updates_' + str(page_num+1) + '.html'
 		if page_num != 0:
 			outFile.write('\n        <a style="border-bottom:0px" href="'+prevupdatepage+'">')
 			outFile.write('\n          <button>&lang; PREVIOUS</button>')
@@ -157,7 +157,7 @@ class PAL_12_Generate_Updates(object):
 		for page_num in range(self.PAL_12_Split_Updates_Content()):
 
 			# Open web page for writing
-			current_updates_html_file = self.HTML_PATHS + unicode(page_num) + '.html'
+			current_updates_html_file = self.HTML_PATHS + str(page_num) + '.html'
 			outFile = open(current_updates_html_file, 'w')
 
 			# Print the header

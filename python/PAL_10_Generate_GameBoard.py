@@ -68,7 +68,7 @@ class PAL_10_Generate_GameBoard(object):
 	# 			self.Build_No[self.current_date_key] = []
 	# 		else:
 	# 			self.Build_No[self.current_date_key].append(update)
-	# 	return unicode(len(self.Build_No)-25-1)
+	# 	return str(len(self.Build_No)-25-1)
 
 
 	def PAL_10_Print_Mini_Row(self, outFile):
@@ -77,19 +77,19 @@ class PAL_10_Generate_GameBoard(object):
 
 		end_square = 0
 		for id_num in range(1,6):
-			id_num = unicode(id_num)
+			id_num = str(id_num)
 
 			start_square 	= end_square + 1
 			end_square 		= start_square + 19
 
-			square_string	= unicode(start_square) + ' to ' + unicode(end_square)
+			square_string	= str(start_square) + ' to ' + str(end_square)
 
 			outFile.write('\n          <label class="minigameboard-home-row" for="_'+id_num+'">Squares '+square_string+'</label>')
 			outFile.write('\n          <input id="_'+id_num+'" type="checkbox">')
 			outFile.write('\n          <div class="minigameboard-home-box-contain">')
 			
 			for square in range (int(start_square), int(end_square)+1):
-				square = unicode(square)
+				square = str(square)
 				square_link = 'square_' + square + '.html'
 				if square_link in os.listdir(self.SQUARE_PAGES_DIR):
 					if square == '1':
@@ -112,9 +112,9 @@ class PAL_10_Generate_GameBoard(object):
 	def PAL_10_Print_Forward_Row(self, start, end, outFile):
 
 		for square in range(start, end+1):
-			if 'content_square_' + unicode(square) + '_easy.txt' in os.listdir(self.SQUARE_DATA_DIR):
+			if 'content_square_' + str(square) + '_easy.txt' in os.listdir(self.SQUARE_DATA_DIR):
 				self.list_of_easy_squares[square] = None
-			elif 'content_square_' + unicode(square) + '_hard.txt' in os.listdir(self.SQUARE_DATA_DIR):
+			elif 'content_square_' + str(square) + '_hard.txt' in os.listdir(self.SQUARE_DATA_DIR):
 				self.list_of_hard_squares[square] = None
 
 		outFile.write('\n            <div>')
@@ -129,21 +129,21 @@ class PAL_10_Generate_GameBoard(object):
 				square_link = 'square_' + '1' + '.html'
 				square_print = 'GO'
 			else:
-				square_link = 'square_' + unicode(square) + '.html'
-				square_print = unicode(square)
+				square_link = 'square_' + str(square) + '.html'
+				square_print = str(square)
 
 			if square_link in os.listdir(self.SQUARE_PAGES_DIR):
 				if square_print=='GO':
-					outFile.write('\n              <a href="./main/squares/pages/'+square_link+'" alt="'+unicode(square)+'"><div class="box"><div class="box-grid-home-start" onclick="">'+unicode(square_print)+'</div></div></a>')
+					outFile.write('\n              <a href="./main/squares/pages/'+square_link+'" alt="'+str(square)+'"><div class="box"><div class="box-grid-home-start" onclick="">'+str(square_print)+'</div></div></a>')
 				else:
 					if square in self.list_of_easy_squares:
-						outFile.write('\n              <a href="./main/squares/pages/'+square_link+'" alt="'+unicode(square)+'"><div class="box"><div class="box-grid-home-easy" onclick="">'+unicode(square_print)+'</div></div></a>')
+						outFile.write('\n              <a href="./main/squares/pages/'+square_link+'" alt="'+str(square)+'"><div class="box"><div class="box-grid-home-easy" onclick="">'+str(square_print)+'</div></div></a>')
 					elif square in self.list_of_hard_squares:
-						outFile.write('\n              <a href="./main/squares/pages/'+square_link+'" alt="'+unicode(square)+'"><div class="box"><div class="box-grid-home-hard" onclick="">'+unicode(square_print)+'</div></div></a>')
+						outFile.write('\n              <a href="./main/squares/pages/'+square_link+'" alt="'+str(square)+'"><div class="box"><div class="box-grid-home-hard" onclick="">'+str(square_print)+'</div></div></a>')
 					else:
-						outFile.write('\n              <a href="./main/squares/pages/'+square_link+'" alt="'+unicode(square)+'"><div class="box"><div class="box-grid-home" onclick="">'+unicode(square_print)+'</div></div></a>')
+						outFile.write('\n              <a href="./main/squares/pages/'+square_link+'" alt="'+str(square)+'"><div class="box"><div class="box-grid-home" onclick="">'+str(square_print)+'</div></div></a>')
 			else: 
-				outFile.write('\n              <a href="pagenotfound.html" alt="'+unicode(square)+'"><div class="box"><div class="box-grid-home" onclick="">'+unicode(square_print)+'</div></div></a>')
+				outFile.write('\n              <a href="pagenotfound.html" alt="'+str(square)+'"><div class="box"><div class="box-grid-home" onclick="">'+str(square_print)+'</div></div></a>')
 
 			if curr_boxnum == 1: boxnum = 1
 			if curr_boxnum == 3: boxnum = 3
@@ -155,9 +155,9 @@ class PAL_10_Generate_GameBoard(object):
 	def PAL_10_Print_Backward_Row(self, start, end, outFile):
 
 		for square in range(start, end+1):
-			if 'content_square_' + unicode(square) + '_easy.txt' in os.listdir(self.SQUARE_DATA_DIR):
+			if 'content_square_' + str(square) + '_easy.txt' in os.listdir(self.SQUARE_DATA_DIR):
 				self.list_of_easy_squares[square] = None
-			elif 'content_square_' + unicode(square) + '_hard.txt' in os.listdir(self.SQUARE_DATA_DIR):
+			elif 'content_square_' + str(square) + '_hard.txt' in os.listdir(self.SQUARE_DATA_DIR):
 				self.list_of_hard_squares[square] = None
 		
 		outFile.write('\n            <div>')
@@ -167,23 +167,23 @@ class PAL_10_Generate_GameBoard(object):
 				boxnum = 3
 			if square == 100:
 				square = '100'
-			square_link = 'square_' + unicode(square) + '.html'
+			square_link = 'square_' + str(square) + '.html'
 			
 			if square_link in os.listdir(self.SQUARE_PAGES_DIR):
 				if square == '100':
-					outFile.write('\n              <a href="./main/squares/pages/'+square_link+'" alt="'+unicode(square)+'"><div class="box"><div class="box-grid-home" onclick="">'+unicode(square)+'</div></div></a>')
+					outFile.write('\n              <a href="./main/squares/pages/'+square_link+'" alt="'+str(square)+'"><div class="box"><div class="box-grid-home" onclick="">'+str(square)+'</div></div></a>')
 				else:
 					if square in self.list_of_easy_squares:
-						outFile.write('\n              <a href="./main/squares/pages/'+square_link+'" alt="'+unicode(square)+'"><div class="box"><div class="box-grid-home-easy" onclick="">'+unicode(square)+'</div></div></a>')
+						outFile.write('\n              <a href="./main/squares/pages/'+square_link+'" alt="'+str(square)+'"><div class="box"><div class="box-grid-home-easy" onclick="">'+str(square)+'</div></div></a>')
 					elif square in self.list_of_hard_squares:
-						outFile.write('\n              <a href="./main/squares/pages/'+square_link+'" alt="'+unicode(square)+'"><div class="box"><div class="box-grid-home-hard" onclick="">'+unicode(square)+'</div></div></a>')
+						outFile.write('\n              <a href="./main/squares/pages/'+square_link+'" alt="'+str(square)+'"><div class="box"><div class="box-grid-home-hard" onclick="">'+str(square)+'</div></div></a>')
 					else:
-						outFile.write('\n              <a href="./main/squares/pages/'+square_link+'" alt="'+unicode(square)+'"><div class="box"><div class="box-grid-home" onclick="">'+unicode(square)+'</div></div></a>')
+						outFile.write('\n              <a href="./main/squares/pages/'+square_link+'" alt="'+str(square)+'"><div class="box"><div class="box-grid-home" onclick="">'+str(square)+'</div></div></a>')
 			else:
 				if square == '100':
-					outFile.write('\n              <a href="pagenotfound.html" alt="'+unicode(square)+'"><div class="box"><div class="box-grid-home" onclick="">'+unicode(square)+'</div></div></a>')
+					outFile.write('\n              <a href="pagenotfound.html" alt="'+str(square)+'"><div class="box"><div class="box-grid-home" onclick="">'+str(square)+'</div></div></a>')
 				else:
-					outFile.write('\n              <a href="pagenotfound.html" alt="'+unicode(square)+'"><div class="box"><div class="box-grid-home" onclick="">'+unicode(square)+'</div></div></a>')
+					outFile.write('\n              <a href="pagenotfound.html" alt="'+str(square)+'"><div class="box"><div class="box-grid-home" onclick="">'+str(square)+'</div></div></a>')
 			
 			boxnum -=1
 		outFile.write('\n            </div><!-- anonymous div -->')

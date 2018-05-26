@@ -145,19 +145,19 @@ class PAL_21_Generate_Squares_Easy(object):
 
 		end_square = 0
 		for id_num in range(1,6):
-			id_num = unicode(id_num)
+			id_num = str(id_num)
 
 			start_square 	= end_square + 1
 			end_square 		= start_square + 19
 
-			square_string	= unicode(start_square) + ' to ' + unicode(end_square)
+			square_string	= str(start_square) + ' to ' + str(end_square)
 
 			outFile.write('\n          <label class="minigameboard-row" for="_'+id_num+'">Squares '+square_string+'</label>')
 			outFile.write('\n          <input id="_'+id_num+'" type="checkbox">')
 			outFile.write('\n          <div class="minigameboard-box-contain">')
 			
 			for square in range (int(start_square), int(end_square)+1):
-				square = unicode(square)
+				square = str(square)
 				square_link = 'square_' + square + '.html'
 
 				if square_link in os.listdir(self.LOCAL_PAGES_DIR):
@@ -181,8 +181,8 @@ class PAL_21_Generate_Squares_Easy(object):
 		outFile.write('\n        <div class="bannerpane-easy">')
 		outFile.write('\n          <div class="banneritems">')
 
-		previous_square = 'square_'+unicode(square_num-1)+'.html'
-		next_square 	= 'square_'+unicode(square_num)+'.html'
+		previous_square = 'square_'+str(square_num-1)+'.html'
+		next_square 	= 'square_'+str(square_num)+'.html'
 
 		if previous_square not in os.listdir(self.LOCAL_PAGES_DIR):
 			if previous_square == 'square_0.html':
@@ -194,9 +194,9 @@ class PAL_21_Generate_Squares_Easy(object):
 			next_square = '../../../pagenotfound.html'
 
 		outFile.write('\n      <div class="squarenav2">')
-		outFile.write('\n        <a href="square_'+unicode(square_num)+'.html"><div class="box-square2"><div class="box-square-number2" onclick=""><img style="width:80%;height:100%;max-width:47px" src="../../../images/snake.png"></div></div></a>')
+		outFile.write('\n        <a href="square_'+str(square_num)+'.html"><div class="box-square2"><div class="box-square-number2" onclick=""><img style="width:80%;height:100%;max-width:47px" src="../../../images/snake.png"></div></div></a>')
 
-		if unicode(square_num) != '100':
+		if str(square_num) != '100':
 			outFile.write('\n        <a href="'+next_square+'"><div class="box-square2"><div class="box-square-arrows2" onclick="">&rang;</div></div></a>')
 		outFile.write('\n      </div>')
 
@@ -264,7 +264,7 @@ class PAL_21_Generate_Squares_Easy(object):
 
 		# Print editor content
 		outFile.write('\n          <form> ')
-		number_of_editor_rows		 = unicode(len(self.Square_Info['$LEFTPANEL_EDITOR$\n'])+4)
+		number_of_editor_rows		 = str(len(self.Square_Info['$LEFTPANEL_EDITOR$\n'])+4)
 		
 		if int(number_of_editor_rows) <= 4:
 			outFile.write('\n            <textarea id="textbox" name="textbox" rows="'+number_of_editor_rows+'">')
@@ -292,7 +292,7 @@ class PAL_21_Generate_Squares_Easy(object):
 		outFile.write('\n          <h4 class="h4gold">Easy Versions</h4>')
 		Easy_Text = self.Utilities.Easy_Version_Text.split('\n')
 		for paragraph in Easy_Text:
-			outFile.write('\n              <p>'+paragraph.replace('$#$', unicode(square_num))+'</p>')
+			outFile.write('\n              <p>'+paragraph.replace('$#$', str(square_num))+'</p>')
 
 		# Print notes
 		if self.Square_Info['$RIGHTPANEL_NOTES$\n'] == ['']:
@@ -330,7 +330,7 @@ class PAL_21_Generate_Squares_Easy(object):
 		outFile.write('\n          <h4 class="greyheading">Easy Versions</h4>')
 		Easy_Text = self.Utilities.Easy_Version_Text.split('\n')
 		for paragraph in Easy_Text:
-			outFile.write('\n              <p>'+paragraph.replace('$#$', unicode(square_num))+'</p>')
+			outFile.write('\n              <p>'+paragraph.replace('$#$', str(square_num))+'</p>')
 		outFile.write('\n        </div><!-- infocard -->')
 		outFile.write('\n          </div><!-- rightpane -->')
 
@@ -364,12 +364,12 @@ class PAL_21_Generate_Squares_Easy(object):
 		for page_num in range(1,101):
 
 			# Load the content to go in this file
-			current_content_file = self.CONTENT_PATHS + unicode(page_num) + '_easy.txt'
+			current_content_file = self.CONTENT_PATHS + str(page_num) + '_easy.txt'
 			if os.path.exists(current_content_file):
 				self.PAL_21_Load_Square_Content(current_content_file, page_num)
 
 				# Open web page for writing
-				current_square_html_file = self.HTML_PATHS + unicode(page_num) + '_easy.html'
+				current_square_html_file = self.HTML_PATHS + str(page_num) + '_easy.html'
 				outFile = open(current_square_html_file, 'w')
 
 				# Print the header
@@ -379,7 +379,7 @@ class PAL_21_Generate_Squares_Easy(object):
 				self.PAL_21_Print_Body(page_num, outFile)
 
 				# Print the title
-				self.Utilities.PAL_90_Print_Title('Square ' + unicode(page_num) + ' (Easy)', outFile)
+				self.Utilities.PAL_90_Print_Title('Square ' + str(page_num) + ' (Easy)', outFile)
 
 				# Print closing tags
 				self.Utilities.PAL_90_Print_Template(self.Closing_Tags_Data, outFile)
