@@ -1,0 +1,89 @@
+________________________________
+$LEFTPANEL_HEADING$
+Levels
+https://open.spotify.com/track/6dfXwa0dI1sBm4CIePuOYM
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+________________________________
+$LEFTPANEL_QUESTION$
+Define a function, <def>withinList</def>(), which checks for an element <var>a</var> inside a ^list^ <var>x</var>. Your input ^list^ may contain any datatypes, including another ^list^. 
+For the purposes of this question, you should only check <var>x</var> up to a maximum of two levels--that is to say, you won't need to check inside a list inside a list inside a list... and so on. 
+For example, if <def>withinList</def>() is called with the following two inputs, it should return ^True^:
+<democodeblock>
+<code><var>a</var> = 5</code>
+<code><var>x</var> = [2, 'a', [5], 'b']</code>
+</democodeblock>
+________________________________
+$LEFTPANEL_EDITOR$
+def withinList(a, x):
+________________________________
+$LEFTPANEL_HINTS$
+Nested conditional ^if^/^else^ statements will do the trick!
+________________________________
+$RIGHTPANEL_QUESTIONS$
+Can you complete this question with a single ^for^ loop?
+________________________________
+$RIGHTPANEL_TESTCASES$
+Pay special attention to the second Submit case--it should return ^False^, since the element is found in the third level of lists.
+________________________________
+$ALLPANES_SUBMITCASES$
+print ""
+print "INPUT     | '', ['', ' ', [' ', ' ']]"
+print "OUTPUT    |", withinList('', ['', ' ', [' ', ' ']])
+print "EXPECTED  | True"
+if withinList('', ['', ' ', [' ', ' ']]) == True:
+    print "PASSED!"
+else: 
+    print "FAILED"
+
+print ""
+print "INPUT     | '', [' ', [' ', [''], ' ']]"
+print "OUTPUT    |", withinList('', [' ', [' ', [''], ' ']])
+print "EXPECTED  | False"
+if withinList('', [' ', [' ', [''], ' ']]) == False:
+    print "PASSED!"
+else: 
+    print "FAILED"
+
+print ""
+print "INPUT     | 5, [2, 'a', [5], 'b']"
+print "OUTPUT    |", withinList(5, [2, 'a', [5], 'b'])
+print "EXPECTED  | True"
+if withinList(5, [2, 'a', [5], 'b']) == True:
+    print "PASSED!"
+else: 
+    print "FAILED"
+
+print ""
+print "INPUT     | 5, [2, 'a', ['5'], 'b']"
+print "OUTPUT    |", withinList(5, [2, 'a', ['5'], 'b'])
+print "EXPECTED  | False"
+if withinList(5, [2, 'a', ['5'], 'b']) == False:
+    print "PASSED!"
+else: 
+    print "FAILED"
+
+print ""
+print "INPUT     | 5, [2, 'a', 5, 'b']"
+print "OUTPUT    |", withinList(5, [2, 'a', 5, 'b'])
+print "EXPECTED  | True"
+if withinList(5, [2, 'a', 5, 'b']) == True:
+    print "PASSED!"
+else: 
+    print "FAILED"
+________________________________
+$RIGHTPANEL_SPONSORED$
+
+________________________________
+$RIGHTPANEL_SOLUTION$
+def withinList(a, x):
+    if a in x:
+        return True
+    else:
+        for i in x:
+            if type(i) is list:
+                if a in i:
+                    return True
+        return False
+________________________________
+FIN

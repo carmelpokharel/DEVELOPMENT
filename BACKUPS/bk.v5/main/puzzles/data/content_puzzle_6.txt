@@ -1,0 +1,27 @@
+________________________________
+$LEFTPANEL_HEADING$
+Numbers
+https://open.spotify.com/track/7Ghnsdv1lVpUJN2YhUbz4d
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+Next up&#8212;^keyword^int arithmetic. In mathematics, addition, subtraction, multiplication, and division are all examples of arithmetic <strong>operations</strong>. 
+Run each of the following statements in the Editor and observe their outputs:
+<code class="demoblock">~^keyword^print 10 + 2~^keyword^print 10 - 2~^keyword^print 10 * 2~^keyword^print 10 / 2~</code>
+________________________________
+$LEFTPANEL_QUESTION$
+Write a Python statement which calculates and prints the result of the following expression:
+<p class="mathserif">45 &times; 4 + 2</p>
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+Remember, you're working with integers, not strings. You shouldn't be using quotation marks anywhere!
+________________________________
+$RIGHTPANEL_QUESTIONS$
+What's wrong with this statement?<p class="small"><code>^keyword^print "10" / "2"</code>
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

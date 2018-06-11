@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html> 
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- **************** -->
+    <!--      SCRIPTS     -->
+    <!-- **************** -->
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap-tooltip-and-popover.css">
+    <link rel="stylesheet" type="text/css" href="./css/buttons.css">
+    <link rel="stylesheet" type="text/css" href="./css/editors2.css">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <link rel="stylesheet" type="text/css" href="./css/media-queries.css">
+    <link rel="stylesheet" type="text/css" href="./css/variables.css">
+    <link rel="stylesheet" type="text/css" href="./css/style2.css">
+
+    <!-- JAVASCRIPT -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" ></script> 
+    <script type="text/javascript" src="http://www.skulpt.org/static/skulpt.min.js"></script>
+    <script type="text/javascript" src="http://www.skulpt.org/static/skulpt-stdlib.js"></script>
+    <!--<script type="text/javascript" src="./js/bootstrap-tooltip-and-popover.min.js"></script>-->
+    <!-- JAVASCRIPT: POPOVERS -->
+    <script type="text/javascript">
+      $(document).ready(function() {
+        // Placement can be top, right, left, bottom
+        $('.bootstrap-popover').popover({placement: 'top', delay: {show: 10, hide: 10}})
+      })
+    </script>
+    <!-- JAVASCRIPT: GOOGLE ANALYTICS -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-85355151-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <!-- JAVASCRIPT: TWITTER -->
+    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <!-- JAVASCRIPT: SKULPT + CODEMIRROR -->
+    <script type="text/javascript">
+        var editor;
+        function outf(text) {
+            var mypre = document.getElementById("dynamicframe");
+            mypre.innerHTML = mypre.innerHTML + text;
+        }
+        function builtinRead(x) {
+            if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
+                throw "File not found: '" + x + "'";
+            return Sk.builtinFiles["files"][x];
+        }
+        function runit() {
+                var prog = editor.getDoc().getValue();
+                var mypre = document.getElementById("dynamicframe");
+                mypre.innerHTML = '';
+                Sk.pre = "dynamicframe";
+                Sk.configure({
+                    output: outf,
+                    read: builtinRead
+                });
+                (Sk.TurtleGraphics || (Sk.TurtleGraphics = {})).target = 'canvas';
+                var myPromise = Sk.misceval.asyncToPromise(function() {
+                    try {
+                      return Sk.importMainWithBody("<stdin>", false, prog, true);
+                    }
+                    catch(e) {
+                      var errormsg = e.toString()
+                      var errormsg = errormsg.replace(/\</g,"&lt;");
+                      var errormsg = errormsg.replace(/\>/g,"&gt;")
+                      var errormsg = "<span class=keyword-error>" + errormsg + "</span>"
+                      mypre.innerHTML = (errormsg);
+                    }
+                });
+                myPromise.then(function(mod) {
+                        console.log('success');
+                    },
+                    function(err) {
+                        console.log(err.toString());
+                    });
+            }
+        window.onload = function() {
+                editor = CodeMirror.fromTextArea(document.getElementById('textbox'), {
+                    mode: {
+                        name: "python",
+                        version: 2,
+                        singleLineStringErrors: false
+                    },
+                    lineNumbers: true,
+                    indentUnit: 4
+                });
+            }
+      // --------------------------------
+      // Clear feature for the output div
+      // --------------------------------
+      function clearBox() {
+          document.getElementById('dynamicframe').innerHTML = "";
+      }
+      // --------------------------------
+      // Save as feature for the textarea
+      // --------------------------------
+      function saveTextAsFile() {
+
+          var textToWrite = editor.getDoc().getValue();
+          var textFileAsBlob = new Blob([textToWrite], {
+              type: 'text/plain'
+          });
+          var fileNameToSaveAs = location.href.split("/").slice(-1).toString();
+          var fileNameToSaveAs = "pythonsandladders_" + fileNameToSaveAs.replace(".html", ".txt");
+
+          var downloadLink = document.createElement("a");
+          downloadLink.download = fileNameToSaveAs;
+          downloadLink.innerHTML = "Download File";
+          if (window.webkitURL != null) {
+              // Chrome allows the link to be clicked
+              // without actually adding it to the DOM.
+              downloadLink.href = window.webkitURL.createObjectURL(textFileAsBlob);
+          } else {
+              // Firefox requires the link to be added to the DOM
+              // before it can be clicked.
+              downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
+              downloadLink.onclick = destroyClickedElement;
+              downloadLink.style.display = "none";
+              document.body.appendChild(downloadLink);
+          }
+          downloadLink.click();
+      }
+      var button = document.getElementById('save');
+      button.addEventListener('click', saveTextAsFile);
+      function destroyClickedElement(event) {
+          // remove the link from the DOM
+          document.body.removeChild(event.target);
+      }
+      function sendEmail() {
+        window.location = "mailto:info@pythonsandladders.com?subject=[FEEDBACK]&Body=Square number: %0d%0dIssue or Suggestion: %0d%0dExpected behaviour: ";
+      }
+      function reportBug() {
+        window.location = "mailto:info@pythonsandladders.com?subject=[REPORT BUG]&Body=Date encountered: %0d%0dBug description: %0d%0dExpected behaviour: ";
+      }
+      // --------------------------------
+    </script>
+  </head> 
+
+<body>
+  <div id="wrapper">
+    <header>
+      <!-- SLIDE OUT NAV FOR MOBILE -->
+      <div class="slideoutnav">
+        <input type="checkbox" id="menuToggle">
+        <label for="menuToggle" class="menuicon">&equiv;</label>
+        <nav class="menu">
+          <div class="sidenavlogo">
+            <a href="./index.html">
+              <img src="./images/headingtitle.png" alt="Pythons and Ladders" style="width: 75%; height: 18%;">
+            </a>
+          </div><!-- sidenavlogo -->
+          <p><a href="./index.html">home</a></p>
+          <p><a href="./overview.html">overview</a></p>
+          <p><a href="./main/updates/pages/updates_0.html">updates</a></p>
+          <p><a href="./faq.html">questions</a></p>
+          <p><a href="mailto:info@pythonsandladders.com?subject=Attn: [ADMIN] Pythons and Ladders">contact us</a></p>
+        </nav>
+      </div><!-- slideoutnav -->
+      <a href="./index.html" onclick="">pythons and ladders</a>
+    </header>
+    <div class="allpanes_new">
+      <!-- SIDENAV -->
+      <div class="sidenavpane">
+        <div class="sidenavlogo">
+          <a href="index.html">
+            <img src="./images/headingtitle.png" alt="Pythons and Ladders" style="width: 75%; height: 18%;" onmouseover="this.src='./images/headingtitle_snake.png'" onmouseout="this.src='./images/headingtitle.png'">
+          </a>
+        </div><!-- sidenavlogo -->
+        <br>
+        <br>
+        <br>
+        <br>
+        <a href="index.html">home</a>
+        <a href="overview.html">overview</a>
+        <a href="./main/updates/pages/updates_0.html">updates</a>
+        <a href="faq.html">questions</a>
+        <a href="mailto:info@pythonsandladders.com?subject=Attn: [ADMIN] Pythons and Ladders">contact us</a>
+      </div><!-- sidenavpane -->
+      <!-- BANNER -->
+      <div class="bannerpane">
+        <div class="banneritems">
+          <h2 class="bannertitle">e r r o r</h2>
+        </div><!-- banneritems -->
+      </div><!-- bannerpane -->
+      <!-- LEFT PANE -->
+      <div class="leftpane">
+        <div class="leftpaneinner">
+          <h3>Oops! There's nothing here.</h3>
+          <p>Looks like you've stumbled upon a page that doesn't (yet) exist.</p>
+          <p>That could mean a couple of things:</p>
+          <ol>
+            <li>We're still working on it... it'll be up soon!</li>
+            <li>We never intended for this page to exist in the first place -- you found a bug!</li>
+          </ol>
+          <p>If this feels like unexpected behaviour, please call it to our attention below.</p>
+          <button type="button" onclick="window.location.href='./index.html'">Return home</button>
+          <button type="button" onclick="reportBug()">Report bug</button>
+        </div><!-- leftpaneinner -->
+      </div><!-- leftpane -->
+      <!-- RIGHT PANE -->
+      <div class="rightpane-home">
+      </div><!-- rightpane-home -->
+    </div><!-- allpanes_new -->
+    <title>Oops!</title>
+    <div class="footer">&copy; Pythons and Ladders 2016. All rights reserved.</div><!-- footer -->
+  </div><!-- wrapper -->
+</body>
+</html>

@@ -1,0 +1,25 @@
+________________________________
+$LEFTPANEL_HEADING$
+Changing
+https://open.spotify.com/track/0ZdQuZmy12Mv6px1hjDjcQ
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+As it turns out, you can convert between numerical data types (^int^ to ^float^, or ^float^ to ^int^).
+________________________________
+$LEFTPANEL_QUESTION$
+Write a statement that converts and prints the ^int^ 4 to its respective ^float^ representation. Your output box should show:
+<outputcodeline>4.0</outputcodeline>
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+Look at the Question for You section, then try something similar!
+________________________________
+$RIGHTPANEL_QUESTIONS$
+Try running the following statement from the Editor--what does Python do here?<linespace><code>^print^ ^int^(4.8)</code>
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

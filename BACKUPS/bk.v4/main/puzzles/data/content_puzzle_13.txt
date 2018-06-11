@@ -1,0 +1,47 @@
+________________________________
+$LEFTPANEL_HEADING$
+Hide and Seek
+https://open.spotify.com/track/121so7t3AeX6nLMvxy9ZP9
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+Not all the text that you type in your script will necessarily be a command. In Python, we use <b>comments</b> to make note of what a particular piece of code does. Research how to use comments in your code.
+________________________________
+$LEFTPANEL_QUESTION$
+Write four lines of script that do the following:
+<table>
+   <tr>
+      <td width="15%" valign="top"><u>Line 1:</u></td>
+      <td>A comment that says "This is addition"</td>
+   </tr>
+   <tr>
+      <td width="15%" valign="top"><u>Line 2:</u></td>
+      <td>The output of adding 5 and 3</td>
+   </tr>
+   <tr>
+      <td width="15%" valign="top"><u>Line 3:</u></td>
+      <td>A comment that says "This is multiplication"</td>
+   </tr>
+   <tr>
+      <td width="15%" valign="top"><u>Line 4:</u></td>
+      <td>The output of multiplying 5 and 3</td>
+   </tr>
+   </table>
+Your output should run without any errors and should output the following:
+<code>8</code>
+<code>15</code>
+<p class="small">&nbsp;</p>
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+Each bit of the output needs to be on a new line; you should have four lines of code.
+________________________________
+$RIGHTPANEL_QUESTIONS$
+How do you write a comment in Python?
+Can you put a comment at the end of a print statement? (On the same line as your code?)
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

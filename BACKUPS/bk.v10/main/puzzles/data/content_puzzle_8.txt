@@ -1,0 +1,37 @@
+________________________________
+$LEFTPANEL_HEADING$
+Float
+https://open.spotify.com/track/4MUvaBckjtNGlxX1IuHDPW
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+Python uses a separate datatype to represent decimal numbers, which it calls floating-point numbers, or ^float^. In Python, 5 is an ^int^ but 5.0 is a ^float^.
+
+Notice that the first two statements below include a combination of ^int^ and ^float^ datatypes. How are each of these statements handled?
+<democodeblock>
+<code>^print^ 5.0 + 5</code>
+<code>^print^ 5 + 5.1</code>
+<code>^print^ 5.9 + 5.1</code>
+<code>^print^ 5.0 + 5.1</code>
+</democodeblock>
+________________________________
+$LEFTPANEL_QUESTION$
+Write a statement which calculates and prints the result of the following expression:
+<mathexp>( 10 &divide; 2.5 )<sup> -1</sup> &ndash; 0.095</mathexp>
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+Try to write the expression exactly as shown, but in Python syntax.
+________________________________
+$RIGHTPANEL_QUESTIONS$
+Try running the following statements from the Editor--what do you see?
+<cardcodeblock>
+<code>^print^ ^type^(155) ^is^ ^float^</code>
+<code>^print^ ^type^(155.0) ^is^ ^int^</code>
+</cardcodeblock>
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

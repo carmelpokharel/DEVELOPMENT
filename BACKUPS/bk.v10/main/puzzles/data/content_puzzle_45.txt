@@ -1,0 +1,63 @@
+________________________________
+$LEFTPANEL_HEADING$
+Compared to What
+https://open.spotify.com/track/6HwUwxon7QjBIf75SCz2QD
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+A function isn't always made up of one line of instruction--you can include as many statements as you like. This allows you to do several things to your input before returning an output.
+
+Perhaps more importantly, you can input multiple parameters as well.
+________________________________
+$LEFTPANEL_QUESTION$
+Define a function, <def>greatestOfTwo</def>(), which takes in two ^int^ inputs, <var>number1</var> and <var>number2</var>, compares them, then returns whichever is greater. 
+We've prepopulated the Editor with the function structure for you. Replace the blanks with your code, and make sure to ^print^ your function.
+________________________________
+$LEFTPANEL_EDITOR$
+def greatestOfTwo(number1, number2):
+    if ____:
+        return ____
+    elif ____:
+        return ____
+    else:
+        return ____
+________________________________
+$LEFTPANEL_HINTS$
+Does your function account for cases where the inputs are equal?
+________________________________
+$RIGHTPANEL_QUESTIONS$
+Right now, your function uses multiple ^return^ statements--how would you rewrite it to still compute the greater of two numbers, but only use one ^return^ statement?
+________________________________
+$RIGHTPANEL_TESTCASES$
+If your numbers are equal, ^return^ the first number.
+________________________________
+$ALLPANES_SUBMITCASES$
+print ""
+print "INPUT     | 4, 7"
+print "OUTPUT    |", greatestOfTwo(4, 7)
+print "EXPECTED  | 7"
+if greatestOfTwo(4, 7) == 7:
+	print "PASSED!"
+else: 
+	print "FAILED"
+
+print ""
+print "INPUT     | 7, 4"
+print "OUTPUT    |", greatestOfTwo(4, 7)
+print "EXPECTED  | 7"
+if greatestOfTwo(7, 4) == 7:
+	print "PASSED!"
+else: 
+	print "FAILED"
+
+print ""
+print "INPUT     | 4, 4"
+print "OUTPUT    |", greatestOfTwo(4, 4)
+print "EXPECTED  | 4"
+if greatestOfTwo(4, 4) == 4:
+	print "PASSED!"
+else: 
+	print "FAILED"
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

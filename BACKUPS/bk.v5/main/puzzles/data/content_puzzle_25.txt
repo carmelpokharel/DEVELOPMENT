@@ -1,0 +1,31 @@
+________________________________
+$LEFTPANEL_HEADING$
+Somewhere Else
+https://open.spotify.com/track/1xDPUKoyQuIiea7Le9ZNgn
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+Consider the following two blocks of code:
+
+<code class="demoblock">~finalGrade = 80~^keyword^if finalGrade > 50:~&emsp;&emsp;&emsp;&emsp;^keyword^print 'You passed!'~^keyword^else:~&emsp;&emsp;&emsp;&emsp;^keyword^if finalGrade ^keyword^is 50:~~&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;^keyword^print 'See your professor.'~~&emsp;&emsp;&emsp;&emsp;^keyword^else:~&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;^keyword^print 'You failed.'~</code>
+<code class="demoblock">~finalGrade = 80~^keyword^if finalGrade > 50:~&emsp;&emsp;&emsp;&emsp;^keyword^print 'You passed the course!'~^keyword^elif finalGrade ^keyword^is 50:~&emsp;&emsp;&emsp;&emsp;^keyword^print 'See your professor.'~^keyword^else:~&emsp;&emsp;&emsp;&emsp;^keyword^print 'You failed.'~</code>
+
+You may notice that they are identical in execution. What does the ^keyword^elif statement do?
+________________________________
+$LEFTPANEL_QUESTION$
+Extend your solution to Task Twenty-Four by adding an ^keyword^elif statement. Your code should now print the following line if my_age is set to the ^keyword^int 18:
+<code>Welcome to adulthood!</code>
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+Both the ^keyword^if and ^keyword^elif statements must return a Boolean (i.e. include a conditional statement).
+________________________________
+$RIGHTPANEL_QUESTIONS$
+Is it possible to have more than one ^keyword^elif statement?
+Is it possible to have an ^keyword^if statement, an ^keyword^elif statement, but no ^keyword^else statement?
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

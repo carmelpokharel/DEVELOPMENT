@@ -1,0 +1,176 @@
+
+/*----------------
+  1024px to 1279px
+-----------------*/
+@media all
+and (min-width:                 1024px) 
+and (max-width:                 1279px) 
+{
+    h4.h4goldsmall {
+        margin-bottom:          -8px;
+    }
+    h4.greyheading {
+        margin-top:             2vw;
+        margin-bottom:          -0.6vw;
+        text-transform:         uppercase;
+    }
+    td.demo {
+        width:                  49.3135981vw;
+    }
+    td.output {
+        width:                  49.3135981vw;
+    }
+    .allpanes {
+        margin:                 var(--ipad-landscape-page-padding);
+        width:                  var(--ipad-landscape-allpanes-width);
+        min-width:              var(--ipad-landscape-allpanes-width);
+        border:                 0px solid red;
+        box-shadow:             var(--shadow-small);
+    }
+    .menu {
+        opacity:                1;
+        width:                  205px;
+        font-size:              95%;
+        height:                 455px;
+        padding-top:            -10px;
+        position:               absolute;
+        background-color:       var(--colour-blue-two);
+        left:                   calc(-205px - 2vw);
+        top:                    calc(0vmin + var(--ipad-landscape-headerbar-height));
+        box-shadow:             var(--shadow-small);
+        transition:             all var(--animation-transition-std) ease-in-out;
+        -webkit-transition:     all var(--animation-transition-std) ease-in-out;
+        -moz-transition:        all var(--animation-transition-std) ease-in-out;
+        -ms-transition:         all var(--animation-transition-std) ease-in-out;
+        -o-transition:          all ease-in-out;        
+    }
+    .menu a {
+        display:                block;
+        padding:                8px;
+        text-decoration:        none;
+        font-family:            sans-serif;
+        font-variant:           small-caps;
+        font-size:              110%;
+        line-height:            110%;
+        color:                  var(--colour-off-white);
+        transition:             var(--animation-transition-std);
+    }
+    .leftpane {
+        width:                  51vw;
+        min-width:              51vw;
+        line-height:            150%;
+        margin-top:             2vw;
+        margin-left:            2vw;
+        margin-right:           2vw;
+        padding:                0vw 2vw 3vw 2vw;
+        border:                 0px solid red;
+        box-shadow:             var(--shadow-small);
+        border-radius:          5px;
+    }
+    .puzzlenav {
+        margin-top:             2vw;
+        margin-bottom:          -2vmin;
+        margin-left:            -5px;
+        font-weight:            bold;
+        border:                 0px solid red;
+    }
+    .editor {
+        width:                  48.7vw;
+        min-width:              48.7vw;
+    }
+    .editortoolbaritems {
+        margin-bottom:          6px;
+    }
+    .leftpane .box-grid-1 {
+        margin:                 var(--ipad-landscape-box-margin);
+        height:                 var(--ipad-landscape-box-size);
+        width:                  var(--ipad-landscape-box-size);
+        line-height:            var(--ipad-landscape-box-size);
+        border:                 var(--ipad-landscape-box-border) solid var(--colour-lighter-orange);
+    }
+    .leftpane .box-grid-1-start {
+        margin:                 var(--ipad-landscape-box-margin);
+        height:                 var(--ipad-landscape-box-size);
+        width:                  var(--ipad-landscape-box-size);
+        line-height:            var(--ipad-landscape-box-size);
+        border:                 var(--ipad-landscape-box-border) solid var(--colour-lighter-orange);
+        box-shadow:             none;
+    }
+    .leftpane .box-grid-2 {
+        margin:                 var(--ipad-landscape-box-margin);
+        height:                 var(--ipad-landscape-box-size);
+        width:                  var(--ipad-landscape-box-size);
+        line-height:            var(--ipad-landscape-box-size);
+        border:                 var(--ipad-landscape-box-border) solid var(--colour-text-grey);
+    }
+    .leftpane .box-grid-3 {
+        margin:                 var(--ipad-landscape-box-margin);
+        height:                 var(--ipad-landscape-box-size);
+        width:                  var(--ipad-landscape-box-size);
+        line-height:            var(--ipad-landscape-box-size);
+        border:                 var(--ipad-landscape-box-border) solid var(--colour-lighter-blue-one);
+    }
+    .leftpane .box-grid-3-end {
+        margin:                 var(--ipad-landscape-box-margin);
+        height:                 var(--ipad-landscape-box-size);
+        width:                  var(--ipad-landscape-box-size);
+        line-height:            var(--ipad-landscape-box-size);
+        border:                 var(--ipad-landscape-box-border) solid var(--colour-lighter-blue-one);
+        font-family:            var(--font-style-antic);
+    }
+    .rightpanehome {
+        margin-top:             2vw;
+        width:                  30.5vw;
+        min-width:              30.5vw;
+        box-shadow:             var(--shadow-small);
+        border:                 0px solid red;
+    }
+    .rightpane {
+        margin-top:             2.4vw;
+        width:                  35vw;
+        min-width:              35vw;
+        box-shadow:             none;
+        border:                 0px solid blue;
+    }
+    .miniboard {
+        width:                  35vw;
+        min-width:              35vw;
+
+        box-shadow:             var(--shadow-small);
+        border:                 0px solid yellow;
+    }
+    .rightpanecard {  
+        margin-top:             0.5vw;
+        margin-bottom:          1.25vw;
+        margin-right:           0px;
+        padding-right:          1vw;
+        width:                  88%;
+        min-width:              88%;
+        box-shadow:             var(--shadow-small);
+        border:                 0px solid red;
+    }
+    .minigrid {
+        float:                  middle;
+        width:                  100%;
+        border:                 0px solid green;
+    }
+    .questionsforyou {
+        width:                  90%;
+        border:                 0px solid green;
+    }
+    .box-mini-grid {
+        width:                  2.2vw;
+        height:                 2.2vw;
+        margin:                 0.211vw;
+        line-height:            2.25vw;
+    }
+    .sidenavemptybottom {
+        display: none;
+    }
+    .rightpane .pythonshellbox {
+        display: none;
+    }
+    .overviewrightpane {
+        margin-top: 3vmin;
+    }
+}

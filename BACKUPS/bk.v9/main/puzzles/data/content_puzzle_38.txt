@@ -1,0 +1,51 @@
+________________________________
+$LEFTPANEL_HEADING$
+Days Go By
+https://open.spotify.com/track/4HvO16USfzteifG3cXVSd5
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+Run the following code, and examine its output:
+<democodeblock>
+<code>my_string = 'QWE'</code>
+<code>my_list = ['Robby', 'Thalie', 'Yasmin']</code>
+<code>^for^ name ^in^ my_list:</code>
+<code><tab>my_string = my_string + name[0]</tab></code>
+<code>^print^ my_string</code>
+</democodeblock>
+________________________________
+$LEFTPANEL_QUESTION$
+<table>
+   <tr>
+      <td class="linecol">Line 1</td>
+      <td class="codecol">Declare a variable, new_string, that is an empty ^str^ ('')</td>
+   </tr>
+   <tr>
+      <td class="linecol">Line 2</td>
+      <td class="codecol">Declare a list variable, weekdays, which contains the following five strings: 'Monday', 'Tuesday', 'Wednesday', 'Thursday', and 'Friday'</td>
+   </tr>
+   <tr>
+      <td class="linecol">Line 3-4</td>
+      <td class="codecol">Using a ^for^ loop, iterate through each item of weekdays, and add the first letter of each list item to new_string</td>
+   </tr>
+   <tr>
+      <td class="linecol">Line 5</td>
+      <td class="codecol">Print your new string</td>
+   </tr>
+</table>
+Your output should look like this:
+<outputcodeline>'MTWTF'</outputcodeline>
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+Follow the example closely!
+________________________________
+$RIGHTPANEL_QUESTIONS$
+What does my_string = my_string + name[0] mean?
+What happens if you take out the ^print^ statement?
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

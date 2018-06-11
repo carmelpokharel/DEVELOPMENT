@@ -1,0 +1,33 @@
+________________________________
+$LEFTPANEL_HEADING$
+Another Part of Me
+https://open.spotify.com/track/21VCYxPZ8A2XpSNUyQCT3B
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+To access a larger substring from a string, use a range instead of a single number in the square brackets, like so:
+<code class="demo">print "laughter"[2:5]</code>
+<p class="small">&nbsp;</p>
+________________________________
+$LEFTPANEL_QUESTION$
+In two lines of code, create a variable called <em>movie_name</em> that stores the string "Interstellar", and then returns the substring "Inter" by calling on the variable. Your output should be:
+<code>Inter</code>
+<p class="small">&nbsp;</p>
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+What is the number position of the first letter of a string?
+________________________________
+$RIGHTPANEL_TIME$
+2-3 minutes
+________________________________
+$RIGHTPANEL_QUESTIONS$
+Is the output of your substring inclusive of the first number in your number range? 
+Is the output of your substring inclusive of they second number in your number range?
+What happens if the second number in the range is larger than the position of the last letter? (ie. What output would you get if you typed <em>print "laughter"[5:10]</em>)
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

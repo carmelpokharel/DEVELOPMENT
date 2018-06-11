@@ -1,0 +1,35 @@
+________________________________
+$LEFTPANEL_HEADING$
+TBD
+https://open.spotify.com/track/4t2v0vTHC4bgpgt4cYwEAG
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+In cases where you want another if statement before resorting to the else statement, you can use something called an <b>elif statement</b>. Try this:
+<code class="demo">age = 25</code>
+<code class="demo">if age < 20:</code>
+<code class="demo">&emsp;&emsp;&emsp;&emsp;print "You are a child"</code>
+<code class="demo">elif age >= 20:</code>
+<code class="demo">&emsp;&emsp;&emsp;&emsp;print "You are an adult"</code>
+<code class="demo">else:</code>
+<code class="demo">&emsp;&emsp;&emsp;&emsp;print "That's not an integer, try again."</code>
+When you run this, since the if statement (age < 20) results in False, your code continues to run and moves on to the elif statement. Since your elif statement (age < 20) results in True, Python outputs "You are an adult", and terminates. It does not move on to the else statement.
+________________________________
+$LEFTPANEL_QUESTION$
+INSERT QUESTION HERE
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+Only the else statement does not need a comparison operator. The if and elif statements must both return a Boolean.
+________________________________
+$RIGHTPANEL_QUESTIONS$
+Change the age variable to equal to 10. Which output do you see? Did your code ever reach the elif or else statements?
+Change the age variable to equal to the string "ten". Which output do you see? Which conditional statements had to fail in order to arrive at this output?
+Is it possible to have more than one elif statement?
+Is it possible to have an if statement, an elif statement, but no else statement?
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

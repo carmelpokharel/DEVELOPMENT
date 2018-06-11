@@ -1,0 +1,32 @@
+________________________________
+$LEFTPANEL_ABOUT$
+
+Pythons and Ladders is a free, interactive, and entirely in-browser tutorial for beginners with minimal exposure to programming.
+
+<h4 class="h4gold">AUDIENCE</h4>
+The intended users of Pythons and Ladders are individuals interested in learning how to code, with the ability to motivate and pace themselves. More advanced users will likely not find this tutorial useful.
+
+<h4 class="h4gold">PREREQUISITES</h4>
+In general, the questions in Pythons and Ladders assume the user has a basic knowledge of elementary algebra and mathematics, as well as an Internet connection.
+
+<h4 class="h4gold">USAGE</h4>
+Powered by the Python emulator from Skulpt.org, Pythons and Ladders guides you through a sequence of squares, each containing a puzzle. Your task is to complete each square, each more difficult than the preceding one, until you reach the end. Along the way, you will encounter some "Python" squares, and some "Ladder" squares. Follow the instructions in each square when encountered.
+
+<h4 class="h4gold">OBJECTIVE</h4>
+Pythons and Ladders has been developed with the belief that education should be fun, free, and accessible to all. In a world where the ability to design algorithms is rapidly evolving into a necessity rather than an advantage, we aspire to introduce our users to common programming concepts typically tucked away behind the walls of formal education, and do so in a structured and interesting way.
+
+We are always open to suggestions and feedback. Whether you use Pythons and Ladders to learn programming from scratch, for a quick refresher, or as an educational resource, we hope it serves you well.
+________________________________
+$RIGHTPANEL_RESOURCES$
+One of the most important skills you can develop as a programmer is your ability to ask the right questions. In particular, ask Google the right questions. 
+
+To mimic the real world of programming, the puzzles in Pythons and Ladders are designed to encourage you to research important concepts on your own, and use them in your solutions.
+
+Here are some of our favourite websites:
+<p><a href="http://www.stackoverflow.com" target="_blank">StackOverflow.com</a> &#8212; The world's best programming Q&A site, in our opinion. Every Python question you'll ever think of has been asked and answered here.</p>
+<p><a href="https://docs.python.org/2/" target="_blank">Python web documentation</a> &#8212; Although it's likely that many things here will fly over your head, try to study their usage-case examples.</p>
+<p><a href="http://www.python.org/dev/peps/pep-0008" target="_blank">PEP 008: Style guide in Python</a> &#8212; For all perfectionists, PEP 008 provides guidelines on how to keep your code clean, simple, and quintessentially "Python."</p>
+<p><a href="http://www.python.org/dev/peps/pep-0020" target="_blank">PEP 20: The Zen of Python</a> &#8212; An Animal Farm-esque list of principles for writing fantastic code in Python.</p>
+<p><a href="http://www.learnpython.org" target="_blank">LearnPython.org</a> &#8212; Similar to Pythons and Ladders with its in-browser exercises, LearnPython.org is a free resource for more advanced users, typically already with some background in programming.</p>
+________________________________
+FIN

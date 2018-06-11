@@ -1,0 +1,29 @@
+________________________________
+$LEFTPANEL_HEADING$
+Changing
+https://open.spotify.com/track/0ZdQuZmy12Mv6px1hjDjcQ
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+________________________________
+$LEFTPANEL_QUESTION$
+Write a script that converts the integer 4 into it's respective floating point.
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+You will need to use the float() function.
+________________________________
+$RIGHTPANEL_TIME$
+2-3 minutes
+________________________________
+$RIGHTPANEL_QUESTIONS$
+In Python, is 1.0 the same data type as 1?
+Can you convert between numerical data types (int-float and vice-versa)? If so, how?
+What happens if you try <em>print int(4.8)</em>?
+Can you multiply an integer by a float? 
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

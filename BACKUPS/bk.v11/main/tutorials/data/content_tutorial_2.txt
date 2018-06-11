@@ -1,0 +1,34 @@
+________________________________
+$LEFTPANEL_MAIN$
+Algorithms
+________________________________
+$LEFTPANEL_MAINAREA$
+<h4 class="h4gold">What is an algorithm?</h4>
+In the programming world, not all inputs are equal. The set of instructions you provide to a computer, known as an <strong>algorithm</strong>, affects <em>how</em> a computer processes your requests.
+<h4 class="h4gold">How important is algorithm design?</h4>
+Given the ubiquity of computers from our watches to our cars, refrigerators to lightbulbs, and headphones to thermostats, machine systems are showing up in all parts of our lives.
+To make all of these systems run flawlessly at all times, we rely on well-designed algorithms. These efficient yet complex networks of code are written by (mostly) great minds, who in turn rely on years of research, quality assurance, and experience in the field.
+When dealing with large-scale problems, algorithm design becomes of paramount importance&#8212;you'll always want the computer to solve problems in the quickest, most stable, and most efficient way.
+________________________________
+$LEFTPANEL_INSTRUCTIONSAREA$
+________________________________
+$LEFTPANEL_TOOLBARAREA$
+________________________________
+$LEFTPANEL_EDITORAREA$
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINT$
+You'll find your hints here!
+________________________________
+$LEFTPANEL_OUTPUTAREA$
+________________________________
+$RIGHTPANEL_PYTHONSHELL$
+________________________________
+$RIGHTPANEL_QUESTIONS$
+The topic of design raises an important point: computers do not like bad inputs. If you provide a poorly-designed algorithm to a computer, it will either refuse to run, over-exert itself, throw out error messages, or simply ignore you.
+Needless to say, this behaviour has consequences. On one hand, it can be challenging to communicate with a computer, given its preference for incredibly explicit instructions. On the other hand, at least one thing is for certain: when a computer acts up, the problem is always you!
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+FIN

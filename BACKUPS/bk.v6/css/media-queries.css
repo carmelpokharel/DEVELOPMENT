@@ -1,0 +1,494 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+@import url('https://fonts.googleapis.com/css?family=Antic');
+
+/*-------------
+  MEDIA QUERIES
+--------------*/
+/* Don't adjust text size on mobile devices */
+@media screen and (max-device-width: 1279px){
+  body{
+    -webkit-text-size-adjust: none;
+  }
+}
+/*--------------
+  Mobile-generic
+---------------*/
+@media all
+and (min-width:                 1px) 
+and (max-width:                 1279px) 
+{
+    body {
+        background-color:       var(--colour-lighter-blue-one);
+    }
+    h3 {
+        margin-bottom:          -5px;
+    }
+    h4.h4gold {
+        margin-top:             -2px;
+        margin-bottom:          -7px;
+    }
+    .allpanes .menuicon {
+        font-size:              200%;
+        margin:                 0px 0px 0px 15px;
+        width:                  var(--iphone6-headerbar-height);
+        height:                 var(--iphone6-headerbar-height);
+        color:                  var(--colour-orange);
+    }
+    .box-nav-buttons {
+      margin:                   15px -10px 20px 0px;
+    }
+    .box {
+        font-size: 115%;
+    }
+    .box-nav-orange-empty{
+        width:                  72px;
+        height:                 30px;
+        line-height:            30px;
+        font-size:              90%;
+    }
+    .box-nav-red-filled {
+        width:                  72px;
+        height:                 30px;
+        line-height:            30px;
+        font-size:              90%;
+    }
+    #menuToggle:checked ~ .menu {
+        position:               absolute;
+        left:                   0; 
+    }
+    .tutorial-nav-circles {
+        margin-top:             20px;
+        margin-bottom:          -5px;
+    } 
+    .allpanes .editortoolbar {
+        margin-bottom:          8px;
+    }
+    .allpanes .editortoolbaritems {
+        width:                  55px;
+        height:                 25px;
+        line-height:            25px;
+        font-weight:            bolder;
+        margin-left:            0px;
+        margin-right:           6px;
+    }
+    .popover {
+        padding:                24px;
+    }
+    .popover .arrow {
+        margin:                 19px;
+    }
+    .allpanes .leftpane .box {
+        font-size:              85%;
+        font-family:            var(--font-style-antic);
+    }
+    .allpanes .headerbar {
+        all:                    default;
+        opacity:                1;
+        width:                  100%;
+        font-size:              85%;
+        border:                 0px solid red;
+        margin:                 0 auto 0 auto;
+        float:                  left;
+        position:               relative;
+        height:                 var(--mobile-headerbar-height);
+        line-height:            var(--mobile-headerbar-height);
+        background-color:       var(--colour-blue-two);
+    }
+    .allpanes .headerlogo {
+        all:                    default;
+        margin-left:            21px;
+        width:                  200px;
+        height:                 var(--mobile-headerbar-height);
+        background-color:       var(--colour-blue-two);
+    }
+    .allpanes .headerbar .headerspacingleftedge {
+        width:                  28px;
+        height:                 var(--mobile-headerbar-height);
+        border:                 0px solid orange;
+        background-color:       var(--colour-blue-two);
+    }
+    .allpanes .tutorialbox {
+        margin-top:             4px;
+        font-family:            var(--font-style-antic);
+        font-size:              80%;
+        font-weight:            bold;
+        width:                  155px;
+        background-color:       var(--colour-red);
+        box-shadow:             var(--shadow-small);
+    }
+    .allpanes .mobilefooter {
+        display: none;
+    }
+    #menuToggle {display: none;}
+    .allpanes .sidenav {display: none;}
+    .allpanes .editortoolbarsave {display: none;}
+    .allpanes .headerbar .headerspacingmiddle {display: none;}
+    .allpanes .headerbar .headerspacingrightedge {display: none;}
+    .allpanes .headerbar .headersocialmedia {display: none;}
+    .allpanes .headerbar .headersearch {display: none;}
+    .allpanes .middlepane {display: none;}
+    .feedback {display:none;}
+}
+/*-------------
+  1px to 1023px
+--------------*/
+@media all
+and (min-width:                 1px) 
+and (max-width:                 1023px) 
+{
+    h4.greyheading {
+        color:                  var(--colour-orange);
+        margin-top:             -37px;
+        margin-bottom:          -0px;
+        font-size:              105%;
+        text-transform:         unset;
+    }
+    .allpanes {
+        margin:                 var(--iphone6-portrait-page-padding);
+        width:                  var(--iphone6-allpanes-width);
+        min-width:              var(--iphone6-allpanes-width);
+        border:                 0px solid red;
+        box-shadow:             var(--shadow-small);
+    }
+    .mathexp {
+        width:                  88.5vw;
+    }
+    td.demo {
+        width:                  88.5vw;
+    }
+    table.demo {
+        width:                  89.5vw;
+    }
+    td.output {
+        width:                  88.5vw;
+    }
+    table.output {
+        width:                  89.5vw;
+    }
+    .allpanes .menu {
+        opacity:                1;
+        width:                  200px;
+        font-size:              95%;
+        height:                 420px;
+        padding-top:            -10px;
+        position:               absolute;
+        background-color:       var(--colour-blue-two);
+        left:                   calc(-200px - 2vw);
+        top:                    calc(0vmin + var(--iphone6-headerbar-height));
+        box-shadow:             var(--shadow-small);
+        transition:             all var(--animation-transition-std) ease-in-out;
+        -webkit-transition:     all var(--animation-transition-std) ease-in-out;
+        -moz-transition:        all var(--animation-transition-std) ease-in-out;
+        -ms-transition:         all var(--animation-transition-std) ease-in-out;
+        -o-transition:          all ease-in-out;        
+    }
+    .allpanes .menu a {
+        display:                block;
+        padding:                8px;
+        text-decoration:        none;
+        font-family:            sans-serif;
+        font-variant:           small-caps;
+        font-size:              120%;
+        line-height:            65%;
+        color:                  var(--colour-off-white);
+        transition:             var(--animation-transition-std);
+    }
+    .allpanes .leftpane {
+        width:                  89.4vw;
+        min-width:              89.4vw;
+        line-height:            150%;
+        margin-top:             5px;
+        margin-left:            3vw;
+        margin-bottom:          65px;
+        border:                 0px solid red;
+    }
+    .allpanes .puzzlenav {
+        margin-top:             10px;
+        margin-bottom:          -20px;
+        margin-left:            -5px;
+        font-weight:            bold;
+    }
+    .allpanes .editor {
+        width:                  86.2vw;
+    }
+    .allpanes .leftpane .box-grid-1 {
+        margin:                 var(--iphone6-portrait-box-margin);
+        height:                 var(--iphone6-portrait-box-size);
+        width:                  var(--iphone6-portrait-box-size);
+        line-height:            var(--iphone6-portrait-box-size);
+        border:                 var(--iphone6-box-border) solid var(--colour-lighter-orange);
+    }
+    .allpanes .leftpane .box-grid-1-start {
+        margin:                 var(--iphone6-portrait-box-margin);
+        height:                 var(--iphone6-portrait-box-size);
+        width:                  var(--iphone6-portrait-box-size);
+        line-height:            var(--iphone6-portrait-box-size);
+        border:                 var(--iphone6-box-border) solid var(--colour-lighter-orange);
+        box-shadow:             none;
+        font-size:              100%;
+    }
+    .allpanes .leftpane .box-grid-2 {
+        margin:                 var(--iphone6-portrait-box-margin);
+        height:                 var(--iphone6-portrait-box-size);
+        width:                  var(--iphone6-portrait-box-size);
+        line-height:            var(--iphone6-portrait-box-size);
+        border:                 var(--iphone6-box-border) solid var(--colour-text-grey);
+    }
+    .allpanes .leftpane .box-grid-3 {
+        margin:                 var(--iphone6-portrait-box-margin);
+        height:                 var(--iphone6-portrait-box-size);
+        width:                  var(--iphone6-portrait-box-size);
+        line-height:            var(--iphone6-portrait-box-size);
+        border:                 var(--iphone6-box-border) solid var(--colour-lighter-blue-one);
+    }
+    .allpanes .leftpane .box-grid-3-end {
+        margin:                 var(--iphone6-portrait-box-margin);
+        height:                 var(--iphone6-portrait-box-size);
+        width:                  var(--iphone6-portrait-box-size);
+        line-height:            var(--iphone6-portrait-box-size);
+        border:                 var(--iphone6-box-border) solid var(--colour-lighter-blue-one);
+        font-family:            var(--font-style-antic);
+    }
+    .box-grid-1:hover {
+        background-color:       white;
+        color:                  var(--colour-text-grey);
+    }
+    .box-grid-1-start:hover {
+        transform:              none;
+        border-radius:          var(--shape-rounded-corners);
+        background-color:       var(--colour-orange);
+        color:                  white;
+    }
+    .box-grid-2:hover {
+        background-color:       white;
+        color:                  var(--colour-text-grey);
+    }
+    .box-grid-3:hover {
+        background-color:       white;
+        color:                  var(--colour-text-grey);
+    }
+    .box-grid-3-end:hover {
+        background-color:       white;
+        color:                  var(--colour-text-grey);
+    }
+    .allpanes .rightpane {
+        background-color:       white;
+        margin-top:             0px;
+        margin-left:            3vw;
+        padding:                0px;
+        width:                  89.5vw;
+        min-width:              89.5vw;
+        line-height:            125%;
+    }
+    .rightpanecard {
+        background-color: white;
+        box-shadow: none;
+        border: 0px solid red;
+        width: 89.3vw;
+        padding: 0px;
+        line-height: 150%;
+    }
+    .note-gutter {
+        width: 0px;
+    }
+    .miniboard {
+        display: none;
+    }
+    .allpanes .overviewrightpane {
+    margin-top:             -65px;
+    }
+    .allpanes .rightpanehome {display: none;}
+    .allpanes .rightpane .pythonshell {display:none;}
+}
+
+/*----------------
+  1024px to 1279px
+-----------------*/
+@media all
+and (min-width:                 1024px) 
+and (max-width:                 1279px) 
+{
+    h4.h4goldsmall {
+        margin-bottom:          -8px;
+    }
+    h4.greyheading {
+        margin-top:             2vw;
+        margin-bottom:          -0.6vw;
+        text-transform:         uppercase;
+    }
+    td.demo {
+        width:                  49.3135981vw;
+    }
+    td.output {
+        width:                  49.3135981vw;
+    }
+    .allpanes {
+        margin:                 var(--ipad-landscape-page-padding);
+        width:                  var(--ipad-landscape-allpanes-width);
+        min-width:              var(--ipad-landscape-allpanes-width);
+        border:                 0px solid red;
+        box-shadow:             var(--shadow-small);
+    }
+    .allpanes .menu {
+        opacity:                1;
+        width:                  205px;
+        font-size:              95%;
+        height:                 455px;
+        padding-top:            -10px;
+        position:               absolute;
+        background-color:       var(--colour-blue-two);
+        left:                   calc(-205px - 2vw);
+        top:                    calc(0vmin + var(--ipad-landscape-headerbar-height));
+        box-shadow:             var(--shadow-small);
+        transition:             all var(--animation-transition-std) ease-in-out;
+        -webkit-transition:     all var(--animation-transition-std) ease-in-out;
+        -moz-transition:        all var(--animation-transition-std) ease-in-out;
+        -ms-transition:         all var(--animation-transition-std) ease-in-out;
+        -o-transition:          all ease-in-out;        
+    }
+    .allpanes .menu a {
+        display:                block;
+        padding:                8px;
+        text-decoration:        none;
+        font-family:            sans-serif;
+        font-variant:           small-caps;
+        font-size:              110%;
+        line-height:            110%;
+        color:                  var(--colour-off-white);
+        transition:             var(--animation-transition-std);
+    }
+    .allpanes .leftpane {
+        width:                  51vw;
+        min-width:              51vw;
+        line-height:            150%;
+        margin-top:             2vw;
+        margin-left:            2vw;
+        margin-right:           2vw;
+        padding:                1vw 2vw 3vw 2vw;
+        border:                 0px solid red;
+        box-shadow:             var(--shadow-small);
+        border-radius:          5px;
+    }
+    .allpanes .puzzlenav {
+        margin-top:             2vw;
+        margin-bottom:          -3vmin;
+        margin-left:            -5px;
+        font-weight:            bold;
+        border:                 0px solid red;
+    }
+    .allpanes .editor {
+        width:                  48.7vw;
+        min-width:              48.7vw;
+    }
+    .allpanes .editortoolbaritems {
+        margin-bottom:          6px;
+    }
+    .allpanes .leftpane .box-grid-1 {
+        margin:                 var(--ipad-landscape-box-margin);
+        height:                 var(--ipad-landscape-box-size);
+        width:                  var(--ipad-landscape-box-size);
+        line-height:            var(--ipad-landscape-box-size);
+        border:                 var(--ipad-landscape-box-border) solid var(--colour-lighter-orange);
+    }
+    .allpanes .leftpane .box-grid-1-start {
+        margin:                 var(--ipad-landscape-box-margin);
+        height:                 var(--ipad-landscape-box-size);
+        width:                  var(--ipad-landscape-box-size);
+        line-height:            var(--ipad-landscape-box-size);
+        border:                 var(--ipad-landscape-box-border) solid var(--colour-lighter-orange);
+        box-shadow:             none;
+    }
+    .allpanes .leftpane .box-grid-2 {
+        margin:                 var(--ipad-landscape-box-margin);
+        height:                 var(--ipad-landscape-box-size);
+        width:                  var(--ipad-landscape-box-size);
+        line-height:            var(--ipad-landscape-box-size);
+        border:                 var(--ipad-landscape-box-border) solid var(--colour-text-grey);
+    }
+    .allpanes .leftpane .box-grid-3 {
+        margin:                 var(--ipad-landscape-box-margin);
+        height:                 var(--ipad-landscape-box-size);
+        width:                  var(--ipad-landscape-box-size);
+        line-height:            var(--ipad-landscape-box-size);
+        border:                 var(--ipad-landscape-box-border) solid var(--colour-lighter-blue-one);
+    }
+    .allpanes .leftpane .box-grid-3-end {
+        margin:                 var(--ipad-landscape-box-margin);
+        height:                 var(--ipad-landscape-box-size);
+        width:                  var(--ipad-landscape-box-size);
+        line-height:            var(--ipad-landscape-box-size);
+        border:                 var(--ipad-landscape-box-border) solid var(--colour-lighter-blue-one);
+        font-family:            var(--font-style-antic);
+    }
+    .allpanes .rightpanehome {
+        margin-top:             2vw;
+        width:                  30.5vw;
+        min-width:              30.5vw;
+        box-shadow:             var(--shadow-small);
+        border:                 0px solid red;
+    }
+    .allpanes .rightpane {
+        margin-top:             2.4vw;
+        width:                  35vw;
+        min-width:              35vw;
+        box-shadow:             none;
+        border:                 0px solid blue;
+    }
+    .miniboard {
+        width:                  35vw;
+        min-width:              35vw;
+
+        box-shadow:             var(--shadow-small);
+        border:                 0px solid yellow;
+    }
+    .allpanes .rightpanecard {  
+        margin-top:             0.5vw;
+        margin-bottom:          1.25vw;
+        margin-right:           0px;
+        padding-right:          1vw;
+        width:                  88%;
+        min-width:              88%;
+        box-shadow:             var(--shadow-small);
+        border:                 0px solid red;
+    }
+    .minigrid {
+        float:                  middle;
+        width:                  100%;
+        border:                 0px solid green;
+    }
+    .questionsforyou {
+        width:                  90%;
+        border:                 0px solid green;
+    }
+    .box-mini-grid {
+        width:                  2.22vw;
+        height:                 2.22vw;
+        margin:                 0.211vw;
+        line-height:            2.25vw;
+    }
+    .sidenavemptybottom {
+        display: none;
+    }
+    .allpanes .rightpane .pythonshellbox {
+        display: none;
+    }
+    .overviewrightpane {
+        margin-top: 3vmin;
+    }
+}
+
+/*-------
+  >1280px
+--------*/
+@media all
+and (min-width:                 1280px) 
+{
+    .leftpane {
+        font-size: 95%;
+        line-height: 150%;
+    }
+    .rightpane {
+        font-size: 95%;
+        line-height: 150%;  
+    }
+}

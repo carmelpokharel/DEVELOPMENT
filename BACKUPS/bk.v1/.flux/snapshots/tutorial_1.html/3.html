@@ -1,0 +1,61 @@
+<html> 
+
+<head>
+<!-- JAVASCRIPT -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" type="text/javascript"></script> 
+<script src="http://www.skulpt.org/static/skulpt.min.js" type="text/javascript"></script> 
+<script src="http://www.skulpt.org/static/skulpt-stdlib.js" type="text/javascript"></script>
+<script src='js/board.js' type="text/javascript"></script>
+<script src='js/console.js' type="text/javascript"></script>
+
+<!-- CSS -->
+<link rel="stylesheet" type="text/css" href="css/main.css">
+</head> 
+
+<body>
+<ul>
+  <li><a href="index.html"><img src="headingtitle.png" alt="Pythons and Ladders" style="width: 100%; height: 18%;" ></a></li>
+  <li style="float:top"><a class="active" href="#about">profile</a></li>
+  <li><a href="#Progress">game board</a></li>
+  <li><a href="#Progress">setup</a></li>
+  <li><a href="#Board">tutorial</a></li>
+  <li><a href="#Updates">updates</a></li>
+  <li><a href="#Donate">donate</a></li>
+  <li><a href="#contact">contact</a></li>
+</ul>
+<br><br>
+<div align="center">
+<h3 align="center">
+<font face="Arial">Tutorial
+</font>
+</h3>
+</div>
+<br>
+<p align="center">
+<font face="Arial" size=3px>
+Welcome to Pythons and Ladders! 
+In this web-based game, you will be solving a series of consecutive puzzles using the Python programming language. 
+The objective is to start with someone who has never worked with a single line of code, and leave them in a place where they understand some key programming concepts. The best part? You can play all of this in-browser, thanks to a fantastic team over at Skulpt. 
+As a player, you begin with a game board at the 'INIT' square. After you solve the puzzle in the first square, you will be allowed to move on. The game is designed such that completing each puzzle enables you to attempt the next one.
+To solve the puzzles, you may use any resource available to you. This is for your own learning purposes, so use the problem sets to your advantage.
+
+For a quick example, consider the following puzzle below. You may enter any code and click "Run" as many times as you like to view the output, but you will only be assessed when you click "Submit." Submit compares your solution to my solutions, and if your code is sufficiently correct,  you will unlock the next square. You may only submit 3 solutions per puzzle in a 24-hour period, so it'd be a good idea to test your answers before handing them in.
+Write a one-line Python statement which prints "Let's get started!" to the output. Note that incorrect code will not yield any output.
+</font>
+</p>
+<form align="center"> 
+<textarea id="yourcode" cols="100" rows="10">
+print "Let's get started!"
+</textarea><br /> 
+<br>
+<button type="button" onclick="runit()">Run</button>
+<button type="submit">Submit</button> 
+</form> 
+<pre align="center" id="output" ></pre>
+
+<!-- If you want turtle graphics include a canvas
+<div id="mycanvas"></div>  -->
+
+</body> 
+
+</html> 

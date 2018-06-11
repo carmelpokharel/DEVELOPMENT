@@ -1,0 +1,28 @@
+________________________________
+$LEFTPANEL_HEADING$
+New Divide
+https://open.spotify.com/track/6Wx88Mv6b9ofjKMKkdwOJd
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+In this puzzle, you will need to incorporate brackets into your arithmetic expression. Once you get the hang of a single set of brackets, take a shot at brackets within brackets. Does Python still follow the rules of BEDMAS?
+________________________________
+$LEFTPANEL_QUESTION$
+Write a script that will output the addition of 4 and 3, and then multiply it by 6, then finally multiply everything by 2.
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+Think about what you are told to do first and where you need to include brackets. The output should be 84.
+________________________________
+$RIGHTPANEL_TIME$
+2-3 minutes
+________________________________
+$RIGHTPANEL_QUESTIONS$
+Print an expression with more than one operation. In what order does the expression get solved?
+Take a shot at incorporating brackets into an arithmetic expression. Does Python follow the rules of BEDMAS?
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

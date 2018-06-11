@@ -1,0 +1,35 @@
+________________________________
+$LEFTPANEL_HEADING$
+What If
+https://open.spotify.com/track/39qRdHcl2tizWbzlM9kUlN
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+Sometimes, you will want to write code that will only do something if a condition is met. An <b>if statement</b> can help you do just that.
+
+Here's the basic construct of an if statement:
+if (conditional statement is True):
+&emsp;&emsp;do something
+
+Now type this out and run it. (To create the tab on the third line, use four spaces.) 
+<code class="demo">finalGrade = 80</code>
+<code class="demo">if finalGrade > 50:</code>
+<code class="demo">&emsp;&emsp;&emsp;&emsp;print "You passed the course!"</code>
+<p class="small">&nbsp;</p>
+________________________________
+$LEFTPANEL_QUESTION$
+INSERT QUESTION HERE
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+Note that that the if statement will have to return a Boolean. If you need to refresh your memory on Booleans, make sure to revisit puzzles 14-16. 
+________________________________
+$RIGHTPANEL_QUESTIONS$
+Update the <em>finalGrade</em> variable to equal to 45. What does your code output now? Why?
+Update the <em>finalGrade</em> variable to equal to 50. Why is the print statement not being returned? How can you change your if statement to include the number 50?
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

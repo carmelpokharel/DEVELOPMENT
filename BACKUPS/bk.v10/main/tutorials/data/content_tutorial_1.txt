@@ -1,0 +1,34 @@
+________________________________
+$LEFTPANEL_MAIN$
+Introduction
+________________________________
+$LEFTPANEL_MAINAREA$
+<h4 class="h4gold">What is programming?</h4>
+In a nutshell, <strong>programming</strong> refers to the process of making a computer do something for you. This involves three basic steps:
+<ol>
+<li>Providing an <strong>input</strong> to the computer<li>Computer <strong>processing</strong> your instructions<li>Receiving an <strong>output</strong> from the computer
+</ol>
+<h4 class="h4gold">What is a programming language?</h4>
+To communicate with computers, we use <strong>languages</strong>, much like the ones we use amongst ourselves everyday. In the context of programming, a language is a set of rules which govern what we may input to a computer.
+There are many programming languages to choose from, and you may have even heard of a few, such as C++, Java, Python, or Ruby. Each language comes with its own merits and shortcomings, but they all fundamentally do one thing: provide a means to communicate with your computer.
+________________________________
+$LEFTPANEL_INSTRUCTIONSAREA$
+________________________________
+$LEFTPANEL_TOOLBARAREA$
+________________________________
+$LEFTPANEL_EDITORAREA$
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINT$
+You'll find your hints here!
+________________________________
+$LEFTPANEL_OUTPUTAREA$
+________________________________
+$RIGHTPANEL_PYTHONSHELL$
+________________________________
+$RIGHTPANEL_QUESTIONS$
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+FIN

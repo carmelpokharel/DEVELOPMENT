@@ -1,0 +1,29 @@
+________________________________
+$LEFTPANEL_HEADING$
+True Faith
+https://open.spotify.com/track/01jBLs7IZQzPt3dVdn5rDa
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+Comparison operators can not only compare numbers, but also ^keyword^str datatypes.
+________________________________
+$LEFTPANEL_QUESTION$
+Write four ^keyword^print statements which output ^keyword^bool datatypes for the following comparisons:
+<ol>
+<li>Is the ^keyword^str 'bat' equal to the ^keyword^str 'BAT'?<li>Is the ^keyword^str 'bat' greater than or equal to 'Bat'?<li>Is the ^keyword^str 'BAT' greater than or equal to 'BAt'?<li>Is the ^keyword^str 'cat' greater than or equal to 'Bat'?
+</ol>
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+Remember to use quotations for each of your ^keyword^str datatypes
+________________________________
+$RIGHTPANEL_QUESTIONS$
+What are ASCII characters?
+What is the order of ASCII characters? Do upper-case or lower-case letters come first?
+Suggested reading: The "String Comparisons" section <a href = "http://thepythonguru.com/python-strings">on this page</a>.
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

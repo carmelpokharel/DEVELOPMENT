@@ -1,0 +1,82 @@
+________________________________
+$VERSION$
+0.0.2.
+________________________________
+$LEFTPANEL_RECENTUPDATES$
+2016-11-01
+Updated website sans-serif font to Roboto
+Fixed position of left navigation on desktop
+Added opacity and high z-index to header (fixed)
+2016-10-31
+Updated fixed-width font to Ubuntu Mono
+Updated HTML generation code to auto-format keywords, terms, and monospace code blocks
+Added content for squares 11-30
+Tested for responsiveness on resolutions 375px to 1920px
+2016-10-27
+Removed Python shell and all its references from the website--feature is not ready for deployment
+Added a mini-grid navigation feature to all squares (hidden on smaller resolutions/devices)
+Added the ability to support Python-squares and Ladder-squares on larger resolutions
+2016-10-25
+Added onclick="" and :active to replace hover effects on touch-enabled devices
+Reduced mobile website font size by 5% for readability on devices < 375px in width
+Added keyword coloring feature for important terms
+Removed references to Python shell throughout website, particularly in the mobile versions
+2016-10-24
+Removed the editor's "Save" feature for mobile devices
+Added slide-out navigation menu to all resolutions < 1280px
+Added card-based design for device resolutions >= 1024px and < 1280px
+2016-10-23
+Updated website with responsive design, currently tested on and supporting mobile devices with widths >= 375px and < 1024px
+2016-10-15
+Updated button CSS & tested on Windows (IE, Chrome)
+Removed the option to request guidance on puzzles
+2016-10-12
+Added social media buttons (Facebook and Twitter)
+Introduced a versioning system in the form of [major].[minor].[release].[build]
+Restructured backend of website to generate pages in organized folders
+2016-10-09
+Changed the updates section to auto-generate new pages when the length of the page exceeds 17 rows (need to still test on various lengths)
+2016-10-07
+Added a popover containing a hint for each square, with backend code to support the feature
+2016-10-05
+Added a 5-step tutorial as a prequel to the gameboard
+Reduced content width from 1400 to 1280 (min width)
+Moved location of footer to be in the main content div
+Created a static-height right panel on the home page
+2016-10-04
+Added a red feedback button bottom right corner
+Updated logo to change on mouse hover (Javascript)
+Increased responsiveness for left navigation bar
+Added a search engine feature for in-site queries
+2016-09-29
+Centre-justified the entire webpage and reduced the content width from 1470 to 1400
+Added a subtle gradient to the header bar for color differentiation
+2016-09-26
+Added a 'Profile' section to the homepage in the right panel
+Re-designed the navigation and look of each square; using divs now instead of images
+Narrowed the width and reduced font size in the right panel
+Updated date headings in recent updates to be champagne gold
+Decreased height of header bar
+2016-09-25
+Site is now updated with Google Fonts Antic and Source Sans Pro
+CSS div tags are now being used throughout the website instead of hidden table tags
+Changed colour theme from multicolour to tricolour with a champagne accent
+Completed contents of manual page, and changed name to "Overview"
+2016-09-18
+Added the option to request solutions
+Added content to questions 6, 7, 8, 9, and 10
+2016-09-17
+Updated color palette to include off-white and grey for background and text, respectively
+Added hyperlinks to all squares and nagivation items
+Completed reference manual
+Created a 'Page Not Found' page for missing URLs
+2016-09-16
+Added left navigation
+Designed and updated logo
+________________________________
+$RIGHTPANEL_SPONSORED$
+Sponsored1 $LINK$ www.stringsinpython.com
+Sponsored2 $LINK$ www.newlinecharacters.com
+Sponsored3 $LINK$ www.printstatements.com
+________________________________
+FIN

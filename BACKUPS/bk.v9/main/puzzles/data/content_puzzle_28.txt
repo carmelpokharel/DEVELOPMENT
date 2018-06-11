@@ -1,0 +1,39 @@
+________________________________
+$LEFTPANEL_HEADING$
+ABC
+https://open.spotify.com/track/6wDviYDtmSDZ0S6TVMM9Vc
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+Here's a slightly different way to add to a ^list^:
+<democodeblock>
+<code>countries1 = ['Canada','Spain']</code>
+<code>countries2 = ['France','Australia']</code>
+<code>countries3 = countries1 + countries2</code>
+</democodeblock>
+
+And yet another method, using .^extend^():
+<democodeblock>
+<code>greetings = ['hello','hola']</code>
+<code>greetings.^extend^('ciao')</code>
+<code>^print^ greetings</code>
+<code>greetings2 = ['namaste','salaam']</code>
+<code>greetings.^extend^(greetings2)</code>
+<code>^print^ greetings</code>
+</democodeblock>
+________________________________
+$LEFTPANEL_QUESTION$
+Initialize a ^list^ variable, the_alphabet, which contains the first three letters of the English alphabet. Using the .^extend^() method, add the remaining letters of the English alphabet to your ^list^. 
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+What happened when we extended the ^list^ greetings with 'ciao'?
+________________________________
+$RIGHTPANEL_QUESTIONS$
+There are a few ways to solve this problem--can you figure out the simplest one?
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

@@ -1,0 +1,82 @@
+________________________________
+$LEFTPANEL_HEADING$
+Pairs
+https://open.spotify.com/track/3tZarrjlgmCsz926gtzyZi
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+________________________________
+$LEFTPANEL_QUESTION$
+Define a function, <def>createPairs</def>(), which takes in a ^list^ and creates pairs of its elements. For example, an input of [1, 2, 3, 4, 5, 6] should result in the following:
+<outputcodeline>[[1, 2], [3, 4], [5, 6]]</outputcodeline>
+
+If you have an odd number of items, print the last item in its own sublist.
+________________________________
+$LEFTPANEL_EDITOR$
+def createPairs(input_list):
+________________________________
+$LEFTPANEL_HINTS$
+Use a ^for^ loop, and update your output ^list^ every two elements.
+________________________________
+$RIGHTPANEL_QUESTIONS$
+How many new variables are you creating to solve this square?
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$ALLPANES_SUBMITCASES$
+print ""
+print "INPUT     | []"
+print "OUTPUT    |", createPairs([])
+print "EXPECTED  | []"
+if createPairs([]) == []:
+	print "PASSED!"
+else: 
+	print "FAILED"
+
+print ""
+print "INPUT     | [1]"
+print "OUTPUT    |", createPairs([1])
+print "EXPECTED  | [[1]]"
+if createPairs([1]) == [[1]]:
+	print "PASSED!"
+else: 
+	print "FAILED"
+
+print ""
+print "INPUT     | [1,2,35,6]"
+print "OUTPUT    |", createPairs([1,2,35,6])
+print "EXPECTED  | [[1, 2], [35, 6]]"
+if createPairs([1,2,35,6]) == [[1,2],[35,6]]:
+	print "PASSED!"
+else: 
+	print "FAILED"
+
+print ""
+print "INPUT     | [1,2,3,'Hello']"
+print "OUTPUT    |", createPairs([1,2,3,'Hello'])
+print "EXPECTED  | [[1, 2], [3, 'Hello']]"
+if createPairs([1,2,3,'Hello']) == [[1,2],[3,'Hello']]:
+	print "PASSED!"
+else: 
+	print "FAILED"
+
+print ""
+print "INPUT     | [1,2,3,4,5,6,7]"
+print "OUTPUT    |", createPairs([1,2,3,4,5,6,7])
+print "EXPECTED  | [[1, 2], [3, 4],[5, 6], [7]]"
+if createPairs([1,2,3,4,5,6,7]) == [[1, 2], [3, 4],[5, 6], [7]]:
+	print "PASSED!"
+else: 
+	print "FAILED"
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+$RIGHTPANEL_SOLUTION$
+def createPairs(the_list):
+    chunk_size = 2
+    result_list = []
+    while the_list:
+        result_list.append(the_list[:chunk_size])
+        the_list = the_list[chunk_size:]
+    return result_list
+________________________________
+FIN

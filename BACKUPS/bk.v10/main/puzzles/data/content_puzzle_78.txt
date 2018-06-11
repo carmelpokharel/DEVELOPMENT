@@ -1,0 +1,60 @@
+________________________________
+$LEFTPANEL_HEADING$
+Breaking the Chain
+https://open.spotify.com/track/1ijfXmenqXnS37PioJBvj
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+________________________________
+$LEFTPANEL_QUESTION$
+Define a function, <def>updateList</def>(), which takes in a ^list^ of lists, and checks for any sequence where the ^int^ 1 is followed by the ^int^ 2 in a sublist. If the sequence is found, remove the entire sublist.
+For example, if <def>updateList</def>() is called with [[3, 4, 5], [1], [1, 2, 5], [5, 4, 1, 2]], you should return the following:
+<outputcodeline>[[3,4,5], [1]]</outputcodeline>
+As you can see, both sublists [1, 2, 5] and [5, 4, 1, 2] were removed, as they had a sequence where ^int^ 1 was followed by ^int^ 2.
+________________________________
+$LEFTPANEL_EDITOR$
+def updateList(input_list):
+________________________________
+$LEFTPANEL_HINTS$
+This function follows similar patterns to <def>withinList</def>() and interestingly, <def>javanais</def>()!
+________________________________
+$RIGHTPANEL_QUESTIONS$
+It's generally a bad idea to remove items from your ^list^ while you iterate through it. Why is this so? Look it up--it's important. What can you do instead to be safe?
+Can your function handle the case where instead of a sublist, your ^list^ contains a non-^list^ datatype? 
+For instance, [3, [3, 4, 5], ['4']]?
+________________________________
+$RIGHTPANEL_TESTCASES$
+This square is notably more difficult than the previous one. Think carefully about how you will recognize the sequence of ^int^1 followed by ^int^ 2.
+________________________________
+$ALLPANES_SUBMITCASES$
+print ""
+print "INPUT     | [[3, 4, 5], [1], [1, 2, 5], [5, 4, 1, 2]]"
+print "OUTPUT    |", updateList([[3, 4, 5], [1], [1, 2, 5], [5, 4, 1, 2]])
+print "EXPECTED  | [[3,4,5], [1]]"
+if updateList([[3, 4, 5], [1], [1, 2, 5], [5, 4, 1, 2]]) == [[3,4,5], [1]]:
+    print "PASSED!"
+else: 
+    print "FAILED"
+
+print ""
+print "INPUT     | [[3, 4, 5], [1, 1, 2, 1, 2], [1, 2, 5]]"
+print "OUTPUT    |", updateList([[3, 4, 5], [1, 1, 2, 1, 2], [1, 2, 5]])
+print "EXPECTED  | [[3,4,5]]"
+if updateList([[3, 4, 5], [1, 1, 2, 1, 2], [1, 2, 5]]) == [[3,4,5]]:
+    print "PASSED!"
+else: 
+    print "FAILED"
+
+print ""
+print "INPUT     | [[1], [2], [2, 1]]"
+print "OUTPUT    |", updateList([[1], [2], [2, 1]])
+print "EXPECTED  | [[1], [2], [2, 1]]"
+if updateList([[1], [2], [2, 1]]) == [[1], [2], [2, 1]]:
+    print "PASSED!"
+else: 
+    print "FAILED"
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+$RIGHTPANEL_SOLUTION$
+________________________________
+FIN

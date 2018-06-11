@@ -1,0 +1,28 @@
+________________________________
+$LEFTPANEL_HEADING$
+Changing
+https://open.spotify.com/track/0ZdQuZmy12Mv6px1hjDjcQ
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+Did you know you can convert between numerical data types (integer-to-float and vice-versa)? Search this up on Google to see how you can achieve this.
+________________________________
+$LEFTPANEL_QUESTION$
+Write a script that converts the integer 4 into its respective floating point. Your output should be:
+<code>4.0</code>
+<p class="small">&nbsp;</p>
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+You will need to use the float() function.
+________________________________
+$RIGHTPANEL_QUESTIONS$
+In Python, is 1.0 the same data type as 1?
+What happens if you try <em>print int(4.8)</em>?
+Can you multiply an integer by a float? 
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

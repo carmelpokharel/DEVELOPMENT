@@ -1,0 +1,26 @@
+________________________________
+$LEFTPANEL_HEADING$
+False Pretense
+https://open.spotify.com/track/2ZICF8SFI5tHttaLJKMY1X
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+Can we compare the ^keyword^str datatype with numerical ones, like ^keyword^int or ^keyword^float? What about ^keyword^bool?
+<code class="demoblock">~^keyword^print '1' > 1~^keyword^print 'a' > 1~^keyword^print 'a' > '1'~^keyword^print '1.0' > 1~^keyword^print True > 'True'~</code>
+________________________________
+$LEFTPANEL_QUESTION$
+Using a comparison operator, write a ^keyword^print statement which checks if the ^keyword^str '21.0' is equal to the ^keyword^int 21.
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+Remember to use the correct comparison operator!
+________________________________
+$RIGHTPANEL_QUESTIONS$
+How does Python compare ^keyword^str and ^keyword^int datatypes? Do numbers come before or after letters?
+How is == different from = in Python?
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

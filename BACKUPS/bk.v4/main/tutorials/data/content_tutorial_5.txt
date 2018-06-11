@@ -1,0 +1,34 @@
+________________________________
+$LEFTPANEL_MAIN$
+To Infinity & Beyond
+________________________________
+$LEFTPANEL_MAINAREA$
+Now that we've covered a thing or two about the Python programming language, let's do one more exercise before we move on to the gameboard.
+________________________________
+$LEFTPANEL_INSTRUCTIONSAREA$
+Write a syntactically correct Python statement which prints the following, <u>including</u> the quotation marks, to the output:
+<code>"To infinity & beyond!"</code>
+<code>&nbsp;</code>
+________________________________
+$LEFTPANEL_TOOLBARAREA$
+________________________________
+$LEFTPANEL_EDITORAREA$
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINT$
+Use a combination of double quotations ('') and single quotations (')!
+________________________________
+$LEFTPANEL_OUTPUTAREA$
+When you are satisfied that your output displays correctly, save your editor's contents to your hard drive (there's a button!), then clear the output box below. 
+Great, you're done the Tutorial! You're now ready to dive into Pythons and Ladders. Good luck!
+________________________________
+$RIGHTPANEL_TIME$
+2-3 minutes
+________________________________
+$RIGHTPANEL_QUESTIONS$
+How would you generate your output if you could only use four double quotes in your editor, and no single quotes at all?
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+FIN

@@ -1,0 +1,54 @@
+________________________________
+$LEFTPANEL_HEADING$
+Foreign Language
+https://open.spotify.com/track/6d3T1poJZ0cOCtWaFuMTWr 
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+Javanais is a another type of <a href="https://en.wikipedia.org/wiki/Argot" target="_bank">argot</a>, a French one, in which words are modified slightly by the following rule: every time a consonant is followed by a vowel, the letters "av" are inserted in between. 
+For instance, "Bien?" becomes "B<b>av</b>ien?" and "Nice" becomes "N<b>av</b>ic<b>av</b>e" (notice where the "av" is inserted in each case).
+________________________________
+$LEFTPANEL_QUESTION$
+Define a function, <def>javanais</def>(), which translates text into Javanais. Both your input and output are ^str^ datatypes.
+________________________________
+$LEFTPANEL_EDITOR$
+def javanais(text):
+________________________________
+$LEFTPANEL_HINTS$
+As a first step, find out how to keep track of the previous character in a ^for^ loop.
+________________________________
+$RIGHTPANEL_QUESTIONS$
+Can your function handle special characters in the input string?
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$ALLPANES_SUBMITCASES$
+print ""
+print "INPUT     | 'Pomme'"
+print "OUTPUT    |", javanais('Pomme')
+print "EXPECTED  | Pavommave"
+if javanais('Pomme') == 'Pavommave':
+	print "PASSED!"
+else: 
+	print "FAILED"
+
+print ""
+print "INPUT     | 'Au revoir'"
+print "OUTPUT    |", javanais('Au revoir')
+print "EXPECTED  | Au ravevavoir"
+if javanais('Au revoir') == 'Au ravevavoir':
+	print "PASSED!"
+else: 
+	print "FAILED"
+
+print ""
+print "INPUT     | 'Je m'appelle Claude!'"
+print "OUTPUT    |", javanais("Je m'appelle Claude!")
+print "EXPECTED  | Jave m'appavellave Clavaudave!"
+if javanais("Je m'appelle Claude!") == "Jave m'appavellave Clavaudave!":
+	print "PASSED!"
+else: 
+	print "FAILED"
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

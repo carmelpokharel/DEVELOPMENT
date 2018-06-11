@@ -1,0 +1,37 @@
+________________________________
+$LEFTPANEL_MAIN$
+Syntax II
+________________________________
+$LEFTPANEL_MAINAREA$
+________________________________
+$LEFTPANEL_INSTRUCTIONSAREA$
+It is worth noting that in Pythons and Ladders, even <em>one</em> mistake somewhere in your Editor can prevent your code from running.
+
+Here are some more syntax-related issues which may cause your Output box to remain blank. Review and make the necessary changes to each line of code in the Editor below to generate the following output:
+<code>Hello World!</code>
+<code>Hello World!</code>
+<code>Hello World!</code>
+<p class="small">&nbsp;</p>
+________________________________
+$LEFTPANEL_TOOLBARAREA$
+________________________________
+$LEFTPANEL_EDITORAREA$
+________________________________
+$LEFTPANEL_EDITOR$
+print 'Hello World'!
+print "Hello World!'
+Print "Hello World!"
+________________________________
+$LEFTPANEL_HINT$
+The devil is in the details!
+________________________________
+$LEFTPANEL_OUTPUTAREA$
+________________________________
+$RIGHTPANEL_TIME$
+2-3 minutes
+________________________________
+$RIGHTPANEL_QUESTIONS$
+What is the output of using two single quotations on either side of your text? Does it work?<p class="small"><code>^keyword^print ''Hello World''</code><p class="small">&nbsp;</p>
+________________________________
+$RIGHTPANEL_TESTCASES$
+FIN

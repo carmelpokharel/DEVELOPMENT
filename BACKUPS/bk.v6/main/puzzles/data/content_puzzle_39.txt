@@ -1,0 +1,23 @@
+________________________________
+$LEFTPANEL_HEADING$
+Monkey Tree
+https://open.spotify.com/track/3ix9l9TN5brDLn9KvwyN2S
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+________________________________
+$LEFTPANEL_QUESTION$
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+You will need to use one of .^append^() or .^extend^()
+________________________________
+$RIGHTPANEL_QUESTIONS$
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

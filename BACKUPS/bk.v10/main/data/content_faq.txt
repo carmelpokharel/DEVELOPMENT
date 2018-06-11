@@ -1,0 +1,29 @@
+________________________________
+$LEFTPANEL_FAQs$
+Q: Why is nothing happening when I run my code?
+<p>The absence of error messages in the output box is a current limitation in emulator technology. Please see <a href="./main/tutorials/pages/tutorial_8.html">this page</a> of the Tutorial for more information, or install Python on your local machine.
+Q: Which version of Python is used in Pythons and Ladders?
+<p>Pythons and Ladders makes use of the Python emulator from <a href="http://www.skulpt.org" target="_blank">Skulpt.org</a>, whose currently known supported version is Python 2.6+ (2016).
+Q: How can I install and set up Python on my computer?
+<p>You don't need to; all puzzles can be completed in-browser! However, if you're looking to go the extra mile, <a href="https://wiki.python.org/moin/BeginnersGuide/Download" target="_blank">here's a link</a> which guides you through the setup process. As far as editors go, we recommend <a href="http://www.wingware.com/downloads/wingide-101" target="_blank">Wing IDE 101</a> if you've never coded before, and in all other cases, <a href="https://www.sublimetext.com/3" target="_blank">Sublime Text</a>.
+Q: When can I expect to complete Pythons and Ladders?
+<p>For a beginner, the completion time is intended to be between one to four months. This, of course, is proportional to individual activity and engagement levels.
+Q: How difficult is programming?
+<p>Learning to code isn't particularly easy. Compare it to learning another language, like Spanish. Even though most of the alphabet is the same and there are plenty of overlapping words, a native English speaker will still need to put in a considerable amount of effort to be able to communicate in Spanish.
+Q: Is Pythons and Ladders a substitute for formal education?
+<p>In short, no. For the sake of comparison, Pythons and Ladders covers roughly the same amount of material as the first four weeks of a first-year university course. The same material is presented here in a more self-paced and tiered manner, reducing the slope of the introductory learning curve, and not the curve itself.
+Q: How can Python be relevant to my everyday work and lifestyle?
+<p>We've attempted to cover real-world use cases in the last few squares of Pythons and Ladders, but <a href="http://www.pythonapprentice.com/how-python-is-used/" target="_blank">here's a page</a> with a nice list.
+________________________________
+$LEFTPANEL_2$
+________________________________
+$RIGHTPANEL_1$
+________________________________
+$RIGHTPANEL_1$
+________________________________
+$RIGHTPANEL_SPONSORED$
+Sponsored1 $LINK$ www.stringsinpython.com
+Sponsored2 $LINK$ www.newlinecharacters.com
+Sponsored3 $LINK$ www.printstatements.com
+________________________________
+FIN

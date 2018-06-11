@@ -1,0 +1,36 @@
+________________________________
+$LEFTPANEL_MAIN$
+Hello World!
+________________________________
+$LEFTPANEL_MAINAREA$
+Let's get started with your first exercise: printing a string to the output box.
+________________________________
+$LEFTPANEL_INSTRUCTIONSAREA$
+When learning a new language, "Hello World!" is always the first string you are encouraged to output. In programming terms, the word "string" essentially means "text", and is a type of data. Meanwhile, the word "print" means "display to the output", and is a command.
+To print a string, all you need to do is write the word <em>print</em> followed by whatever text you want to output, enclosed in quotation marks.
+For this tutorial's first task, your instructions are simple: using the Python language, write code into the editor which prints "Hello World!" to the output.
+________________________________
+$LEFTPANEL_TOOLBARAREA$
+Remember to click "Run" to view the output!
+________________________________
+$LEFTPANEL_EDITORAREA$
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_OUTPUTAREA$
+Recall from the previous page that your output will be displayed <em>without</em> the quotation marks. This is what we want!
+________________________________
+$RIGHTPANEL_TIME$
+2-3 minutes
+________________________________
+$RIGHTPANEL_QUESTIONS$
+How would you print "Hello World!" <em>with</em> the quotation marks?
+Instead of using double quotes (") to print your string, try using single quotes(') instead. Is there a difference in the output?
+________________________________
+$RIGHTPANEL_TESTCASES$
+
+________________________________
+$RIGHTPANEL_HINTS$
+Check out the first page of this tutorial!
+________________________________
+FIN

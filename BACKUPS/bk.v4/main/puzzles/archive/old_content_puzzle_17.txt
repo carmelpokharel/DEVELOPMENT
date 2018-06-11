@@ -1,0 +1,39 @@
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+
+Run the sample code embedded in the editor, and analyze the output at the bottom.
+
+Variables are an important concept in programming. Think of them as boxes. They are used to store things, and when you want, you can access their contents. You can also carry them around without ever having to see or touch what's inside.
+
+When naming your variables, try to make them unique. For example, a terrible variable name would be something like "print". Why? Well "print" just happens to be a keyword in Python. If you tried to execute "print = 5", Python is confused. What are you trying to do? Luckily, since Python makes the final decision, it will refuse to run. A great step is to avoid using any word in the English language as a variable name. So, instead of "variable = 4", try "var1 = 4" instead.
+
+Now, write Python code that stores the string "Pythons" in a variable called var1, "and" in a variable called var2, and "Ladders!" in a variable called var3. 
+
+Print these three variables so that the output appears as a sentence, exactly  as shown below:
+&#9656; Pythons and Ladders!
+
+Once again, ignore the arrow.
+________________________________
+$LEFTPANEL_EDITOR$
+print 'Quick lesson:'
+print "You can store strings in variables, which can be declared as follows:"
+firstString = "This string is stored inside the variable firstString."
+print firstString
+print "\nNotice how you don't put quotations around a variable name when printing it?"
+________________________________
+$RIGHTPANEL_TIME$
+7-10 minutes
+________________________________
+$RIGHTPANEL_QUESTIONS$
+How do you print multiple variables on the same line?<br>(Hint: there's more than one way!)
+What would be the result of declaring var4 = var1 + var2 + var3?
+If you wanted to see what's stored in var4, how would you do it?
+How would you add spaces between the words in var4?
+By the same token, can you subtract variables? What happens when you do?
+________________________________
+$RIGHTPANEL_SPONSORED$
+Sponsored1 $LINK$ www.stringsinpython.com
+Sponsored2 $LINK$ www.newlinecharacters.com
+Sponsored3 $LINK$ www.printstatements.com
+________________________________
+FIN

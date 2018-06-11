@@ -1,0 +1,31 @@
+________________________________
+$LEFTPANEL_HEADING$
+155
+https://open.spotify.com/track/3DPBEiVe1lzl8MP0NDVM7R
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+So far, you've printed strings (^keyword^str) in a couple of different ways. Let's look at the ^keyword^int datatype now, which represents integers in Python.
+
+If you recall from math class, an integer is any whole number that is positive, negative, or zero. Python's ^keyword^int datatype is much the same.
+
+Printing an integer is <em>almost</em> like printing a string, but with one difference: unlike strings, integers don't need quotation marks.
+________________________________
+$LEFTPANEL_QUESTION$
+Print the integers 155 and -155 on separate lines, so that the output looks like the following.
+<code>155</code>
+<code>-155</code>
+<p class="small">&nbsp;</p>
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+Write the statements as you would for strings, but omit the quotation marks.
+________________________________
+$RIGHTPANEL_QUESTIONS$
+Why do you think it's important to distinguish between a string and an integer, if they look the same? Compare the results between: a) <em>print "2" + "2"</em> and b) <em>print 2 + 2</em> 
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

@@ -1,0 +1,59 @@
+________________________________
+$LEFTPANEL_HEADING$
+Retrace
+https://open.spotify.com/track/5TYESt53Ot3rS2XoxOlM83
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+________________________________
+$LEFTPANEL_QUESTION$
+Define a function, <def>simpleMath</def>(), which takes in an ^int^ <var>n</var> and returns the result of the following mathematical expression:
+<mathexp>(<var>n</var> &times; 2)<sup> <var>n</var> &#8211; 1</sup> + 7</mathexp>
+________________________________
+$LEFTPANEL_EDITOR$
+def simpleMath(n):
+________________________________
+$LEFTPANEL_HINTS$
+All of the math can be performed in the ^return^ step.
+________________________________
+$RIGHTPANEL_QUESTIONS$
+Have you been testing your code with ^print^ statements outside the function body?
+How are you handling cases where your input <var>n</var> is equal to 0?
+Do you remember how to <a href="http://pythonsandladders.com/main/puzzles/pages/puzzle_7.html" target="_blank">perform exponentiation</a> in Python?
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$ALLPANES_SUBMITCASES$
+print ""
+print "INPUT     | 5"
+print "OUTPUT    |", simpleMath(5)
+print "EXPECTED  | 10007"
+if simpleMath(5) == 10007:
+	print "PASSED!"
+else: 
+	print "FAILED"
+
+print ""
+print "INPUT     | 1"
+print "OUTPUT    |", simpleMath(1)
+print "EXPECTED  | 8"
+if simpleMath(1) == 8:
+	print "PASSED!"
+else: 
+	print "FAILED"
+
+print ""
+print "INPUT     | -3"
+print "OUTPUT    |", simpleMath(-3)
+print "EXPECTED  | 7.00077160494"
+if str(simpleMath(-3)) == str(7.00077160494):
+	print "PASSED!"
+else: 
+	print "FAILED"
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+$RIGHTPANEL_SOLUTION$
+def simpleMath(n):
+	return (n*2)**(n-1) + 7
+________________________________
+FIN

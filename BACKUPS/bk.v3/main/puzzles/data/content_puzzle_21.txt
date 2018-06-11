@@ -1,0 +1,52 @@
+________________________________
+$LEFTPANEL_HEADING$
+Piece of Me
+https://open.spotify.com/track/2EvwLVrnYbCZEG6Kx5DCRy
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+<u>Substring</u> is a word used to refer to a "piece" of a string. For example, "gym" is a substring of "gymnastics", "nt" is a substring of "paint", and "P" is a substring of "Python". A substring can be any piece of that string, and of any length.
+
+Try the following to see how you can access a single letter from an existing string:
+<code class="demo">print "laughter"[2]</code>
+<code class="demo">print "laughter"[5]</code>
+<p class="small">&nbsp;</p>
+
+This concept of accessing a substring from a string can be applied to variables as well. 
+________________________________
+$LEFTPANEL_QUESTION$
+Write three lines of code that does the following:
+<table>
+   <tr>
+      <td width="15%" valign="top"><u>Line 1:</u>  </td>
+      <td>Create a variable called <em>my_variable</em> that equals to the string "bonsai tree"</td>
+   </tr>
+   <tr>
+      <td width="15%" valign="top"><u>Line 2:</u>  </td>
+      <td>Print the substring "b" from the variable</td>
+   </tr>
+   <tr>
+      <td width="15%" valign="top"><u>Line 3:</u>  </td>
+      <td>Prints the substring " " (a space) from the variable</td>
+   </tr>
+</table>
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+Lines 2 and 3 should only reference the variable and NOT the string. 
+________________________________
+$RIGHTPANEL_TIME$
+2-3 minutes
+________________________________
+$RIGHTPANEL_QUESTIONS$
+Why did <em>print "laughter"[2]</em> return the substring 'u' and not 'a'?
+Why did <em>print "laughter"[5]</em> return the substring 't' and not 'h'?
+How would you access the substring 'l' (first letter) in the string 'laughter'?
+What is the largest number you can enclose in the square brackets? Why do you think <em>print "laughter"[8]</em> wont work?
+When accessing a substring from a variable, do you have to enclose the variable in quotation marks?
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

@@ -1,0 +1,27 @@
+________________________________
+$LEFTPANEL_HEADING$
+Strawberry Fields Forever
+ https://open.spotify.com/track/3Am0IbOxmvlSXro7N5iSfZ
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+You can add elements to the end of a ^keyword^list using the built-in .^keyword^append() method. Run the following code from your Editor, and observe the outputs:
+<code class="demoblock">~fruits = ['apples', 'pears', 'oranges']~fruits.^keyword^append('grapes')~^keyword^print fruits~berries = ['cherries', 'blueberries']~fruits.^keyword^append(berries)~^keyword^print fruits~</code>
+________________________________
+$LEFTPANEL_QUESTION$
+Add'strawberry' and 'mango' to the end of the fruits ^keyword^list from above.
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+You'll need to use .^keyword^append() twice.
+________________________________
+$RIGHTPANEL_QUESTIONS$
+Can you append to a ^keyword^list with several items at once? Try fruits.^keyword^append('peaches', 'mangoes').
+What happens when you use .^keyword^append()</em> to add a ^keyword^list to an existing ^keyword^list?
+Can you use .^keyword^append() on a ^keyword^str? How about an ^keyword^int?
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

@@ -1,0 +1,29 @@
+________________________________
+$LEFTPANEL_HEADING$
+TBD
+ 
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+Remember when we were able to access a substring from a string? We can do the same with lists. Try the following: 
+<code class="demo">instruments = ["piano", "guitar", "drums", "flute", "trumpet", "violin"]</code>
+<code class="demo">print instruments[1]</code>
+________________________________
+$LEFTPANEL_QUESTION$
+Create the following list: 
+<em>space = ["sun", "moon", "earth", ["stars", "constellations"], "asteroids"]</em>
+Now, access the list to retrieve and print the following output:
+<code>["stars", "constellations"]</code>
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+The expected output is really only one item (a list containing two strings). Find it's position in the initial list and access it.
+________________________________
+$RIGHTPANEL_QUESTIONS$
+Look up and understand what <b>list slicing</b> is in Python.
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

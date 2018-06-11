@@ -1,0 +1,55 @@
+________________________________
+$LEFTPANEL_HEADING$
+Encoded
+https://open.spotify.com/track/6DNWLpWP33zqnR7rpMkzh1
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+Encryption is a method we use to convert data into unrecognizable forms.
+
+One very simple encryption technique is rotation, in which each letter of the alphabet is mapped to another letter, a few positions away. 
+
+For instance, a rotation of 1 means that A is mapped to B, B is mapped to C, and so on, until Z is mapped to A. With a rotation of 1, then, 'Nepal' becomes 'Ofqbm'.
+________________________________
+$LEFTPANEL_QUESTION$
+Define a function, <def>encode</def>(), which takes in a ^str^ and an ^int^ <var>n</var>, and encodes the string with rotation <var>n</var>.
+
+For example, with inputs 'Hardwell' and 2, your function should return the following:
+<outputcodeline>Jctfygnn</outputcodeline>
+________________________________
+$LEFTPANEL_EDITOR$
+def encode(input_string, n):
+________________________________
+$LEFTPANEL_HINTS$
+Start by creating a ^dict^ to map the rotation!
+________________________________
+$RIGHTPANEL_QUESTIONS$
+Are you able to handle rotations greater than 26, or negative rotations?
+________________________________
+$RIGHTPANEL_TESTCASES$
+Remember that there are both uppercase and lowercase letters to account for in your mapping.
+If you encounter a space in your input ^str^, leave it as is.
+________________________________
+$ALLPANES_SUBMITCASES$
+print ""
+print "INPUT     | 'Nepal', 1"
+print "OUTPUT    | " + "'" +  encode('Nepal', 1) + "'"
+print "EXPECTED  | 'Ofqbm'"
+if  encode('Nepal', 1) == 'Ofqbm':
+    print "PASSED!"
+else: 
+    print "FAILED"
+
+print ""
+print "INPUT     | 'Kathmandu City', -2"
+print "OUTPUT    |", encode('Kathmandu City', -2)
+print "EXPECTED  | 'Iyrfkylbs Agrw'"
+if  encode('Kathmandu City', -2) == 'Iyrfkylbs Agrw':
+    print "PASSED!"
+else: 
+    print "FAILED"
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+$RIGHTPANEL_SOLUTION$
+________________________________
+FIN

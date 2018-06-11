@@ -1,0 +1,32 @@
+________________________________
+$LEFTPANEL_HEADING$
+From the Inside
+https://open.spotify.com/track/1h4qhOmbd7eQLeMNOg8nWQ
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+Can you access a substring from a ^str^ inside a ^list^? 
+<democodeblock>
+<code>letters = ['ABCD','EFGH','IJKL']</code>
+<code>^print^ letters[1]</code>
+<code>^print^ letters[1][1]</code>
+</democodeblock>
+In the above example, the first set of [square brackets] accesses the ^list^ item 'EFGH'. Then, the second set of square brackets returns the substring of 'EFGH', which is 'F'.
+________________________________
+$LEFTPANEL_QUESTION$
+Declare the following ^list^:
+<democodeline>more_letters = ['MNOP','QRST','UVWX','YZ']</democodeline>
+Using one ^print^ statement, access the ^list^ to return the following substring:
+<outputcodeline>U</outputcodeline>
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+Follow the example closely!
+________________________________
+$RIGHTPANEL_QUESTIONS$
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

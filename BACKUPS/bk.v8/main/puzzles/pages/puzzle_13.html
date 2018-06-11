@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html> 
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- **************** -->
+    <!--      SCRIPTS     -->
+    <!-- **************** -->
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-tooltip-and-popover.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/buttons.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/editors.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/media-queries.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/modal.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/variables.css">
+    <!-- JAVASCRIPT -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" ></script> 
+    <script type="text/javascript" src="../../../js/skulpt/debugger.js"></script>
+    <script type="text/javascript" src="../../../js/skulpt/skulpt.min.js"></script>
+    <script type="text/javascript" src="../../../js/skulpt/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src='../../../js/console.js'></script>
+    <script type="text/javascript" src="../../../js/bootstrap-tooltip-and-popover.min.js"></script>
+    <!-- JAVASCRIPT: POPOVERS -->
+    <script type="text/javascript">
+      $(document).ready(function() {
+        // Placement can be top, right, left, bottom
+        $('.bootstrap-popover').popover({placement: 'top', delay: {show: 10, hide: 10}});
+      })
+    </script>
+    <!-- JAVASCRIPT: GOOGLE ANALYTICS -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-85355151-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <!-- JAVASCRIPT: TWITTER -->
+    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+  </head> 
+
+  <body>
+    <div class="allpanes">
+      <div class="headerbar">
+        <!-- **************** -->
+        <!--      HEADER      -->
+        <!-- **************** -->
+        <div onclick="window.scrollTo(0, 0);" class="headerspacingleftedge">
+          <!-- SLIDE OUT NAV FOR MOBILE -->
+          <div class="slideoutnav">
+            <input type="checkbox" id="menuToggle">
+            <label for="menuToggle" class="menuicon">&equiv;</label>
+            <nav class="menu">
+              <div class="sidenavlogo">
+                <a href="../../../index.html">
+                  <img src="../../../images/headingtitle.png" alt="Pythons and Ladders" style="width: 75%; height: 18%;">
+                </a>
+              </div>
+                <p><a href="../../../index.html">home</a>
+                <p><a href="../../../overview.html">overview</a>
+                <p><a href="../../main/updates/pages/updates_0.html">updates</a>
+                <p><a href="../../../faq.html">questions</a>
+                <p><a href="mailto:pythonsandladders@gmail.com?subject=Attn: [ADMIN] Pythons and Ladders">contact us</a>
+            </nav>
+          </div>
+        </div>
+        <div class="headerlogo">
+          <a href="../../../index.html"><h2>pythons and ladders</h2>
+          </a>
+        </div>
+        <div onclick="window.scrollTo(0, 0);" class="headerspacingmiddle">
+          <div class="headersocialmedia">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=www.pythonsandladders.com" target="_blank">
+              <img src="../../../images/facebook_icon.png" class="socialmediabuttons" />
+            </a>
+            <a href="https://twitter.com/share" target="_blank" data-show-count="false">
+            <img src="../../../images/twitter_icon.png" class="socialmediabuttons" />
+            </a>
+          </div>
+        </div>
+        <div class="headersearch">
+            <!-- SEARCH BOX -->
+            <form method="get" action="http://www.google.com/search">
+              <div class="searchbox">
+                <input class="searchbox"type="text" name="q" size="32" maxlength="255" value="Search Pythons and Ladders" onfocus="if(this.value==this.defaultValue)this.value=''; this.style.color='#bbb';" onblur="if(this.value=='')this.value=this.defaultValue; "/>
+                <input class="gobutton" type="image" src="../../../images/search.png" value="Go!" />
+                <input type="hidden" name="sitesearch" value="pythonsandladders.com" />
+              </div>
+            </form>
+          </div>
+        <div onclick="window.scrollTo(0, 0);" class="headerspacingrightedge">
+        </div>
+      </div> 
+    <!-- **************** -->
+    <!--    NAVIGATION    -->
+    <!-- **************** -->
+    <div class="sidenav">
+      <div class="headerspacingleft">
+      </div>
+      <div class="sidenavlogo">
+        <a href="../../../index.html">
+          <img src="../../../images/headingtitle.png" alt="Pythons and Ladders" style="width: 75%; height: 18%;" onmouseover="this.src='../../../images/headingtitle_snake.png'" onmouseout="this.src='../../../images/headingtitle.png'">
+        </a>
+      </div>
+      <div class="sidenavcontentemptytop">
+      </div>
+      <div class="sidenavcontentmiddle">
+        <a href="../../../index.html">home</a>
+        <a href="../../../overview.html">overview</a>
+        <a href="../../../main/updates/pages/updates_0.html">updates</a>
+        <a href="../../../faq.html">questions</a>
+        <!-- <a href="#openModal">contribute</a>
+        <div id="openModal" class="modalDialog">
+          <div>
+            <a href="#close" title="Close" class="close">X</a>
+                <h2>Contribute to Pythons and Ladders</h2>
+              <p>Pythons and Ladders is free to use, and we intend for it to remain so.</p>
+              </p>However, if you feel that Pythons and Ladders has added value to your life in any meaningful way, please consider contributing to its continued development and presence on the web.</p>
+              <p>With your support, we hope to initiate many more students into the world of programming, many of whom cannot afford to pay for a learning experience.</p>
+              <p>Thank you for your kindness.</p>
+              <a href="#"><div class="donatenowbutton" alt="Donate Now">DONATE NOW</div></a>
+          </div>
+        </div> -->
+
+        <a href="mailto:pythonsandladders@gmail.com?subject=Attn: [ADMIN] Pythons and Ladders">contact us</a>
+      </div>
+      <div class="sidenavcontentemptybottom">
+      <!-- FOOTER -->
+      <div class="footer"><p>Python emulator powered by Skulpt.org</a> | Copyright &copy; PythonsandLadders.com 2016</p></div>    </div>
+  </div>
+
+
+    <!-- **************** -->
+    <!--        BODY      -->
+    <!-- **************** -->
+    <div class="middlepane">
+    </div>
+    <!-- LEFT PANE -->
+    <div class="welcomehome2">
+      <div class="puzzlenav2">
+        <a href="puzzle_13.html"><div class="box-puzz2"><div class="box-puzzle-number2">13</div></div></a>
+        <a href="puzzle_12.html"><div class="box-puzz2"><div class="box-puzzle-arrows2">&lang;</div></div></a>
+        <a href="puzzle_14.html"><div class="box-puzz2"><div class="box-puzzle-arrows2">&rang;</div></div></a>
+      </div>
+        <!-- LEFT: QUESTION AND EDITOR -->
+    </div>
+    <div class="leftpane">
+      <div class="puzzlenav">
+        <a href="puzzle_13.html"><div class="box-puzz"><div class="box-puzzle-number">13</div></div></a>
+        <a href="puzzle_12.html"><div class="box-puzz"><div class="box-puzzle-arrows">&lang;</div></div></a>
+        <a href="puzzle_14.html"><div class="box-puzz"><div class="box-puzzle-arrows">&rang;</div></div></a>
+      </div>
+        <!-- LEFT: QUESTION AND EDITOR -->
+        <a class="songheading" target="_blank" href="https://open.spotify.com/track/121so7t3AeX6nLMvxy9ZP9"">
+        <h3>Hide and Seek</h3>
+        </a>
+        <p>Not all code in Python needs to be an instruction to the computer. For instance, if you wish to take notes while writing code, you can use <b>comments</b>. </p>
+        <p></p>
+        <p>In Python, comments are initiated by a <span class=keyword-green>#</span>. That is to say, whenever <span class=keyword-green>#</span> is encountered in the Editor, the rest of the code <em>on that line</em> is ignored.</p>
+        <p></p>
+        <p>It is important to note that comments are <b>not a special case</b>; if Python encounters a <span class=keyword-green>#</span> inside a <span class=keyword-teal>str</span>, it will proceed normally:</p>
+        <p></p>
+        <p><table class="demo"><tr><td></p>
+        <p class="small"><code><span class="keyword-green"><span class=keyword-green>#</span> This is a comment<span class="keyword-green"></code></p>
+        <p class="small"><code><span class=keyword-orange>print</span> 'What is your telephone #?'</code></p>
+        <p></td></tr></table><p></p></p>
+          <h4 class="h4gold">Task Thirteen</h4>
+        <p>Write two lines of code which represent the following:</p>
+        <p><table></p>
+        <p>   <tr></p>
+        <p>      <td class="linecol">Line 1:</td></p>
+        <p>      <td class="codecol">A comment that reads: This is a comment</td></p>
+        <p>   </tr></p>
+        <p>   <tr></p>
+        <p>      <td class="linecol">Line 2:</td></p>
+        <p>      <td class="codecol">A statement which prints: This isn't a comment</td></p>
+        <p>   </tr></p>
+        <p>   </table></p>
+        <p>Your final output should simply display the following:</p>
+        <p><table><tr><td class="output">This isn't a comment</td></tr></table></p>
+          <div class="editor">
+            <div class="editortoolbar">
+              <div class="editortoolbaritems" onclick="runit()">RUN</div>
+              <div class="editortoolbaritems" onclick="clearBox()">CLEAR</div>
+              <div class="editortoolbarsave">
+                <div class="editortoolbaritems" id="save" onclick="saveTextAsFile()">SAVE</div>
+              </div>
+              <div class="editortoolbaritems">
+                <a href="#" class="bootstrap-popover" title="need a little help?" data-content="<p>Don't forget the escape character for the word &quot;isn't&quot;!
+</p>">
+                HINT
+                </a>
+              </div>
+            </div>
+          <form align="left"> 
+            <textarea id="yourcode" class="editortextarea" rows="5">
+</textarea>
+          </form>
+          <!-- **************** -->
+          <!--     OUTPUT       -->
+          <!-- **************** -->
+          <div class="editoroutput">
+          <pre align="left" id="output"></pre>
+          </div>
+
+        </div>
+      </div>
+      <div class="middlepane">
+      </div>
+      <!-- RIGHT PANEL -->
+      <div class="rightpane">
+      	 <div class="miniboard">
+          <div class="rightpanecard">
+          <h4 class="greyheading">MINI-BOARD</h4>
+          <div class="minigrid">
+          <a href="puzzle_1.html">
+          <div class="box-mini-grid">1</div>
+          </a>
+          <a href="puzzle_2.html">
+          <div class="box-mini-grid">2</div>
+          </a>
+          <a href="puzzle_3.html">
+          <div class="box-mini-grid">3</div>
+          </a>
+          <a href="puzzle_4.html">
+          <div class="box-mini-grid">4</div>
+          </a>
+          <a href="puzzle_5.html">
+          <div class="box-mini-grid">5</div>
+          </a>
+          <a href="puzzle_6.html">
+          <div class="box-mini-grid">6</div>
+          </a>
+          <a href="puzzle_7.html">
+          <div class="box-mini-grid">7</div>
+          </a>
+          <a href="puzzle_8.html">
+          <div class="box-mini-grid">8</div>
+          </a>
+          <a href="puzzle_9.html">
+          <div class="box-mini-grid">9</div>
+          </a>
+          <a href="puzzle_10.html">
+          <div class="box-mini-grid">10</div>
+          </a>
+          <a href="puzzle_11.html">
+          <div class="box-mini-grid">11</div>
+          </a>
+          <a href="puzzle_12.html">
+          <div class="box-mini-grid">12</div>
+          </a>
+          <a href="puzzle_13.html">
+          <div class="box-mini-grid-curr">13</div>
+          </a>
+          <a href="puzzle_14.html">
+          <div class="box-mini-grid">14</div>
+          </a>
+          <a href="puzzle_15.html">
+          <div class="box-mini-grid">15</div>
+          </a>
+          <a href="puzzle_16.html">
+          <div class="box-mini-grid">16</div>
+          </a>
+          <a href="puzzle_17.html">
+          <div class="box-mini-grid">17</div>
+          </a>
+          <a href="puzzle_18.html">
+          <div class="box-mini-grid">18</div>
+          </a>
+          <a href="puzzle_19.html">
+          <div class="box-mini-grid">19</div>
+          </a>
+          <a href="puzzle_20.html">
+          <div class="box-mini-grid">20</div>
+          </a>
+          <a href="puzzle_21.html">
+          <div class="box-mini-grid">21</div>
+          </a>
+          <a href="puzzle_22.html">
+          <div class="box-mini-grid">22</div>
+          </a>
+          <a href="puzzle_23.html">
+          <div class="box-mini-grid">23</div>
+          </a>
+          <a href="puzzle_24.html">
+          <div class="box-mini-grid">24</div>
+          </a>
+          <a href="puzzle_25.html">
+          <div class="box-mini-grid">25</div>
+          </a>
+          <a href="puzzle_26.html">
+          <div class="box-mini-grid">26</div>
+          </a>
+          <a href="puzzle_27.html">
+          <div class="box-mini-grid">27</div>
+          </a>
+          <a href="puzzle_28.html">
+          <div class="box-mini-grid">28</div>
+          </a>
+          <a href="puzzle_29.html">
+          <div class="box-mini-grid">29</div>
+          </a>
+          <a href="puzzle_30.html">
+          <div class="box-mini-grid">30</div>
+          </a>
+          <a href="puzzle_31.html">
+          <div class="box-mini-grid">31</div>
+          </a>
+          <a href="puzzle_32.html">
+          <div class="box-mini-grid">32</div>
+          </a>
+          <a href="puzzle_33.html">
+          <div class="box-mini-grid">33</div>
+          </a>
+          <a href="puzzle_34.html">
+          <div class="box-mini-grid">34</div>
+          </a>
+          <a href="puzzle_35.html">
+          <div class="box-mini-grid">35</div>
+          </a>
+          <a href="puzzle_36.html">
+          <div class="box-mini-grid">36</div>
+          </a>
+          <a href="puzzle_37.html">
+          <div class="box-mini-grid">37</div>
+          </a>
+          <a href="puzzle_38.html">
+          <div class="box-mini-grid">38</div>
+          </a>
+          <a href="puzzle_39.html">
+          <div class="box-mini-grid">39</div>
+          </a>
+          <a href="puzzle_40.html">
+          <div class="box-mini-grid">40</div>
+          </a>
+          <a href="puzzle_41.html">
+          <div class="box-mini-grid">41</div>
+          </a>
+          <a href="puzzle_42.html">
+          <div class="box-mini-grid">42</div>
+          </a>
+          <a href="puzzle_43.html">
+          <div class="box-mini-grid">43</div>
+          </a>
+          <a href="puzzle_44.html">
+          <div class="box-mini-grid">44</div>
+          </a>
+          <a href="puzzle_45.html">
+          <div class="box-mini-grid">45</div>
+          </a>
+          <a href="puzzle_46.html">
+          <div class="box-mini-grid">46</div>
+          </a>
+          <a href="puzzle_47.html">
+          <div class="box-mini-grid">47</div>
+          </a>
+          <a href="puzzle_48.html">
+          <div class="box-mini-grid">48</div>
+          </a>
+          <a href="puzzle_49.html">
+          <div class="box-mini-grid">49</div>
+          </a>
+          <a href="puzzle_50.html">
+          <div class="box-mini-grid">50</div>
+          </a>
+          <a href="puzzle_51.html">
+          <div class="box-mini-grid">51</div>
+          </a>
+          <a href="puzzle_52.html">
+          <div class="box-mini-grid">52</div>
+          </a>
+          <a href="puzzle_53.html">
+          <div class="box-mini-grid">53</div>
+          </a>
+          <a href="puzzle_54.html">
+          <div class="box-mini-grid">54</div>
+          </a>
+          <a href="puzzle_55.html">
+          <div class="box-mini-grid">55</div>
+          </a>
+          <a href="puzzle_56.html">
+          <div class="box-mini-grid">56</div>
+          </a>
+          <a href="puzzle_57.html">
+          <div class="box-mini-grid">57</div>
+          </a>
+          <a href="puzzle_58.html">
+          <div class="box-mini-grid">58</div>
+          </a>
+          <a href="puzzle_59.html">
+          <div class="box-mini-grid">59</div>
+          </a>
+          <a href="puzzle_60.html">
+          <div class="box-mini-grid">60</div>
+          </a>
+          <a href="puzzle_61.html">
+          <div class="box-mini-grid">61</div>
+          </a>
+          <a href="puzzle_62.html">
+          <div class="box-mini-grid">62</div>
+          </a>
+          <a href="puzzle_63.html">
+          <div class="box-mini-grid">63</div>
+          </a>
+          <a href="puzzle_64.html">
+          <div class="box-mini-grid">64</div>
+          </a>
+          <a href="puzzle_65.html">
+          <div class="box-mini-grid">65</div>
+          </a>
+          <a href="puzzle_66.html">
+          <div class="box-mini-grid">66</div>
+          </a>
+          <a href="puzzle_67.html">
+          <div class="box-mini-grid">67</div>
+          </a>
+          <a href="puzzle_68.html">
+          <div class="box-mini-grid">68</div>
+          </a>
+          <a href="puzzle_69.html">
+          <div class="box-mini-grid">69</div>
+          </a>
+          <a href="puzzle_70.html">
+          <div class="box-mini-grid">70</div>
+          </a>
+          <a href="puzzle_71.html">
+          <div class="box-mini-grid">71</div>
+          </a>
+          <a href="puzzle_72.html">
+          <div class="box-mini-grid">72</div>
+          </a>
+          <a href="puzzle_73.html">
+          <div class="box-mini-grid">73</div>
+          </a>
+          <a href="puzzle_74.html">
+          <div class="box-mini-grid">74</div>
+          </a>
+          <a href="puzzle_75.html">
+          <div class="box-mini-grid">75</div>
+          </a>
+          <a href="puzzle_76.html">
+          <div class="box-mini-grid">76</div>
+          </a>
+          <a href="puzzle_77.html">
+          <div class="box-mini-grid">77</div>
+          </a>
+          <a href="puzzle_78.html">
+          <div class="box-mini-grid">78</div>
+          </a>
+          <a href="puzzle_79.html">
+          <div class="box-mini-grid">79</div>
+          </a>
+          <a href="puzzle_80.html">
+          <div class="box-mini-grid">80</div>
+          </a>
+          <a href="puzzle_81.html">
+          <div class="box-mini-grid">81</div>
+          </a>
+          <a href="puzzle_82.html">
+          <div class="box-mini-grid">82</div>
+          </a>
+          <a href="puzzle_83.html">
+          <div class="box-mini-grid">83</div>
+          </a>
+          <a href="puzzle_84.html">
+          <div class="box-mini-grid">84</div>
+          </a>
+          <a href="puzzle_85.html">
+          <div class="box-mini-grid">85</div>
+          </a>
+          <a href="puzzle_86.html">
+          <div class="box-mini-grid">86</div>
+          </a>
+          <a href="puzzle_87.html">
+          <div class="box-mini-grid">87</div>
+          </a>
+          <a href="puzzle_88.html">
+          <div class="box-mini-grid">88</div>
+          </a>
+          <a href="puzzle_89.html">
+          <div class="box-mini-grid">89</div>
+          </a>
+          <a href="puzzle_90.html">
+          <div class="box-mini-grid">90</div>
+          </a>
+          <a href="puzzle_91.html">
+          <div class="box-mini-grid">91</div>
+          </a>
+          <a href="puzzle_92.html">
+          <div class="box-mini-grid">92</div>
+          </a>
+          <a href="puzzle_93.html">
+          <div class="box-mini-grid">93</div>
+          </a>
+          <a href="puzzle_94.html">
+          <div class="box-mini-grid">94</div>
+          </a>
+          <a href="puzzle_95.html">
+          <div class="box-mini-grid">95</div>
+          </a>
+          <a href="puzzle_96.html">
+          <div class="box-mini-grid">96</div>
+          </a>
+          <a href="puzzle_97.html">
+          <div class="box-mini-grid">97</div>
+          </a>
+          <a href="puzzle_98.html">
+          <div class="box-mini-grid">98</div>
+          </a>
+          <a href="puzzle_99.html">
+          <div class="box-mini-grid">99</div>
+          </a>
+          <a href="puzzle_100.html">
+          <div class="box-mini-grid">100</div>
+          </a>
+          </div>
+         </div>
+      </div>
+        <div class="rightpanecard">
+          <h4 class="greyheading">Question for You</h4>
+            <p>Can you put a comment at the end of a print statement, on the same line as your code? For instance:<p class="small">&nbsp;<code><span class=keyword-orange>print</span> 'What is your #?' <span class="keyword-green"><span class=keyword-green>#</span> Comment</span</code></p>
+          <div>
+        </div>
+      </div>
+    </div>
+
+    <!-- **************** -->
+    <!--       TITLE      -->
+    <!-- **************** -->
+    <title>Puzzle 13 | Pythons and Ladders</title>
+
+  </body>
+	<a href="mailto:pythonsandladders@gmail.com?subject=Feedback: [ADMIN] Pythons and Ladders">
+  	  <div class="feedback">
+  	  &#128172;
+  	  </div>
+  	</a>
+</html>

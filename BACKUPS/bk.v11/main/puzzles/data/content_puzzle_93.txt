@@ -1,0 +1,128 @@
+________________________________
+$LEFTPANEL_HEADING$
+Magician Reversed
+https://open.spotify.com/track/5xRJeMA4P6RCoA1nfwE6iL
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+With speculated origins from ancient China, Persia, and India, a <a href="https://en.wikipedia.org/wiki/Magic_square" target="_blank">magic square</a> is an <var>n</var> &times; <var>n</var> grid, where <var>n</var> > 2.
+
+Each box in a magic square contains an ^int^, which occurs only once. The property of a magic square is such that each row, column, and diagonal add up to exactly the same number.
+Below are examples of magic squares with orders 3 and 4, respectively.
+<table>
+<tr>
+<td>
+<table class="magicsquare">
+<tr>
+<td class="magicsquare">2</td>
+<td class="magicsquare">7</td>
+<td class="magicsquare">6</td>
+</tr>
+<tr>
+<td class="magicsquare">9</td>
+<td class="magicsquare">5</td>
+<td class="magicsquare">1</td>
+</tr>
+<tr>
+<td class="magicsquare">4</td>
+<td class="magicsquare">3</td>
+<td class="magicsquare">8</td>
+</tr>
+</table>
+</td>
+<td></td><td></td><td></td><td></td>
+<td>
+<table class="magicsquare">
+<tr>
+<td class="magicsquare">4</td>
+<td class="magicsquare">14</td>
+<td class="magicsquare">15</td>
+<td class="magicsquare">1</td>
+</tr>
+<tr>
+<td class="magicsquare">9</td>
+<td class="magicsquare">17</td>
+<td class="magicsquare">6</td>
+<td class="magicsquare">12</td>
+</tr>
+<tr>
+<td class="magicsquare">5</td>
+<td class="magicsquare">11</td>
+<td class="magicsquare">10</td>
+<td class="magicsquare">8</td>
+</tr>
+<tr>
+<td class="magicsquare">16</td>
+<td class="magicsquare">2</td>
+<td class="magicsquare">8</td>
+<td class="magicsquare">18</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+In Python, you can represent the 3 &times; 3 magic square above as:
+<democodeline>[[2,7,6], [9,5,1], [4,3,8]]</democodeline>
+________________________________
+$LEFTPANEL_QUESTION$
+Define a function, <def>isMagicSquare</def>(), which takes in a ^list^ representing a square grid, and determines whether it is a magic square. Your output should be a ^bool^ value.
+________________________________
+$LEFTPANEL_EDITOR$
+def isMagicSquare(square):
+________________________________
+$LEFTPANEL_HINTS$
+First, figure out what order of square is passed in. Then, set up a running tally of the rows, columns, and diagonals accordingly.
+________________________________
+$RIGHTPANEL_QUESTIONS$
+How would you go about writing an algorithm which <i>generates</i> magic squares?
+________________________________
+$RIGHTPANEL_TESTCASES$
+You may assume that your input list will always represent an <var>n</var> &times; <var>n</var> grid (no rogue input cases).
+You may assume that your sublist elements will always be of datatype ^int^.
+________________________________
+$ALLPANES_SUBMITCASES$
+print ""
+print "INPUT     | [[2,7,6], [9,5,1], [4,3,8]]"
+print "OUTPUT    |", isMagicSquare([[2,7,6], [9,5,1], [4,3,8]])
+print "EXPECTED  | True"
+if isMagicSquare([[2,7,6], [9,5,1], [4,3,8]]) == True:
+    print "PASSED!"
+else: 
+    print "FAILED"
+
+print ""
+print "INPUT     | [[2,7,6], [9,5,1], [4,10,8]]"
+print "OUTPUT    |", isMagicSquare([[2,7,6], [9,5,1], [4,10,8]])
+print "EXPECTED  | False"
+if isMagicSquare([[2,7,6], [9,5,1], [4,10,8]]) == False:
+    print "PASSED!"
+else: 
+    print "FAILED"
+
+print ""
+print "INPUT     | [[4,14,15,1],[9,17,6,12],[5,11,10,8],[16,2,8,18]]"
+print "OUTPUT    |", isMagicSquare([[4,14,15,1],[9,17,6,12],[5,11,10,8],[16,2,8,18]])
+print "EXPECTED  | True"
+if isMagicSquare([[4,14,15,1],[9,17,6,12],[5,11,10,8],[16,2,8,18]]) == True:
+    print "PASSED!"
+else: 
+    print "FAILED"
+
+print ""
+print "INPUT     | [[23,6,19,2,15],[4,12,25,8,16],[10,18,1,14,22],[11,24,7,20,3],[17,5,13,21,9]]"
+print "OUTPUT    |", isMagicSquare([[23,6,19,2,15],[4,12,25,8,16],[10,18,1,14,22],[11,24,7,20,3],[17,5,13,21,9]])
+print "EXPECTED  | True "
+if isMagicSquare([[23,6,19,2,15],[4,12,25,8,16],[10,18,1,14,22],[11,24,7,20,3],[17,5,13,21,9]]) == True:
+    print "PASSED!"
+else: 
+    print "FAILED"
+
+
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+$RIGHTPANEL_SOLUTION$
+
+________________________________
+FIN
+
+

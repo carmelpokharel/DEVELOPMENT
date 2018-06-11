@@ -1,0 +1,84 @@
+________________________________
+$LEFTPANEL_HEADING$
+Four Walls
+https://open.spotify.com/track/1IcEofBOoS01ouUsqdn8ke
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+In puzzle form, a Shidoku is typically incomplete, requiring enthusiasts to fill in the missing values. Here's an example of an incomplete Shidoku:
+<table class="magicsquare">
+<tr>
+<td class="magicsquare"></td>
+<td class="shidoku-right"></td>
+<td class="shidoku-left">4</td>
+<td class="magicsquare"></td>
+</tr>
+<tr>
+<td class="shidoku-bottom">4</td>
+<td class="shidoku-bottom-right"></td>
+<td class="shidoku-bottom-left">3</td>
+<td class="shidoku-bottom"></td>
+</tr>
+<tr>
+<td class="shidoku-top"></td>
+<td class="shidoku-top-right">4</td>
+<td class="shidoku-top-left"></td>
+<td class="shidoku-top">3</td>
+</tr>
+<tr>
+<td class="magicsquare"></td>
+<td class="shidoku-right">1</td>
+<td class="shidoku-left"></td>
+<td class="magicsquare"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+In Python, you can represent this as:
+<democodeline>[['', '', 4, ''], [4, '', 3, ''], ['', 4, '', 3], ['', 1, '', '']]</democodeline>
+________________________________
+$LEFTPANEL_QUESTION$
+Define a function, <def>solveShidoku</def>(), which takes in a ^list^ representing a 4 &times; 4 incomplete Shidoku, and completes it. Your output should be a ^list^ with a completed, well-formed Shidoku.
+________________________________
+$LEFTPANEL_EDITOR$
+def solveShidoku(square):
+________________________________
+$LEFTPANEL_HINTS$
+Loop over every square, performing checks, until each square has a value; this may require you to loop over the Shidoku board multiple times.
+________________________________
+$RIGHTPANEL_QUESTIONS$
+How can you reuse code from <def>checkShidoku</def>() here?
+When you are looping over the Shidoku multiple times, can you call your function again from within your function body (psst--<a href="http://softwareengineering.stackexchange.com/questions/25052/in-plain-english-what-is-recursion" target="_blank">recursion</a>)?
+________________________________
+$RIGHTPANEL_TESTCASES$
+Try attempting the incomplete Shidokus by hand to see if you can determine an algorithm.
+You may assume your input Shidoku will have at least one unpopulated box.
+You may assume your input will always be solvable.
+________________________________
+$ALLPANES_SUBMITCASES$
+print ""
+print "INPUT     | [['', '', 4, ''], [4, '', 3, ''], ['', 4, '', 3], ['', 1, '', '']]"
+print "OUTPUT    |", solveShidoku([['', '', 4, ''], [4, '', 3, ''], ['', 4, '', 3], ['', 1, '', '']])
+print "EXPECTED  | [[1, 3, 4, 2], [4, 2, 3, 1], [2, 4, 1, 3], [3, 1, 2, 4]]"
+if solveShidoku([['', '', 4, ''], [4, '', 3, ''], ['', 4, '', 3], ['', 1, '', '']]) == [[1, 3, 4, 2], [4, 2, 3, 1], [2, 4, 1, 3], [3, 1, 2, 4]]:
+    print "PASSED!"
+else: 
+    print "FAILED"
+
+print ""
+print "INPUT     | [[3, 4, 1, ''], ['', 2, '', ''], ['', '', 2, ''], ['', 1, 4, 3]]"
+print "OUTPUT    |", solveShidoku([[3, 4, 1, ''], ['', 2, '', ''], ['', '', 2, ''], ['', 1, 4, 3]])
+print "EXPECTED  | [[3, 4, 1, 2, [1, 2, 3, 4], [4, 3, 2, 1], [2, 1, 4, 3]]"
+if solveShidoku([[3, 4, 1, ''], ['', 2, '', ''], ['', '', 2, ''], ['', 1, 4, 3]]) == [[3, 4, 1, 2, [1, 2, 3, 4], [4, 3, 2, 1], [2, 1, 4, 3]]:
+    print "PASSED!"
+else: 
+    print "FAILED"
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+$RIGHTPANEL_SOLUTION$
+
+________________________________
+FIN
+
+

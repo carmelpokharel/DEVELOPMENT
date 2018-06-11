@@ -1,0 +1,39 @@
+________________________________
+$LEFTPANEL_HEADING$
+TBD
+ 
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+Did you know you can add to an existing list? Try this:
+<code class="demo">fruits = ['apples', 'pears', 'oranges']</code>
+<code class="demo">fruits.append('grapes')</code>
+<code class="demo">print fruits</code>
+<code class="demo">someBerries = ['cherries', 'blueberries', 'raspberries']</code>
+<code class="demo">fruits.append(someBerries)</code>
+<code class="demo">print fruits</code>
+<p class="small">&nbsp;</p>
+It is worth noting that <em>.append()</em> will only allow you to add to the end of a list.
+________________________________
+$LEFTPANEL_QUESTION$
+Create a list called <em>rainbow</em> that contains the first five colours of the rainbow. Then, add the sixth colour of the rainbow to the rainbow list. And then add the seventh colour to the rainbow list. Finally, print your rainbow list. Your output should be:
+<code>['red','orange','yellow','green','blue','indigo','violet']</code>
+<p class="small">&nbsp;</p>
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+Your code must be four lines long and will need to use <em>.append()</em> twice.
+________________________________
+$RIGHTPANEL_TIME$
+2-3 minutes
+________________________________
+$RIGHTPANEL_QUESTIONS$
+Can you append to a list with several items at once? Try <em>greetings.append('peaches', 'mangoes')</em> and then print it to see if it works. 
+What happens when you use <em>.append()</em> to add a list to an existing list?
+Can you use <em>.append()</em> on a string? How about an integer?
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

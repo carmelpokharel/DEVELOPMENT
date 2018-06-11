@@ -1,0 +1,35 @@
+________________________________
+$LEFTPANEL_MAIN$
+Tutorial: Algorithms
+________________________________
+$LEFTPANEL_MAINAREA$
+<p class="small">&nbsp;</p>
+<p class="tutorialheading">What is an algorithm?</p>
+In the programming world, not all inputs are equal. The set of instructions you provide to a computer, known as an <strong>algorithm</strong>, affects <em>how</em> a computer processes your requests.
+When dealing with large-scale problems, algorithm design increases in importance&#8212;you'll always want the computer to solve problems in the quickest, most stable, and most efficient way.
+<p class="medium">&nbsp;</p>
+<p class="tutorialheading">Pitfalls</p>
+The design of algorithms brings up an important caveat: computers do not like bad algorithms. If you provide a poorly-designed algorithm to a computer, it will either refuse to run, over-exert itself, throw out error messages, or simply ignore you.
+
+Needless to say, this behaviour has consequences. On the one hand, it can be challenging to communicate with a computer, given its preference for incredibly explicit instructions. On the other hand, at least one thing is for certain: when a computer acts up, the problem is always you!
+________________________________
+$LEFTPANEL_INSTRUCTIONSAREA$
+________________________________
+$LEFTPANEL_TOOLBARAREA$
+________________________________
+$LEFTPANEL_EDITORAREA$
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINT$
+You'll find your hints here!
+________________________________
+$LEFTPANEL_OUTPUTAREA$
+________________________________
+$RIGHTPANEL_PYTHONSHELL$
+________________________________
+$RIGHTPANEL_QUESTIONS$
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+FIN

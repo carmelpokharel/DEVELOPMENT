@@ -1,0 +1,32 @@
+________________________________
+$LEFTPANEL_HEADING$
+Days Go By
+https://open.spotify.com/track/4HvO16USfzteifG3cXVSd5
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+Run the following code, and examine its output:
+<democodeblock>
+<code>my_string = 'QWE'</code>
+<code>my_list = ['Robby', 'Thalie', 'Yasmin']</code>
+<code>^for^ name ^in^ my_list:</code>
+<code><tab>my_string = my_string + name[0]</tab></code>
+<code>^print^ my_string</code>
+</democodeblock>
+________________________________
+$LEFTPANEL_QUESTION$
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+Follow the example closely!
+________________________________
+$RIGHTPANEL_QUESTIONS$
+What does my_string = my_string + name[0] mean?
+What happens if you take out the ^print^ statement?
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

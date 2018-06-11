@@ -1,0 +1,34 @@
+________________________________
+$LEFTPANEL_HEADING$
+Bring Me to Life
+https://open.spotify.com/track/0COqiPhxzoWICwFCS4eZcp
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+When we want to store data for later use, we use <strong>variables</strong>, which can be thought of as labelled containers.
+To use variables, you must first create them. In programming, this action is known as variable <b>declaration</b> or <b>initialization</b>. 
+When declaring a variable, the name comes first, followed by an equals sign (=), then the datatype you wish to store in it.
+<democodeblock>
+<code>name = 'Alexander'</code>
+<code>age = 26</code>
+<code>^print^ name</code>
+<code>^print^ name, age</code>
+</democodeblock>
+________________________________
+$LEFTPANEL_QUESTION$
+Declare two variables, firstWord and secondWord, which store the strings 'Hello' and 'World!' respectively. Then, write one ^print^ statement which outputs the two variables on one line, so that you see the following text in your output:
+<outputcodeline>Hello World!</outputcodeline>
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+The structure of the example code is very similar to that of this task.
+________________________________
+$RIGHTPANEL_QUESTIONS$
+What kind of datatypes can you store in a variable?
+What might be considered a bad variable name to use?
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

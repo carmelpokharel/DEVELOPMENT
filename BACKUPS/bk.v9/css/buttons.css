@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+@import url('https://fonts.googleapis.com/css?family=Antic');
+
+/*-------
+  BUTTONS
+--------*/
+button {
+  background-color:     var(--colour-lighter-blue-one);
+  border:               none;
+  color:                var(--colour-off-white);
+  padding:              10px 15px;
+  border-radius:        var(--shape-rounded-corners);
+  margin-right:         var(--shape-rounded-corners);
+  margin-top:           5px;
+}
+button.start {
+  background-color:     var(--colour-red);
+}
+button:hover, button:active {
+  background-color:     var(--colour-blue-one);
+  box-shadow:           var(--shadow-small);
+  cursor:               pointer;
+}
+button.start:hover, button.start:active{
+  background-color:     var(--colour-red);
+}
+.box {
+  font-family:          var(--font-style-antic);
+  font-size:            var(--grid-box-font-size-std);
+  float:                left;
+  text-align:           center;
+  vertical-align:       middle;
+  line-height:          var(--grid-box-height);
+  color:                var(--colour-text-grey);
+  background-color:     var(--colour-absolute-white);
+  }
+.box-puzz {
+  font-family:          var(--font-style-antic);
+  font-size:            var(--grid-box-font-size-std);
+  float:                left;
+  text-align:           center;
+  vertical-align:       middle;
+  line-height:          var(--grid-box-height);
+  color:                var(--colour-text-grey);
+  background-color:     var(--colour-absolute-white);
+}
+.box-puzz2 {
+  font-family:          var(--font-style-antic);
+  font-size:            var(--grid-box-font-size-std);
+  float:                left;
+  text-align:           center;
+  vertical-align:       middle;
+  line-height:          var(--grid-box-height);
+  color:                var(--colour-text-grey);
+}
+.puzzlenav {
+    width: 100%;
+    background-color: var(--colour-absolute-white);
+    margin-left: -5px;
+}
+.puzzlenav2 {
+    width: 100%;
+    background-color: var(--colour-absolute-white);
+    margin-left: -5px;
+}
+/*----------
+  GRID BOXES
+-----------*/
+.box-mini-grid {
+  margin:               var(--mini-grid-box-margins);
+  width:                var(--mini-grid-box-width);
+  height:               var(--mini-grid-box-height);
+  border:               var(--mini-grid-box-border) solid var(--colour-text-grey);
+  border-radius:        var(--shape-rounded-corners);
+  transition-duration:  var(--animation-transition-std);
+  font-family:          var(--font-style-antic);
+  float:                left;
+  text-align:           center;
+  vertical-align:       middle;
+  line-height:          var(--mini-grid-box-height);
+  background:           var(--colour-off-white);
+  color:                var(--colour-text-grey);
+}
+.box-mini-grid-curr {
+  margin:               var(--mini-grid-box-margins);
+  width:                var(--mini-grid-box-width);
+  height:               var(--mini-grid-box-height);
+  border:               var(--mini-grid-box-border) solid var(--colour-text-grey);
+  border-radius:        var(--shape-rounded-corners);
+  transition-duration:  var(--animation-transition-std);
+  font-family:          var(--font-style-antic);
+  float:                left;
+  text-align:           center;
+  vertical-align:       middle;
+  line-height:          var(--mini-grid-box-height);
+  background:           var(--colour-text-grey);
+  color:                var(--colour-off-white);
+}
+.box-mini-grid:hover, .box-mini-grid:active {
+  border:               var(--mini-grid-box-border) solid var(--colour-orange);
+  background:           var(--colour-orange);
+  color:                var(--colour-off-white);
+}
+/*--------------------------
+  NAVIGATION-RELATED BUTTONS
+---------------------------*/
+.box-puzzle-number2 {
+  margin:               var(--grid-box-margins);
+  height:               var(--grid-box-height);
+  border:               1px solid var(--colour-absolute-white);
+  border-radius:        var(--shape-rounded-corners);
+  transition-duration:  var(--animation-transition-std);
+  background-color:     rgba(0,0,0,0.6);
+  color:                var(--colour-absolute-white);
+  /* --- */
+  width:                120px;
+}
+.box-puzzle-arrows2 {
+  margin:               var(--grid-box-margins);
+  width:                var(--grid-box-width);
+  height:               var(--grid-box-height);
+  border:               1px solid var(--colour-absolute-white);
+  border-radius:        var(--shape-rounded-corners);
+  transition-duration:  var(--animation-transition-std);
+  background-color:     rgba(0,0,0,0.7);
+  color:                var(--colour-absolute-white);
+}
+.tutorial-nav-circles {
+  padding:              30px 0 20px 45px;
+  height:               30px;
+  font-size:            80%;
+  font-weight:          bolder;
+  z-index:              2;
+}
+/*-------------
+  DONATE BUTTON
+--------------*/
+.donatenowbutton {
+  background-color:     var(--colour-bright-orange);
+  width:                150px;
+  height:               30px;
+  line-height:          30px;
+  font-family:          var(--font-style-antic);
+  font-size:            90%;
+  color:                var(--colour-absolute-white);
+  text-align:           center;
+  margin:               auto;
+  border-radius:        var(--shape-rounded-corners);
+  transition-property:  background, border-radius;
+  transition-duration:  var(--animation-transition-std);
+}
+/*_________________________________________________________________________________*/
+
+/*-------
+  CIRCLES
+--------*/
+.circle-tutorial {
+  float: left;
+  line-height:          var(--circle-tutorial-diameter);
+  font-size:            var(--circle-tutorial-font-size);
+  font-family:          var(--font-style-antic);
+  color:                var(--colour-off-white);
+  text-align:           center;
+  vertical-align:       middle;
+}
+.circle-tutorial-off {
+  margin-right:         var(--circle-tutorial-margins);
+  width:                var(--circle-tutorial-diameter);
+  height:               var(--circle-tutorial-diameter);
+  border:               var(--circle-tutorial-border) solid #bbb;
+  border-radius:        var(--shape-circle-corners);
+  transition-duration:  var(--animation-transition-std);
+}
+.circle-tutorial-on {
+  margin-right:         var(--circle-tutorial-margins);
+  width:                var(--circle-tutorial-diameter);
+  height:               var(--circle-tutorial-diameter);
+  border:               var(--circle-tutorial-border) solid #bbb;
+  border-radius:        var(--shape-circle-corners);
+  transition-duration:  var(--animation-transition-std);
+  /* --- */
+  background-color:     #555;
+  color:                var(--colour-off-white);
+}
+.feedback {
+  width:                var(--circle-feedback-diameter);
+  height:               var(--circle-feedback-diameter);
+  line-height:          var(--circle-feedback-diameter);
+  box-shadow:           var(--shadow-small);
+  background-color:     var(--colour-red);
+  right:                var(--circle-feedback-padding);
+  bottom:               var(--circle-feedback-padding);
+  font-family:          var(--font-style-sourcesanspro);
+  font-size:            150%;
+  color:                var(--colour-off-white);
+  text-align:           center;
+  vertical-align:       middle;
+  transition-duration:  var(--animation-transition-std);
+  position:             fixed;
+  border-radius:        var(--shape-circle-corners);
+  z-index:              6;
+}
+.feedback:hover, .feedback:active {
+  background:         var(--colour-lighter-red);
+}
+
+
+.whitebox {
+  width:                130px;
+  height:               28px;
+  line-height:          28px;
+  border:               2px solid var(--colour-off-white);
+  float:                left;
+  font-family:          "Exo 2";
+  font-size:            85%;
+  font-weight:          100;
+  color:                var(--colour-off-white);
+  text-align:           center;
+  vertical-align:       middle;
+  border-radius:        var(--shape-rounded-corners);
+  transition-duration:  var(--animation-transition-std);
+}
+.whitebox:hover, .whitebox:active {
+  background-color:     var(--colour-lighter-blue-one);
+  color:                var(--colour-off-white);
+}
+.redbox {
+  width:                130px;
+  height:               28px;
+  line-height:          28px;
+  margin-right:         10px;
+  border:               2px solid var(--colour-red);
+  background-color:     var(--colour-red);
+  float:                left;
+  font-size:            85%;
+  font-weight:          100;
+  font-family:          "Exo 2";
+  color:                var(--colour-off-white);
+  text-align:           center;
+  vertical-align:       middle;
+  border-radius:        var(--shape-rounded-corners);
+  transition-duration:  var(--animation-transition-std);
+}
+.redbox:hover, .redbox:active {
+  background-color:     var(--colour-lighter-red);
+  border:               2px solid var(--colour-red);
+  box-shadow:           var(--shadow-small);
+}
+.redbox1 {
+  width:                150px;
+  height:               39px;
+  line-height:          39px;
+  margin-right:         10px;
+  margin-top:           0px;
+  background-color:     var(--colour-red);
+  float:                left;
+  font-size:            85%;
+  font-weight:          100;
+  font-family:          "Exo 2";
+  color:                var(--colour-off-white);
+  text-align:           center;
+  vertical-align:       middle;
+  border-radius:        var(--shape-rounded-corners);
+  transition-duration:  var(--animation-transition-std);
+}
+.redbox1:hover, .redbox1:active {
+  background-color:     var(--colour-lighter-red);
+  box-shadow:           var(--shadow-small);
+}

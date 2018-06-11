@@ -1,0 +1,41 @@
+________________________________
+$LEFTPANEL_HEADING$
+Monkey Tree
+https://open.spotify.com/track/3ix9l9TN5brDLn9KvwyN2S
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+________________________________
+$LEFTPANEL_QUESTION$
+<table>
+   <tr>
+      <td class="linecol">Line 1</td>
+      <td class="codecol">Declare a variable, letter_list, that is an empty ^list^ []</td>
+   </tr>
+   <tr>
+      <td class="linecol">Line 2</td>
+      <td class="codecol">Declare a variable, animal, for the ^str^ 'monkey'</td>
+   </tr>
+   <tr>
+      <td class="linecol">Line 3-4</td>
+      <td class="codecol">Using a ^for^ loop, iterate through each letter of the animal variable and add that letter to letter_list</td>
+   </tr>
+   <tr>
+      <td class="linecol">Line 5</td>
+      <td class="codecol">^print^ letter_list</td>
+   </tr>
+</table>
+Your output should look like this:
+<outputcodeline>['m','o','n','k','e','y']</outputcodeline>
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+You will need to use one of .^append^() or .^extend^()
+________________________________
+$RIGHTPANEL_QUESTIONS$
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

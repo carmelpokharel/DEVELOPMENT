@@ -1,0 +1,81 @@
+________________________________
+$LEFTPANEL_HEADING$
+Great for My Collection
+https://open.spotify.com/track/6CHZkZjR2OXL0Lqo0WA3mz
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+________________________________
+$LEFTPANEL_QUESTION$
+Define a function, <def>createGroups</def>(), which takes in a ^list^ and an ^int^ <var>n</var> > 0, then creates groups of its elements. The ^int^ determines how many elements there are per group.
+
+For example, an input of ^list^ [1, 2, 3, 4, 5, 6, 7] and ^int^ 3 should result in the following:
+<outputcodeline>[[1,2,3], [4,5,6], [7]]</outputcodeline>
+________________________________
+$LEFTPANEL_EDITOR$
+def createGroups(input_list, n):
+________________________________
+$LEFTPANEL_HINTS$
+Use a ^for^ loop, and update your output ^list^ every <var>n</var> elements.
+________________________________
+$RIGHTPANEL_QUESTIONS$
+Can you complete this square by only changing two lines of code from <def>createPairs</def>()?
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$ALLPANES_SUBMITCASES$
+print ""
+print "INPUT     | [], 2"
+print "OUTPUT    |", createGroups([], 2)
+print "EXPECTED  | []"
+if createGroups([], 2) == []:
+	print "PASSED!"
+else: 
+	print "FAILED"
+
+print ""
+print "INPUT     | [1], 1"
+print "OUTPUT    |", createGroups([1], 1)
+print "EXPECTED  | [[1]]"
+if createGroups([1], 1) == [[1]]:
+	print "PASSED!"
+else: 
+	print "FAILED"
+
+print ""
+print "INPUT     | [1,2,35,6], 1"
+print "OUTPUT    |", createGroups([1,2,35,6], 1)
+print "EXPECTED  | [[1], [2], [35], [6]]"
+if createGroups([1,2,35,6], 1) == [[1], [2], [35], [6]]:
+	print "PASSED!"
+else: 
+	print "FAILED"
+
+print ""
+print "INPUT     | [1,2,3,'Hello'], 2"
+print "OUTPUT    |", createGroups([1,2,3,'Hello'], 2)
+print "EXPECTED  | [[1, 2], [3, 'Hello']]"
+if createGroups([1,2,3,'Hello'], 2) == [[1,2],[3,'Hello']]:
+	print "PASSED!"
+else: 
+	print "FAILED"
+
+print ""
+print "INPUT     | [1,2,3,4,5,6,7,8,9], 4"
+print "OUTPUT    |", createGroups([1,2,3,4,5,6,7,8,9], 4)
+print "EXPECTED  | [[1, 2, 3, 4], [5, 6, 7, 8], [9]]"
+if createGroups([1,2,3,4,5,6,7,8,9], 4) == [[1, 2, 3, 4], [5, 6, 7, 8], [9]]:
+	print "PASSED!"
+else: 
+	print "FAILED"
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+$RIGHTPANEL_SOLUTION$
+def createGroups(the_list, chunk_size):
+    result_list = []
+    while the_list:
+        result_list.append(the_list[:chunk_size])
+        the_list = the_list[chunk_size:]
+    return result_list
+________________________________
+FIN

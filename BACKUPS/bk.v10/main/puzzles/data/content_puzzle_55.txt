@@ -1,0 +1,62 @@
+________________________________
+$LEFTPANEL_HEADING$
+New Divide
+https://open.spotify.com/track/6Wx88Mv6b9ofjKMKkdwOJd
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+________________________________
+$LEFTPANEL_QUESTION$
+Define a function, <def>divide</def>(), which sequentially divides a ^list^ of numbers, and outputs the result as the final quotient. For example, [10,5,1] = 10 &divide; 5 &divide; 1 = 2. 
+You may assume that input ^list^ does not contain any zeros, and will only hold ^int^ datatypes.
+________________________________
+$LEFTPANEL_EDITOR$
+def divide(input_list):
+________________________________
+$LEFTPANEL_HINTS$
+Use an exponent to the power of 2 when initializing your quotient!
+________________________________
+$RIGHTPANEL_QUESTIONS$
+How can you make your fourth Submit case return the ^float^ 33.3, and not ^int^ 33?
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$ALLPANES_SUBMITCASES$
+print ""
+print "INPUT     | [10]"
+print "OUTPUT    |", divide([10])
+print "EXPECTED  | 10"
+if divide([10]) == 10:
+	print "PASSED!"
+else: 
+	print "FAILED"
+
+print ""
+print "INPUT     | [10,5,1]"
+print "OUTPUT    |", divide([10,5,1])
+print "EXPECTED  | 2"
+if divide([10,5,1]) == 2:
+	print "PASSED!"
+else: 
+	print "FAILED"
+
+print ""
+print "INPUT     | [20,1,2,2,1]"
+print "OUTPUT    |", divide([20,1,2,2,1])
+print "EXPECTED  | 5"
+if divide([20,1,2,2,1]) == 5:
+	print "PASSED!"
+else: 
+	print "FAILED"
+
+print ""
+print "INPUT     | [100,3]"
+print "OUTPUT    |", divide([100,3])
+print "EXPECTED  | 33"
+if divide([100,3]) == 33:
+	print "PASSED!"
+else: 
+	print "FAILED"
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

@@ -1,0 +1,30 @@
+________________________________
+$LEFTPANEL_HEADING$
+Numbers
+https://open.spotify.com/track/7Ghnsdv1lVpUJN2YhUbz4d
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+Time to work with integer arithmetic. Enter the following statements in your Shell, and run them to see the outputs:
+<code class="demoblock">~print 10 + 2~print 10 - 2~print 10 * 2~print 10 / 2~print 8 / 3~</code>
+________________________________
+$LEFTPANEL_QUESTION$
+Write a Python statement which prints the result of the following math expression: 
+<ol>multiply 2 by 3, and then add 4</ol>
+Your statement must include all of the three integers, with the output simply showing:
+<code>10</code>
+<p class="small">&nbsp;</p>
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+Remember, you're working with integers, not strings. You shouldn't be using quotation marks anywhere!
+________________________________
+$RIGHTPANEL_QUESTIONS$
+Take out the word <em>print</em> and see what happens. Notice the importance of typing the word <em>print</em> before your arithmetic expression. Why do you think this makes a difference? 
+When you divide an integer by another integer that is not a factor of the first (ex. <em>print 8 / 3</em> ). What is the output?
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

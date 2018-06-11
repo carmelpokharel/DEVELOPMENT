@@ -1,0 +1,28 @@
+________________________________
+$LEFTPANEL_HEADING$
+The Silver String
+https://open.spotify.com/track/1fulFeOm8Zm5QJDSLRpoCc
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+<a href="../../tutorials/pages/tutorial_1.html">
+<div class="tutorialbox" onclick="">Take the tutorial &rang;</div>
+<linespace>
+</a>
+<br>
+________________________________
+$LEFTPANEL_QUESTION$
+For this first square, your task is simple--write a Python statement in the Editor which prints the following string (^str^) to the output box:
+<outputcodeline>Pythons and Ladders</outputcodeline>
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+Make sure to check out our tutorial!
+________________________________
+$RIGHTPANEL_QUESTIONS$
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

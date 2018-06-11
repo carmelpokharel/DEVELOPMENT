@@ -1,0 +1,42 @@
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+
+A Boolean is a data type which is either True or False. Note that a Boolean is not a 
+string of the words "True" and "False", but its own data type.
+
+To obtain Booleans, we can perform comparison operations, such as greater than, less
+than, or equal to.
+
+Run the sample code embedded in the editor, and analyze the output at the bottom.
+Now, write 3 print statements which print the comparisons of two numbers.
+
+For example, if your first number is 1.0, and your second number is 1, your statements
+should output exactly the following 3 separate lines:
+&#9656; Equality comparison:     True
+&#9656; Less than comparison:    False
+&#9656; Greater than comparison: False
+________________________________
+$LEFTPANEL_EDITOR$
+# Remember to test your code thoroughly on a variety of inputs!
+num1 = 5.5
+num2 = 5
+# Comparison operators
+print 'Examples:'
+print num1 == num2, num1 >= num2, num1 <= num2, num1 > num2, num1 < num2, num1 != num2
+
+________________________________
+$RIGHTPANEL_TIME$
+7-10 minutes
+________________________________
+$RIGHTPANEL_QUESTIONS$
+How is the double equal sign "==" different from a single "=" one?
+What is the "!=" comparison operator?
+What would be the result of using a comparison operator on two strings?<br>Try it on "string1 == string1"
+Can a string be greater than or less than another string?<br>Try it on "batman" > "Batman"<br>What does the above result mean? (Hint: look into ASCII values)
+________________________________
+$RIGHTPANEL_SPONSORED$
+Sponsored1 $LINK$ www.stringsinpython.com
+Sponsored2 $LINK$ www.newlinecharacters.com
+Sponsored3 $LINK$ www.printstatements.com
+________________________________
+FIN

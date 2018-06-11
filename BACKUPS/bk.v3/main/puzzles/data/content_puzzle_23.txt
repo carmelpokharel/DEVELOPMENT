@@ -1,0 +1,45 @@
+________________________________
+$LEFTPANEL_HEADING$
+What If
+https://open.spotify.com/track/39qRdHcl2tizWbzlM9kUlN
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+Sometimes, you will want to write code that will only do something if a condition is met. If/else statements help you do that. Make sure you have a good understanding of Booleans before continuing with this puzzle.
+
+Here's the basic construct of an if/else statement:
+if (conditional statement is True):
+&emsp;&emsp;do something
+else:
+&emsp;&emsp;do something else
+
+Try the following and observe the results to get a better understanding of if/else statements:
+<code class="demo">first_mark = 88</code>
+<code class="demo">second_mark = 92</code>
+<code class="demo">if first_mark > second_mark:</code>
+<code class="demo">&emsp;&emsp;&emsp;&emsp;print "You did better on your first test!"</code>
+<code class="demo">else:</code>
+<code class="demo">&emsp;&emsp;&emsp;&emsp;print "You did better on your second test!"</code>
+<p class="small">&nbsp;</p>
+________________________________
+$LEFTPANEL_QUESTION$
+Create three variables, <em>first_name</em>, <em>middle_initial</em>, <em>last_name</em>, and have each equal to a string with your own name details. Now, Write an if/else statement that checks your name details and outputs a sentence that declares whether or not you have a middle name. You should have 7 lines of code, in total.
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+If you don't have a middle name, your middle initial will be an empty string (<em>middle_initial = ''</em>). Also, you don't need to use your <em>first_name</em> and <em>last_name</em> variables in the if/else statement.
+________________________________
+$RIGHTPANEL_TIME$
+2-3 minutes
+________________________________
+$RIGHTPANEL_QUESTIONS$
+Update the variable <em>first_mark</em> to equal to 95. What does your code output now?
+Update the variable <em>first_mark</em> to equal to 92 (same as <em>second_mark</em>). Why does your output say you did better on your second test if the two marks are equal? Knowing this, consider how you can improve your if/else statement to correct this issue.
+What if you want to do something "if it's True", but do nothing "if it's False"? Can an if statement exist without an else statement?
+Can an else statement exist without an if statement?
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

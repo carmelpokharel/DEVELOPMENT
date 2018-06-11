@@ -1,0 +1,36 @@
+________________________________
+$LEFTPANEL_HEADING$
+Again, Again, and Again
+https://open.spotify.com/track/4t2v0vTHC4bgpgt4cYwEAG
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+Did you know you can multiply strings by integers? Try these:
+<code class="demo">print 'A' * 3</code>
+<code class="demo">print '7' * 3</code>
+<code class="demo">print 7 * 3</code>
+<p class="small">&nbsp;</p>
+________________________________
+$LEFTPANEL_QUESTION$
+Write a script, using multiplication, that outputs the following string: 
+<code>HelloHelloHelloHelloHello</code>
+<p class="small">&nbsp;</p>
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+The string 'Hello' should only appear once in your script. How would you make it repeat x number of times?
+________________________________
+$RIGHTPANEL_TIME$
+2-3 minutes
+________________________________
+$RIGHTPANEL_QUESTIONS$
+How are the first two print statements similar? 
+Why isn't the answer to the second statement equal to 21?
+How are the 2nd and 3rd print statements different?
+Is it possible to multiply a string by a float?
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

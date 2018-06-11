@@ -1,0 +1,36 @@
+________________________________
+$LEFTPANEL_HEADING$
+The Silver String
+https://open.spotify.com/track/1fulFeOm8Zm5QJDSLRpoCc
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+First time here? Take the tutorial!
+<a href="../../tutorials/pages/tutorial_1.html">
+<div class="tutorialbox">TUTORIAL</div>
+<p class="small">&nbsp;</p>
+</a>
+<br>
+________________________________
+$LEFTPANEL_QUESTION$
+For your first Pythons and Ladders square, your task is simple: write a Python statement in the editor which prints the following phrase to the output box:
+<p class="small">&nbsp;</p>
+<code>Hello World!</code>
+<p class="small">&nbsp;</p>
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+Make sure to check out our tutorial!
+________________________________
+$RIGHTPANEL_TIME$
+1-2 minutes
+________________________________
+$RIGHTPANEL_QUESTIONS$
+What happens to your quotation marks when you run the code?
+Is there another way to display text in the output box, without using the <em>print</em> command?
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

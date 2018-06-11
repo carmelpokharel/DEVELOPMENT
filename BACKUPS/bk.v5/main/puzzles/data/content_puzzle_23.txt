@@ -1,0 +1,30 @@
+________________________________
+$LEFTPANEL_HEADING$
+What If
+https://open.spotify.com/track/39qRdHcl2tizWbzlM9kUlN
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+Sometimes, you'll want to write code that runs only when a condition is met. An ^keyword^if statement helps you do just that.
+
+Here's the basic construct of an ^keyword^if statement:
+<code class="demoblock">~^keyword^# <span class="keyword-green">if conditional statement is True:</span>~^keyword^#&emsp;&emsp;&emsp;&emsp;<span class="keyword-green">do something</span>~</code>
+Here's an example of how you'd use one.
+<code class="demoblock">~finalGrade = 80~^keyword^if finalGrade > 50:~&emsp;&emsp;&emsp;&emsp;^keyword^print 'You passed the course!'~</code>
+<strong>Note</strong>: In the Python language, when the last character of a line is a colon (:), the next line <em>must</em> be indented. You can achieve the indentation with space characters.
+________________________________
+$LEFTPANEL_QUESTION$
+Add another ^keyword^if statement below the above example, which prints "You did not pass!" if finalGrade is less than 50.
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+The ^keyword^if statement you write should not be indented, but the ^keyword^print statement should.
+________________________________
+$RIGHTPANEL_QUESTIONS$
+In the example, what would happen if you changed finalGrade to 20?
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

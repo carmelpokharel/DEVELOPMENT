@@ -1,0 +1,35 @@
+________________________________
+$LEFTPANEL_MAIN$
+Tutorial: Interface (I)
+________________________________
+$LEFTPANEL_MAINAREA$
+Let's now put our knowledge into practice.
+In Pythons and Ladders, the grey box below is what we call the <strong>Editor</strong>. This is the box from where you can input your instructions to Python (i.e. the computer). 
+
+Right now, we've written a command in there for you. To see what the computer does with the code, click on the <strong>Run</strong> button.
+
+<h4 class="h4gold">EDITOR</h4>
+________________________________
+$LEFTPANEL_INSTRUCTIONSAREA$
+________________________________
+$LEFTPANEL_TOOLBARAREA$
+________________________________
+$LEFTPANEL_EDITORAREA$
+________________________________
+$LEFTPANEL_EDITOR$
+print 'Hello World!'
+________________________________
+$LEFTPANEL_HINT$
+You'll find your hints here!
+________________________________
+$LEFTPANEL_OUTPUTAREA$
+You may notice that the box below, the <strong>Output</strong> box, has suddenly populated with content. This indicates that Python has successfully received the command, processed it, and has given you an output. Great!
+<h4 class="h4gold">OUTPUT</h4>
+________________________________
+$RIGHTPANEL_PYTHONSHELL$
+________________________________
+$RIGHTPANEL_QUESTIONS$
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+FIN

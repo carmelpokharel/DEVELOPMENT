@@ -1,0 +1,59 @@
+________________________________
+$LEFTPANEL_HEADING$
+Greater Than 84
+https://open.spotify.com/track/4X2Cl1m6a7NmJkvnlZb5yB
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+A <b>Boolean</b> is a data type which is either <u>True</u> or <u>False</u>. Note that a Boolean is <u>not</u> a string of the words "True" and "False", but its own data type. 
+
+To obtain Booleans, we can perform comparison operations, such as greater than, less than, or equal to (>, <, ==). For example, test the following and observe the results:
+<code class="demo">print 5 < 10&emsp;&emsp;&emsp;# Answer should be True </code> 
+<code class="demo">print 5 > 10&emsp;&emsp;&emsp;# Answer should be False</code> 
+<code class="demo">print 5 == 5&emsp;&emsp;&emsp;# Answer should be True </code> 
+Now play around with and understand these other comparison operators: "!=", ">=", and "<=".
+________________________________
+$LEFTPANEL_QUESTION$
+Write only four lines of code, each containing a comparison operator, that returns the following outputs:
+<table>
+   <tr>
+      <td><b>Line #</b></td>
+      <td><b>Comparison Operator</b></td>
+      <td><b>Output</b></td>
+   </tr>
+   <tr>
+      <td>1</td>
+      <td>Equality comparison</td>
+      <td>True</td>
+   </tr>
+   <tr>
+      <td>2</td>
+      <td>'Less than' comparison</td>
+      <td>False</td>
+   </tr>
+   <tr>
+      <td>3</td>
+      <td>'Greater than' comparison</td>
+      <td>False</td>
+   </tr>
+   <tr>
+      <td>4</td>
+      <td>'Does not equal to' comparison&emsp;</td>
+      <td>True</td>
+   </tr>
+</table>
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+Don’t forget to write print before each statement and make sure you’re using the right symbols (>, <, ==, !=)
+________________________________
+$RIGHTPANEL_QUESTIONS$
+How is the double equal sign "==" different from a single "=" one?
+What is the "!=" comparison operator?
+Are you able to compare floating points against integers? Do you have to do anything differently?
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

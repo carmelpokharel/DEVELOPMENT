@@ -1,0 +1,45 @@
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+
+Now that you've learned how to add integers, how can you use Python to add non-integer 
+numbers? Hint: it's a new data type.
+
+Extend your solution to Sq. 3 so that you are now able to handle any numerical data-
+type in Python, and print it correctly to the output. Instead of addition, however,
+you will now be performing multiplication.
+
+For example, if you store the numbers 4.8 and 9 in num1 and num2 respectively, your 
+output should read exactly as follows:
+&#9656; The product of 2.5 and 3 is 7.5.
+
+Note: The following output is considered incorrect:
+&#9656; The product of 2.5 and 3.0 is 7.5.
+________________________________
+$LEFTPANEL_EDITOR$
+# Test your code on the following cases:
+# num1 = 5, num2 = 5
+# num1 = 5.1, num2 = 5
+# num1 = 5.9, num2 = 5.1
+# num1 = 5.0, num2 = 5.1
+# num1 = 5, num2 = 5.4
+# num1 = 5, num2 = 5.0
+________________________________
+$RIGHTPANEL_TIME$
+10-15 minutes
+________________________________
+$RIGHTPANEL_QUESTIONS$
+What purpose do the hashtags on the first few lines serve?
+Which data type allows you to represent decimal numbers in Python?
+Once you have discovered this new data type, can you verify it by using isinstance() on num1?
+Can you convert between numerical data types? If so, how?
+What happens if you try to print int(4.8)?
+Can you convert between a string and this new data type?
+How many decimal points can this new data type store?
+Examine the test cases carefully. How does each pair test your code?
+________________________________
+$RIGHTPANEL_SPONSORED$
+Sponsored1 $LINK$ www.stringsinpython.com
+Sponsored2 $LINK$ www.newlinecharacters.com
+Sponsored3 $LINK$ www.printstatements.com
+________________________________
+FIN

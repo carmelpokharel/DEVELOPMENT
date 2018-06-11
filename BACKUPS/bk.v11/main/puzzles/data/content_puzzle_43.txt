@@ -1,0 +1,64 @@
+________________________________
+$LEFTPANEL_HEADING$
+Who I Am
+https://open.spotify.com/track/1CTbnq41ms9R4lcifz27Et
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+The brackets after your function name actually serve a useful purpose: to deliver <b>input parameters</b> to your function code.
+<democodeblock>
+<code>^def^ <def>whoAmI</def>(my_name):</code>
+<code><tab>^return^ my_name</tab></code>
+</democodeblock>
+To see how the input parameter behaves, use the ^print^ statement again:
+<democodeblock>
+<code>^def^ <def>whoAmI</def>(my_name):</code>
+<code><tab>^return^ my_name</tab></code>
+<code>^print^ <def>whoAmI</def>('Arian')</code>
+</democodeblock>
+In this function call, you've asked Python to plug in the ^str^ 'Arian' whenever it encounters <var>my_name</var> in the function. So, printing <def>whoAmI</def>('Arian') should display 'Arian' in the Output box.
+________________________________
+$LEFTPANEL_QUESTION$
+Define a function, <def>howOld</def>(), which takes in an ^int^, <var>my_age</var>, and returns it. Check to see if your function works with both positive and negative inputs.
+
+________________________________
+$LEFTPANEL_EDITOR$
+def howOld(my_age):
+________________________________
+$LEFTPANEL_HINTS$
+Remember, any code associated with your function should be indented.
+________________________________
+$RIGHTPANEL_QUESTIONS$
+What happens if you don't unindent your ^print^ statement, and include it in your function definition?
+________________________________
+$RIGHTPANEL_TESTCASES$
+There's a new button in the Toolbar: Submit. 
+When your code is error-free, this button runs your function through some test inputs, and lets you know whether you passed or failed its tests. Essentially, it helps you determine whether your code is thorough. 
+<b>Reminder</b>: Your function bodies should <i>never</i> have ^print^ statements; the Submit button will only compare expected results with what you ^return^.
+Typically, you should use Submit as a last step before moving on to the next square. Give it a try!
+________________________________
+$ALLPANES_SUBMITCASES$
+print ""
+print "INPUT     | 25"
+print "OUTPUT    |", howOld(25)
+print "EXPECTED  | 25"
+if howOld(25) == 25:
+	print "PASSED!"
+else: 
+	print "FAILED"
+
+print ""
+print "INPUT     | -25"
+print "OUTPUT    |", howOld(-25)
+print "EXPECTED  | -25"
+if howOld(-25) == -25:
+	print "PASSED!"
+else: 
+	print "FAILED"
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+$RIGHTPANEL_SOLUTION$
+def howOld(my_age):
+    return my_age
+________________________________
+FIN

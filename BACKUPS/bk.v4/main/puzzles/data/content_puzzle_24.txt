@@ -1,0 +1,32 @@
+________________________________
+$LEFTPANEL_HEADING$
+TBD
+https://open.spotify.com/track/4t2v0vTHC4bgpgt4cYwEAG
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+In the previous puzzle, you learned how to do something if a condition was met. If you want Python to do something else when the condition of your if statement is not met, you will need to use an <b>else statement</b>.
+Try the following and observe the results to get a better understanding of if/else statements:
+<code class="demo">finalGrade = 80</code>
+<code class="demo">if finalGrade >= 50:</code>
+<code class="demo">&emsp;&emsp;&emsp;&emsp;print "You passed the course!"</code>
+<code class="demo">else:</code>
+<code class="demo">&emsp;&emsp;&emsp;&emsp;print "You failed the course."</code>
+<p class="small">&nbsp;</p>
+________________________________
+$LEFTPANEL_QUESTION$
+Create two variables. Name the first variable <em>myAge</em> and set it to equal to your age. Name the second variable <em>adult</em> and set it to equal to 18. Now, write an if/else statement that compares <em>myAge</em> to <em>adultAge</em> and outputs a sentence that declares whether or not you are an adult. You should have 6 lines of code, in total.
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+Don't forget to use four space to create the tabs for the outputs of your if and else statements.
+________________________________
+$RIGHTPANEL_QUESTIONS$
+What if you want to do something "if it's True", but do nothing "if it's False"? Can an if statement exist without an else statement?
+Can an else statement exist without an if statement?
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html> 
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- **************** -->
+    <!--      SCRIPTS     -->
+    <!-- **************** -->
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-tooltip-and-popover.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/buttons.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/editors2.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/media-queries.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/modal.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/variables.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/style2.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/codemirror.css"">
+    <!-- JAVASCRIPT -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" ></script> 
+    <script type="text/javascript" src="http://www.skulpt.org/static/skulpt.min.js"></script>
+    <script type="text/javascript" src="http://www.skulpt.org/static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src='../../../js/console.js'></script>
+    <script type="text/javascript" src="../../../js/popover.js"></script>
+    <script type="text/javascript" src="../../../js/codemirror.js"></script>
+    <script type="text/javascript" src="../../../js/python.js"></script>
+    <script type="text/javascript">
+
+    </script>
+    <!-- JAVASCRIPT: GOOGLE ANALYTICS -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-85355151-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <!-- JAVASCRIPT: TWITTER -->
+    <script async src="http:/wwww.platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <!-- JAVASCRIPT: SKULPT + CODEMIRROR -->
+    <script type="text/javascript">
+        var editor;
+        function outf(text) {
+            var mypre = document.getElementById("dynamicframe");
+            mypre.innerHTML = mypre.innerHTML + text;
+        }
+        function builtinRead(x) {
+            if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
+                throw "File not found: '" + x + "'";
+            return Sk.builtinFiles["files"][x];
+        }
+        function runit() {
+                var prog = editor.getDoc().getValue();
+                var mypre = document.getElementById("dynamicframe");
+                mypre.innerHTML = '';
+                Sk.pre = "dynamicframe";
+                Sk.configure({
+                    output: outf,
+                    read: builtinRead
+                });
+                (Sk.TurtleGraphics || (Sk.TurtleGraphics = {})).target = 'canvas';
+                var myPromise = Sk.misceval.asyncToPromise(function() {
+                    try {
+                      return Sk.importMainWithBody("<stdin>", false, prog, true);
+                    }
+                    catch(e) {
+                      var errormsg = e.toString()
+                      var errormsg = errormsg.replace(/\</g,"&lt;");
+                      var errormsg = errormsg.replace(/\>/g,"&gt;")
+                      var errormsg = "<span class=keyword-error>" + errormsg + "</span>"
+                      mypre.innerHTML = (errormsg);
+                    }
+                });
+                myPromise.then(function(mod) {
+                        console.log('success');
+                    },
+                    function(err) {
+                        console.log(err.toString());
+                    });
+            }
+        window.onload = function() {
+                editor = CodeMirror.fromTextArea(document.getElementById('textbox'), {
+                    mode: {
+                        name: "python",
+                        version: 2,
+                        singleLineStringErrors: false
+                    },
+                    lineNumbers: true,
+                    indentUnit: 4
+                });
+            }
+      // --------------------------------
+      // Clear feature for the output div
+      // --------------------------------
+      function clearBox() {
+          document.getElementById('dynamicframe').innerHTML = "";
+      }
+      // --------------------------------
+      // Save as feature for the textarea
+      // --------------------------------
+      function saveTextAsFile() {
+
+          var textToWrite = editor.getDoc().getValue();
+          var textFileAsBlob = new Blob([textToWrite], {
+              type: 'text/plain'
+          });
+          var fileNameToSaveAs = location.href.split("/").slice(-1).toString();
+          var fileNameToSaveAs = "pythonsandladders_" + fileNameToSaveAs.replace(".html", ".txt");
+
+          var downloadLink = document.createElement("a");
+          downloadLink.download = fileNameToSaveAs;
+          downloadLink.innerHTML = "Download File";
+          if (window.webkitURL != null) {
+              // Chrome allows the link to be clicked
+              // without actually adding it to the DOM.
+              downloadLink.href = window.webkitURL.createObjectURL(textFileAsBlob);
+          } else {
+              // Firefox requires the link to be added to the DOM
+              // before it can be clicked.
+              downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
+              downloadLink.onclick = destroyClickedElement;
+              downloadLink.style.display = "none";
+              document.body.appendChild(downloadLink);
+          }
+          downloadLink.click();
+      }
+      var button = document.getElementById('save');
+      button.addEventListener('click', saveTextAsFile);
+      function destroyClickedElement(event) {
+          // remove the link from the DOM
+          document.body.removeChild(event.target);
+      }
+      function sendEmail() {
+        window.location = "mailto:info@pythonsandladders.com?subject=[FEEDBACK]&Body=Square number: %0d%0dIssue or Suggestion: %0d%0dExpected behaviour: ";
+      }
+      function reportBug() {
+        window.location = "mailto:info@pythonsandladders.com?subject=[REPORT BUG]&Body=Date encountered: %0d%0dBug description: %0d%0dExpected behaviour: ";
+      }
+      // --------------------------------
+    </script>
+
+    <script>
+      function testit() {
+        var prog = editor.getDoc().getValue().concat('\nprint "<b>TEST RESULTS</b>:"\ntry:\n    print ""\n    print "INPUT     | \'7 - 4 + 6 * 8 / 2\'"\n    print "OUTPUT    |", solve(\'7 - 4 + 6 * 8 / 2\')\n    print "EXPECTED  | 27"\n    if  solve(\'7 - 4 + 6 * 8 / 2\') == 27:\n        print "<span class=keyword-green>PASSED!</span>"\n    else: \n        print "<span class=keyword-red>FAILED</span>"\n    \n    print ""\n    print "INPUT     | \'14 + 8(6 / 0)\'"\n    print "OUTPUT    |", solve(\'14 + 8(6 / 0)\')\n    print "EXPECTED  | Error: Division by 0"\n    if  solve(\'14 + 8(6 / 0)\') == \'Error: Division by 0\':\n        print "<span class=keyword-green>PASSED!</span>"\n    else: \n        print "<span class=keyword-red>FAILED</span>"\n    \n    print ""\n    print "INPUT     | \'(5 - 1)(4 + 7)\'"\n    print "OUTPUT    |", solve(\'(5 - 1)(4 + 7)\')\n    print "EXPECTED  | 44"\n    if  solve(\'(5 - 1)(4 + 7)\') == 44:\n        print "<span class=keyword-green>PASSED!</span>"\n    else: \n        print "<span class=keyword-red>FAILED</span>"\n    \n    print ""\n    print "INPUT     | \'10^2 - 10 + 3^2\'"\n    print "OUTPUT    |", solve(\'10^2 - 10 + 3^2\')\n    print "EXPECTED  | 99"\n    if  solve(\'10^2 - 10 + 3^2\') == 99:\n        print "<span class=keyword-green>PASSED!</span>"\n    else: \n        print "<span class=keyword-red>FAILED</span>"\n    \n    print ""\n    print "INPUT     | \'30 - 3(4.5 * 2)^(2 + 1)\'"\n    print "OUTPUT    |", solve(\'30 - 3(4.5 * 2)^(2 + 1)\')\n    print "EXPECTED  | -2157"\n    if  solve(\'30 - 3(4.5 * 2)^(2 + 1)\') == -2157:\n        print "<span class=keyword-green>PASSED!</span>"\n    else: \n        print "<span class=keyword-red>FAILED</span>"\nexcept:\n\tprint "<span class=keyword-error>SemanticError: invalid logic encountered</span>"');
+        var mypre = document.getElementById("dynamicframe");
+        mypre.innerHTML = '';
+        Sk.pre = "dynamicframe";
+        Sk.configure({
+            output: outf,
+            read: builtinRead
+        });
+        var myPromise = Sk.misceval.asyncToPromise(function() {
+            return Sk.importMainWithBody("<stdin>", false, prog, true);
+        });
+        myPromise.then(function(mod) {
+                console.log('success');
+            },
+            function(err) {
+                console.log(err.toString());
+            });
+      }
+    </script>
+  </head>
+<body>
+  <div id="wrapper">
+    <header>
+      <!-- SLIDE OUT NAV FOR MOBILE -->
+      <div class="slideoutnav">
+        <input type="checkbox" id="menuToggle">
+        <label for="menuToggle" class="menuicon">&equiv;</label>
+        <nav class="menu">
+          <div class="sidenavlogo">
+            <a href="../../../index.html">
+              <img src="../../../images/headingtitle.png" alt="Pythons and Ladders" style="width: 75%; height: 18%;">
+            </a>
+          </div><!-- sidenavlogo -->
+          <p><a href="../../../index.html">home</a></p>
+          <p><a href="../../../overview.html">overview</a></p>
+          <p><a href="../../../main/updates/pages/updates_0.html">updates</a></p>
+          <p><a href="../../../faq.html">questions</a></p>
+          <p><a href="mailto:info@pythonsandladders.com?subject=Attn: [ADMIN] Pythons and Ladders">contact us</a></p>
+        </nav>
+      </div><!-- slideoutnav -->
+      <a href="../../../index.html" onclick="">pythons and ladders</a>
+    </header>
+    <div class="allpanes_new">
+      <!-- SIDENAV -->
+      <div class="sidenavpane">
+        <div class="sidenavlogo">
+          <a href="../../../index.html">
+            <img src="../../../images/headingtitle.png" alt="Pythons and Ladders" style="width: 75%; height: 18%;" onmouseover="this.src='../../../images/headingtitle_snake.png'" onmouseout="this.src='../../../images/headingtitle.png'">
+          </a>
+        </div><!-- sidenavlogo -->
+        <br>
+        <br>
+        <br>
+        <br>
+        <a href="../../../index.html">home</a>
+        <a href="../../../overview.html">overview</a>
+        <a href="../../../main/updates/pages/updates_0.html">updates</a>
+        <a href="../../../faq.html">questions</a>
+        <a href="mailto:info@pythonsandladders.com?subject=Attn: [ADMIN] Pythons and Ladders">contact us</a>
+      </div><!-- sidenavpane -->
+      <!-- BANNER -->
+      <div class="bannerpane">
+        <div class="banneritems">
+          <div class="puzzlenav2">
+            <a href="puzzle_100.html"><div class="box-puzz2"><div class="box-puzzle-number2" onclick="">100</div><!-- box-puzz2 --></div><!-- box-puzzle-number2 --></a>
+            <a href="puzzle_99.html"><div class="box-puzz2"><div class="box-puzzle-arrows2" onclick="">&lang;</div><!-- box-puzz2 --></div><!-- box-puzzle-arrows2 --></a>
+          </div><!-- puzzlenav2 -->
+        </div><!-- banneritems -->
+      </div><!-- bannerpane -->
+      <!-- LEFT PANE -->
+      <div class="leftpane">
+        <div class="leftpaneinner">
+          <a class="songheading" target="_blank" href="https://open.spotify.com/track/7fwycbhYngsgYoeQzidkvH"">
+            <h3>(*Fin)</h3>
+          </a>
+          <p>For your last square, you'll be developing a natural language calculator, resembling an extremely basic form of <a href="https://www.wolframalpha.com/" target="_blank">Wolfram Alpha</a>.</p>
+          <h4 class="h4gold">Task One Hundred</h4>
+          <p>Define a function, <span class='keyword-pink'>solve</span>(), whose input is a <span class=keyword-teal>str</span> with a mathematical expression, and output is its solution.</p>
+          <p></p>
+          <p>Your function will be evaluated on the following expressions:</p>
+          <p><table class="mathexp"><tr><td></p>
+          <p>7 &#8211; 4 + 6 &times; 8 &divide; 2</p>
+          <p>14 + 8 (6 &divide; 0)</p>
+          <p>(5 &#8211; 1) (4 + 7)</p>
+          <p>10<sup>2</sup> &#8211; 10 + 3<sup>2</sup></p>
+          <p>30 &#8211; 3 (4.5 &times; 2)<sup>2 + 1</sup></p>
+          <p></td></tr></table><p></p></p>
+          <p>The expressions will be passed to <span class='keyword-pink'>solve</span>() in the following formats:</p>
+          <p><table class="demo"><tr><td></p>
+          <p class="small"><code>'7 - 4 + 6 * 8 / 2'</code></p>
+          <p class="small"><code>'14 + 8(6 / 0)'</code></p>
+          <p class="small"><code>'(5 - 1)(4 + 7)'</code></p>
+          <p class="small"><code>'10^2 - 10 + 3^2'</code></p>
+          <p class="small"><code>'30 - 3(4.5 * 2)^(2 + 1)'</code></p>
+          <p></td></tr></table><p></p></p>
+          <div class="editor">
+            <div class="editortoolbar">
+              <div class="editortoolbaritems" onclick="runit()">RUN</div><!-- editortoolbaritems -->
+              <div class="editortoolbaritems" onclick="clearBox()">CLEAR</div><!-- editortoolbaritems -->
+              <div class="editortoolbarsave">
+                <div class="editortoolbaritems" id="save" onclick="saveTextAsFile()">SAVE</div><!-- editortoolbaritems -->
+              </div><!-- editortoolbarsave -->
+              <div class="editortoolbaritems">
+                <a href="#" style="border-bottom:0px" class="bootstrap-popover" title="not your day?" data-content="<p>Break your solution into smaller parts, and work through them one by one.
+                </p>">
+                HINT
+                </a>
+              </div><!-- editortoolbaritems -->
+              <div class="editortoolbaritems-submit" onclick="testit()">SUBMIT</div><!-- editortoolbaritems-submit -->
+            </div><!-- editortoolbar -->
+            <form> 
+            <textarea id="textbox" name="textbox" rows="5">def solve(expression):
+</textarea>
+            </form>
+            <div class="editoroutput">
+              <pre align="left" id="dynamicframe"></pre>
+            </div><!-- editoroutput -->
+          </div><!-- editor -->
+          <div class="questions-small-devices">
+            <h4 class="h4gold">Questions for You</h4>
+            <p>Do you remember what the "exponent" operator in Python is?</p>
+            <p>Are you able to re-use any code from <span class='keyword-pink'>calculate</span>() in this square?</p>
+            <h4 class="h4gold">Notes</h4>
+            <p>You are expected to understand multiplication is implicit in expressions like 3(4 + 5).</p>
+            <p>Spacing might be the first thing you want to remove. Check out Python's built-in method .<span class=keyword-green>split</span>() for <span class=keyword-teal>str</span> datatypes.</p>
+            <p>Remember&#8212;your function should also adhere to <a href="https://en.wikipedia.org/wiki/Order_of_operations" target="_blank">BEDMAS</a>!</p>
+          </div><!-- questions-small-devices -->
+          <a style="border-bottom:0px" href="puzzle_99.html">
+            <button>&lang; PREVIOUS</button>
+          </a>
+          <a style="border-bottom:0px" href="../../../index.html">
+            <button class="start">FINISH!</button>
+          </a>
+        </div><!-- leftpaneinner -->
+      </div><!-- leftpane -->
+      <!-- RIGHT PANE -->
+      <div class="questions-large-devices">
+        <div class="rightpane">
+          <div class="infocard">
+            <h4 class="greyheading">Questions for You</h4>
+            <p>Do you remember what the "exponent" operator in Python is?</p>
+            <p>Are you able to re-use any code from <span class='keyword-pink'>calculate</span>() in this square?</p>
+          </div><!-- infocard -->
+        </div><!-- rightpane -->
+        <div class="rightpane">
+          <div class="infocard">
+            <h4 class="greyheading">NOTES</h4>
+            <p>You are expected to understand multiplication is implicit in expressions like 3(4 + 5).</p>
+            <p>Spacing might be the first thing you want to remove. Check out Python's built-in method .<span class=keyword-green>split</span>() for <span class=keyword-teal>str</span> datatypes.</p>
+            <p>Remember&#8212;your function should also adhere to <a href="https://en.wikipedia.org/wiki/Order_of_operations" target="_blank">BEDMAS</a>!</p>
+          </div><!-- infocard -->
+        </div><!-- rightpane -->
+      </div><!-- questions-large-devices -->
+    </div><!-- allpanes_new -->
+    <title>Puzzle 100 | Pythons and Ladders</title>
+    <div class="footer">&copy; Pythons and Ladders 2016. All rights reserved.</div><!-- footer -->
+  </div><!-- wrapper -->
+</body>
+</html>

@@ -1,0 +1,36 @@
+________________________________
+$LEFTPANEL_HEADING$
+Get Me Right
+https://open.spotify.com/track/2weZVbAaNENsANFiIlPiAc
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+________________________________
+$LEFTPANEL_QUESTION$
+Define a function, <def>rightHistogram</def>(), which now right-justifies your histogram (with spaces on the left). For example, ^print^ <def>rightHistogram</def>([4, 9, 7]) should display the following in the Output box:
+<outputcodeline>
+<code><tab><1sp>****</code>
+<code>*********</code>
+<code><tab>*****</code>
+</outputcodeline>
+As a reminder, your function should ^return^ a single ^str^, and should not use any ^print^ statements in the function body.
+________________________________
+$LEFTPANEL_EDITOR$
+def rightHistogram(input_list):
+________________________________
+$LEFTPANEL_HINTS$
+Find the largest number in your input ^list^, and ensure that the length of each row is exactly that number.
+________________________________
+$RIGHTPANEL_QUESTIONS$
+How can you use ^len^() in your solution?
+________________________________
+$RIGHTPANEL_TESTCASES$
+This square does not have a Submit button, as the results are self-explanatory. However, make sure to test your function on the following inputs:
+<cardcodeblock>
+list1 = [4,9,7]
+list2 = [2,2,0,5]
+list3 = []
+</cardcodeblock>
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

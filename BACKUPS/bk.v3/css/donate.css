@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+@import url('https://fonts.googleapis.com/css?family=Antic');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+
+.donatenowbutton {
+  width:150px;
+  height: 30px;
+  background-color: #ff9000;
+  line-height: 30px;
+  font-family: 'Antic', sans-serif;
+  font-size: 90%;
+  color: #fff;
+  text-align: center;
+  margin: auto;
+  border-radius: 6px;
+  transition-property: background, border-radius;
+  transition-duration: .25s;
+  transition-timing-function: linear;
+}

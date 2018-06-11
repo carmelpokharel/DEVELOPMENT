@@ -1,0 +1,31 @@
+________________________________
+$LEFTPANEL_HEADING$
+Nothing Special
+https://open.spotify.com/track/5Bm68GvwmiOJOBnnTNElf7
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+________________________________
+$LEFTPANEL_QUESTION$
+Using only one line, write a script that outputs the following:
+<p class="small">&nbsp;</p>
+<code>This is a normal line</code>
+<code>&emsp;&emsp;&emsp;&emsp;This is a tabbed line</code>
+<p class="small">&nbsp;</p>
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+You should only be using one print statement, and all words should be enclosed between only one set of quotation marks.
+________________________________
+$RIGHTPANEL_TIME$
+2-3 minutes
+________________________________
+$RIGHTPANEL_QUESTIONS$
+How can you print a tabbed line in Python?
+How can you print a backslash within a string?
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

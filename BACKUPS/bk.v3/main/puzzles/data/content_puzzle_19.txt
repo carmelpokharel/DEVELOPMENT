@@ -1,0 +1,47 @@
+________________________________
+$LEFTPANEL_HEADING$
+Maths
+https://open.spotify.com/track/5xu7YKEWSljtXXXAB8NVdS
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+You can store just about anything in a variable. This even includes arithmetic expressions.
+________________________________
+$LEFTPANEL_QUESTION$
+George is 45 years old and his sister, Clara, is 38 years old. Write four lines of code that do the following:
+<table>
+   <tr>
+      <td width="15%" valign="top"><u>Line 1:</u></td>
+      <td>Create a variable that stores George's age in it</td>
+   </tr>
+   <tr>
+      <td width="15%" valign="top"><u>Line 2:</u></td>
+      <td>Create a variable that stores Clara's age</td>
+   </tr>
+   <tr>
+      <td width="15%" valign="top"><u>Line 3:</u></td>
+      <td>Create a variable called <em>difference_in_age</em> that calculates the difference between George and Clara's age</td>
+   </tr>
+   <tr>
+      <td width="15%" valign="top"><u>Line 4:</u></td>
+      <td>Print the <em>difference_in_age</em> variable</td>
+   </tr>
+</table>
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+Your <em>difference_in_age</em> variable should store a mathematical expression, using the variables you created in your first and second line of code.
+________________________________
+$RIGHTPANEL_TIME$
+2-3 minutes
+________________________________
+$RIGHTPANEL_QUESTIONS$
+TBD
+TBD
+TBD
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

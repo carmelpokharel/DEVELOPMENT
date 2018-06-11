@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html> 
+  <head>
+    <!-- **************** -->
+    <!--      SCRIPTS     -->
+    <!-- **************** -->
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!-- JAVASCRIPT -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" type="text/javascript"></script> 
+    <script src="http://www.skulpt.org/static/skulpt.min.js" type="text/javascript"></script> 
+    <script src="http://www.skulpt.org/static/skulpt-stdlib.js" type="text/javascript"></script>
+    <script src='js/console.js' type="text/javascript"></script>
+    <!-- FAVICON -->
+    <link href="./images/favicons/favicon.ico" rel="icon" type="image/x-icon" />
+  </head> 
+
+  <body style="margin-bottom:455px">
+
+    <!-- **************** -->
+    <!--    NAVIGATION    -->
+    <!-- **************** -->
+    <nav>
+      <ul>
+        <li>
+          <a href="index.html">
+            <img src="./images/headingtitle.png" alt="Pythons and Ladders" style="width: 75%; height: 18%;" >
+          </a>
+        </li>
+        <li>
+          <a href="index.html">
+            <img src="./images/board_icon.png" alt="m" style="width: 32%; height: 32%;" >
+          </a>
+          <a href="manual.html">
+            <img src="./images/manual_icon.png" alt="m" style="width: 30%; height: 30%;" >
+          </a>
+           <a href="faq.html">
+            <img src="./images/faq_icon.png" alt="m" style="width: 32%; height: 32%;" >
+          </a>
+          <a href="updates.html">
+            <img src="./images/updates_icon.png" alt="m" style="width: 32%; height: 32%;" >
+          </a>
+          <!--<a href="www.facebook.com">
+            <img src="./images/facebook_icon.png" alt="f" style="width: 25%; height: 25%;" >
+          </a>
+          <a href="www.twitter.com">
+            <img src="./images/twitter_icon.png" alt="t" style="width: 25%; height: 25%;" >
+          </a>
+          <a href="pagenotfound.html">
+            <img src="./images/donate_icon.png" alt="d" style="width: 35%; height: 35%;" >
+          </a>-->
+          <a href="mailto:pythonsandladders@gmail.com?subject=Attn: [ADMIN] Pythons and Ladders">
+            <img src="./images/mail_icon.png" alt="m" style="width: 35%; height: 35%;" >
+          </a>
+        </li>
+        <!--<li style="float:top"><a class="active" href="#about">profile</a></li>-->
+      </ul>
+    </nav>
+
+    <!-- **************** -->
+    <!--       TITLE      -->
+    <!-- **************** -->
+    <title>Puzzle 6</title
+    <div align="center">
+
+    <!-- **************** -->
+    <!--      HEADER      -->
+    <!-- **************** -->
+      <br><br>
+      <table align="center" style="width:1200px" cellspacing="0px" border="0">
+        <tr>
+          <!-- LEFT: EMPTY PADDING COLUMN -->
+          <td valign="top" width="20px">
+          </td>
+          <!-- CURRENT PAGE IMAGE -->
+          <td valign="top" width="90px">
+            <a href="puzzle_6.html">
+              <img src="./images/6.png" alt="INIT">
+            </a>
+          </td>
+          <!-- NAVIGATION IMAGES -->
+          <td valign="top" width="50px">
+            <a href="puzzle_5.html">
+              <img align="top" src="./images/back.png" alt="2" style="width:90%;height:48%">
+            </a>
+            <a href="puzzle_7.html">
+              <img align="top" src="./images/next.png" alt="3" style="width:90%;height:48%">
+            </a>
+          </td>
+          <!-- RIGHT: EMPTY PADDING COLUMN -->
+          <td valign="bottom">
+          </td>
+        </tr>
+      </table>
+      <!-- LINE BREAK -->
+      <br>
+      <hr>
+
+    <!-- **************** -->
+    <!--        BODY      -->
+    <!-- **************** -->
+      <table align="center" style="width:1200px" cellspacing="20px" border="0">
+        <tr>
+        <!-- LEFT: QUESTION AND EDITOR -->
+          <td align="left" valign="top" width="600px">
+            <h3>SQ. 6</h3>
+            <p class="small">&nbsp;</p>
+            <p class="small">Here's the basic construct of an if/else statement:</p>
+            <p class="small">&nbsp;</p>
+            <p class="small">if (conditional statement is True):</p>
+            <p class="small">&nbsp;&nbsp;&nbsp;&nbsp;do something</p>
+            <p class="small">else:</p>
+            <p class="small">&nbsp;&nbsp;&nbsp;&nbsp;do something else</p>
+            <p class="small">&nbsp;</p>
+            <p class="small">Recall from the previous lesson that a conditional statement always returns a </p>
+            <p class="small">Boolean value: True, or False.</p>
+            <p class="small">&nbsp;</p>
+            <p class="small">Run the sample code embedded in the editor, and analyze the output at the bottom.</p>
+            <p class="small">Now, rewrite the if/else statement so that it does the exact same thing, but </p>
+            <p class="small">uses "!=" as the comparison operator (and not "==").</p>
+            <p class="small">&nbsp;</p>
+            <p class="small">Remember: we are naming our variable newSum, because we don't know if Python has</p>
+            <p class="small">a built-in keyword or function named "sum"... we don't want any conflicts!</p>
+            <p class="small">&nbsp;</p>
+            <form align="left"> 
+            <textarea id="yourcode" cols="80" rows="14">
+# Remember to test your code thoroughly on a variety of inputs!
+num1 = 10
+num2 = 15.4
+
+if ((num1 + num2) == 25.4):		# Will only execute if (num1 + num2) == 25.4 is True
+	newSum = 25.4			# Initializes a new variable, and gives it a value
+else:							# Comes here if (num1 + num2) == 25.4 is False
+	newSum = num1 + num2	# Initializes a new variable, and gives it a value
+print "The sum is " + str(newSum)
+
+
+            </textarea>
+            <br>
+            <br>
+            <button type="button" onclick="runit()">Run</button>
+            <button type="button" onclick="sendEmail()">Feedback</button>
+            </form>
+          </td>
+        <!-- RIGHT: TIMES, QUESTIONS, AND SPONSORED -->
+          <td align="left"  valign="top">
+          <h3>Approximate learning time</h3>
+          <p>10-15 minutes</p>
+          <button type="button" onclick="requestSolution()">Request solution</button>
+          <h3><br>Questions for you</h3>
+          <ol>
+            <li>What if you want to do something "if it's True", but do nothing "if it's False"?<br>Can an if statement exist without an else statement?</li><br>
+            <li>Can an else statement exist without an if statement?</li><br>
+            <li>What if, in the editor's else statement, we changed "print firstNum + secondNum" to "newSum = firstNum + secondNum"? What would go wrong?</li><br>
+            <li>In the editor's print statement, why does the following code not work?<br>print "The new sum is " + newSum</li><br>
+            <li>What's the difference between these two statements?<br>print "The new sum is " + str(newSum)<br>print "The new sum is ", str(newSum)</li><br>
+          </ol>
+          <h3>Sponsored</h3>
+          <ol>
+            <a href="www.stringsinpython.com" target="_blank"><li>Sponsored1</li></a>
+            <a href="www.newlinecharacters.com" target="_blank"><li>Sponsored2</li></a>
+            <a href="www.printstatements.com" target="_blank"><li>Sponsored3</li></a>
+          </ol>
+          </td>
+        </tr>
+      </table>
+
+    <!-- **************** -->
+    <!--     CONSOLE      -->
+    <!-- **************** -->
+     <table align="center" style="width:1200px;" cellspacing="20px" border="0s">
+      <tr>
+      <td>
+      <pre align="left" id="output"></pre>
+      </td>
+      </tr>
+      </table>
+    </div>
+  </body>
+  <footer align="center"><br>Copyright &copy; Shamil Pokharel 2016</footer>
+</html>

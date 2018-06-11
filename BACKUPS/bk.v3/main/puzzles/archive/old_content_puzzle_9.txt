@@ -1,0 +1,48 @@
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+
+So far, you've encountered four different built-in Python functions, which take in inputs, and magically output things you want: isinstance(), int(),
+str(), and len(). Now, what if you want to write your own function? You can!
+
+def myFunction(input1, input2):
+&nbsp;&nbsp;&nbsp;&nbsp;do something
+&nbsp;&nbsp;&nbsp;&nbsp;return something
+
+Run the sample code embedded in the editor, and analyze how the function generates the output at the bottom.
+
+Now, rewrite your solution to SQ. 2 by defining a function threeWords(), which takes in 3 strings as inputs, and returns them as one string, separated by spaces. Make sure to test your function with these strings as inputs, too:
+var1 = '', var2 = '', var3 = ''
+
+For example, if you print threeWords('Life', 'is', 'good!'), your output should be:
+&#9656; Life is good!
+
+Note: If the output string has an extra space at the end, it is considered incorrect.
+________________________________
+$LEFTPANEL_EDITOR$
+# Consider the example of a function below, which multiplies two numbers:
+def multiplyTwoNumbers(num1, num2):
+	numProduct = num1 * num2
+	return numProduct
+
+# To use the function, you need to call it.
+multiplyTwoNumbers(4, 3)
+
+# And in order to see what the function outputs, you need to print it.
+print multiplyTwoNumbers(5, 6)
+print multiplyTwoNumbers(5.1, 7.2)
+________________________________
+$RIGHTPANEL_TIME$
+15-20 minutes
+________________________________
+$RIGHTPANEL_QUESTIONS$
+Why is there no output when you call your function without a print statement?<br>Does calling the built-in functions without printing them result in the same thing?
+What if you unknowingly tried to call threeWords() with numbers as inputs? How would you update your function to take care of this case? In other words:<br>print threeWords('Life', 2, 'good')
+Can you store the output of your function in a variable? If the following code is valid, could you do something similar with threeWords()?:<br>lengthOfList = len(list1)<br>print lengthOfList
+What happens if you try to call multiplyTwoNumbers() with no inputs? Try running this code in your offline editor!
+________________________________
+$RIGHTPANEL_SPONSORED$
+Sponsored1 $LINK$ www.stringsinpython.com
+Sponsored2 $LINK$ www.newlinecharacters.com
+Sponsored3 $LINK$ www.printstatements.com
+________________________________
+FIN

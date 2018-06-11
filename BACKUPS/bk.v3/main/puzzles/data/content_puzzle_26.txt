@@ -1,0 +1,43 @@
+________________________________
+$LEFTPANEL_HEADING$
+TBD
+ 
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+Here's a slightly different way to add to a list:
+<code class="demo">someCountries = ['Canada', 'Germany', 'France']</code>
+<code class="demo">moreCountries = ['USA', 'Australia', 'Spain']</code>
+<code class="demo">someCountries = someCountries + moreCountries</code>
+<code class="demo">print someCountries</code>
+
+And another method:
+<code class="demo">greetings = ['hello', 'bonjour', 'hola']</code>
+<code class="demo">greetings.extend('ciao')</code>
+<code class="demo">print greetings</code>
+<code class="demo">moreGreetings = ['namaste', 'salaam']</code>
+<code class="demo">greetings.extend(moreGreetings)</code>
+<code class="demo">print greetings</code>
+<p class="small">&nbsp;</p>
+________________________________
+$LEFTPANEL_QUESTION$
+Create a list called <em>alphabet</em> that contains the first three letters of the alphabet. Using the <em>.extend()</em> method, add the remaining letters of the alphabet. There are a couple of ways to do this, but one is much easier than the other!
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+Take a look at what happened when we added <em>ciao</em> to the <em>greetings</em> list.
+________________________________
+$RIGHTPANEL_TIME$
+2-3 minutes
+________________________________
+$RIGHTPANEL_QUESTIONS$
+If you print the variable <em>someCountries</em> after the second line of code (before you combine it with <em>moreCountries</em>), what do you think you will see? Test out your guess.
+Does the list content of <em>someCountries</em> change before and after line three?
+Does the list content of <em>moreCountries</em> change before and after line three?
+What happened when we wrote <em>greetings.extend('ciao')</em>. What can you do to prevent this from happening?
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

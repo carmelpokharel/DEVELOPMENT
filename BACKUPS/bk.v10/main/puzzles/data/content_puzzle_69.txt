@@ -1,0 +1,56 @@
+________________________________
+$LEFTPANEL_HEADING$
+Filter This
+https://open.spotify.com/track/1Owksarfb2t9PiK7ySeKdf
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+<b>Filtering</b> is another concept in programming, which refers to the downsizing of a datatype based on some specific condition.
+________________________________
+$LEFTPANEL_QUESTION$
+Define a function, <def>filterWords</def>(), which takes a ^list^ of words and an ^int^ <var>n</var> as parameters, and returns a ^list^ of the words that are longer than <var>n</var>.
+
+For example, ^print^ <def>filterWords</def>(['Aravind', 'Stefan', 'Paul', 'Alex', 'Jimmy'], 4) should output the following ^list^:
+<outputcodeline>['Aravind', 'Stefan', 'Jimmy']</outputcodeline>
+________________________________
+$LEFTPANEL_EDITOR$
+def filterWords(list_of_words, n)
+________________________________
+$LEFTPANEL_HINTS$
+Similar to mapping, you can create and return a new ^list^.
+________________________________
+$RIGHTPANEL_QUESTIONS$
+Are you able to write <def>filterWords</def>() without creating a new ^list^ in the function body?
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$ALLPANES_SUBMITCASES$
+print ""
+print "INPUT     | ['hat','cat','bat','rat'], 3"
+print "OUTPUT    |", filterWords(['hat','cat','bat','rat'], 3)
+print "EXPECTED  | []"
+if filterWords(['hat','cat','bat','rat'], 3) == []:
+	print "PASSED!"
+else: 
+	print "FAILED"
+
+print ""
+print "INPUT     | ['a','aa','aaa','aaaa'], 2"
+print "OUTPUT    |", filterWords(['a','aa','aaa','aaaa'], 2)
+print "EXPECTED  | ['aaa','aaaa']"
+if filterWords(['a','aa','aaa','aaaa'], 2) == ['aaa', 'aaaa']:
+	print "PASSED!"
+else: 
+	print "FAILED"
+
+print ""
+print "INPUT     | ['Stef', 'Stefa', 'Stefan', 'Stefano'], -1"
+print "OUTPUT    |", filterWords(['Stef', 'Stefa', 'Stefan', 'Stefano'], -1)
+print "EXPECTED  | ['Stef', 'Stefa', 'Stefan', 'Stefano']"
+if filterWords(['Stef', 'Stefa', 'Stefan', 'Stefano'], -1) == ['Stef', 'Stefa', 'Stefan', 'Stefano']:
+	print "PASSED!"
+else: 
+	print "FAILED"
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

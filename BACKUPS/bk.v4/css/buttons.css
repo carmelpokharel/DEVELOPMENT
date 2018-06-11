@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+@import url('https://fonts.googleapis.com/css?family=Antic');
+
+/*-------
+  BUTTONS
+--------*/
+button {
+  background-color:     var(--colour-lighter-blue-one);
+  border:               none;
+  color:                var(--colour-off-white);
+  padding:              10px 15px;
+  border-radius:        var(--shape-rounded-corners);
+  margin-right:         var(--shape-rounded-corners);
+}
+button:hover, button:active {
+  background-color:     var(--colour-blue-one);
+  box-shadow:           var(--shadow-small);
+  cursor:               pointer;
+}
+.box {
+  font-family:          var(--font-style-antic);
+  font-size:            var(--grid-box-font-size-std);
+  float:                left;
+  text-align:           center;
+  vertical-align:       middle;
+  line-height:          var(--grid-box-height);
+  color:                var(--colour-text-grey);
+  background-color:     var(--colour-absolute-white);
+}
+/*-----------
+  GRID BOXES
+------------*/
+.box-grid-1 {
+  margin:               var(--grid-box-margins);
+  width:                var(--grid-box-width);
+  height:               var(--grid-box-height);
+  border:               var(--grid-box-border) solid var(--colour-orange);
+  border-radius:        var(--shape-rounded-corners);
+  transition-duration:  var(--animation-transition-std);
+}
+.box-grid-1:hover, .box-grid-1:active {
+  border:               var(--grid-box-border) solid var(--colour-orange);
+  background:           var(--colour-orange) ;
+  color:                var(--colour-absolute-white);
+    }
+.box-grid-1-start {
+  margin:               var(--grid-box-margins);
+  width:                var(--grid-box-width);
+  height:               var(--grid-box-height);
+  border:               var(--grid-box-border) solid var(--colour-orange);
+  border-radius:        var(--shape-rounded-corners);
+  transition-duration:  var(--animation-transition-long);
+  /* --- */
+  background-color:     var(--colour-orange);
+  color:                var(--colour-absolute-white);
+  font-size:            110%;
+  box-shadow:           var(--shadow-small);
+}
+.box-grid-1-start:hover, .box-grid-1-start:active{
+  -webkit-transform:    var(--animation-rotation-Z);
+  transform:            var(--animation-rotation-Z);
+  border-radius:        var(--shape-circle-corners);
+  background-color:     var(--colour-lighter-orange);
+}
+.box-grid-2 {
+  margin:               var(--grid-box-margins);
+  width:                var(--grid-box-width);
+  height:               var(--grid-box-height);
+  border:               var(--grid-box-border) solid var(--colour-text-grey);
+  border-radius:        var(--shape-rounded-corners);
+  transition-duration:  var(--animation-transition-std);
+}
+.box-grid-2:hover, .box-grid-2:active {
+  background:           var(--colour-text-grey);
+  color:                var(--colour-absolute-white);
+}
+.box-grid-3 {
+  margin:               var(--grid-box-margins);
+  width:                var(--grid-box-width);
+  height:               var(--grid-box-height);
+  border:               var(--grid-box-border) solid var(--colour-blue-one);
+  border-radius:        var(--shape-rounded-corners);
+  transition-duration:  var(--animation-transition-std);
+}
+.box-grid-3:hover, .box-grid-3:active {
+  background:           var(--colour-blue-one);
+  color:                var(--colour-off-white);
+}
+.box-grid-3-end {
+  margin:               var(--grid-box-margins);
+  width:                var(--grid-box-width);
+  height:               var(--grid-box-height);
+  border:               var(--grid-box-border) solid var(--colour-blue-one);
+  border-radius:        var(--shape-rounded-corners);
+  transition-duration:  var(--animation-transition-std);
+  /* --- */
+  font-size:            95%;
+}
+.box-grid-3-end:hover, .box-grid-3-end:active {
+  background:           var(--colour-blue-one);
+  color:                var(--colour-off-white);
+}
+/*--------------------------
+  NAVIGATION-RELATED BUTTONS
+---------------------------*/
+.box-puzzle-number {
+  margin:               var(--grid-box-margins);
+  height:               var(--grid-box-height);
+  border:               var(--grid-box-border) solid var(--colour-orange);
+  background-color:     var(--colour-absolute-white);
+  border-radius:        var(--shape-rounded-corners);
+  transition-duration: var(--animation-transition-std);
+  /* --- */
+  width:                100px;
+}
+.box-puzzle-number:hover, .box-puzzle-number:active {
+  background:           var(--colour-orange);
+  color:                var(--colour-absolute-white);
+}
+.box-puzzle-arrows {
+  margin:               var(--grid-box-margins);
+  width:                var(--grid-box-width);
+  height:               var(--grid-box-height);
+  border:               var(--grid-box-border) solid var(--colour-blue-one);
+  border-radius:        var(--shape-rounded-corners);
+  transition-duration:  var(--animation-transition-std);
+}
+.box-puzzle-arrows:hover, .box-puzzle-arrows:active {
+  background:           var(--colour-blue-one);
+  color:                var(--colour-off-white);
+}
+.box-nav-buttons {
+  width:                72px;
+  height:               20px;
+  line-height:          20px;
+  margin:               0.8%;
+  float:                left;
+  font-family:          var(--font-style-sourcesanspro);
+  font-size:            75%;
+  line-height:          20px;
+  cursor:               pointer;
+  text-align:           center;
+  vertical-align:       middle;
+}
+/*------------------------
+  NAVIGATION ORANGE BUTTON
+-------------------------*/
+.box-nav-orange-empty{
+  border:               var(--nav-box-border) solid var(--colour-orange);
+  background-color:     var(--colour-absolute-white);
+  color:                var(--colour-text-grey);
+  border-radius:        var(--shape-rounded-corners);;
+  transition-duration:  var(--animation-transition-std);
+}
+.box-nav-orange-empty:hover, .box-nav-orange-empty:active {
+  background:           var(--colour-orange);
+  color:                var(--colour-off-white); 
+}
+/*----------------------------
+  NAVIGATION RED ACTION BUTTON
+-----------------------------*/
+.box-nav-red-filled {
+  border:               var(--nav-box-border) solid var(--colour-red);
+  background-color:     var(--colour-red);
+  color:                var(--colour-off-white);
+  border-radius:        var(--shape-rounded-corners);;
+  transition-duration:  var(--animation-transition-std);
+}
+.box-nav-red-filled:hover, .box-nav-red-filled:active {
+  border:               var(--nav-box-border) solid var(--colour-lighter-red);
+  background-color:     var(--colour-lighter-red);
+  color:                var(--colour-off-white);
+  box-shadow:           var(--shadow-small);
+}
+/*--------------------------
+  NAVIGATION TUTORIAL BUTTON
+---------------------------*/
+.tutorialbox {
+  width:                117px;
+  height:               30px;
+  line-height:          30px;
+  background-color:     var(--colour-red);
+  float:                left;
+  font-family:          var(--font-style-antic);
+  font-size:            90%;
+  color:                var(--colour-off-white);
+  text-align:           center;
+  vertical-align:       middle;
+  border-radius:        var(--shape-rounded-corners);
+  transition-duration:  var(--animation-transition-std);
+}
+.tutorialbox:hover, .tutorialbox:active {
+  background:           var(--colour-lighter-red);
+  box-shadow:           var(--shadow-small);
+}
+/*-------------
+  DONATE BUTTON
+--------------*/
+.donatenowbutton {
+  background-color:     var(--colour-bright-orange);
+  width:                150px;
+  height:               30px;
+  line-height:          30px;
+  font-family:          var(--font-style-antic);
+  font-size:            90%;
+  color:                var(--colour-absolute-white);
+  text-align:           center;
+  margin:               auto;
+  border-radius:        var(--shape-rounded-corners);
+  transition-property:  background, border-radius;
+  transition-duration:  var(--animation-transition-std);
+}
+/*_________________________________________________________________________________*/
+
+/*-------
+  CIRCLES
+--------*/
+.circle-tutorial {
+  float: left;
+  background-color:     var(--colour-absolute-white);
+  line-height:          var(--circle-tutorial-diameter);
+  font-size:            var(--circle-tutorial-font-size);
+  font-family:          var(--font-style-antic);
+  color:                var(--colour-text-grey);
+  text-align:           center;
+  vertical-align:       middle;
+}
+.circle-tutorial-off {
+  margin:               var(--grid-box-margins);
+  width:                var(--circle-tutorial-diameter);
+  height:               var(--circle-tutorial-diameter);
+  border:               var(--circle-tutorial-border) solid var(--colour-blue-one);
+  border-radius:        var(--shape-circle-corners);
+  transition-duration:  var(--animation-transition-std);
+}
+.circle-tutorial-on {
+  margin:               var(--grid-box-margins);
+  width:                var(--circle-tutorial-diameter);
+  height:               var(--circle-tutorial-diameter);
+  border:               var(--circle-tutorial-border) solid var(--colour-blue-one);
+  border-radius:        var(--shape-circle-corners);
+  transition-duration:  var(--animation-transition-std);
+  /* --- */
+  background-color:     var(--colour-blue-one);
+  color:                var(--colour-off-white);
+}
+.feedback {
+  width:                var(--circle-feedback-diameter);
+  height:               var(--circle-feedback-diameter);
+  line-height:          var(--circle-feedback-diameter);
+  border:               1px solid var(--colour-blue-two);
+  background-color:     var(--colour-red);
+  float:                left;
+  right:                var(--circle-feedback-padding);
+  bottom:               var(--circle-feedback-padding);
+  font-family:          var(--font-style-sourcesanspro);
+  font-size:            68%;
+  display:              table-cell;
+  color:                var(--colour-off-white);
+  text-align:           center;
+  vertical-align:       middle;
+  transition-property:  background, border-radius;
+  transition-duration:  var(--animation-transition-std);
+  position:             fixed;
+  border-radius:        var(--shape-circle-corners);
+}
+.feedback:hover, .feedback:active {
+  background:         var(--colour-lighter-red);
+  color:              var(--colour-off-white);
+  box-shadow:         var(--shadow-small);
+}
+
+
+

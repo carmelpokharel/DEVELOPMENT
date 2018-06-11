@@ -1,0 +1,30 @@
+________________________________
+$LEFTPANEL_HEADING$
+Again, Again, and Again
+https://open.spotify.com/track/4t2v0vTHC4bgpgt4cYwEAG
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+You can also multiply ^str^ and ^int^ datatypes. Try running these statements, and observe the differences in their outputs.
+<democodeblock>
+<code>^print^ 'A' * 3</code>
+<code>^print^ 3 * '7'</code>
+<code>^print^ 7 * 3</code>
+</democodeblock>
+________________________________
+$LEFTPANEL_QUESTION$
+Using ^str^ and ^int^ multiplication, write a Python statement which outputs the following line:
+<outputcodeline>HelloHelloHelloHelloHello</outputcodeline>
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+The ^str^ 'Hello' should only appear once in your statement. How can you make it repeat five times?
+________________________________
+$RIGHTPANEL_QUESTIONS$
+Is it possible to multiply a ^str^ by a ^float^?
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

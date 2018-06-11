@@ -1,0 +1,40 @@
+________________________________
+$LEFTPANEL_HEADING$
+Hide and Seek
+https://open.spotify.com/track/121so7t3AeX6nLMvxy9ZP9
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+Not all code in Python needs to be an instruction to the computer. For instance, if you wish to take notes while writing code, you can use <b>comments</b>. 
+In the Python language, comments can be initiated by a ^keyword^#. That is to say, whenever ^keyword^# is encountered in the Editor, Python ignores the rest of the code <em>on that line</em>.
+It is important to note that comments are <b>not a special case</b>; if Python encounters a ^keyword^# inside a ^keyword^str, it will proceed normally:
+<code class="demoblock">~^keyword^# <span class="keyword-green">This is a comment</span>~^keyword^print 'What is your telephone #?'~</code>
+________________________________
+$LEFTPANEL_QUESTION$
+Write two lines of code which represent the following:
+<table>
+   <tr>
+      <td width="15%" valign="top" class="linecol">Line 1:</td>
+      <td class="codecol">A comment that reads: This is a comment</td>
+   </tr>
+   <tr>
+      <td width="15%" valign="top" class="linecol">Line 2:</td>
+      <td class="codecol">A statement which prints: This isn't a comment</td>
+   </tr>
+   </table>
+Your final output should simply display the following:
+<code>This isn't a comment</code>
+<p class="small">&nbsp;</p>
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+Don't forget the escape character for the word &quot;isn't&quot;!
+________________________________
+$RIGHTPANEL_QUESTIONS$
+Can you put a comment at the end of a print statement, on the same line as your code? For instance:<p class="small"><code>^keyword^print 'What is your #?' ^keyword^# <span class="keyword-green">Comment</span></code>
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

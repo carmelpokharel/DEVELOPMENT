@@ -1,0 +1,31 @@
+________________________________
+$LEFTPANEL_HEADING$
+Come Together
+https://open.spotify.com/track/2EqlS6tkEnglzr7tkKAAYD
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+Let's throw integers into the mix. Taking our two methods from the previous square, let's replace the string "two" and replace it with the integer 2 (no quotations).
+1. Printing with a <u>comma</u> (,):
+<code class="demo">print "one", 2, "three"</code>
+2. Using a <u>plus sign</u> (+):
+<code class="demo">print "one" + 2 + "three"</code>
+Test these both out, one at a time. Type out the first method in the Python Editor, and the second method in the Python Shell and observe and compare the results. Interestingly, one of those methods no longer works.
+________________________________
+$LEFTPANEL_QUESTION$
+Write a single-line Python statement which prints the following to the output box, <u>without</u> enclosing the integer 2 in quotation marks:
+<code>one2three</code>
+<p class="small">&nbsp;</p>
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+There's a handy little Python function called <code>str</code>. Look it up&#8212;you'll need it here.
+________________________________
+$RIGHTPANEL_QUESTIONS$
+Why didn't one of those methods work? Try searching Google to see why the combination of string + integer doesn't work in Python.
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

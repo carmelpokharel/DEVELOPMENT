@@ -1,0 +1,27 @@
+________________________________
+$LEFTPANEL_ABOUT$
+________________________________
+$LEFTPANEL_OBJECTIVE$
+
+________________________________
+$RIGHTPANEL_RECENTUPDATES$
+2016-09-18
+Added the option to request solutions on each question
+Added content to questions 6, 7, 8, 9, and 10
+2016-09-17
+Updated color palette to include off-white and grey for background and text, respectively
+Added hyperlinks to all squares and nagivation items
+Completed reference manual
+Created a 'Page Not Found' page for missing URLs
+2016-09-16
+Added left navigation
+Designed and updated logo
+________________________________
+$RIGHTPANEL_TERMINOLOGY$
+________________________________
+$RIGHTPANEL_SPONSORED$
+Sponsored1 $LINK$ www.stringsinpython.com
+Sponsored2 $LINK$ www.newlinecharacters.com
+Sponsored3 $LINK$ www.printstatements.com
+________________________________
+FIN

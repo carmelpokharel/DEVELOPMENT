@@ -1,0 +1,29 @@
+________________________________
+$LEFTPANEL_HEADING$
+Float
+https://open.spotify.com/track/4MUvaBckjtNGlxX1IuHDPW
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+Python uses a separate datatype to represent decimal numbers, which it calls floating-point numbers, or ^keyword^float. In Python, 5 is an ^keyword^int but 5.0 is a ^keyword^float.
+
+Notice that the first two statements below include a combination of ^keyword^int and ^keyword^float datatypes. How are each of these statements handled?
+
+<code class="demoblock">~^keyword^print 5.0 + 5~^keyword^print 5 + 5.1~^keyword^print 5.9 + 5.1~^keyword^print 5.0 + 5.1~</code>
+________________________________
+$LEFTPANEL_QUESTION$
+Write a statement which calculates and prints the result of the following expression:
+<p class="mathserif">( 10 &divide; 2.5 )<sup> -1</sup> &ndash; 0.095</p>
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+Try to write the expression exactly as shown, but in Python syntax.
+________________________________
+$RIGHTPANEL_QUESTIONS$
+Try running the following statements from the Editor&#8212;what do you see?<p class="small"><code>^keyword^print ^keyword^type(155) ^keyword^is ^keyword^float</code><p class="small"><code>^keyword^print ^keyword^type(155.0) ^keyword^is ^keyword^int</code>
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

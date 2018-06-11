@@ -1,0 +1,80 @@
+________________________________
+$LEFTPANEL_HEADING$
+Phantom
+https://open.spotify.com/track/5gl1RBnZ8GinizZINPzDpu
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+________________________________
+$LEFTPANEL_QUESTION$
+Define a function, <def>containsOneVowel</def>(), which takes in a ^str^ and returns ^True^ if it contains <i>only</i> one instance of a vowel. In all other cases, return ^False^.
+________________________________
+$LEFTPANEL_EDITOR$
+def containsOneVowel(input_string):
+________________________________
+$LEFTPANEL_HINTS$
+You'll have to initialize a ^str^ variable to <i>tell</i> Python which letters are vowels.
+________________________________
+$RIGHTPANEL_QUESTIONS$
+Can you solve this square only using ^if^ statements, and no ^else^ statements?
+________________________________
+$RIGHTPANEL_TESTCASES$
+You must account for both uppercase and lowercase vowels.
+________________________________
+$ALLPANES_SUBMITCASES$
+print ""
+print "INPUT     | ''"
+print "OUTPUT    |", containsOneVowel('')
+print "EXPECTED  | False"
+if containsOneVowel('') == False:
+	print "PASSED!"
+else: 
+	print "FAILED"
+
+print ""
+print "INPUT     | 'insipid'"
+print "OUTPUT    |", containsOneVowel('insipid')
+print "EXPECTED  | False"
+if containsOneVowel('insipid') == False:
+	print "PASSED!"
+else: 
+	print "FAILED"
+
+print ""
+print "INPUT     | 'ghost x.'"
+print "OUTPUT    |", containsOneVowel('ghost x.')
+print "EXPECTED  | True"
+if containsOneVowel('ghost x.') == True:
+	print "PASSED!"
+else: 
+	print "FAILED"
+
+print ""
+print "INPUT     | 'All'"
+print "OUTPUT    |", containsOneVowel('All')
+print "EXPECTED  | True"
+if containsOneVowel('All') == True:
+	print "PASSED!"
+else: 
+	print "FAILED"
+
+print ""
+print "INPUT     | 'Air'"
+print "OUTPUT    |", containsOneVowel('Air')
+print "EXPECTED  | False"
+if containsOneVowel('Air') == False:
+	print "PASSED!"
+else: 
+	print "FAILED"
+
+print ""
+print "INPUT     | '0.0'"
+print "OUTPUT    |", containsOneVowel('0.0')
+print "EXPECTED  | False"
+if containsOneVowel('0.0') == False:
+	print "PASSED!"
+else: 
+	print "FAILED"
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

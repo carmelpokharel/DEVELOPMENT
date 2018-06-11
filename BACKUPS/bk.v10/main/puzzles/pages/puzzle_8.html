@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html> 
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- **************** -->
+    <!--      SCRIPTS     -->
+    <!-- **************** -->
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-tooltip-and-popover.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/buttons.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/editors.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/media-queries.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/modal.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/variables.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/codemirror.css"">
+    <!-- JAVASCRIPT -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" ></script> 
+    <script type="text/javascript" src="http://www.skulpt.org/static/skulpt.min.js"></script>
+    <script type="text/javascript" src="http://www.skulpt.org/static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src='../../../js/console.js'></script>
+    <script type="text/javascript" src="../../../js/bootstrap-tooltip-and-popover.min.js"></script>
+    <script type="text/javascript" src="../../../js/codemirror.js"></script>
+    <script type="text/javascript" src="../../../js/python.js"></script>
+    <!-- JAVASCRIPT: POPOVERS -->
+    <script type="text/javascript">
+      $(document).ready(function() {
+        // Placement can be top, right, left, bottom
+        $('.bootstrap-popover').popover({placement: 'top', delay: {show: 10, hide: 10}})
+      })
+    </script>
+    <!-- JAVASCRIPT: GOOGLE ANALYTICS -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-85355151-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <!-- JAVASCRIPT: TWITTER -->
+    <script async src="http:/wwww.platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <!-- JAVASCRIPT: SKULPT + CODEMIRROR -->
+    <script type="text/javascript">
+        var editor;
+        function outf(text) {
+            var mypre = document.getElementById("dynamicframe");
+            mypre.innerHTML = mypre.innerHTML + text;
+        }
+        function builtinRead(x) {
+            if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
+                throw "File not found: '" + x + "'";
+            return Sk.builtinFiles["files"][x];
+        }
+        function runit() {
+                var prog = editor.getDoc().getValue();
+                var mypre = document.getElementById("dynamicframe");
+                mypre.innerHTML = '';
+                Sk.pre = "dynamicframe";
+                Sk.configure({
+                    output: outf,
+                    read: builtinRead
+                });
+                (Sk.TurtleGraphics || (Sk.TurtleGraphics = {})).target = 'canvas';
+                var myPromise = Sk.misceval.asyncToPromise(function() {
+                    return Sk.importMainWithBody("<stdin>", false, prog, true);
+                });
+                myPromise.then(function(mod) {
+                        console.log('success');
+                    },
+                    function(err) {
+                        console.log(err.toString());
+                    });
+            }
+            //<![CDATA[
+        window.onload = function() {
+                editor = CodeMirror.fromTextArea(document.getElementById('textbox'), {
+                    mode: {
+                        name: "python",
+                        version: 2,
+                        singleLineStringErrors: false
+                    },
+                    lineNumbers: true,
+                    indentUnit: 4
+                });
+            } //]]>
+      // --------------------------------
+      // Clear feature for the output div
+      // --------------------------------
+      function clearBox() {
+          document.getElementById('dynamicframe').innerHTML = "";
+      }
+      // --------------------------------
+      // Save as feature for the textarea
+      // --------------------------------
+      function saveTextAsFile() {
+          var textToWrite = document.getElementById('textbox').value;
+          var textFileAsBlob = new Blob([textToWrite], {
+              type: 'text/plain'
+          });
+          var fileNameToSaveAs = "progress_pythonsandladders.txt";
+
+          var downloadLink = document.createElement("a");
+          downloadLink.download = fileNameToSaveAs;
+          downloadLink.innerHTML = "Download File";
+          if (window.webkitURL != null) {
+              // Chrome allows the link to be clicked
+              // without actually adding it to the DOM.
+              downloadLink.href = window.webkitURL.createObjectURL(textFileAsBlob);
+          } else {
+              // Firefox requires the link to be added to the DOM
+              // before it can be clicked.
+              downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
+              downloadLink.onclick = destroyClickedElement;
+              downloadLink.style.display = "none";
+              document.body.appendChild(downloadLink);
+          }
+          downloadLink.click();
+      }
+      var button = document.getElementById('save');
+      button.addEventListener('click', saveTextAsFile);
+      function destroyClickedElement(event) {
+          // remove the link from the DOM
+          document.body.removeChild(event.target);
+      }
+      function sendEmail() {
+        window.location = "mailto:pythonsandladders@gmail.com?subject=[FEEDBACK]&Body=Square number: %0d%0dIssue or Suggestion: %0d%0dExpected behaviour: ";
+      }
+      function reportBug() {
+        window.location = "mailto:pythonsandladders@gmail.com?subject=[REPORT BUG]&Body=Date encountered: %0d%0dBug description: %0d%0dExpected behaviour: ";
+      }
+      // --------------------------------
+    </script>
+
+    <script>
+      function testit() {
+        var prog = editor.getDoc().getValue().concat('\nprint "<b>TEST RESULTS</b>:"\n');
+        var mypre = document.getElementById("dynamicframe");
+        mypre.innerHTML = '';
+        Sk.pre = "dynamicframe";
+        Sk.configure({
+            output: outf,
+            read: builtinRead
+        });
+        var myPromise = Sk.misceval.asyncToPromise(function() {
+            return Sk.importMainWithBody("<stdin>", false, prog, true);
+        });
+        myPromise.then(function(mod) {
+                console.log('success');
+            },
+            function(err) {
+                console.log(err.toString());
+            });
+      }
+    </script>
+  </head>
+  <body>
+    <div id="wrapper">
+
+      <header>
+          <!-- SLIDE OUT NAV FOR MOBILE -->
+          <div class="slideoutnav">
+            <input type="checkbox" id="menuToggle">
+            <label for="menuToggle" class="menuicon">&equiv;</label>
+            <nav class="menu">
+              <div class="sidenavlogo">
+                <a href="../../../index.html">
+                  <img src="../../../images/headingtitle.png" alt="Pythons and Ladders" style="width: 75%; height: 18%;">
+                </a>
+              </div>
+                <p><a href="../../../index.html">home</a></p>
+                <p><a href="../../../overview.html">overview</a></p>
+                <p><a href="../../../main/updates/pages/updates_0.html">updates</a></p>
+                <p><a href="../../../faq.html">questions</a></p>
+                <p><a href="mailto:pythonsandladders@gmail.com?subject=Attn: [ADMIN] Pythons and Ladders">contact us</a></p>
+            </nav>
+          </div><!-- slideoutnav -->
+          <a href="../../../index.html" onclick="">pythons and ladders</a>
+      </header>
+
+      <div class="allpanes_new">
+        <!-- SIDENAV -->
+        <div class="sidenavpane">
+          <div class="sidenavlogo">
+            <a href="../../../index.html">
+              <img src="../../../images/headingtitle.png" alt="Pythons and Ladders" style="width: 75%; height: 18%;" onmouseover="this.src='../../../images/headingtitle_snake.png'" onmouseout="this.src='../../../images/headingtitle.png'">
+            </a>
+          </div><!-- sidenavlogo -->
+            <br>
+            <br>
+            <br>
+            <br>
+            <a href="../../../index.html">home</a>
+            <a href="../../../overview.html">overview</a>
+            <a href="../../../main/updates/pages/updates_0.html">updates</a>
+            <a href="../../../faq.html">questions</a>
+            <a href="mailto:pythonsandladders@gmail.com?subject=Attn: [ADMIN] Pythons and Ladders">contact us</a>
+        </div><!-- sidenavpane -->
+
+        <!-- BANNER -->
+        <div class="bannerpane">
+          <div class="banneritems">
+      <div class="puzzlenav2">
+        <a href="puzzle_8.html"><div class="box-puzz2"><div class="box-puzzle-number2" onclick="">8</div></div></a>
+        <a href="puzzle_7.html"><div class="box-puzz2"><div class="box-puzzle-arrows2" onclick="">&lang;</div></div></a>
+        <a href="puzzle_9.html"><div class="box-puzz2"><div class="box-puzzle-arrows2" onclick="">&rang;</div></div></a>
+      </div>
+          </div><!-- banneritems -->
+        </div><!-- bannerpane -->
+
+        <!-- LEFT PANE -->
+        <div class="leftpane">
+          <div class="leftpaneinner">
+        <a class="songheading" target="_blank" href="https://open.spotify.com/track/4MUvaBckjtNGlxX1IuHDPW"">
+        <h3>Float</h3>
+        </a>
+        <p>Python uses a separate datatype to represent decimal numbers, which it calls floating-point numbers, or <span class=keyword-teal>float</span>. In Python, 5 is an <span class=keyword-teal>int</span> but 5.0 is a <span class=keyword-teal>float</span>.</p>
+        <p></p>
+        <p>Notice that the first two statements below include a combination of <span class=keyword-teal>int</span> and <span class=keyword-teal>float</span> datatypes. How are each of these statements handled?</p>
+        <p><table class="demo"><tr><td></p>
+        <p class="small"><code><span class=keyword-orange>print</span> 5.0 + 5</code></p>
+        <p class="small"><code><span class=keyword-orange>print</span> 5 + 5.1</code></p>
+        <p class="small"><code><span class=keyword-orange>print</span> 5.9 + 5.1</code></p>
+        <p class="small"><code><span class=keyword-orange>print</span> 5.0 + 5.1</code></p>
+        <p></td></tr></table><p></p></p>
+          <h4 class="h4gold">Task Eight</h4>
+        <p>Write a statement which calculates and prints the result of the following expression:</p>
+        <p><p class="mathexp">( 10 &divide; 2.5 )<sup> -1</sup> &ndash; 0.095</p</p>
+          <div class="editor">
+            <div class="editortoolbar">
+              <div class="editortoolbaritems" onclick="runit()">RUN</div>
+              <div class="editortoolbaritems" onclick="clearBox()">CLEAR</div>
+              <div class="editortoolbarsave">
+                <div class="editortoolbaritems" id="save" onclick="saveTextAsFile()">SAVE</div>
+              </div><!-- editortoolbarsave -->
+              <div class="editortoolbaritems">
+                <a href="#" style="border-bottom:0px" class="bootstrap-popover" title="need a little help?" data-content="<p>Try to write the expression exactly as shown, but in Python syntax.
+</p>">
+                HINT
+                </a>
+              </div><!-- editortoolbaritems -->
+            </div><!-- editortoolbar -->
+          <form> 
+            <textarea id="textbox" name="textbox" rows="5">
+</textarea>
+          </form>
+          <div class="editoroutput">
+          <pre align="left" id="dynamicframe"></pre>
+          </div><!-- editoroutput -->
+
+        </div><!-- editor -->
+       <div class="questions-small-devices">
+          <h4 class="h4gold">Questions for You</h4>
+              <p>Try running the following statements from the Editor&#8212;what do you see?</p>
+              <p><table class="card"><tr><td></p>
+              <p><code><span class=keyword-orange>print</span> <span class=keyword-green>type</span>(155) <span class=keyword-orange>is</span> <span class=keyword-teal>float</span></code></p>
+              <p><code><span class=keyword-orange>print</span> <span class=keyword-green>type</span>(155.0) <span class=keyword-orange>is</span> <span class=keyword-teal>int</span></code></p>
+              <p></td></tr></table><p></p></p>
+       </div><!-- questions-small-devices -->
+
+        <a style="border-bottom:0px" href="puzzle_7.html">
+          <button>&lang; PREVIOUS</button>
+        </a>
+        <a style="border-bottom:0px" href="puzzle_9.html">
+          <button>NEXT &rang; </button>
+        </a>
+          </div><!-- leftpaneinner -->
+        </div><!-- leftpane -->
+
+        <!-- RIGHT PANE -->
+       <div class="questions-large-devices">
+         <div class="rightpane">
+        <div class="infocard">
+          <h4 class="greyheading">Questions for You</h4>
+              <p>Try running the following statements from the Editor&#8212;what do you see?</p>
+              <p><table class="card"><tr><td></p>
+              <p><code><span class=keyword-orange>print</span> <span class=keyword-green>type</span>(155) <span class=keyword-orange>is</span> <span class=keyword-teal>float</span></code></p>
+              <p><code><span class=keyword-orange>print</span> <span class=keyword-green>type</span>(155.0) <span class=keyword-orange>is</span> <span class=keyword-teal>int</span></code></p>
+              <p></td></tr></table><p></p></p>
+        </div><!-- infocard -->
+          </div><!-- rightpane -->
+         	<div class="rightpane">
+          </div><!-- rightpane -->
+        </div><!-- questions-large-devices -->
+
+      </div><!-- allpanes_new -->
+
+      <div class="footer">
+        Copyright &copy; Pythons and Ladders 2016
+      </div><!-- footer -->
+
+    </div><!-- wrapper -->
+
+    <title>Puzzle 8 | Pythons and Ladders</title>
+
+  </body>
+</html>

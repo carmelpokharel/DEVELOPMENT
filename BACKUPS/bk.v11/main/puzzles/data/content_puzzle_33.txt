@@ -1,0 +1,33 @@
+________________________________
+$LEFTPANEL_HEADING$
+Dream Within a Dream
+https://open.spotify.com/track/7ifWgqspqvPpQWXCfyrho4
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+This is how you can access a ^list^ within a ^list^:
+<democodeblock>
+<code>list1 = ['A','B',['C','D'],['E','F','G']]</code>
+<code>^print^ list1[2][0]</code>
+</democodeblock>
+________________________________
+$LEFTPANEL_QUESTION$
+Declare the following ^list^ variable:
+<democodeline>colours = ['red', 'ruby'], 'orange', 'yellow', ['green', 'emerald', 'olive']]</democodeline>
+Now, write a ^print^ statement to access <var>colours</var> and retrieve:
+<outputcodeline>emerald</outputcodeline>
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+You will need two sets of square brackets.
+________________________________
+$RIGHTPANEL_QUESTIONS$
+What does the first pair of square brackets do?
+What does the second pair of square brackets do?
+What happens if you try to access list1[1][0]?
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

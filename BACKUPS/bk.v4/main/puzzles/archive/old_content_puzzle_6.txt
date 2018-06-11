@@ -1,0 +1,44 @@
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+
+Here's the basic construct of an if/else statement:
+
+if (conditional statement is True):
+&nbsp;&nbsp;&nbsp;&nbsp;do something
+else:
+&nbsp;&nbsp;&nbsp;&nbsp;do something else
+
+Recall from the previous lesson that a conditional statement always returns a Boolean value: True, or False.
+
+Run the sample code embedded in the editor, and analyze the output at the bottom. Now, rewrite the if/else statement so that it does the exact same thing, but uses "!=" as the comparison operator (and not "==").
+
+Remember: we are naming our variable newSum, because we don't know if Python has a built-in keyword or function named "sum"... we don't want any conflicts!
+________________________________
+$LEFTPANEL_EDITOR$
+# Remember to test your code thoroughly on a variety of inputs!
+num1 = 10
+num2 = 15.4
+
+if ((num1 + num2) == 25.4):		# Will only execute if (num1 + num2) == 25.4 is True
+	newSum = 25.4			# Initializes a new variable, and gives it a value
+else:							# Comes here if (num1 + num2) == 25.4 is False
+	newSum = num1 + num2	# Initializes a new variable, and gives it a value
+print "The sum is " + str(newSum)
+
+________________________________
+$RIGHTPANEL_TIME$
+10-15 minutes
+________________________________
+$RIGHTPANEL_QUESTIONS$
+What if you want to do something "if it's True", but do nothing "if it's False"?<br>Can an if statement exist without an else statement?
+Can an else statement exist without an if statement?
+What if, in the editor's else statement, we changed "print firstNum + secondNum" to "newSum = firstNum + secondNum"? What would go wrong?
+In the editor's print statement, why does the following code not work?<br>print "The new sum is " + newSum
+What's the difference between these two statements?<br>print "The new sum is " + str(newSum)<br>print "The new sum is ", str(newSum)
+________________________________
+$RIGHTPANEL_SPONSORED$
+Sponsored1 $LINK$ www.stringsinpython.com
+Sponsored2 $LINK$ www.newlinecharacters.com
+Sponsored3 $LINK$ www.printstatements.com
+________________________________
+FIN

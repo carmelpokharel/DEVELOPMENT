@@ -1,0 +1,35 @@
+________________________________
+$LEFTPANEL_HEADING$
+Float
+https://open.spotify.com/track/4MUvaBckjtNGlxX1IuHDPW
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+Now that you've learned how to add integers, you're ready to learn about floating point numbers. <b>Floating points numbers</b> are another way of representing numbers, and always includes a decimal point. For example, 5 is an integer, but 5.0 is a floating point number.
+
+Test the following code and take note of what the outputs look like:
+<code class="demo"> print 5 + 5</code>
+<code class="demo"> print 5 + 5.1</code>
+<code class="demo"> print 5.9 + 5.1</code>
+<code class="demo"> print 5.0 + 5.1</code>
+<code class="demo"> print type(5.2)</code>
+<p class="small">&nbsp;</p>
+________________________________
+$LEFTPANEL_QUESTION$
+Write a script that will divide a number by 2 and will output:
+<code>3.6</code>
+<p class="small">&nbsp;</p>
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+Since your output must be a decimal, think about what your input in this division expression may need to be. 
+________________________________
+$RIGHTPANEL_QUESTIONS$
+What data type allows you to represent decimal numbers in Python?
+How is a floating point number different from an integer?
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

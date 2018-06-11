@@ -1,0 +1,26 @@
+________________________________
+$LEFTPANEL_HEADING$
+Cities of Night
+https://open.spotify.com/track/7g7x4198L8HVckp33Zp5XB
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+Based on the last two squares, consider the differences between .^keyword^append() versus .^keyword^extend().
+________________________________
+$LEFTPANEL_QUESTION$
+Start by initializing the following ^keyword^list:
+<code class="demo">cities = ['Toronto', 'Singapore']</code> 
+Now, use a combination of .^keyword^append() and/or .^keyword^extend() on cities, so that your output is the following: 
+<code class="demo">['Toronto', 'Singapore', ['New York', 'Los Angeles'], ['Tokyo', 'Seoul'], 'Paris']</code>
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+You may add the new ^keyword^list items all in one go, or use multiple lines of code.
+________________________________
+$RIGHTPANEL_QUESTIONS$
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

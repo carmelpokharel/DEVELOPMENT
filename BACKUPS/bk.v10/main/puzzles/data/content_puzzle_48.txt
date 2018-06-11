@@ -1,0 +1,53 @@
+________________________________
+$LEFTPANEL_HEADING$
+Retrace
+https://open.spotify.com/track/5TYESt53Ot3rS2XoxOlM83
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+________________________________
+$LEFTPANEL_QUESTION$
+Define a function, <def>simpleMath</def>(), which takes in an ^int^ <var>n</var> and returns the result of the following mathematical expression:
+<mathexp><var>n</var> &times; 2 &#8211; 6</mathexp>
+________________________________
+$LEFTPANEL_EDITOR$
+def simpleMath(n):
+________________________________
+$LEFTPANEL_HINTS$
+All of the math can be performed in the ^return^ step.
+________________________________
+$RIGHTPANEL_QUESTIONS$
+Have you been testing your code with ^print^ statements outside the function body?
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$ALLPANES_SUBMITCASES$
+print ""
+print "INPUT     | 5"
+print "OUTPUT    |", simpleMath(5)
+print "EXPECTED  | 4"
+if simpleMath(5) == 4:
+	print "PASSED!"
+else: 
+	print "FAILED"
+
+print ""
+print "INPUT     | 0"
+print "OUTPUT    |", simpleMath(0)
+print "EXPECTED  | -6"
+if simpleMath(0) == -6:
+	print "PASSED!"
+else: 
+	print "FAILED"
+
+print ""
+print "INPUT     | -3"
+print "OUTPUT    |", simpleMath(-3)
+print "EXPECTED  | -12"
+if simpleMath(-3) == -12:
+	print "PASSED!"
+else: 
+	print "FAILED"
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

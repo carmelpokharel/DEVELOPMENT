@@ -1,0 +1,45 @@
+________________________________
+$LEFTPANEL_HEADING$
+Error: Operator
+https://open.spotify.com/track/4N1LUOB78ynfBNAvLIl8TX
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+An ^if^/^else^ statement can come in handy for catching errors.
+________________________________
+$LEFTPANEL_QUESTION$
+Complete the ^for^ loop below, which iterates through a ^list^ of numbers and prints whether each number is positive, zero, or negative. If a non-^int^ datatype is encountered, print a descriptive error.
+For example, the list [-1, 2, 0, 'three', 4.5] should return:
+<outputcodeline>
+<code>negative</code>
+<code>positive</code>
+<code>zero</code>
+<code>Error: Non-integer datatype.</code>
+<code>Error: Non-integer datatype.</code>
+</outputcodeline>
+________________________________
+$LEFTPANEL_EDITOR$
+elem_list = [-1, 2, 0, 'three', 4.5]
+for num in elem_list:
+    if ________:
+        print ________
+    elif num > 0:
+        print 'positive'
+    elif num < 0:
+        ________
+    elif num == 0:
+        ________
+    else:
+        ________
+________________________________
+$LEFTPANEL_HINTS$
+Remember ^type^() from Square 3? In the ^if^ statement, use it to check whether your number is an ^int^.
+________________________________
+$RIGHTPANEL_QUESTIONS$
+When will your code (if ever) execute the ^else^ statement?
+Remember when you compared ^int^ and ^str^ datatypes? Why was the comparison '3' > 3 valid in Python?
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

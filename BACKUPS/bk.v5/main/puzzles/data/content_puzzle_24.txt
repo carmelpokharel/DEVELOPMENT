@@ -1,0 +1,30 @@
+________________________________
+$LEFTPANEL_HEADING$
+Nothing Else Matters
+https://open.spotify.com/track/3ZFwuJwUpIl0GeXsvF1ELf
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+There's actually a better way to approach your puzzle from the last square, using an ^keyword^else statement:
+<code class="demoblock">~finalGrade = 80~^keyword^if finalGrade > 50:~&emsp;&emsp;&emsp;&emsp;^keyword^print 'You passed the course!'~^keyword^else:~&emsp;&emsp;&emsp;&emsp;^keyword^print 'You failed the course.'~</code>
+<b>Note</b>: The ^keyword^else statement <em>does not</em> include a conditional statement.
+________________________________
+$LEFTPANEL_QUESTION$
+Declare a variable, my_age, and set it to equal to your age. Declare another variable, adult_age, and set it to the ^keyword^int 18. 
+Now, write an ^keyword^if/^keyword^else statement which compares my_age to adult_age, and prints one of the following two outputs:
+<code>Yes, I am an adult!</code>
+<code>No, I am not yet an adult.</code>
+<p class="small">&nbsp;</p>
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+Have you indented your code properly?
+________________________________
+$RIGHTPANEL_QUESTIONS$
+In the previous puzzle, you may have noticed than an ^keyword^if statement can exist without an ^keyword^else statement. Can ^keyword^else exist without ^keyword^if?
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

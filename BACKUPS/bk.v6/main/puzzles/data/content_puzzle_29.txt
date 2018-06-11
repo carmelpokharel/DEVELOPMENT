@@ -1,0 +1,25 @@
+________________________________
+$LEFTPANEL_HEADING$
+Cities of Night
+https://open.spotify.com/track/7g7x4198L8HVckp33Zp5XB
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+________________________________
+$LEFTPANEL_QUESTION$
+Start by initializing the following ^list^:
+<outputcodeline>cities = ['Toronto','Singapore']</outputcodeline> 
+Now, use a combination of .^append^() and/or .^extend^() on cities, so that your output is the following: 
+<outputcodeline>['Toronto','Singapore',['New York','Los Angeles'],['Tokyo','Seoul'],'Paris']</outputcodeline>
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+You can the new items all in one go, or use multiple lines of code
+________________________________
+$RIGHTPANEL_QUESTIONS$
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

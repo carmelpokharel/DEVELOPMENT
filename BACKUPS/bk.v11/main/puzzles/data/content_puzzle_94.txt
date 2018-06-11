@@ -1,0 +1,102 @@
+________________________________
+$LEFTPANEL_HEADING$
+Check Yes, Juliet
+https://open.spotify.com/track/3Jkp1ZJykzl8dy27WzaLP5
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+A <a href="http://theory.tifr.res.in/~sgupta/sudoku/shidoku.html" target="_blank">Shidoku</a> is a Japanese number puzzle, related to the Sudoku (if you are unfamiliar with Sudokus, read about them <a href="https://en.wikipedia.org/wiki/Sudoku" target="_blank">here</a>). In a properly formed 4 &times; 4 Shidoku, each row, each column and each interior 2 &times; 2 box contains the integers 1-4 exactly once.
+
+Below is an example of a well-formed, completed 4 &times; 4 Shidoku:
+<table class="magicsquare">
+<tr>
+<td class="magicsquare">1</td>
+<td class="shidoku-right">3</td>
+<td class="shidoku-left">2</td>
+<td class="magicsquare">4</td>
+</tr>
+<tr>
+<td class="shidoku-bottom">4</td>
+<td class="shidoku-bottom-right">2</td>
+<td class="shidoku-bottom-left">1</td>
+<td class="shidoku-bottom">3</td>
+</tr>
+<tr>
+<td class="shidoku-top">3</td>
+<td class="shidoku-top-right">1</td>
+<td class="shidoku-top-left">4</td>
+<td class="shidoku-top">2</td>
+</tr>
+<tr>
+<td class="magicsquare">2</td>
+<td class="shidoku-right">4</td>
+<td class="shidoku-left">3</td>
+<td class="magicsquare">1</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+In Python, you can represent this as:
+<democodeline>[[1, 3, 2, 4], [4, 2, 1, 3], [3, 1, 4, 2], [2, 4, 3, 1]]</democodeline>
+________________________________
+$LEFTPANEL_QUESTION$
+Define a function, <def>checkShidoku</def>(), which takes in a ^list^ representing a 4 &times; 4 Shidoku, and determines whether it is properly formed. Your output should be a ^bool^ value.
+________________________________
+$LEFTPANEL_EDITOR$
+def checkShidoku(square):
+________________________________
+$LEFTPANEL_HINTS$
+First, figure out how to keep track of the four interior 2 &times; 2 boxes; the rest is similar to <def>isMagicSquare</def>().
+________________________________
+$RIGHTPANEL_QUESTIONS$
+Are you writing preliminary "filtering" code, such as "^return^ ^False^ if any of the integers are not 1, 2, 3, or 4"?
+Is it <i>really</i> necessary to check each 2 &times; 2 box if you've already checked each row and column? Why or why not?
+________________________________
+$RIGHTPANEL_TESTCASES$
+You may assume your input Shidoku will have all boxes populated.
+________________________________
+$ALLPANES_SUBMITCASES$
+print ""
+print "INPUT     | [[1, 3, 2, 4], [4, 2, 1, 3], [4, 1, 4, 2], [2, 4, 3, 1]]"
+print "OUTPUT    |", checkShidoku([[1, 3, 2, 4], [4, 2, 1, 3], [4, 1, 4, 2], [2, 4, 3, 1]])
+print "EXPECTED  | False"
+if checkShidoku([[1, 3, 2, 4], [4, 2, 1, 3], [4, 1, 4, 2], [2, 4, 3, 1]]) == False:
+    print "PASSED!"
+else: 
+    print "FAILED"
+
+print ""
+print "INPUT     | [[1, 3, 2, 4], [4, 2, 5, 3], [3, 1, 4, 2], [2, 4, 3, 1]]"
+print "OUTPUT    |", checkShidoku([[1, 3, 2, 4], [4, 2, 5, 3], [3, 1, 4, 2], [2, 4, 3, 1]])
+print "EXPECTED  | False"
+if checkShidoku([[1, 3, 2, 4], [4, 2, 5, 3], [3, 1, 4, 2], [2, 4, 3, 1]]) == False:
+    print "PASSED!"
+else: 
+    print "FAILED"
+
+print ""
+print "INPUT     | [[1, 3, 2, 4], [4, 2, 1, 3], [3, 1, 4, 2], [2, 4, 3, 1]]"
+print "OUTPUT    |", checkShidoku([[1, 3, 2, 4], [4, 2, 1, 3], [3, 1, 4, 2], [2, 4, 3, 1]])
+print "EXPECTED  | True"
+if checkShidoku([[1, 3, 2, 4], [4, 2, 1, 3], [3, 1, 4, 2], [2, 4, 3, 1]]) == True:
+    print "PASSED!"
+else: 
+    print "FAILED"
+
+print ""
+print "INPUT     | [[1, 3, 4, 2], [4, 2, 1, 3], [2, 4, 3, 1], [3, 1, 2, 4]]"
+print "OUTPUT    |", checkShidoku([[1, 3, 4, 2], [4, 2, 1, 3], [2, 4, 3, 1], [3, 1, 2, 4]])
+print "EXPECTED  | True"
+if checkShidoku([[1, 3, 4, 2], [4, 2, 1, 3], [2, 4, 3, 1], [3, 1, 2, 4]]) == True:
+    print "PASSED!"
+else: 
+    print "FAILED"
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+$RIGHTPANEL_SOLUTION$
+
+________________________________
+FIN
+
+

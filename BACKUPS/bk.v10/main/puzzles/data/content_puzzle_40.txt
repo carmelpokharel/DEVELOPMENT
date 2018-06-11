@@ -1,0 +1,38 @@
+________________________________
+$LEFTPANEL_HEADING$
+Square Dance
+https://open.spotify.com/track/27mgDrExPa3obPAYXd3yQg
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+There's another very useful built-in Python function, ^range^(). 
+<democodeblock>
+<code>^for^ n ^in^ ^range^(4):</code>
+<code><tab>^print^ n</tab></code>
+
+<code>^for^ n ^in^ ^range^(12,15):</code>
+<code><tab>^print^ n</tab>
+</democodeblock>
+
+________________________________
+$LEFTPANEL_QUESTION$
+Write a ^for^ loop that iterates through the numbers 2 to 5, printing the <a href="http://www.mathsisfun.com/definitions/square-number.html" target="_blank">square of each number</a>. Your output should be:
+<outputcodeline>
+<code>4</code>
+<code>9</code>
+<code>16</code>
+<code>25</code>
+</outputcodeline>
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+What does the second number in your ^range^() function have to be?
+________________________________
+$RIGHTPANEL_QUESTIONS$
+What happens when you only have one ^int^ in the brackets of your ^range^() function? How is this different from having two?
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

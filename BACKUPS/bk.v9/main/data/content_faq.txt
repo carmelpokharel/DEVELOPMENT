@@ -1,0 +1,27 @@
+________________________________
+$LEFTPANEL_FAQs$
+Q: When can I expect to complete Pythons and Ladders?
+<p>For a complete beginner, the completion time is intended to be from one to three months. This, of course, is proportional to the activity and interest levels of the individual.
+Q: Which version of Python is used in Pythons and Ladders?
+<p>Pythons and Ladders makes use of the Python emulator from <a href="skulpt.org">Skulpt.org</a>, whose currently known supported version is Python 2.6+ (2016).
+Q: How can I install and set up Python on my computer?
+<p>Here's a link which guides you through the setup process. As far as editors go, we recommend Wing IDE 101 if you've never coded before, and in all other cases, Sublime Text.
+Q: How can Python be relevant to my everyday work and lifestyle?
+<p>We've attempted to cover real-world use cases in the last few squares of Pythons and Ladders, but here's an article which answers this question far better than we can.
+Q: Why is nothing happening when I run my code?
+<p>The absence of error messages in the output box is a current limitation in emulator technology. Please see <a href="./main/tutorials/pages/tutorial_8.html">this page</a> of the Tutorial for more information, or install Python on your local machine.
+Q: Why can't I use the tab key to indent code in my Editor?
+<p>While we figure out a solution, try using spaces instead! When it comes to indentation, either 2 or 4 spaces are best. Whichever you pick, remember to stay consistent.
+________________________________
+$LEFTPANEL_2$
+________________________________
+$RIGHTPANEL_1$
+________________________________
+$RIGHTPANEL_1$
+________________________________
+$RIGHTPANEL_SPONSORED$
+Sponsored1 $LINK$ www.stringsinpython.com
+Sponsored2 $LINK$ www.newlinecharacters.com
+Sponsored3 $LINK$ www.printstatements.com
+________________________________
+FIN

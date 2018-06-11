@@ -1,0 +1,31 @@
+________________________________
+$LEFTPANEL_HEADING$
+The Sweet Escape
+https://open.spotify.com/track/66ZcOcouenzZEnzTJvoFmH
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+Try printing the following from the Editor:
+<code class="demo">^keyword^print 'I'll write once a week.'</code>
+You'll find that this doesn't work. This is because your ^keyword^str terminates in the word <strong>don't</strong>&#8212;the apostrophe closes the string! In other words, you are telling Python to print 'I don', and the rest of the text is bad syntax.
+To overcome this issue, Python uses a concept called an <strong>escape character</strong>, i.e. a backslash: ^keyword^\.
+Now, try printing the above statement this way:
+<code class="demo">^keyword^print 'I^keyword^\'ll write once a week.'</code>
+________________________________
+$LEFTPANEL_QUESTION$
+Write a print statement which displays the following to the output, <em>including</em> the speech quotations: 
+<code>"I'll write once a week," she said.</code>
+<p class="small">&nbsp;</p>
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+Try doubling up the double-quotes!
+________________________________
+$RIGHTPANEL_QUESTIONS$
+Can you use both single <em>and</em> double quotations in a string? Try this:<p class="small"><code>^keyword^print "'Hello' World!"</code>
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

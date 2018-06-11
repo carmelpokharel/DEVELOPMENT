@@ -1,0 +1,46 @@
+________________________________
+$LEFTPANEL_HEADING$
+Side to Side
+https://open.spotify.com/track/1pKeFVVUOPjFsOABub0OaV
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+When you initialize a variable, all you're really doing is putting the datatype into a labelled container.
+
+Run the following code, and examine its results.
+<code class="demoblock">~my_age = 25~your_age = 25~^keyword^print my_age, your_age~</code>
+With those results in mind, do you think the following statement is valid? Why or why not?
+<code class="demo">^keyword^print 25 = my_age</code>
+________________________________
+$LEFTPANEL_QUESTION$
+Write three lines of code to do the following:
+<table>
+   <tr>
+      <td width="15%" valign="top" class="linecol">Line 1:</td>
+      <td class="codecol">Declare a variable, word_1, for the ^keyword^str 'Side'</td>
+   </tr>
+   <tr>
+      <td width="15%" valign="top" class="linecol">Line 2:</td>
+      <td class="codecol">Declare a variable, word_2, for the ^keyword^str 'to'</td>
+   </tr>
+   <tr>
+      <td width="15%" valign="top" class="linecol">Line 3:</td>
+      <td class="codecol">Declare a variable, word_3, for the ^keyword^str 'Side'</td>
+   </tr>
+   </table>
+Now, print the three variables so that your output displays the following:
+<code>Side to Side</code>
+<p class="small">&nbsp;</p>
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+Your ^keyword^print statement should <em>not</em> contain any strings; only variables!
+________________________________
+$RIGHTPANEL_QUESTIONS$
+How would you modify your ^keyword^print statement to output the following?<p class="small"><code>SidetoSide</code>
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

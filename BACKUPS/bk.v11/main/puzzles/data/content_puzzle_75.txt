@@ -1,0 +1,51 @@
+________________________________
+$LEFTPANEL_HEADING$
+Nesting Dolls
+https://open.spotify.com/track/0B2hCEoIf0kEpuPrXF5ZFW
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+Nested loops are simply another way of referring to multiple levels of loops:
+<democodeblock>
+<code>all_characters = ''</code>
+<code>^for^ element in ['alpha', 'beta', 'gamma']:</code>
+<code><tab>^for^ character in element:</code>
+<code><tab><tab>^print^ character</code>
+</democodeblock>
+________________________________
+$LEFTPANEL_QUESTION$
+Using nested loops, define a function <def>numRectangle</def>() that takes in an ^int^ <var>n</var> > 0 and produces a formatted output. For example, an input of ^int^ 5 should return the following ^str^:
+<outputcodeblock>
+<code>....1</code>
+<code>...22</code>
+<code>..333</code>
+<code>.4444</code>
+<code>55555</code>
+</outputcodeblock>
+Your function should ^return^ a single ^str^, and use ^\n^ characters to separate the rows.
+________________________________
+$LEFTPANEL_EDITOR$
+def numRectangle(n):
+________________________________
+$LEFTPANEL_HINTS$
+Two ^for^ loops may be useful.
+________________________________
+$RIGHTPANEL_QUESTIONS$
+What is the minimum number of loops you can use to solve this square?
+________________________________
+$RIGHTPANEL_TESTCASES$
+This square does not have a Submit button, as the results are self-explanatory. However, make sure to test your function on the following inputs:
+<cardcodeblock>
+test1 = 10
+test2 = 5
+test3 = 3
+test4 = 1
+test5 = 0
+</cardcodeblock>
+________________________________
+$ALLPANES_SUBMITCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+$RIGHTPANEL_SOLUTION$
+________________________________
+FIN

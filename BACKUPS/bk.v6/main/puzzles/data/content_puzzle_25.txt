@@ -1,0 +1,49 @@
+________________________________
+$LEFTPANEL_HEADING$
+Somewhere Else
+https://open.spotify.com/track/1xDPUKoyQuIiea7Le9ZNgn
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+Consider the following two blocks of code:
+
+<democodeblock>
+<code>finalGrade = 80</code>
+<code>^if^ finalGrade > 50:</code>
+<code><tab>^print^ 'You passed!'</code>
+<code>^else^:</code>
+<code><tab>^if^ finalGrade ^is^ 50:</code>
+<code><tab><tab>^print^ 'See your professor.'</code>
+<code><tab>^else^:</code>
+<code><tab><tab>^print^ 'You failed.'</code>
+</democodeblock>
+
+<democodeblock>
+<code>finalGrade = 80</code>
+<code>^if^ finalGrade > 50:</code>
+<code><tab>^print^ 'You passed!'</code>
+<code>^elif^ finalGrade is 50:</code>
+<code><tab>^print^ 'See your professor.'</code>
+<code>^else^:</code>
+<code><tab>^print^ 'You failed.'</code>
+</democodeblock>
+
+You may notice that they are identical in execution. What does the ^elif^ statement do?
+________________________________
+$LEFTPANEL_QUESTION$
+Extend your solution to <a href="puzzle_24.html">Task Twenty-Four</a> by adding an ^elif^ statement. Your code should now print the following line if my_age is set to the ^int^ 18:
+<outputcodeline>Welcome to adulthood!</outputcodeline>
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+Both the ^if^ and ^elif^ statements must return a ^bool^ (i.e. include a conditional statement).
+________________________________
+$RIGHTPANEL_QUESTIONS$
+Is it possible to have more than one ^elif^ statement?
+Is it possible to have an ^if^ statement, an ^elif^ statement, but no ^else^ statement?
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

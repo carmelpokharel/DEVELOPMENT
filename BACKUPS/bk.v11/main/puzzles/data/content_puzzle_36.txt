@@ -1,0 +1,55 @@
+________________________________
+$LEFTPANEL_HEADING$
+Vowels
+https://open.spotify.com/track/77dRMsf3qPiG9DRFZfRg3p
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+Handily, ^for^ loops can also be used with ^if^/^else^ statements:
+<democodeblock>
+<code>numbers = [0, 1, 2, 0, 3, -5, 7]</code>
+<code>^for^ digit ^in^ numbers:</code>
+<code><tab>^if^ digit > 0:</tab></code>
+<code><tab><tab>^print^ digit, 'is positive'</tab></tab></code>
+<code><tab>^else^:</tab></code>
+<code><tab><tab>^print^ digit</tab></tab></code>
+</democodeblock>
+________________________________
+$LEFTPANEL_QUESTION$
+<table>
+   <tr>
+      <td class="linecol">Line 1</td>
+      <td class="codecol">Declare a variable, <var>vowels_list</var>, for the ^str^ 'aeiou'</td>
+   </tr>
+   <tr>
+      <td class="linecol">Line 2</td>
+      <td class="codecol">Declare a ^list^ variable, <var>letters_list</var>, which contains the first six letters of the English alphabet</td>
+   </tr>
+   <tr>
+      <td class="linecol">Lines 3-7</td>
+      <td class="codecol">Write a ^for^ loop that iterates through <var>letters_list</var>, and prints each of its elements followed by 'is a vowel!' or 'is not a vowel.'</td>
+   </tr>
+</table>
+Your output should look like:
+<outputcodeline>
+<code>A is a vowel!</code>
+<code>B is not a vowel.</code>
+<code>C is not a vowel.</code>
+<code>D is not a vowel.</code>
+<code>E is a vowel!</code>
+<code>F is not a vowel.</code></outputcodeline>
+
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+Play close attention to the indentation of each line!
+________________________________
+$RIGHTPANEL_QUESTIONS$
+Can you recall why your ^if^/^else^ statements are indented?
+What happens when you remove the indent from your ^if^/^else^ statements?
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

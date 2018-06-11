@@ -1,0 +1,39 @@
+________________________________
+$LEFTPANEL_MAIN$
+Usage
+________________________________
+$LEFTPANEL_MAINAREA$
+________________________________
+$LEFTPANEL_INSTRUCTIONSAREA$
+So how does Pythons and Ladders work?
+
+It's pretty simple. Throughout the website, you will be guided through a sequence of squares, each containing a puzzle. The puzzles gradually increase in difficulty, equipping you with important Python programming techniques as you go.
+
+Here's an example of how a puzzle may appear in Pythons and Ladders:
+<h4 class="h4gold">Task Zero</h4>
+In the Editor below, write Python code to print your first name on one line, and your last name on the next. Your Output box should resemble the following:
+<outputcodeblock>
+<code>Snow</code>
+<code>White</code>
+</outputcodeblock>
+________________________________
+$LEFTPANEL_TOOLBARAREA$
+________________________________
+$LEFTPANEL_EDITORAREA$
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINT$
+________________________________
+$LEFTPANEL_OUTPUTAREA$
+________________________________
+$RIGHTPANEL_PYTHONSHELL$
+________________________________
+$RIGHTPANEL_QUESTIONS$
+On some squares, you may notice options to attempt a "Python" or a "Ladder" version of your question.
+These options will be presented to you when we think the square may be too simple or too difficult for the average user.
+"Python" versions of your question will be comparatively easy, allowing you spread your learning across multiple squares, while the "Ladder" versions will be more difficult, and cover more concepts.
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+FIN

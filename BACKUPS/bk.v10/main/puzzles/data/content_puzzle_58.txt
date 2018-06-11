@@ -1,0 +1,73 @@
+________________________________
+$LEFTPANEL_HEADING$
+Eve
+https://open.spotify.com/track/2oq7eoZRyBsUDyW1uyQNOZ
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+________________________________
+$LEFTPANEL_QUESTION$
+Define a function, <def>isPalindrome</def>(),which recognizes <a href="https://en.wikipedia.org/wiki/Palindrome" target="_blank">palindromes</a> (words that are the same spelled backwards). For example, <def>isPalindrome</def>('Eve') should return ^True^. In all other cases, return ^False^.
+
+You may assume that all inputs will be words in the English language, except for possible inputs of an empty ^str^ or space character.
+________________________________
+$LEFTPANEL_EDITOR$
+def isPalindrome(word):
+________________________________
+$LEFTPANEL_HINTS$
+Remember your <def>reverse</def>() function? Use its code in combination with the .^upper^() and/or .^lower^() methods.
+________________________________
+$RIGHTPANEL_QUESTIONS$
+Have you accounted for the case where your input string is a space character or an empty string? As these are not words, they should return ^False^.
+________________________________
+$RIGHTPANEL_TESTCASES$
+These squares will be much easier to solve if you run your own tests before using the Submit button.
+________________________________
+$ALLPANES_SUBMITCASES$
+print ""
+print "INPUT     | ''"
+print "OUTPUT    |", isPalindrome('')
+print "EXPECTED  | False"
+if isPalindrome('') == False:
+	print "PASSED!"
+else: 
+	print "FAILED"
+
+print ""
+print "INPUT     | ' '"
+print "OUTPUT    |", isPalindrome(' ')
+print "EXPECTED  | False"
+if isPalindrome(' ') == False:
+	print "PASSED!"
+else: 
+	print "FAILED"
+
+print ""
+print "INPUT     | 'kayak'"
+print "OUTPUT    |", isPalindrome('kayak')
+print "EXPECTED  | True"
+if isPalindrome('kayak') == True:
+	print "PASSED!"
+else: 
+	print "FAILED"
+
+print ""
+print "INPUT     | 'Racing'"
+print "OUTPUT    |", isPalindrome('Racing')
+print "EXPECTED  | False"
+if isPalindrome('Racing') == False:
+	print "PASSED!"
+else: 
+	print "FAILED"
+
+print ""
+print "INPUT     | 'Eve'"
+print "OUTPUT    |", isPalindrome('Eve')
+print "EXPECTED  | True"
+if isPalindrome('Eve') == True:
+	print "PASSED!"
+else: 
+	print "FAILED"
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

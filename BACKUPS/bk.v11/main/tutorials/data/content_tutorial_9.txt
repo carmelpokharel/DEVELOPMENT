@@ -1,0 +1,32 @@
+________________________________
+$LEFTPANEL_MAIN$
+Final Step
+________________________________
+$LEFTPANEL_MAINAREA$
+________________________________
+$LEFTPANEL_INSTRUCTIONSAREA$
+You're almost done!
+One more exercise before we move on to the gameboard.
+Write a syntactically correct Python statement which prints the following ^keyword^str, <em>including</em> the quotation marks, to the output:
+<outputcodeline>'To infinity and beyond!'</outputcodeline>
+________________________________
+$LEFTPANEL_TOOLBARAREA$
+________________________________
+$LEFTPANEL_EDITORAREA$
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINT$
+Try using a combination of double quotations (&quot;) and single quotations (')
+________________________________
+$LEFTPANEL_OUTPUTAREA$
+________________________________
+$RIGHTPANEL_PYTHONSHELL$
+________________________________
+$RIGHTPANEL_QUESTIONS$
+Do you think the sentence "Travis flows snares!" is syntactically correct? 
+Is it semantically correct?
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+FIN

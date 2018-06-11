@@ -1,0 +1,24 @@
+________________________________
+$LEFTPANEL_HEADING$
+Square Dance
+https://open.spotify.com/track/27mgDrExPa3obPAYXd3yQg
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+________________________________
+$LEFTPANEL_QUESTION$
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+________________________________
+$RIGHTPANEL_QUESTIONS$
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

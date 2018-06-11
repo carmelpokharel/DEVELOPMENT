@@ -1,0 +1,61 @@
+________________________________
+$LEFTPANEL_HEADING$
+The Greatest
+https://open.spotify.com/track/3XIIOCu6B8PuGq5j61asEM
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+________________________________
+$LEFTPANEL_QUESTION$
+Define a function, <def>maximum</def>(), which takes in a ^list^ of numbers, and returns the greatest of its elements.
+________________________________
+$LEFTPANEL_EDITOR$
+def maximum(list_of_numbers):
+________________________________
+$LEFTPANEL_HINTS$
+Look up the built-in ^max^() function; it'll make this square a lot easier to complete.
+________________________________
+$RIGHTPANEL_QUESTIONS$
+Can you complete this square without a ^for^ loop?
+________________________________
+$RIGHTPANEL_TESTCASES$
+Your input ^list^ can be of any length.
+________________________________
+$ALLPANES_SUBMITCASES$
+print ""
+print "INPUT     | [2,4,6,8]"
+print "OUTPUT    |", maximum([2,4,6,8])
+print "EXPECTED  | 8"
+if maximum([2,4,6,8]) == 8:
+	print "PASSED!"
+else: 
+	print "FAILED"
+
+print ""
+print "INPUT     | [8,4,0,1,50]"
+print "OUTPUT    |", maximum([8,4,0,1,50])
+print "EXPECTED  | 50"
+if maximum([8,4,0,1,50]) == 50:
+	print "PASSED!"
+else: 
+	print "FAILED"
+
+print ""
+print "INPUT     | [4,0,-3,-22,4,0,3.9,4.0]"
+print "OUTPUT    |", maximum([4,0,-3,-22,4,0,3.9,4.0])
+print "EXPECTED  | 4"
+if maximum([4,0,-3,-22,4,0,3.9,4.0]) == 4:
+	print "PASSED!"
+else: 
+	print "FAILED"
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+$RIGHTPANEL_SOLUTION$
+def maximum(list_of_numbers):
+    greatest = list_of_numbers[0]
+    for num in list_of_numbers:
+        if num > greatest:
+            greatest = num
+    return greatest
+________________________________
+FIN

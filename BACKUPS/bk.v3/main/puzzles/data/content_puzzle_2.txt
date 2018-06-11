@@ -1,0 +1,30 @@
+________________________________
+$LEFTPANEL_HEADING$
+Clone
+https://open.spotify.com/track/5Ac3ayR8mWH7hE1GYzrgD1
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+Great&#8212;now that you know how to print a single string, you'll want to learn how to print more than one line to the output box.
+________________________________
+$LEFTPANEL_QUESTION$
+Write two Python statements in the editor which display the following two lines to the output box:
+<p class="small">&nbsp;</p>
+<code>This is the first line</code>
+<code>This is the second line</code>
+<p class="small">&nbsp;</p>
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+Try writing two separate print statements, one on each line.
+________________________________
+$RIGHTPANEL_TIME$
+Less than a minute
+________________________________
+$RIGHTPANEL_QUESTIONS$
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

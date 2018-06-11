@@ -1,0 +1,26 @@
+________________________________
+$LEFTPANEL_HEADING$
+TBD
+ 
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+________________________________
+$LEFTPANEL_QUESTION$
+Using a comparison operator, compare a string to an integer to get an output of <em>False</em>.
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+There are only four comparison operators to choose from. Which one will result in an output of <em>False</em>?
+________________________________
+$RIGHTPANEL_TIME$
+2-3 minutes
+________________________________
+$RIGHTPANEL_QUESTIONS$
+How does Python compare strings and integers? Do numbers come before or after letters?
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

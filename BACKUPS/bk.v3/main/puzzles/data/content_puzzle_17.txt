@@ -1,0 +1,37 @@
+________________________________
+$LEFTPANEL_HEADING$
+Bring Me To Life
+https://open.spotify.com/track/0COqiPhxzoWICwFCS4eZcp
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+Next up... variables. Variables are an important concept in programming. Think of them as boxes. They are used to store things, and when you want, you can access their contents. First, you need to name your variables, like so:
+<code class="demo">my_name = "Carmel"</code>
+<code class="demo">my_age = 25</code>
+<p class="small">&nbsp;</p>
+Once you've named a variable, they're ready to be used. Now, run this:
+<code class="demo">print my_name, my_age</code>
+<p class="small">&nbsp;</p>
+Notice how you don't put quotations around a variable name when printing it?
+________________________________
+$LEFTPANEL_QUESTION$
+Write Python code that stores the string "Pythons" in a variable called var1, "and" in a variable called var2, and "Ladders!" in a variable called var3. Print these three variables so that the output appears as a sentence, exactly  as shown below:
+<code>Pythons and Ladders!</code>
+<p class="small">&nbsp;</p>
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+Think of how you would write this using only strings, and now replace the strings with the variable name. 
+________________________________
+$RIGHTPANEL_TIME$
+2-3 minutes
+________________________________
+$RIGHTPANEL_QUESTIONS$
+What kind of data types can you store in a variable?
+What might be a 'bad' variable names to use?
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

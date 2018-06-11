@@ -1,0 +1,10 @@
+________________________________
+$LEFTPANEL_WELCOME$
+Pythons and Ladders is an interactive web-based resource for beginners to programming. To learn more about Pythons and Ladders, <a href="overview.html">click here</a>. 
+________________________________
+$RIGHTPANEL_SPONSORED$
+Sponsored1 $LINK$ www.stringsinpython.com
+Sponsored2 $LINK$ www.newlinecharacters.com
+Sponsored3 $LINK$ www.printstatements.com
+________________________________
+FIN

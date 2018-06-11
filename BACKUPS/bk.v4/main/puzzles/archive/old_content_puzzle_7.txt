@@ -1,0 +1,41 @@
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+
+A list is yet another data type in Python.
+
+If we continue to think of a variable as a box, a list in Python could be thought of as a shelf, carrying items. Some of the items may be boxes. If we have a big enough box, we can also store a shelf inside it, and that's basically how you initialize a variable to store a list in Python.
+
+A Python list is enclosed in square brackets, with each element separated by a comma:
+newVariable = [content0, content1, content2]
+
+Run the sample code embedded in the editor, and analyze the output at the bottom. Now, write Python code that initializes 5 variables containing different elements, and adds them to a list IF they are not already in the list. Then, output the list, which should now only contain unique values.
+
+For example, if your elements are 5, '6', 6, 4, and 5, your code should output should output exactly the following:
+&#9656; Unique list: [5, '6', 6, 4]
+________________________________
+$LEFTPANEL_EDITOR$
+var1 = 5
+var2 = 7
+# Here are a few ways to declare lists
+list1 = []				# Empty list
+list2 = [1, 2, 3]			# List of int
+list3 = ['1', '2', '3']		# List of str
+list4 = [var1, var2]		# List of variables (which could be storing any data type!)
+print 8 in list4			# Check if a list contains a particular element
+list4.append('tail')		# Adds an element to the end of a list
+print list4
+________________________________
+$RIGHTPANEL_TIME$
+15-20 minutes
+________________________________
+$RIGHTPANEL_QUESTIONS$
+Since a list is a data type, can you store lists inside a list? In other words, is the following line legal? Try it out!<br>list1 = [2, 4.5, 'Hello!', [1, 2]]
+Once you have initialized a variable, can you change the type of data it contains? In other words, can you do this?<br>list1 = [1, 2, 3]<br>list1 = 5
+Can you initialize a variable to have no value?<br>(Hint: check out the None data type)
+________________________________
+$RIGHTPANEL_SPONSORED$
+Sponsored1 $LINK$ www.stringsinpython.com
+Sponsored2 $LINK$ www.newlinecharacters.com
+Sponsored3 $LINK$ www.printstatements.com
+________________________________
+FIN

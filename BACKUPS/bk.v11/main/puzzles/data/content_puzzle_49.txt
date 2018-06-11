@@ -1,0 +1,76 @@
+________________________________
+$LEFTPANEL_HEADING$
+The Longest Mile
+https://open.spotify.com/track/0zDx5N5uOtqRquLA2fTZjv
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+________________________________
+$LEFTPANEL_QUESTION$
+Define a function, <def>longestWord</def>(), which takes in a ^list^ of words (^str^ datatypes), and returns the longest one.
+We've pre-populated the Editor with the function structure for you.
+________________________________
+$LEFTPANEL_EDITOR$
+def longestWord(list_of_words):
+    longest_word = ''
+    for ____ in ____:
+        if ____ > ____:
+            longest_word = ____
+    return longest_word
+________________________________
+$LEFTPANEL_HINTS$
+Use ^len^() to replace <var>longest_word</var> each time the current word is longer than <var>longest_word</var>.
+________________________________
+$RIGHTPANEL_QUESTIONS$
+What happens to your output if your input is a ^str^ instead of a ^list^? Why do you think this happens?
+________________________________
+$RIGHTPANEL_TESTCASES$
+If there is a tie for the longest word, return the first one.
+________________________________
+$ALLPANES_SUBMITCASES$
+print ""
+print "INPUT     | ['bottle','anteaters','rat']"
+print "OUTPUT    |", longestWord(['bottle','anteaters','rat'])
+print "EXPECTED  | anteaters"
+if longestWord(['bottle','anteaters','rat']) == "anteaters":
+	print "PASSED!"
+else: 
+	print "FAILED"
+
+print ""
+print "INPUT     | ['airport','climate', 'mile']"
+print "OUTPUT    |", longestWord(['airport','climate', 'mile'])
+print "EXPECTED  | airport"
+if longestWord(['airport','climate', 'mile']) == "airport":
+	print "PASSED!"
+else: 
+	print "FAILED"
+
+print ""
+print "INPUT     | ['hat','dwarf']"
+print "OUTPUT    |", longestWord(['hat','dwarf'])
+print "EXPECTED  | dwarf"
+if longestWord(['hat','dwarf']) == "dwarf":
+	print "PASSED!"
+else: 
+	print "FAILED"
+
+print ""
+print "INPUT     | ['']"
+print "OUTPUT    |", longestWord([''])
+print "EXPECTED  | "
+if longestWord(['']) == "":
+	print "PASSED!"
+else: 
+	print "FAILED"
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+$RIGHTPANEL_SOLUTION$
+def longestWord(list_of_words):
+    longest_word = ''
+    for word in list_of_words:
+        if len(word) > len(longest_word):
+            longest_word = word
+    return longest_word
+________________________________
+FIN

@@ -1,0 +1,68 @@
+________________________________
+$LEFTPANEL_HEADING$
+Sort Of
+https://open.spotify.com/track/6n1QJ1UpZbHSVF6nF5LkCc
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+________________________________
+$LEFTPANEL_QUESTION$
+Define a function, <def>alphaSort</def>(), which takes in a ^list^ of ^str^ datatypes and rearranges them in alphabetical order.
+
+For example, an input of ['Silver', 'Silversun', 'slivers', 'silver'] should output the following ^list^:
+<outputcodeline>['Silver', 'Silversun', 'silver', 'slivers']</outputcodeline>
+________________________________
+$LEFTPANEL_EDITOR$
+def alphaSort(input_list):
+________________________________
+$LEFTPANEL_HINTS$
+Use a ^for^ loop to add elements to your output ^list^, and remove them from the input once added.
+________________________________
+$RIGHTPANEL_QUESTIONS$
+How are you accounting for uppercase and lowercase letters, if at all?
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$ALLPANES_SUBMITCASES$
+print ""
+print "INPUT     | [' ', '', 'zeta']"
+print "OUTPUT    |", alphaSort([' ', '', 'zeta'])
+print "EXPECTED  | ['', ' ', 'zeta']"
+if alphaSort([' ', '', 'zeta']) == ['', ' ', 'zeta']:
+	print "PASSED!"
+else: 
+	print "FAILED"
+
+print ""
+print "INPUT     | ['a', 'c', 'd', 'c']"
+print "OUTPUT    |", alphaSort(['a', 'c', 'd', 'c'])
+print "EXPECTED  | ['a', 'c', 'c', 'd']"
+if alphaSort(['a', 'c', 'd', 'c']) == ['a', 'c', 'c', 'd']:
+	print "PASSED!"
+else: 
+	print "FAILED"
+
+print ""
+print "INPUT     | ['alpha', 'beta', 'gamma', 'alphaone']"
+print "OUTPUT    |", alphaSort(['alpha', 'beta', 'gamma', 'alphaone'])
+print "EXPECTED  | ['alpha', 'alphaone', 'beta', 'gamma']"
+if alphaSort(['alpha', 'beta', 'gamma', 'alphaone']) == ['alpha', 'alphaone', 'beta', 'gamma']:
+	print "PASSED!"
+else: 
+	print "FAILED"
+
+print ""
+print "INPUT     | ['Silver', 'Silversun', 'slivers', 'silver']"
+print "OUTPUT    |", alphaSort(['Silver', 'Silversun', 'slivers', 'silver'])
+print "EXPECTED  | ['Silver', 'Silversun', 'silver', 'slivers']"
+if alphaSort(['Silver', 'Silversun', 'slivers', 'silver']) == ['Silver', 'Silversun', 'silver', 'slivers']:
+	print "PASSED!"
+else: 
+	print "FAILED"
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+$RIGHTPANEL_SOLUTION$
+def alphaSort(input_list):
+    return sorted(input_list)
+________________________________
+FIN

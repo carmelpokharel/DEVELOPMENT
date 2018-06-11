@@ -1,0 +1,45 @@
+________________________________
+$LEFTPANEL_HEADING$
+Piece of Me
+https://open.spotify.com/track/2EvwLVrnYbCZEG6Kx5DCRy
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+<b>Substring</b> is a term used to refer to a piece of a ^keyword^str. For example, 'gym' is a substring of 'gymnastics', and 'rain' is a substring of 'drains'.
+To check if a substring is part of a ^keyword^str, you can use Python's ^keyword^in keyword:
+<code class="demoblock">~^keyword^print 'put' ^keyword^in 'computer'~~^keyword^print 'come' ^keyword^in 'computer'~</code>
+To access particular characters, we use a concept called string <b>indexes</b>, which represent a character's position in a ^keyword^str.
+Carefully examine the outputs of the following code:
+<code class="demoblock">~^keyword^print 'computer'[2]~^keyword^print 'computer'[5]~</code>
+________________________________
+$LEFTPANEL_QUESTION$
+Write three lines of code to do the following:
+<table>
+   <tr>
+      <td width="15%" valign="top" class="linecol">Line 1:</td>
+      <td class="codecol">Declare a variable, Apple, which stores the ^keyword^str 'Macbook Pro'</td>
+   </tr>
+   <tr>
+      <td width="15%" valign="top" class="linecol">Line 2:</td>
+      <td class="codecol">Print the substring 'M' from Apple</td>
+   </tr>
+   <tr>
+      <td width="15%" valign="top" class="linecol">Line 3:</td>
+      <td class="codecol">Print the substring ' ' (space character) from Apple</td>
+   </tr>
+</table>
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+To access the first element of a ^keyword^str, use an index value of 0.
+________________________________
+$RIGHTPANEL_QUESTIONS$
+Why did 'computer'[2] return the substring 'm' and not 'o'?
+Why did 'computer'[5] return the substring 't' and not 'u'?
+Why doesn't this work?<p class="small"><code>^keyword^print 'computer'[8]</code>
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

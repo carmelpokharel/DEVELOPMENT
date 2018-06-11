@@ -1,0 +1,64 @@
+________________________________
+$LEFTPANEL_HEADING$
+Primetime
+https://open.spotify.com/track/32oaQIN08rnsdSP8xuW0Vt
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+________________________________
+$LEFTPANEL_QUESTION$
+Define a function, <def>primeNumbers</def>(), which takes in a ^list^ of numerical datatypes, and returns a ^list^ of all its <a href="https://en.wikipedia.org/wiki/Prime_number" target="_blank">prime numbers</a>.
+________________________________
+$LEFTPANEL_EDITOR$
+def primeNumbers(input_list):
+________________________________
+$LEFTPANEL_HINTS$
+Remember, a prime number is any integer <var>n</var> > 1 that is divisible by 1 and itself--nothing else.
+________________________________
+$RIGHTPANEL_QUESTIONS$
+Which numbers are <i>not</i> prime? You can reduce the size of your input ^list^ considerably by simply removing these numbers first.
+________________________________
+$RIGHTPANEL_TESTCASES$
+This square gets trickier as you encounter larger numbers; if you're a more mathematically adept user, consider using Python's modulus operator.
+________________________________
+$ALLPANES_SUBMITCASES$
+print ""
+print "INPUT     | [1, 19.0, 12, 50, 79, 96]"
+print "OUTPUT    |", primeNumbers([1, 19.0, 12, 50, 79, 96])
+print "EXPECTED  | [1, 19.0, 79]"
+if primeNumbers([1, 19.0, 12, 50, 79, 96]) == [1, 19.0, 79]:
+    print "PASSED!"
+else: 
+    print "FAILED"
+
+print ""
+print "INPUT     | [99, 3, 21, 7, 44, 155]"
+print "OUTPUT    |", primeNumbers([99, 3, 21, 7, 44, 155])
+print "EXPECTED  | [3, 7]"
+if primeNumbers([99, 3, 21, 7, 44, 155]) == [3, 7]:
+    print "PASSED!"
+else: 
+    print "FAILED"
+
+print ""
+print "INPUT     | [99, 3, 21, '7', 44, 155]"
+print "OUTPUT    |", primeNumbers([99, 3, 21, '7', 44, 155])
+print "EXPECTED  | [3]"
+if primeNumbers([99, 3, 21, '7', 44, 155]) == [3]:
+    print "PASSED!"
+else: 
+    print "FAILED"
+
+print ""
+print "INPUT     | [2, 191, 193, 195, 197, 199]"
+print "OUTPUT    |", primeNumbers([2, 191, 193, 195, 197, 199])
+print "EXPECTED  | [2, 191, 193, 197, 199]"
+if primeNumbers([2, 191, 193, 195, 197, 199]) == [2, 191, 193, 197, 199]:
+    print "PASSED!"
+else: 
+    print "FAILED"
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+$RIGHTPANEL_SOLUTION$
+________________________________
+FIN

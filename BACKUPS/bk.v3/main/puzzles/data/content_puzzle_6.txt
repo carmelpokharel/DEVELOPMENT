@@ -1,0 +1,35 @@
+________________________________
+$LEFTPANEL_HEADING$
+Numbers
+https://open.spotify.com/track/7Ghnsdv1lVpUJN2YhUbz4d
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+Let's start working with integer arithmetic. Enter the following statements in your editor, and run them to see the outputs:
+<code class="demo">print 10 + 2</code>
+<code class="demo">print 10 - 2</code>
+<code class="demo">print 10 * 2</code>
+<code class="demo">print 10 / 2</code>
+<p class="small">&nbsp;</p>
+________________________________
+$LEFTPANEL_QUESTION$
+Write a Python statement which prints the result of adding 4 to 6 times 3. Your statement must include all of the three integers, with the output simply showing:
+<code>22</code>
+<p class="small">&nbsp;</p>
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+Remember, you're working with integers, not strings. You shouldn't be using quotation marks anywhere!
+________________________________
+$RIGHTPANEL_TIME$
+2-3 minutes
+________________________________
+$RIGHTPANEL_QUESTIONS$
+Take out the word <em>print</em> and see what happens. Notice the importance of typing the word print before your arithmetic expression. Why do you think this makes a difference? 
+Divide an integer by another integer that is not a factor of the first (ex. 8 / 3). What is the output?
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

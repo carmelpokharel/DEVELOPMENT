@@ -1,0 +1,44 @@
+________________________________
+$LEFTPANEL_HEADING$
+Five Becomes Four
+https://open.spotify.com/track/2REfznWvZEa7eT9VUpxIqn
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+After initializing a variable, you can always update its content (that's why it's called a variable!) and even change its datatype.
+Revisiting our container analogy, it would be like emptying the container and giving it new data, but keeping the same label.
+________________________________
+$LEFTPANEL_QUESTION$
+Write two lines of code to do the following:
+<table>
+   <tr>
+      <td class="linecol">Line 1</td>
+      <td class="codecol">Declare a variable, <var>var1</var>, for the ^str^ 'Five'</td>
+   </tr>
+   <tr>
+      <td class="linecol">Line 2</td>
+      <td class="codecol">Update <var>var1</var> to now store the ^int^ 4</td>
+   </tr>
+</table>
+Now, ^print^ <var>var1</var> to the output box to display the following:
+<outputcodeline>4</outputcodeline>
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+When updating/changing a declared variable, you are simply redefining what the variable equals to.
+________________________________
+$RIGHTPANEL_QUESTIONS$
+What can you learn from the results of the following code?
+<cardcodeblock>
+<code>var1 = 'A'</code>
+<code>^print^ ^type^(var1) ^is^ ^str^</code>
+<code>var1 = 1</code>
+<code>^print^ ^type^(var1) ^is^ ^str^</code>
+<code>^print^ ^type^(var1) ^is^ ^int^</code>
+</cardcodeblock>
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

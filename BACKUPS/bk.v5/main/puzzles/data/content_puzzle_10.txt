@@ -1,0 +1,27 @@
+________________________________
+$LEFTPANEL_HEADING$
+Again, Again, and Again
+https://open.spotify.com/track/4t2v0vTHC4bgpgt4cYwEAG
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+You can also multiply ^keyword^str and ^keyword^int datatypes. Try running these statements, and observe the differences in their outputs.
+<code class="demoblock">~^keyword^print 'A' * 3~^keyword^print 3 * '7'~^keyword^print 7 * 3~</code>
+________________________________
+$LEFTPANEL_QUESTION$
+Using ^keyword^str and ^keyword^int multiplication, write a Python statement which outputs the following line: 
+<code>HelloHelloHelloHelloHello</code>
+<p class="small">&nbsp;</p>
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+The string 'Hello' should only appear once in your statement. How can you make it repeat five times?
+________________________________
+$RIGHTPANEL_QUESTIONS$
+Is it possible to multiply a ^keyword^str by a ^keyword^float?
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

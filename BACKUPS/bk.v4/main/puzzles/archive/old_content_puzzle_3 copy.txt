@@ -1,0 +1,35 @@
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+
+Write a Python script that displays the result of adding two numbers after calculating their sum. Store your numbers in the variables num1 and num2, calculate their sum, and print the result to the output.
+
+For example, if you store the numbers 4 and 9 in num1 and num2 respectively, your output should read exactly as follows:
+&#9656; The sum of 4 and 9 is 13.
+________________________________
+$LEFTPANEL_EDITOR$
+print 'Quick lesson:'
+firstNum = '7'
+print 'Right now, firstNum stores a string (str), since the content is enclosed in quotations.'
+secondNum = 7
+print 'Meanwhile, secondNum stores an integer (int), as the content has no quotations.'
+print '\nLet\'s print them:', firstNum, secondNum
+print 'They both look exactly the same! How do you differentiate between the two?'
+print '\nTry using the isinstance() function to check their types:'
+print isinstance('7', int), isinstance('7', str), isinstance(7, int), isinstance(7, str)
+print '\nCongratulations--you\'ve just encountered your first function!'
+________________________________
+$RIGHTPANEL_TIME$
+15-20 minutes
+________________________________
+$RIGHTPANEL_QUESTIONS$
+How can you print variables storing both numbers and strings on the same line?
+Can you convert back and forth between string and integer types? How would you do this?
+What are the differences between these statements?<br>print '7', '7'<br>print '7' + '7'<br>print 7, 7<br>print 7 + 7
+What happens when you try multiplication with strings?<br>print '7' * 7<br>print 7 * 7
+________________________________
+$RIGHTPANEL_SPONSORED$
+Sponsored1 $LINK$ www.stringsinpython.com
+Sponsored2 $LINK$ www.newlinecharacters.com
+Sponsored3 $LINK$ www.printstatements.com
+________________________________
+FIN

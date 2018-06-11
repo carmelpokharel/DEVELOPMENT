@@ -1,0 +1,32 @@
+________________________________
+$LEFTPANEL_MAIN$
+Tutorial: Final Step
+________________________________
+$LEFTPANEL_MAINAREA$
+________________________________
+$LEFTPANEL_INSTRUCTIONSAREA$
+You're almost done!
+One more exercise before we move on to the gameboard.
+Write a syntactically correct Python statement which prints the following ^keyword^str, <em>including</em> the quotation marks, to the output:
+<code>'To infinity and beyond!'</code>
+<p class="small">&nbsp;</code>
+________________________________
+$LEFTPANEL_TOOLBARAREA$
+________________________________
+$LEFTPANEL_EDITORAREA$
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINT$
+Try using a combination of double quotations (&quot;) and single quotations (').
+________________________________
+$LEFTPANEL_OUTPUTAREA$
+________________________________
+$RIGHTPANEL_TIME$
+2-3 minutes
+________________________________
+$RIGHTPANEL_QUESTIONS$
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+FIN

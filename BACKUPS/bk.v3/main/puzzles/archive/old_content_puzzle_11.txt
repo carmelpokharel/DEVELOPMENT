@@ -1,0 +1,38 @@
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+
+Run the sample code embedded in the editor, and analyze the output at the bottom. Now, write a single-line print statement that outputs exactly the following string:
+&#9656; "Teach me," she said, "I'm interested."
+
+Note: Ignore the arrow; it's only there for you to distinguish the expected output from the rest of the instructions.
+________________________________
+$LEFTPANEL_EDITOR$
+print "This seems to work!"
+print "It's pretty cool."
+print "\"What comes next?\""
+print '"I\'m ready."'
+print "\nQuick lesson:"
+print "Everything inside these quotation marks is called a string."
+print 'A string is a type of data in Python, primarily used to store words.'
+print 'Other types of data include integers, floating-point numbers, and lists.'
+________________________________
+$LEFTPANEL_HINTS$
+Write hint here
+Testing a new line
+________________________________
+$RIGHTPANEL_TIME$
+10-15 minutes
+________________________________
+$RIGHTPANEL_QUESTIONS$
+What happens to the quotations on the first two lines when you run the code?
+Why are there backslashes before some of the quotations?
+What did that '\n' do to "Quick lesson"?
+Does it matter if your words are enclosed in single quotes or double quotes?
+Why is there an empty line between '"I'm ready."'' and 'Quick lesson:'?
+________________________________
+$RIGHTPANEL_SPONSORED$
+Sponsored1 $LINK$ www.stringsinpython.com
+Sponsored2 $LINK$ www.newlinecharacters.com
+Sponsored3 $LINK$ www.printstatements.com
+________________________________
+FIN

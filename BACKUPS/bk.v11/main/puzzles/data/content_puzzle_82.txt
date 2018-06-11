@@ -1,0 +1,87 @@
+________________________________
+$LEFTPANEL_HEADING$
+Identity Disorder
+https://open.spotify.com/track/5LO17f9MJ78bNolNWP6yNz
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+Many applications today make use of unique identification numbers, or user IDs. When you sign up for an app, you are given the option to choose a username and password. In the background, you are likely also assigned a computer-generated unique user ID, which is an ^int^ or ^str^ to represent you. 
+________________________________
+$LEFTPANEL_QUESTION$
+Consider the following information, which is stored in the <var>user_data</var> ^dict^ in your Editor:
+<ul>
+<li><b>User_ID</b>: '001', <b>Username</b>: 'TheRealAngela', <b>Password</b>: 'abcdefgh', <b>Age</b>: 25</li>
+<li><b>User_ID</b>: '007', <b>Username</b>: 'BondJamesBond', <b>Password</b>: 'casinoroyale', <b>Age</b>: 'N/A'</li>
+<li><b>User_ID</b>: '155': <b>Username</b>: 'Mark_Hoppus', <b>Password</b>: 'babycomeon', <b>Age</b>: 44</li>
+</ul>
+Define a function, <def>updateData</def>(), which takes in three parameters: a user ID, an update field, and an update value, and applies the requested changes to <var>user_data</var>.
+
+For example, calling <def>updateData</def>('001', 'Password', 'tuvwxyz') should return this updated version of <var>user_data</var>:
+
+<outputcodeline>{'001': ['TheRealAngela', 'tuvwxyz', 25], '007': ['BondJamesBond', 'casinoroyale', 'N/A'], '155': ['Mark_Hoppus', 'babycomeon', 44]}</outputcodeline>
+________________________________
+$LEFTPANEL_EDITOR$
+user_data = {
+'001':['TheRealAngela', 'abcdefgh', 25], 
+'007':['BondJamesBond', 'casinoroyale', 'N/A'], 
+'155':['Mark_Hoppus', 'babycomeon', 44]
+}
+def updateData(user_id, update_field, update_value):
+________________________________
+$LEFTPANEL_HINTS$
+How does your function recognize that the first ^list^ item is the username, second is the password, and so on?
+________________________________
+$RIGHTPANEL_QUESTIONS$
+How can you update a single item in a ^list^?
+If you call <def>updateData</def>() twice in a row, does it keep the updates from the previous call?
+________________________________
+$RIGHTPANEL_TESTCASES$
+Why create user IDs? After all, no two people have the same username--can't we use those? 
+Well, in the simplest of explanations, having a separate user ID allows you to do things like change your username or password at any time, while preserving your app data. From a development perspective, it's also much easier to implement. Win-win for everyone!
+________________________________
+$ALLPANES_SUBMITCASES$
+print ""
+print "INPUT     | '001', 'Password', 'tuvwxyz'"
+print "OUTPUT    |", updateData('001', 'Password', 'tuvwxyz')
+print "EXPECTED  | {'001': ['TheRealAngela', 'tuvwxyz', 25], '007': ['BondJamesBond', 'casinoroyale', 'N/A'], '155': ['Mark_Hoppus', 'babycomeon', 44]}"
+if updateData('001', 'Password', 'tuvwxyz') == {'001': ['TheRealAngela', 'tuvwxyz', 25], '007': ['BondJamesBond', 'casinoroyale', 'N/A'], '155': ['Mark_Hoppus', 'babycomeon', 44]}:
+    print "PASSED!"
+else: 
+    print "FAILED"
+
+print ""
+print "INPUT     | '001', 'Username', 'Angela25'"
+print "OUTPUT    |", updateData('001', 'Username', 'Angela25')
+print "EXPECTED  | {'001': ['Angela25', 'tuvwxyz', 25], '007': ['BondJamesBond', 'casinoroyale', 'N/A'], '155': ['Mark_Hoppus', 'babycomeon', 44]}"
+if updateData('001', 'Username', 'Angela25') == {'001': ['Angela25', 'tuvwxyz', 25], '007': ['BondJamesBond', 'casinoroyale', 'N/A'], '155': ['Mark_Hoppus', 'babycomeon', 44]}:
+    print "PASSED!"
+else: 
+    print "FAILED"
+
+print ""
+print "INPUT     | '155', 'Age', '45'"
+print "OUTPUT    |", updateData('155', 'Age', '45')
+print "EXPECTED  | {'001': ['Angela25', 'tuvwxyz', 25], '007': ['BondJamesBond', 'casinoroyale', 'N/A'], '155': ['Mark_Hoppus', 'babycomeon', '45']}"
+if updateData('155', 'Age', '45') == {'001': ['Angela25', 'tuvwxyz', 25], '007': ['BondJamesBond', 'casinoroyale', 'N/A'], '155': ['Mark_Hoppus', 'babycomeon', '45']}:
+    print "PASSED!"
+else: 
+    print "FAILED"
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+$RIGHTPANEL_SOLUTION$
+user_data = {
+'001':['TheRealAngela', 'abcdefgh', 25], 
+'007':['BondJamesBond', 'casinoroyale', 'N/A'], 
+'155':['Mark_Hoppus', 'babycomeon', 44]
+}
+def updateData(user_id, update_field, update_value):
+	if update_field == 'Username':
+		index = 0
+	if update_field == 'Password':
+		index = 1
+	if update_field == 'Age':
+		index = 2
+	user_data[user_id][index] = update_value
+	return user_data
+________________________________
+FIN

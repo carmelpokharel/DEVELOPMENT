@@ -1,0 +1,81 @@
+________________________________
+$LEFTPANEL_HEADING$
+In Case
+https://open.spotify.com/track/5Q0LOi7lmEVjpSp0nNGwX6
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+Run the following code from the Editor:
+<democodeblock>
+<code>^def^ <def>increaseByFive</def>(starting_num):</code>
+<code><tab>^return^ starting_num + 5</tab></code>
+<codespace>
+<code>starting_num1 = 6</code>
+<code>starting_num2 = 2.2</code>
+<code>starting_num3 = -8</code>
+<codespace>
+<code>^print^ <def>increaseByFive</def>(starting_num1)</code>
+<code>^print^ <def>increaseByFive</def>(starting_num2)</code>
+<code>^print^ <def>increaseByFive</def>(starting_num3)</code></democodeblock>
+This should display the following in the Output box:
+<democodeblock>
+<code>11</code>
+<code>7.2</code>
+<code>-3</code>
+</democodeblock>
+Can you understand what the code is doing?
+________________________________
+$LEFTPANEL_QUESTION$
+Define a function, <def>decreaseByFive</def>(), which takes in a number <var>starting_num</var>, and returns the output of <var>starting_num</var> minus 5.
+________________________________
+$LEFTPANEL_EDITOR$
+def decreaseByFive(starting_num):
+________________________________
+$LEFTPANEL_HINTS$
+Make sure to follow the exact format of the given example!
+________________________________
+$RIGHTPANEL_QUESTIONS$
+Can you input a non-^int^ datatype to <def>increaseByFive</def>()?
+________________________________
+$RIGHTPANEL_TESTCASES$
+Remember--no ^print^ statements in the function body!
+________________________________
+$ALLPANES_SUBMITCASES$
+print ""
+print "INPUT     | 20"
+print "OUTPUT    |", decreaseByFive(20)
+print "EXPECTED  | 15"
+if decreaseByFive(20) == 15:
+	print "PASSED!"
+else: 
+	print "FAILED"
+
+print ""
+print "INPUT     | 5.8"
+print "OUTPUT    |", decreaseByFive(5.8)
+print "EXPECTED  | 0.8"
+if str(decreaseByFive(5.8)) == str(0.8):
+	print "PASSED!"
+else: 
+	print "FAILED"
+
+print ""
+print "INPUT     | 0"
+print "OUTPUT    |", decreaseByFive(0)
+print "EXPECTED  | -5"
+if decreaseByFive(0) == -5:
+	print "PASSED!"
+else: 
+	print "FAILED"
+
+print ""
+print "INPUT     | -4"
+print "OUTPUT    |", decreaseByFive(-4)
+print "EXPECTED  | -9"
+if decreaseByFive(-4) == -9:
+	print "PASSED!"
+else: 
+	print "FAILED"
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

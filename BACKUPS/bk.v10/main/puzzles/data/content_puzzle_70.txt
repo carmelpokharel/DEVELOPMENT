@@ -1,0 +1,47 @@
+________________________________
+$LEFTPANEL_HEADING$
+Countdown
+https://open.spotify.com/track/3axkNosdVQLZiq1HakuGhc
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+Prior to rocket launch, NASA employs a famous <a href="http://www.nasa.gov/mission_pages/shuttle/launch/countdown101.html" target="_blank">countdown sequence</a>, starting from T-43 to T-0, i.e. lift-off.
+________________________________
+$LEFTPANEL_QUESTION$
+Define a function, <def>countdown</def>(), which takes in an ^int^ <var>n</var> > 2, and returns a countdown sequence. Your first line should always be prefixed by the str 'T-minus ', and your last line should always be 'All engines running. Lift off!'
+
+For example, ^print^ <def>countdown</def>(10) should display the following:
+<outputcodeblock>
+<code>T-minus 10</code>
+<code>9</code>
+<code>8</code>
+<code>7</code>
+<code>6</code>
+<code>5</code>
+<code>4</code>
+<code>3</code>
+<code>2</code>
+<code>1</code>
+<code>0</code>
+<code>All engines running. Lift off!</code>
+</outputcodeblock>
+Your function should return a single ^str^ as its output, with each row separated by a ^\n^ character. There should be no ^print^ statements in the function body.
+________________________________
+$LEFTPANEL_EDITOR$
+def countdown(n):
+________________________________
+$LEFTPANEL_HINTS$
+Remember, your function should ^return^ a single ^str^, with each line separated by a ^\n^ character.
+________________________________
+$RIGHTPANEL_QUESTIONS$
+Can you write <def>countdown</def>() without a single ^if^ statement?
+________________________________
+$RIGHTPANEL_TESTCASES$
+This square does not have a Submit button, as the results are self-explanatory. However, make sure to test your function on the following inputs:
+<cardcodeblock>
+test1 = 10
+test2 = 3
+</cardcodeblock>
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

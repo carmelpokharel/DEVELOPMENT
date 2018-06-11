@@ -1,0 +1,74 @@
+________________________________
+$LEFTPANEL_HEADING$
+Initiated
+https://open.spotify.com/track/7stKwfHRWyivKC0CEiY8QI
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+A dictionary is a datatype in Python, represented as ^dict^. A dictionary is designed to hold mappings in the form of key:value pairs, which can both be of any datatype.
+
+Here's how to initialize and add values to a ^dict^:
+<democodeblock>
+<code><comment># Initialize an empty dictionary</comment></code>
+<code>new_dictionary = {}</code>
+<code><comment># Create the following key:value entries</comment></code>
+<code><comment># alpha : 2</comment></code>
+<code><comment># beta <1sp>: 3</comment></code>
+<code>new_dictionary['alpha'] = 2</code>
+<code>new_dictionary['beta'] <1sp>= 3</code>
+<code>new_dictionary['gamma'] = 4</code>
+<code>^print^ new_dictionary</code>
+</democodeblock>
+
+And another way to do the same thing:
+<democodeblock>
+<code>new_dictionary = {'alpha': 2, 'beta': 3}</code>
+<code>new_dictionary['gamma'] = 4</code>
+<code>^print^ new_dictionary</code>
+</democodeblock>
+________________________________
+$LEFTPANEL_QUESTION$
+Define a function, <def>initializeDict</def>(), which takes in no parameters, but outputs a ^dict^ with keys 'A', 'B', C', and for each key, has a value that’s the ^list^ of integers from 1 to 3.
+
+Your output should be exactly the following:
+<outputcodeline>{'A': [1, 2, 3], 'B': [1, 2, 3], 'C': [1, 2, 3]}</outputcodeline>
+________________________________
+$LEFTPANEL_EDITOR$
+def initializeDict():
+________________________________
+$LEFTPANEL_HINTS$
+Use a ^for^ loop (or more).
+________________________________
+$RIGHTPANEL_QUESTIONS$
+Think about how a ^dict^ different from a ^list^--remember how you could append duplicate values to a ^list^? For a dictionary, what can you do if you have multiple values for the same key?
+How many ^for^ loops did you have to use to solve this square? Could you have used any less, or any more?
+________________________________
+$RIGHTPANEL_TESTCASES$
+An interesting property of a dictionary is that all of its keys are unique. If you attempt to add the same key with a new value to a ^dict^, it replaces the previous entry:
+<cardcodeblock>
+<code>new_dictionary = {}</code>
+<code>new_dictionary['alpha'] = 2</code>
+<code>new_dictionary['beta'] <1sp>= 3</code>
+<code>new_dictionary['alpha'] = 4</code>
+<code>^print^ new_dictionary</code>
+</cardcodeblock>
+________________________________
+$ALLPANES_SUBMITCASES$
+print ""
+print "INPUT     | N/A"
+print "OUTPUT    |", initializeDict()
+print "EXPECTED  | {'A': [1, 2, 3], 'B': [1, 2, 3], 'C': [1, 2, 3]}"
+if initializeDict() == {'A': [1, 2, 3], 'B': [1, 2, 3], 'C': [1, 2, 3]}:
+    print "PASSED!"
+else: 
+    print "FAILED"
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+$RIGHTPANEL_SOLUTION$
+def initializeDict():
+	new_dict = {}
+	for i in 'ABC':
+		new_dict[i] = [1,2,3]
+	return new_dict
+________________________________
+FIN

@@ -1,0 +1,27 @@
+________________________________
+$LEFTPANEL_HEADING$
+Skeptics and True Believers
+https://open.spotify.com/track/7pQUHNh2KfHTIYIVthjjya
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+A <b>Boolean</b>, or ^keyword^bool, is yet another Python datatype which can only hold one of two values: ^keyword^True or ^keyword^False. Note that a ^keyword^bool does <em>not</em> contain the words 'True' and 'False' as strings, but is a datatype of its own with no quotations.
+
+When we perform comparison operations, the resulting datatype is a ^keyword^bool. Run the following code and observe the results:
+<code class="demoblock">~^keyword^print 5 < 10&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;^keyword^# <span class="keyword-green">Should be True</span>~^keyword^print 5 > 10&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;^keyword^# <span class="keyword-green">Should be False</span>~^keyword^print 5 == 5&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;^keyword^# <span class="keyword-green">Should be False</span>~^keyword^print 5 ^keyword^is 5&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;^keyword^# <span class="keyword-green">Should be True</span>~^keyword^print 5 ^keyword^is ^keyword^not 5&emsp;&emsp;&emsp;^keyword^# <span class="keyword-green">Should be False</span>~</code>
+________________________________
+$LEFTPANEL_QUESTION$
+Write a print statement which checks if the ^keyword^int 5 is equal to the ^keyword^float 5.0, and outputs a ^keyword^bool value.
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+The equality comparison operator is '==' (or the keyword ^keyword^is)
+________________________________
+$RIGHTPANEL_QUESTIONS$
+Try running the following statements from the Editor&#8212;what do you see?<p class="small"><code>^keyword^print ^keyword^type(^keyword^True) ^keyword^is ^keyword^str</code><p class="small"><code>^keyword^print ^keyword^type(^keyword^True) ^keyword^is ^keyword^bool</code>
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

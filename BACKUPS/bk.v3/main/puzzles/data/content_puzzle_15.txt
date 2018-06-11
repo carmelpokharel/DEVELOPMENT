@@ -1,0 +1,51 @@
+________________________________
+$LEFTPANEL_HEADING$
+TBD
+ 
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+Comparison operators are not only useful for comparing numbers, but can also be applied to strings!
+________________________________
+$LEFTPANEL_QUESTION$
+Using comparison operators, compare the string "bat" to "bat" using variations of uppercase and lowercase letters to achieve the below mentioned outputs. (Variations you can try: "bat" vs. "bAt", "Bat" vs. "bAT", etc.)
+<table>
+   <tr>
+      <td><b>Comparison Operator</b></td>
+      <td><b>Output</b></td>
+   </tr>
+   <tr>
+      <td>Equality comparison</td>
+      <td>False</td>
+   </tr>
+   <tr>
+      <td>'Less than' comparison</td>
+      <td>True</td>
+   </tr>
+   <tr>
+      <td>'Greater than' comparison</td>
+      <td>True</td>
+   </tr>
+   <tr>
+      <td>'Does not equal to' comparison&emsp;</td>
+      <td>False</td>
+   </tr>
+</table>
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+Think of how you would normally sort in alphabetical order. If you had the words 'cat, 'ant', 'bat', they would be sorted as follows: 'ant', 'bat', 'cat'. Meaning, 'ant' would have the least value, and 'cat' would have the greatest value. 'ant' < 'bat' < 'cat'.
+________________________________
+$RIGHTPANEL_TIME$
+2-3 minutes
+________________________________
+$RIGHTPANEL_QUESTIONS$
+What are ASCII characters?
+What is the order of ASCII characters? Do upper case or lower case letters come first?
+How can you compare strings in Python? (We suggest reading the <b>String Comparisons</b> section <a href = "http://thepythonguru.com/python-strings">on this page</a>.)
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

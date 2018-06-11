@@ -1,0 +1,32 @@
+________________________________
+$LEFTPANEL_HEADING$
+Dream Within a Dream
+https://open.spotify.com/track/7ifWgqspqvPpQWXCfyrho4
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+This is how you can access a ^list^ within a ^list^:
+<democodeblock>
+<code>list1 = ['A','B',['C','D'],['E','F','G']]</code>
+<code>print list1[2][0]</code>
+</democodeblock>
+________________________________
+$LEFTPANEL_QUESTION$
+Declare the following ^list^:
+<outputcodeline>colours = ['red','ruby'],'orange','yellow',['green','emerald','olive']]</outputcodeline>
+Now, write a print statement to access the list and retrieve:
+<outputcodeline>'emerald'</outputcodeline>
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+You will need two sets of square brackets
+________________________________
+$RIGHTPANEL_QUESTIONS$
+What does the first pair of square brackets do?
+What does the second pair of square brackets do?
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

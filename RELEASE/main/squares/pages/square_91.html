@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html> 
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../../../css/codemirror.css"">
+<link rel="stylesheet" type="text/css" href="../../../css/popover.css">
+<link rel="stylesheet" type="text/css" href="../../../css/style.css">
+<link rel="stylesheet" type="text/css" href="../../../css/variables.css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" ></script> 
+<script type="text/javascript" src="http://www.skulpt.org/static/skulpt.min.js"></script>
+<script type="text/javascript" src="http://www.skulpt.org/static/skulpt-stdlib.js"></script>
+<script type="text/javascript" src="../../../js/codemirror.js"></script>
+<script type="text/javascript" src="../../../js/python.js"></script>
+<script type="text/javascript" src="../../../js/toolbar.js"></script>
+<script type="text/javascript" src="../../../js/popover.js"></script>
+<script type="text/javascript" src="../../../js/mail.js"></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-85355151-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script type="text/javascript">
+var editor;
+function outf(text) {
+var mypre = document.getElementById("dynamicframe");
+mypre.innerHTML = mypre.innerHTML + text;
+}
+function builtinRead(x) {
+if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
+throw "File not found: '" + x + "'";
+return Sk.builtinFiles["files"][x];
+}
+function runit() {
+var prog = editor.getDoc().getValue();
+var mypre = document.getElementById("dynamicframe");
+mypre.innerHTML = '';
+Sk.pre = "dynamicframe";
+Sk.configure({
+output: outf,
+read: builtinRead
+});
+(Sk.TurtleGraphics || (Sk.TurtleGraphics = {})).target = 'canvas';
+var myPromise = Sk.misceval.asyncToPromise(function() {
+try {
+return Sk.importMainWithBody("<stdin>", false, prog, true);
+}
+catch(e) {
+var errormsg = e.toString()
+var errormsg = errormsg.replace(/\</g,"&lt;");
+var errormsg = errormsg.replace(/\>/g,"&gt;")
+var errormsg = "<span class=keyword-error>" + errormsg + "</span>"
+mypre.innerHTML = (errormsg);
+}
+});
+myPromise.then(function(mod) {
+console.log('success');
+},
+function(err) {
+console.log(err.toString());
+});
+}
+window.onload = function() {
+editor = CodeMirror.fromTextArea(document.getElementById('textbox'), {
+mode: {
+name: "python",
+version: 2,
+singleLineStringErrors: false
+},
+lineNumbers: true,
+indentUnit: 4
+});
+}
+</script>
+<script>
+function testit() {
+var prog = editor.getDoc().getValue().concat('\nprint "<b>TEST RESULTS</b>:"\ntry:\n    print ""\n    print "INPUT     | 2"\n    print "OUTPUT    |", pascalsTriangle(2).split(\'\\n\')[-1], "(last row)"\n    print "EXPECTED  | 1 2 1"\n    if pascalsTriangle(2).split(\'\\n\')[-1] == \'1 2 1\':\n        print "<span class=keyword-green>PASSED!</span>"\n    else: \n        print "<span class=keyword-red>FAILED</span>"\n    \n    print ""\n    print "INPUT     | 5"\n    print "OUTPUT    |", pascalsTriangle(5).split(\'\\n\')[-1]\n    print "EXPECTED  | 1 5 10 10 5 1"\n    if pascalsTriangle(5).split(\'\\n\')[-1] == \'1 5 10 10 5 1\':\n        print "<span class=keyword-green>PASSED!</span>"\n    else: \n        print "<span class=keyword-red>FAILED</span>"\n    \n    print ""\n    print "INPUT     | 11"\n    print "OUTPUT    |", pascalsTriangle(11).split(\'\\n\')[-1]\n    print "EXPECTED  | 1 11 55 165 330 462 462 330 165 55 11 1"\n    if pascalsTriangle(11).split(\'\\n\')[-1] == \'1 11 55 165 330 462 462 330 165 55 11 1\':\n        print "<span class=keyword-green>PASSED!</span>"\n    else: \n        print "<span class=keyword-red>FAILED</span>"\nexcept:\n\tprint "<span class=keyword-error>SemanticError: invalid logic encountered</span>"');
+var mypre = document.getElementById("dynamicframe");
+mypre.innerHTML = '';
+Sk.pre = "dynamicframe";
+Sk.configure({
+output: outf,
+read: builtinRead
+});
+var myPromise = Sk.misceval.asyncToPromise(function() {
+return Sk.importMainWithBody("<stdin>", false, prog, true);
+});
+myPromise.then(function(mod) {
+console.log('success');
+},
+function(err) {
+console.log(err.toString());
+});
+}
+</script>
+</head><body><div id="wrapper"><header><div class="slideoutnav"><input type="checkbox" id="menuToggle"><label for="menuToggle" class="menuicon">&equiv;</label><nav class="menu"><div class="sidenavlogo"><a href="../../../index.html"><img src="../../../images/headingtitle.png" alt="Pythons and Ladders" style="width: 75%; height: 18%;"></a></div><p><a href="../../../index.html">home</a></p><p><a href="../../../overview.html">overview</a></p><p><a href="../../../faq.html">questions</a></p><p><a href="../../../main/updates/pages/updates_0.html">changelog</a></p><p><a href="mailto:info@pythonsandladders.com?subject=Attn: [ADMIN] Pythons and Ladders">contact us</a></p></nav></div><a href="../../../index.html" onclick="">pythons and ladders</a></header><div class="allpanes_new"><div class="sidenavpane"><div class="sidenavlogo"><a href="../../../index.html"><img src="../../../images/headingtitle.png" alt="Pythons and Ladders" style="width: 75%; height: 18%;" onmouseover="this.src='../../../images/headingtitle_snake.png'" onmouseout="this.src='../../../images/headingtitle.png'"></a></div><br><br><br><br><a href="../../../index.html">home</a><a href="../../../overview.html">overview</a><a href="../../../faq.html">questions</a><a href="mailto:info@pythonsandladders.com?subject=Attn: [ADMIN] Pythons and Ladders">contact us</a></div><div class="bannerpane"><div class="banneritems"><div class="squarenav2"><a href="square_91.html"><div class="box-square2"><div class="box-square-number2" onclick="">91</div></div></a><a href="square_90.html"><div class="box-square2"><div class="box-square-arrows2" onclick="">&lang;</div></div></a><a href="square_92.html"><div class="box-square2"><div class="box-square-arrows2" onclick="">&rang;</div></div></a></div></div></div><div class="leftpane"><div class="leftpaneinner"><a class="songheading" target="_blank" href="https://open.spotify.com/track/43xqZEtdM1Keyma9cy3rjQ""><h3>There Is No Mathematics to Love and Loss</h3></a><p><a href="http://www.mathsisfun.com/pascals-triangle.html" target="_blank">Pascal's Triangle</a>, named after the French mathematician Blaise Pascal, is notable for a number of interesting properties. To build one, we start with three <span class=keyword-teal>int</span> 1 values, and arrange them as follows:</p><p><table class="demo"><tr><td></p><p class="small"><code>row=0 | &nbsp;&nbsp;&nbsp;&nbsp; 1</code></p><p class="small"><code>row=1 | &nbsp;&nbsp;&nbsp; 1 1</code></p><p></td></tr></table><p></p></p><p>The above is considered a Pascal's Triangle of <b>order</b> 1, since it's built until row 1. A Pascal's Triangle of order 2 looks like this:</p><p><table class="demo"><tr><td></p><p class="small"><code>row=0 | &nbsp;&nbsp;&nbsp;&nbsp; 1</code></p><p class="small"><code>row=1 | &nbsp;&nbsp;&nbsp; <span class="keyword-red">1 1</span></code></p><p class="small"><code>row=2 | &nbsp;&nbsp; 1 <span class="keyword-blue">2</span> 1</code></p><p></td></tr></table><p></p></p><p>The middle number in row 2 comes from adding the two <span class=keyword-teal>int</span> 1 values directly above it. In other words, <span class="keyword-red">1</span> + <span class="keyword-red">1</span> = <span class="keyword-blue">2</span>. Now, examine a Pascal's Triangle of order 5, left-justified:</p><p><table class="demo"><tr><td></p><p class="small"><code>1</code></p><p class="small"><code>1 1</code></p><p class="small"><code>1 2 1</code></p><p class="small"><code>1 3 3 1</code></p><p class="small"><code>1 4 6 4 1</code></p><p class="small"><code>1 5 10 10 5 1</code></p><p></td></tr></table><p></p></p><h4 class="h4gold">Task Ninety-One</h4><p>Define a function, <span class='keyword-pink'>pascalsTriangle</span>(), which takes in a positive <span class=keyword-teal>int</span> <span class='keyword-var'>n</span>, and returns a Pascal's Triangle of order <span class='keyword-var'>n</span>. Your <span class=keyword-teal>str</span> must <i>not</i> end with a space character, a <span class=keyword-purple>\n</span>, or both.</p><div class="editor"><div class="editortoolbar"><div class="editortoolbaritems" onclick="runit()">RUN</div><div class="editortoolbaritems" onclick="clearBox()">CLEAR</div><div class="editortoolbarsave"><div class="editortoolbaritems" id="save" onclick="saveTextAsFile()">SAVE</div></div><div class="editortoolbaritems"><a href="#" style="border-bottom:0px" class="bootstrap-popover" title="coder's block?" data-content="<p>In order to remove any trailing <span class=keyword-purple>\n</span> or an extra space characters, look up the .<span class=keyword-green>rstrip</span>() method, and apply it on your <span class=keyword-orange>return</span> statement!</p>">HINT</a></div><div class="editortoolbaritems-submit" onclick="testit()">SUBMIT</div></div><form>            <textarea id="textbox" name="textbox" rows="5">def pascalsTriangle(n):
+</textarea></form><div class="editoroutput"><pre align="left" id="dynamicframe"></pre></div></div><div class="questions-small-devices"><h4 class="h4gold">Questions for You</h4><p>This square is much more difficult, yet vaguely similar to <span class='keyword-pink'>numRectangle</span>(). How are they different?</p><h4 class="h4gold">Notes</h4><p>You should be returning a single <span class=keyword-teal>str</span>, with rows separated by <span class=keyword-purple>\n</span> characters.</p><p>For the purposes of this square, your output must be left-justified, like in the last example.</p></div><a style="border-bottom:0px" href="square_90.html"><button>&lang; PREVIOUS</button></a><a style="border-bottom:0px" href="square_92.html"><button>NEXT &rang; </button></a></div></div><div class="questions-large-devices"><div class="rightpane"><div class="infocard"><h4 class="greyheading">Questions for You</h4><p>This square is much more difficult, yet vaguely similar to <span class='keyword-pink'>numRectangle</span>(). How are they different?</p></div></div><div class="rightpane"><div class="infocard"><h4 class="greyheading">NOTES</h4><p>You should be returning a single <span class=keyword-teal>str</span>, with rows separated by <span class=keyword-purple>\n</span> characters.</p><p>For the purposes of this square, your output must be left-justified, like in the last example.</p></div></div></div></div><title>Square 91 | Pythons and Ladders</title><div class="footer">&copy; Pythons and Ladders 2018. All rights reserved.</div></div></body></html>

@@ -1,0 +1,28 @@
+________________________________
+$LEFTPANEL_HEADING$
+Nothing Special
+https://open.spotify.com/track/5Bm68GvwmiOJOBnnTNElf7
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+Let's explore two more special cases. Run the following code from the Editor:
+<code class="demoblock">~^keyword^print 'First line^keyword^\nSecond line'~^keyword^print 'Normal line^keyword^\tIndented line'~</code>
+When Python encounters a backslash ^keyword^\ inside a ^keyword^str, it interprets your instruction as: "What follows is a special case. Escape from the normal way of doing things, and execute the special case first."
+________________________________
+$LEFTPANEL_QUESTION$
+Write a single Python ^keyword^print statement which outputs the following:
+<code>This is a normal line</code>
+<code>&emsp;&emsp;&emsp;&emsp;This\line\has\backslashes</code>
+<p class="small">&nbsp;</p>
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+To print a backslash inside a ^keyword^str, there's another special case involved. Look it up!
+________________________________
+$RIGHTPANEL_QUESTIONS$
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

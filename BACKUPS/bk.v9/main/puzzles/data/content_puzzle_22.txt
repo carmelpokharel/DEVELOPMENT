@@ -1,0 +1,35 @@
+________________________________
+$LEFTPANEL_HEADING$
+Another Part of Me
+https://open.spotify.com/track/21VCYxPZ8A2XpSNUyQCT3B
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+To access multiple characters from a ^str^, specify a range in square brackets:
+<democodeline>^print^ 'computer'[2:5]</democodeline>
+________________________________
+$LEFTPANEL_QUESTION$
+Write two lines of code to do the following:
+<table>
+   <tr>
+      <td class="linecol">Line 1</td>
+      <td class="codecol">Declare a variable, artist_name, to store the ^str^ 'Jackson'</td>
+   </tr>
+   <tr>
+      <td class="linecol">Line 2</td>
+      <td class="codecol">Print the substring 'Jack' by using square brackets on artist_name</td>
+   </tr>
+</table>
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+What is the index of the first character in a ^str^?
+________________________________
+$RIGHTPANEL_QUESTIONS$
+Why doesn't the following code work?<p class="small"><code>^print^ 'computer'[5:10]</code>
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

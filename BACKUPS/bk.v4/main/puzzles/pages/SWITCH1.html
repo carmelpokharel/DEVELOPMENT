@@ -1,0 +1,21 @@
+          <div class="editor">
+            <div class="editortoolbar">
+              <div class="editortoolbaritems" onclick="runit()">RUN</div>
+              <div class="editortoolbaritems" onclick="clearBox()">CLEAR</div>
+              <div class="editortoolbarsave">
+                <div class="editortoolbaritems" id="save" onclick="saveTextAsFile()">SAVE</div>
+              </div>
+              <div class="editortoolbaritems">
+                <a href="#" class="bootstrap-popover" title="out of ideas?" data-content="<p>Make sure to check out our tutorial!</p>">HINT</a>
+              </div>
+            </div>
+            <form align="left"> 
+              <textarea id="yourcode" class="editortextarea" rows="5"></textarea>
+            </form>
+            <!-- **************** -->
+            <!--     OUTPUT       -->
+            <!-- **************** -->
+            <div class="editoroutput">
+              <pre align="left" id="output"></pre>
+            </div>
+          </div>

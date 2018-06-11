@@ -1,0 +1,30 @@
+________________________________
+$LEFTPANEL_HEADING$
+Space Travel
+ https://open.spotify.com/track/3vpZDiFgxatshUtZJYlzo9
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+Remember how we were able to access substrings from ^keyword^str datatypes? Well, there are also <b>sublists</b> for the ^keyword^list datatype:
+<code class="demoblock">~instruments = ['piano','guitar','drums']~^keyword^print instruments[1]~</code>
+________________________________
+$LEFTPANEL_QUESTION$
+Declare the following ^keyword^list: 
+<code class="demo">outer_space = ['sun', 'moon', 'earth', ['stars', 'constellations'], 'asteroids']</code>
+Now, write a ^keyword^print statement which accesses and outputs the following sublist from outer_space:
+<code>['stars', 'constellations']</code>
+<p class="small">&nbsp;</p>
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+The expected output is really only one item (a ^keyword^list containing two ^keyword^str datatypes). Find its position in outer_space.
+________________________________
+$RIGHTPANEL_QUESTIONS$
+What is <b>list slicing</b> in Python?
+How does slicing a list compare to slicing a string?
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

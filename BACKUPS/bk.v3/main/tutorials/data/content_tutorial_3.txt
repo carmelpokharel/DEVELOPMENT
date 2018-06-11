@@ -1,0 +1,38 @@
+________________________________
+$LEFTPANEL_MAIN$
+Syntax, Pt. I
+________________________________
+$LEFTPANEL_MAINAREA$
+Sometimes, your output box will refuse to show anything. More often than not, this is a result of bad syntax, or improper grammar/spelling.
+________________________________
+$LEFTPANEL_INSTRUCTIONSAREA$
+In the English language, examples of bad syntax are sentences like "I am giong to ym friend huose." or "Iam going to .bed" These sentences are considered syntactically incorrect, as they contain spelling mistakes & punctuation errors. Although by inspection, we as humans can determine that there is a missing space between "I" and "am" in the second sentence, computers don't like to assume things--we have to be explicit.
+In the editor below, there are a few Python statements with bad syntax. Identify the issues, and modify the syntax so that you can generate the following output:
+<code>Hello World!</code>
+<code>Hello World!</code>
+<code>Hello World!</code>
+<code>&nbsp;</code>
+________________________________
+$LEFTPANEL_TOOLBARAREA$
+________________________________
+$LEFTPANEL_EDITORAREA$
+________________________________
+$LEFTPANEL_EDITOR$
+print'Hello World!'
+print ''Hello World!
+prnit "Hello World!"
+________________________________
+$LEFTPANEL_OUTPUTAREA$
+________________________________
+$RIGHTPANEL_TIME$
+2-3 minutes
+________________________________
+$RIGHTPANEL_QUESTIONS$
+What happens if you try to print ''Hello World!'' (i.e. two single quotations on either side)?
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_HINTS$
+Look at each line very carefully, then compare it to the valid code on the previous page. Most of the time in programming, the devil is in the details.
+________________________________
+FIN

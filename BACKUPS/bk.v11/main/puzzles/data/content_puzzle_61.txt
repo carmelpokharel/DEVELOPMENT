@@ -1,0 +1,108 @@
+________________________________
+$LEFTPANEL_HEADING$
+Anagram
+https://open.spotify.com/track/5jFUr4cSK8mjK4xX7O5Dcl
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+Anagrams are words or phrases which can create new words/phrases when their letters are rearranged. For example, "tablet" and "battle" are anagrams.
+________________________________
+$LEFTPANEL_QUESTION$
+Define a function, <def>isAnagram</def>(), which takes in two ^str^ inputs and returns ^True^ if they are anagrams. In all other cases, return ^False^. 
+
+You may assume that your input strings will not contain punctuation or special characters, but remember to account for <a href="https://en.wikipedia.org/wiki/Letter_case" target="_blank">letter cases</a> and spaces.
+________________________________
+$LEFTPANEL_EDITOR$
+def isAnagram(first_string, second_string):
+________________________________
+$LEFTPANEL_HINTS$
+Remove all spaces and convert your input strings to either uppercase or lowercase. Then, use a ^for^ loop.
+________________________________
+$RIGHTPANEL_QUESTIONS$
+Are all palindromes anagrams?
+________________________________
+$RIGHTPANEL_TESTCASES$
+For the purpose of this square, two empty ^str^ inputs are not considered anagrams.
+Also, make sure you are using .^upper^() and .^lower^() correctly, <i>with</i> the brackets.
+________________________________
+$ALLPANES_SUBMITCASES$
+print ""
+print "INPUT     | '', ''"
+print "OUTPUT    |", isAnagram('', '')
+print "EXPECTED  | False"
+if isAnagram('', '') == False:
+	print "PASSED!"
+else: 
+	print "FAILED"
+
+print ""
+print "INPUT     | ' ', ' '"
+print "OUTPUT    |", isAnagram(' ', ' ')
+print "EXPECTED  | False"
+if isAnagram(' ', ' ') == False:
+	print "PASSED!"
+else: 
+	print "FAILED"
+
+print ""
+print "INPUT     | 'a', 'A'"
+print "OUTPUT    |", isAnagram("a", "A")
+print "EXPECTED  | True"
+if isAnagram("a", "A") == True:
+	print "PASSED!"
+else: 
+	print "FAILED"
+
+print ""
+print "INPUT     | 'hello', 'goodbye'"
+print "OUTPUT    |", isAnagram("hello", "goodbye")
+print "EXPECTED  | False"
+if isAnagram("hello", "goodbye") == False:
+	print "PASSED!"
+else: 
+	print "FAILED"
+
+print ""
+print "INPUT     | 'hello', 'helloo'"
+print "OUTPUT    |", isAnagram("hello", "helloo")
+print "EXPECTED  | False"
+if isAnagram("hello", "helloo") == False:
+	print "PASSED!"
+else: 
+	print "FAILED"
+
+print ""
+print "INPUT     | 'Tom Marvolo Riddle', 'I am Lord Voldemort'"
+print "OUTPUT    |", isAnagram("Tom Marvolo Riddle", "I am Lord Voldemort")
+print "EXPECTED  | True"
+if isAnagram("Tom Marvolo Riddle", "I am Lord Voldemort") == True:
+	print "PASSED!"
+else: 
+	print "FAILED"
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+$RIGHTPANEL_SOLUTION$
+def isAnagram(first_string, second_string):
+    if first_string in [' ', '']:
+        answer = False
+    if second_string in [' ', '']:
+        answer = False
+    else:
+        first_string = first_string.lower()
+        first_string = first_string.replace(' ', '')
+        second_string = second_string.lower()
+        second_string = second_string.replace(' ', '')
+        false_counter = 0
+        if len(first_string) == len(second_string):
+            for letter in first_string:
+                if letter not in second_string:
+                    false_counter += 1
+            for letter in second_string:
+                if letter not in first_string:
+                    false_counter += 1
+            answer = (false_counter == 0)
+        else:
+            answer = False
+    return answer
+________________________________
+FIN

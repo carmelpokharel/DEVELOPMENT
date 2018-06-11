@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+@import url('https://fonts.googleapis.com/css?family=Antic');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+
+.puzzlebox {
+  margin: 5px;
+  width:100px;
+  height:39px;
+  border: 2px solid #c59a6d;
+  background-color: #fff;
+  float: left;
+  line-height: 39px;
+  font-family: 'Antic', sans-serif;
+  font-size: 110%;
+  color: #696e71;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 6px;
+  transition-property: background, border-radius;
+  transition-duration: .25s;
+  transition-timing-function: linear;
+}
+.tutorialbox {
+  width:100px;
+  height:25px;
+  line-height: 26px;
+  background-color: #7a0026;
+  float: left;
+  font-family: 'Antic', sans-serif;
+  font-size: 80%;
+  color: #e7e8e9;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 6px;
+  transition-property: background, border-radius;
+  transition-duration: .25s;
+  transition-timing-function: linear;
+}
+.box1 {
+  margin: 5px;
+  width: 39px;
+  height:39px;
+  border: 2px solid #c59a6d;
+  background-color: #fff;
+  float: left;
+  line-height: 39px;
+  font-family: 'Antic', sans-serif;
+  font-size: 110%;
+  color: #696e71;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 6px;
+  transition-property: background, border-radius;
+  transition-duration: .25s;
+  transition-timing-function: linear;
+}
+.box2 {
+  margin: 5px;
+  width:39px;
+  height:39px;
+  border: 2px solid #696e71;
+  background-color: #fff;
+  float: left;
+  line-height: 39px;
+  font-family: 'Antic', sans-serif;
+  font-size: 110%;
+  color: #696e71;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 6px;
+  transition-property: background, border-radius;
+  transition-duration: .25s;
+  transition-timing-function: linear;
+}
+.box3 {
+  margin: 5px;
+  width:39px;
+  height:39px;
+  border: 2px solid #282f35;
+  background-color: #fff;
+  float: left;
+  line-height: 39px;
+  font-family: 'Antic', sans-serif;
+  font-size: 110%;
+  color: #696e71;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 6px;
+  transition-property: background, border-radius;
+  transition-duration: .25s;
+  transition-timing-function: linear;
+}
+.tutorialprogressbox {
+  margin: 5px;
+  width:31px;
+  height:31px;
+  border: 2px solid #282f35;
+  background-color: #fff;
+  float: left;
+  line-height: 31px;
+  font-family: 'Antic', sans-serif;
+  font-size: 110%;
+  color: #696e71;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 50%;
+  transition-property: background, border-radius;
+  transition-duration: .25s;
+  transition-timing-function: linear;
+}
+.tutorialprogressboxcurrent {
+  margin: 5px;
+  width:31px;
+  height:31px;
+  border: 2px solid #282f35;
+  background-color: #282f35;
+  float: left;
+  line-height: 31px;
+  font-family: 'Antic', sans-serif;
+  font-size: 110%;
+  color: #e7e8e9;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 50%;
+  transition-property: background, border-radius;
+  transition-duration: .25s;
+  transition-timing-function: linear;
+}
+.tutorialnavnext {
+  width: 90%;
+  border: 2px solid #282f35;
+  background-color: #282f35;
+  float: middle;
+  line-height: 31px;
+  font-family: 'Antic', sans-serif;
+  font-size: 110%;
+  color: #7a0026;
+  text-align: center;
+  vertical-align: middle;
+  transition-property: background, border-radius;
+  transition-duration: .25s;
+  transition-timing-function: linear;
+}
+.puzzlebox:hover {
+  background: #c59a6d;
+  color: #e7e8e9;
+}
+.tutorialbox:hover {
+  background: #9f0026;
+  color: #e7e8e9;
+}
+.box1:hover {
+  background: #c59a6d;
+  color: #e7e8e9;
+}
+.box2:hover {
+  background: #696e71;
+  color: #e7e8e9;
+}
+.box3:hover {
+  background: #282f35;
+  color: #e7e8e9;
+}

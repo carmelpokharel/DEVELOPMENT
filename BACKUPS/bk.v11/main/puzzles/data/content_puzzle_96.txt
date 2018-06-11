@@ -1,0 +1,39 @@
+________________________________
+$LEFTPANEL_HEADING$
+Genesis
+https://open.spotify.com/track/46weynhDnXhlzms0dNXtQX
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+In Python, there's a method in the ^random^ module called .^choice^(), which comes in useful for certain tasks. To use .^choice^(), you must first ^import^ the ^random^ module, then call it as follows:
+<democodeblock>
+<code>^import^ ^random^</code>
+<code>random_number = ^random^.^choice^(^range^(0,5))</code>
+<code>^print^ random_number</code>
+</democodeblock>
+This block of code is interesting. If you run it multiple times, you may see a different value for <var>random_number</var> on each run. Why is that?
+Well, the second line of code is actually telling Python to "pick a random number in the range 0 to 5" (we know though, Python technically only looks at 1-4).
+________________________________
+$LEFTPANEL_QUESTION$
+Define a function, <def>generateShidoku</def>(), which takes in no inputs, and outputs a solved, well-formed Shidoku. If you run your function multiple times, each resulting Shidoku must be different. 
+________________________________
+$LEFTPANEL_EDITOR$
+def generateShidoku():
+________________________________
+$LEFTPANEL_HINTS$
+You're basically solving a Shidoku here, after populating the first few values at random.
+________________________________
+$RIGHTPANEL_QUESTIONS$
+How can you reuse code from <def>checkShidoku</def>() and <def>solveShidoku</def>() here?
+How many possible Shidoku combinations are there?
+________________________________
+$RIGHTPANEL_TESTCASES$
+This square does not have a Submit button, as the results are self-explanatory. However, you should test your output Shidokus using <def>checkShidoku</def>().
+Make sure to use the ^random^ module's .^choice^() method to solve this square.
+________________________________
+$ALLPANES_SUBMITCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+$RIGHTPANEL_SOLUTION$
+________________________________
+FIN

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html> 
+  <head>
+    <!-- **************** -->
+    <!--      SCRIPTS     -->
+    <!-- **************** -->
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="../../../css/boxes.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-tooltip-and-popover.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/comingsoon.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/donate.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/editor.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/feedback.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/modal.css">
+    <!-- CSS: SKULPT -->
+    <link rel="stylesheet" type="text/css" media="all" href="../../../css/skulpt/codemirror.css">
+    <link rel="stylesheet" type="text/css" media="all" href="../../../css/skulpt/solarized.css">
+    <link rel="stylesheet" type="text/css" media="all" href="../../../css/skulpt/skulpt_main.css">
+    <!-- JAVASCRIPT -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" ></script> 
+    <script type="text/javascript" src="http://www.skulpt.org/static/skulpt.min.js"></script>
+    <script type="text/javascript" src="http://www.skulpt.org/static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src='../../../js/console.js'></script>
+    <script type="text/javascript" src="../../../js/bootstrap-tooltip-and-popover.min.js"></script>
+    <!-- JAVASCRIPT: POPOVERS -->
+    <script type="text/javascript">
+      $(document).ready(function() {
+        // Placement can be top, right, left, bottom
+        $('.bootstrap-popover').popover({placement: 'top', delay: {show: 10, hide: 10}});
+      })
+    </script>
+    <!-- JAVASCRIPT: GOOGLE ANALYTICS -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-85355151-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <!-- JAVASCRIPT: SKULPT SHELL -->
+    <script type="text/javascript" src="../../../js/skulpt/codemirrorepl.js.download"></script>
+    <script type="text/javascript" src="../../../js/skulpt/repl.js.download"></script>
+    <script type="text/javascript" src="../../../js/skulpt/python.js.download"></script>
+    <script type="text/javascript" src="../../../js/skulpt/skulpt.min.js.download"></script>
+    <script type="text/javascript" src="../../../js/skulpt/skulpt-stdlib.js.download" ></script>
+  </head> 
+
+  <div class="headerbar">
+      <!-- **************** -->
+      <!--      HEADER      -->
+      <!-- **************** -->
+      <div onclick="window.scrollTo(0, 0);" class="headerspacingleftedge">
+      </div>
+      <div class="headerlogo">
+        <a href="../../index.html"><h2>pythons and ladders</h2>
+        </a>
+      </div>
+      <div onclick="window.scrollTo(0, 0);" class="headerspacingmiddle">
+        <div class="headersocialmedia">
+          <img src="../../../images/facebook_icon.png" class="socialmediabuttons" />
+          <img src="../../../images/twitter_icon.png" class="socialmediabuttons" />
+        </div>
+      </div>
+      <div class="headersearch">
+          <!-- SEARCH BOX -->
+          <form method="get" action="http://www.google.com/search">
+            <div class="searchbox">
+              <input class="searchbox"type="text" name="q" size="32" maxlength="255" value="Search Pythons and Ladders" onfocus="if(this.value==this.defaultValue)this.value=''; this.style.color='#bbb';" onblur="if(this.value=='')this.value=this.defaultValue; "/>
+              <input class="gobutton" type="image" src="../../../images/search.png" value="Go!" />
+              <input type="hidden" name="sitesearch" value="pythonsandladders.com" />
+            </div>
+          </form>
+        </div>
+      <div onclick="window.scrollTo(0, 0);" class="headerspacingrightedge">
+      </div>
+    </div>
+
+  <body>
+    <div class="allpanes"> 
+    <!-- **************** -->
+    <!--    NAVIGATION    -->
+    <!-- **************** -->
+    <div class="sidenav">
+      <div class="headerspacingleft">
+      </div>
+      <div class="sidenavlogo">
+        <a href="../../index.html">
+          <img src="../../../images/headingtitle.png" alt="Pythons and Ladders" style="width: 75%; height: 18%;" onmouseover="this.src='../../../images/headingtitle_snake.png'" onmouseout="this.src='../../../images/headingtitle.png'">
+        </a>
+      </div>
+      <div class="sidenavcontentemptytop">
+      </div>
+      <div class="sidenavcontentmiddle">
+        <a href="../../index.html">home</a>
+        <a href="../../overview.html">overview</a>
+        <a href="../../updates/pages/updates_0.html">updates</a>
+        <a href="../../faq.html">questions</a>
+        <a href="#openModal">contribute</a>
+        <div id="openModal" class="modalDialog">
+          <div>
+            <a href="#close" title="Close" class="close">X</a>
+                <h2>Contribute to Pythons and Ladders</h2>
+              <p>Pythons and Ladders is free to use, and we intend for it to remain so.</p>
+              </p>However, if you feel that Pythons and Ladders has added value to your life in any meaningful way, please consider contributing to its continued development and presence on the web.</p>
+              <p>With your support, we hope to initiate many more students into the world of programming, many of whom cannot afford to pay for a learning experience.</p>
+              <p>Thank you for your kindness.</p>
+              <a href="#"><div class="donatenowbutton" alt="Donate Now">DONATE NOW</div></a>
+          </div>
+        </div>
+
+        <a href="mailto:pythonsandladders@gmail.com?subject=Attn: [ADMIN] Pythons and Ladders">contact us</a>
+      </div>
+      <div class="sidenavcontentemptybottom">
+      </div>
+      <!-- FOOTER -->
+      <div class="footer"><p>Copyright &copy; Pythons and Ladders 2016</p>
+      </div>
+    </div>
+
+
+    <!-- **************** -->
+    <!--        BODY      -->
+    <!-- **************** -->
+    <div class="middlepane">
+    </div>
+    <!-- LEFT PANE -->
+    <div class="leftpane">
+      <div align="right">
+        <a href="puzzle_18.html"><div class="puzzlebox">18</div></a>
+        <a href="puzzle_17.html"><div class="box3">&lang;</div></a>
+        <a href="puzzle_19.html"><div class="box3">&rang;</div></a>
+      </div>
+        <!-- LEFT: QUESTION AND EDITOR -->
+        <br><br><br>
+        <a class="songheading" target="_blank" href="https://open.spotify.com/track/2REfznWvZEa7eT9VUpxIqn"">
+        <h3>Five Becomes Four</h3>
+        </a>
+          <h4 class="h4gold">Task Eighteen</h4>
+        <p>Write three lines of code that satisfy the following:</p>
+        <p><table></p>
+        <p>   <tr></p>
+        <p>      <td width="15%" valign="top"><u>Line 1:</u></td></p>
+        <p>      <td>Create a variable called var1 that is equal to the string "hello"</td></p>
+        <p>   </tr></p>
+        <p>   <tr></p>
+        <p>      <td width="15%" valign="top"><u>Line 2:</u></td></p>
+        <p>      <td>Update the value of var1 to now be the integer 12345</td></p>
+        <p>   </tr></p>
+        <p>   <tr></p>
+        <p>      <td width="15%" valign="top"><u>Line 3:</u></td></p>
+        <p>      <td>Print your variable so that it outputs the new integer</td></p>
+        <p>   </tr></p>
+        <p></table></p>
+          <div class="editor">
+            <div class="edi	tortoolbar">
+              <div class="editortoolbaritems" onclick="runit()">RUN</div>
+              <div class="editortoolbaritems" onclick="clearBox()">CLEAR</div>
+              <div class="editortoolbaritems" id="save" onclick="saveTextAsFile()">SAVE</div>
+              <div class="editortoolbaritems">
+                <a href="#" class="bootstrap-popover" title="dazed and confused?" data-content="<p>When updating/changing a declared variable, you are simply redefining what the variable equals to.
+</p>">
+                HINT
+                </a>
+              </div>
+            </div>
+          <form align="left"> 
+            <textarea id="yourcode" class="editortextarea" rows="4"></textarea>
+          </form>
+          <!-- **************** -->
+          <!--     OUTPUT       -->
+          <!-- **************** -->
+          <div class="editoroutput">
+          <pre align="left" id="output"></pre>
+          </div>
+
+        </div>
+      </div>
+      <div class="middlepane">
+      </div>
+      <!-- RIGHT PANEL -->
+      <div class="rightpane">
+            <h4 class="greyheading">PYTHON SHELL</h4>
+            <textarea id="interactive" cols="85" rows="1" style="display: none;">
+            </textarea>
+          <h4 class="greyheading">QUESTIONS FOR YOU</h4>
+          <ol>
+            <li class="small">How can you change/update a declared variable?</li>
+          </ol>
+          <button type="button" onclick="requestGuidance()">Request guidance</button>
+        <p class="small">&nbsp;</p>
+        <p class="small">&nbsp;</p>
+      </div>
+    </div>
+
+    <!-- **************** -->
+    <!--       TITLE      -->
+    <!-- **************** -->
+    <title>Puzzle 18 | Pythons and Ladders</title>
+
+  </body>
+	<a href="mailto:pythonsandladders@gmail.com?subject=Feedback: [ADMIN] Pythons and Ladders">
+  	  <div class="feedback">
+  	  <br>
+  	  FEEDBACK
+  	  </div>
+  	</a>
+</html>

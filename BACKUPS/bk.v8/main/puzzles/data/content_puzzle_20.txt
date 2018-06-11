@@ -1,0 +1,44 @@
+________________________________
+$LEFTPANEL_HEADING$
+What's My Age Again?
+https://open.spotify.com/track/5JZcX7TTLx4l0xFIXJ3DBt
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+Interestingly, you can store just about anything in a variable. This even includes arithmetic expressions.
+<democodeblock>
+<code>alphabet = 'a' + 'b' + 'c'</code>
+<code>^print^ alphabet</code>
+</democodeblock>
+________________________________
+$LEFTPANEL_QUESTION$
+Mike is 28 years old and Carol is 24 years old. Write four lines of code to do the following:
+<table>
+   <tr>
+      <td class="linecol">Line 1:</td>
+      <td class="codecol">Declare a variable, m_age, for Mike's age</td>
+   </tr>
+   <tr>
+      <td class="linecol">Line 2:</td>
+      <td class="codecol">Declare a variable, c_age, for Carol's age</td>
+   </tr>
+   <tr>
+      <td class="linecol">Line 3:</td>
+      <td class="codecol">Declare a variable, age_difference, which subtracts c_age from m_age</td>
+   </tr>
+</table>
+Now, print your age_difference variable. Your output should simply read:
+<outputcodeline>4</outputcodeline>
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+You want to subtract c_age <em>from</em> m_age&#8212;not the other way around!
+________________________________
+$RIGHTPANEL_QUESTIONS$
+Can you initialize an empty variable?
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

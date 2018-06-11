@@ -1,0 +1,71 @@
+________________________________
+$LEFTPANEL_HEADING$
+Range Life
+https://open.spotify.com/track/6lAZ7xfP9su2ZvGk1rRc3R 
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+Sometimes, your parameters to a function may be optional. That is, if your function is called without a certain parameter, you can assign a default value:
+
+<democodeblock>
+<code>^def^ <def>defaultValue</def>(a, b=0):</code>
+<code><tab>^return^ a + b</code>
+<code>^print^ <def>defaultValue</def>(1, 2)</code>
+<code>^print^ <def>defaultValue</def>(1)</code>
+</democodeblock>
+Here, when the function is called with a second parameter in <def>defaultValue</def>(1, 2), your function assumes <var>b</var> = 2. When <var>b</var> is not specified, i.e. in <def>defaultValue</def>(1), it is set to 0 by default.
+________________________________
+$LEFTPANEL_QUESTION$
+Define your own implementation of ^range^(), called <def>inBetween</def>(), which accepts both one or two ^int^ parameters. Unlike in ^range^() however, your <i>second</i> input parameter must always be the smaller number.
+________________________________
+$LEFTPANEL_EDITOR$
+def inBetween(larger_num, smaller_num):
+________________________________
+$LEFTPANEL_HINTS$
+Modify the given function definition before you start this square--specifically <var>smaller_num</var>!
+________________________________
+$RIGHTPANEL_QUESTIONS$
+Can your first parameter be a default parameter?
+________________________________
+$RIGHTPANEL_TESTCASES$
+Remember to use the Submit button to see some expected outcomes.
+________________________________
+$ALLPANES_SUBMITCASES$
+print ""
+print "INPUT     | 4"
+print "OUTPUT    |", inBetween(4)
+print "EXPECTED  | [0, 1, 2, 3]"
+if inBetween(4) == [0,1,2,3]:
+	print "PASSED!"
+else: 
+	print "FAILED"
+
+print ""
+print "INPUT     | 6, 2"
+print "OUTPUT    |", inBetween(6, 2)
+print "EXPECTED  | [2, 3, 4, 5]"
+if inBetween(6,2) == [2, 3, 4, 5]:
+	print "PASSED!"
+else: 
+	print "FAILED"
+
+print ""
+print "INPUT     | 2, 6"
+print "OUTPUT    |", inBetween(2, 6)
+print "EXPECTED  | []"
+if inBetween(2, 6) == []:
+	print "PASSED!"
+else: 
+	print "FAILED"
+
+print ""
+print "INPUT     | 0"
+print "OUTPUT    |", inBetween(0)
+print "EXPECTED  | []"
+if inBetween(0) == []:
+	print "PASSED!"
+else: 
+	print "FAILED"
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

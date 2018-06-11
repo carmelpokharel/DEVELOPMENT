@@ -1,0 +1,14 @@
+________________________________
+$LEFTPANEL_WELCOME$
+
+Pythons and Ladders is a web-based resource for beginners with no prior exposure to programming. To learn more about Pythons and Ladders and its objectives, <a href="manual.html">click here</a>. 
+________________________________
+$RIGHTPANEL_VERSION$
+0.0.0.10 (BETA)
+________________________________
+$RIGHTPANEL_SPONSORED$
+Sponsored1 $LINK$ www.stringsinpython.com
+Sponsored2 $LINK$ www.newlinecharacters.com
+Sponsored3 $LINK$ www.printstatements.com
+________________________________
+FIN

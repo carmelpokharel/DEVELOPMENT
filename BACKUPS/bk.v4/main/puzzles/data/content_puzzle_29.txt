@@ -1,0 +1,29 @@
+________________________________
+$LEFTPANEL_HEADING$
+Extreme Ways
+ 
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+Based on what you learned in the last two puzzles, consider how appending to a list compares to extending a list.
+________________________________
+$LEFTPANEL_QUESTION$
+Start by creating the following list: 
+<em>cities = ["Toronto", "Vancouver", "Winnipeg"]</em> 
+and then append and/or extend the list to output the following: 
+<em>["Toronto", "Vancouver", "Winnipeg", ["Calgary", Edmonton"], ["Ottawa", "Montreal"], "Saskatoon"]</em>
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+You may add the new list items all in one go, or you may write a new line of code for each list item.
+________________________________
+$RIGHTPANEL_QUESTIONS$
+What is the difference between appending to a list and extending a list?
+How can you create a list within a list?
+Is there a limit to how many times you can create a list within a list?
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

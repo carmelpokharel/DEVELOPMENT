@@ -1,0 +1,70 @@
+________________________________
+$LEFTPANEL_HEADING$
+The Same Deep Water As You
+https://open.spotify.com/track/05d90KDSSlsK7I0ihRJRv1
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+________________________________
+$LEFTPANEL_QUESTION$
+Define a function, <def>overlapping</def>(), which takes in two ^list^ datatypes and returns ^True^ if they have at least one element in common. In all other cases, return ^False^. 
+You may use the ^in^ operator.
+________________________________
+$LEFTPANEL_EDITOR$
+def overlapping(first_list, second_list):
+________________________________
+$LEFTPANEL_HINTS$
+Iterate through the first ^list^, and use the ^in^ operator to check whether each element exists in the second.
+________________________________
+$RIGHTPANEL_QUESTIONS$
+Can your function handle the input of two empty lists?
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$ALLPANES_SUBMITCASES$
+print ""
+print "INPUT     | ['Simpson','Bart','Homer', 9], []"
+print "OUTPUT    |", overlapping(['Simpson','Bart','Homer', 9], [])
+print "EXPECTED  | False"
+if overlapping(['Simpson','Bart','Homer', 9], []) == False:
+	print "PASSED!"
+else: 
+	print "FAILED"
+
+print ""
+print "INPUT     | ['Simpson','Bart','Homer', 9], ['yes']"
+print "OUTPUT    |", overlapping(['Simpson','Bart','Homer', 9], ['yes'])
+print "EXPECTED  | False"
+if overlapping(['Simpson','Bart','Homer', 9], ['yes']) == False:
+	print "PASSED!"
+else: 
+	print "FAILED"
+
+print ""
+print "INPUT     | ['Simpson','Bart','Homer', 9], ['Lisa', 'Bart', 9]"
+print "OUTPUT    |", overlapping(['Simpson','Bart','Homer', 9], ['Lisa', 'Bart', 9])
+print "EXPECTED  | True"
+if overlapping(['Simpson','Bart','Homer', 9], ['Lisa', 'Bart', 9]) == True:
+	print "PASSED!"
+else: 
+	print "FAILED"
+
+print ""
+print "INPUT     | ['Simpson','Bart','Homer', 9], ['Lisa', 'Bart']"
+print "OUTPUT    |", overlapping(['Simpson','Bart','Homer', 9], ['Lisa', 'Bart'])
+print "EXPECTED  | True"
+if overlapping(['Simpson','Bart','Homer', 9], ['Lisa', 'Bart']) == True:
+	print "PASSED!"
+else: 
+	print "FAILED"
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+$RIGHTPANEL_SOLUTION$
+def overlapping(first_list, second_list):
+    true_count = 0
+    for elem in first_list:
+        if elem in second_list:
+            true_count += 1
+    return true_count > 0
+________________________________
+FIN

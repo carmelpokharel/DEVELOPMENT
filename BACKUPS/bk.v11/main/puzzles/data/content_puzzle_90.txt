@@ -1,0 +1,50 @@
+________________________________
+$LEFTPANEL_HEADING$
+Minimum
+https://open.spotify.com/track/2OkJb05l7iSyx9jFWxuuF6
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+It may have occurred to you that the Python ^dict^ representation of <var>graph1</var> contained a little more information than truly needed. For example, once you had the key 'a' mapped to vertex 'c', you really didn't need key 'c' mapping to vertex 'a'--the edge connecting them, 'ac', is already apparent.
+<img style="width:80%;height:80%;max-width:300px" src="../../../images/example_graph1.png">
+________________________________
+$LEFTPANEL_QUESTION$
+Define a function, <def>minimalGraph</def>(), whose input is a graph (^dict^), and output is what we'll call a minimal graph, with all redundant information removed. For example, with an input of <var>graph1</var>, your output graph should have these values:
+<outputcodeblock>
+<code>outGraph = {'a' : ['c'],</code>
+<code><tab><tab><tab>'b' : ['c', 'e'],</code>
+<code><tab><tab><tab>'c' : ['d', 'e'],</code>
+<code><tab><tab><tab>'d' : [],</code>
+<code><tab><tab><tab>'e' : [],</code>
+<code><tab><tab><tab>'f' : []<3sp>}</code>
+</outputcodeblock>
+________________________________
+$LEFTPANEL_EDITOR$
+def minimalGraph(graph):
+________________________________
+$LEFTPANEL_HINTS$
+You may want to keep a ^list^ of 'already encountered edges' while you iterate through the graph.
+________________________________
+$RIGHTPANEL_QUESTIONS$
+Do you remember the safest way to remove an element from a ^list^?
+________________________________
+$RIGHTPANEL_TESTCASES$
+For this square, only keep the first key:value pair you encounter alphabetically. What this means is that in <var>graph1</var>, keep 'a' : 'c' but not 'c' : 'a', and 'c' : 'e', but not 'e' : 'c'.
+________________________________
+$ALLPANES_SUBMITCASES$
+graph1 = {'a' : ['c'], 'b' : ['c', 'e'], 'c' : ['a', 'b', 'd', 'e'], 'd' : ['c'], 'e' : ['c', 'b'], 'f' : []}
+print ""
+print "INPUT     | graph1"
+print "OUTPUT    |", minimalGraph(graph1)
+print "EXPECTED  | {'a' : ['c'], 'b' : ['c', 'e'], 'c' : ['d', 'e'], 'd' : [], 'e' : [], 'f' : []}"
+if minimalGraph(graph1) == {'a' : ['c'], 'b' : ['c', 'e'], 'c' : ['d', 'e'], 'd' : [], 'e' : [], 'f' : []}:
+    print "PASSED!"
+else: 
+    print "FAILED"
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+$RIGHTPANEL_SOLUTION$
+________________________________
+FIN
+
+

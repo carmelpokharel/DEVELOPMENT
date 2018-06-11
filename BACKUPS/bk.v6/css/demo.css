@@ -1,0 +1,150 @@
+
+h2.home {
+    font-size: 200%;
+    cursor: pointer;
+}
+.headerbar1 {
+    background-image: url('../images/skin.jpg'), linear-gradient(to top right, #1e2429, #1e2429, #282f35, #323b43, #323b43);
+    background-blend-mode: multiply; 
+    /*background: linear-gradient(to top right, #1e2429, #1e2429, #282f35, #323b43, #323b43);*/
+    margin-left: 215px;
+    opacity: 0.94;
+    z-index: 1;
+    width: 1000px;
+    float: middle;
+    height: 300px;
+    text-align: left;
+    border: 0px solid red;
+    position: absolute;
+    padding-top: 35px;
+    color: var(--colour-orange);
+    font-family: 'Antic', sans-serif;
+    padding-left: 50px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.allpanes1 {
+    background-color: #fefefe;
+    width: 1265px;
+    min-width: 1265px;
+    height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+    border: 0px solid yellow;
+    display: table;
+    text-align: center;
+    padding-bottom: 2.2rem;
+}
+.leftpane1 {
+    background: var(--colour-off-white);;
+    width:482px;
+    box-shadow: var(--shadow-small);
+    font-size: 85%;
+    z-index: 2;
+    float: left;
+    text-align:left;
+    display: table;
+    margin-top: 244px;
+    padding: 20px;
+    position: relative;
+    border-radius: 10px;
+}
+.rightpanehome1 {
+    background-color: #e7e8e9;
+    width: 326px;
+    height: 499px;
+    border: 0px solid black;
+    padding-left: 20px;
+    padding-right: 25px;
+    padding-bottom: 20px;
+    float: left;
+    text-align:left;
+    display: table;
+    margin-top: 244px;
+    box-shadow: var(--shadow-small);
+    border-radius: 5px;
+    z-index: 2;
+    position: relative;
+}
+.blurb {
+    color: var(--colour-off-white);
+}
+.whitebox {
+  width:                130px;
+  height:               28px;
+  line-height:          28px;
+  margin-right:         10px;
+  border:               2px solid var(--colour-off-white);
+  float:                left;
+  font-family:          var(--font-style-antic);
+  font-size:            90%;
+  color:                var(--colour-off-white);
+  text-align:           center;
+  vertical-align:       middle;
+  border-radius:        var(--shape-rounded-corners);
+  transition-duration:  var(--animation-transition-std);
+}
+.whitebox:hover, .whitebox:active {
+  background-color:     var(--colour-lighter-blue-one);
+  color:                var(--colour-off-white);
+}
+.redbox {
+  width:                130px;
+  height:               30px;
+  line-height:          30px;
+  margin-right:         10px;
+  border:               2px solid var(--colour-red);
+  background-color:     var(--colour-red);
+  float:                left;
+  font-family:          var(--font-style-antic);
+  font-size:            90%;
+  color:                var(--colour-off-white);
+  text-align:           center;
+  vertical-align:       middle;
+  border-radius:        var(--shape-rounded-corners);
+  transition-duration:  var(--animation-transition-std);
+}
+.redbox:hover, .redbox:active {
+  background-color:     var(--colour-lighter-red);
+  border:               2px solid var(--colour-red);
+  box-shadow:           var(--shadow-small);
+}
+
+.box1 {
+  font-family:          var(--font-style-antic);
+  font-size:            var(--grid-box-font-size-std);
+  float:                left;
+  text-align:           center;
+  vertical-align:       middle;
+  line-height:          33px;
+  color:                var(--colour-text-grey);
+  background:           var(--colour-off-white);
+}
+.box-grid-home {
+  margin:               var(--grid-box-margins);
+  width:                34px;
+  height:               34px;
+  border:               2px solid #777;
+  border-radius:        var(--shape-rounded-corners);
+  transition-duration:  var(--animation-transition-std);
+}
+.box-grid-home:hover, .box-grid-home:active {
+  border:               var(--grid-box-border) solid var(--colour-orange);
+  background:           var(--colour-orange) ;
+  color:                var(--colour-absolute-white);
+}
+
+
+@media all
+and (min-width:                 1px) 
+and (max-width:                 1279px) 
+{
+  .rightpanehome1 {
+    display: none;
+  }
+  .sidenav {
+    display: none;
+  }
+}

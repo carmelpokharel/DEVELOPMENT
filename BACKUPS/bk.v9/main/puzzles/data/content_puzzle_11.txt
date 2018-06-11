@@ -1,0 +1,29 @@
+________________________________
+$LEFTPANEL_HEADING$
+Going Away to College
+https://open.spotify.com/track/0bDmuUdF74kuh8JKlUNiz4
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+Try printing the following from the Editor:
+<democodeline>^print^ 'I'll write you once a week.'</democodeline>
+You'll find that this doesn't work. This is because your ^str^ terminates in the word <strong>I'll</strong>--the apostrophe closes the string!
+To overcome this issue, Python uses a concept called an <b>escape character</b>, i.e. a backslash: ^\^. Here's a way to successfully print the above string:
+<democodeline>^print^ 'I^\^'ll write you once a week.'</democodeline>
+________________________________
+$LEFTPANEL_QUESTION$
+Write a print statement which displays the following to the output, <em>including</em> the speech quotations: 
+<outputcodeline>"I'll write you once a week," she said.</outputcodeline>
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+Try doubling up the double-quotes!
+________________________________
+$RIGHTPANEL_QUESTIONS$
+Can you use both single <em>and</em> double quotations in a string? Try this:<linespace><code>^print^ "'Hello' World!"</code>
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

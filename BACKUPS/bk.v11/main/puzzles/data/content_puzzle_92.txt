@@ -1,0 +1,79 @@
+________________________________
+$LEFTPANEL_HEADING$
+Carol of the Bells
+https://open.spotify.com/track/2mcXjxUpxi9ajOwvkn10NR
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+A <a href="https://en.wikipedia.org/wiki/Bell_triangle" target="_blank">Bell Triangle</a> is similar to Pascal's, with some key differences. To build one, we start with three ^int^ values: 1, 1, and 2, then arrange them as follows:
+<democodeblock>
+<code>row=0 | <tab> 1</code>
+<code>row=1 | <3sp> 1 2</code>
+</democodeblock>
+A Bell Triangle of order 2 looks like this:
+<democodeblock>
+<code>row=0 | <tab> 1</code>
+<code>row=1 | <3sp> <span class="keyword-purple">1</span> <span class="keyword-orange">2</span></code>
+<code>row=2 | <2sp> <span class="keyword-blue">2</span> <span class="keyword-red">3</span> <span class="keyword-green">5</span></code>
+</democodeblock>
+On row 2, ^int^ <span class="keyword-blue">2</span> is copied in from the previous row's rightmost number (<span class="keyword-orange">2</span>), <span class="keyword-red">3</span> is obtained by adding the numbers to its immediate left and upper left (<span class="keyword-blue">2</span> and <span class="keyword-purple">1</span>, respectively), and the same goes for <span class="keyword-green">5</span> (<span class="keyword-red">3</span> + <span class="keyword-orange">2</span>).
+Here is a Bell Triangle of order 5, left-justified:
+<democodeblock>
+<code>1</code>
+<code>1 2</code>
+<code>2 3 5</code>
+<code>5 7 10 15</code>
+<code>15 20 27 37 52</code>
+<code>52 67 87 114 151 203</code>
+</democodeblock>
+________________________________
+$LEFTPANEL_QUESTION$
+Define a function, <def>bellTriangle</def>(), which takes in a positive ^int^ <var>n</var>, and returns a Bell Triangle of order <var>n</var>. Your ^str^ must <i>not</i> end with a space character, a ^\n^, or both.
+________________________________
+$LEFTPANEL_EDITOR$
+def bellTriangle(n):
+________________________________
+$LEFTPANEL_HINTS$
+In order to remove any trailing ^\n^ or an extra space characters, look up the .^rstrip^() method, and apply it on your ^return^ statement!
+________________________________
+$RIGHTPANEL_QUESTIONS$
+How are your "accumulating" variables different between Bell and Pascal's triangles?
+________________________________
+$RIGHTPANEL_TESTCASES$
+You should be returning a single ^str^, with rows separated by ^\n^ characters.
+For the purposes of this square, your output must be left-justified, like in the last example.
+________________________________
+$ALLPANES_SUBMITCASES$
+print ""
+print "INPUT     | 2"
+print "OUTPUT    |", bellTriangle(2).split('\\n')[-1], "(last row)"
+print "EXPECTED  | 2 3 5"
+if bellTriangle(2).split('\\n')[-1] == '2 3 5':
+    print "PASSED!"
+else: 
+    print "FAILED"
+
+print ""
+print "INPUT     | 5"
+print "OUTPUT    |", bellTriangle(5).split('\\n')[-1]
+print "EXPECTED  | 52 67 87 114 151 203"
+if bellTriangle(5).split('\\n')[-1] == '52 67 87 114 151 203':
+    print "PASSED!"
+else: 
+    print "FAILED"
+
+print ""
+print "INPUT     | 6"
+print "OUTPUT    |", bellTriangle(6).split('\\n')[-1]
+print "EXPECTED  | 203 255 322 409 523 674 877"
+if bellTriangle(6).split('\\n')[-1] == '203 255 322 409 523 674 877':
+    print "PASSED!"
+else: 
+    print "FAILED"
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+$RIGHTPANEL_SOLUTION$
+________________________________
+FIN
+
+

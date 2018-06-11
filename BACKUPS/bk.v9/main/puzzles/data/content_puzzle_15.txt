@@ -1,0 +1,29 @@
+________________________________
+$LEFTPANEL_HEADING$
+True Faith
+https://open.spotify.com/track/01jBLs7IZQzPt3dVdn5rDa
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+Comparison operators can not only compare numbers, but also ^str^ datatypes.
+________________________________
+$LEFTPANEL_QUESTION$
+Write four ^print^ statements which output ^bool^ datatypes for the following comparisons:
+<ol>
+<li>Is the ^str^ 'bat' equal to the ^str^ 'BAT'?<li>Is the ^str^ 'bat' greater than or equal to 'Bat'?<li>Is the ^str^ 'BAT' greater than or equal to 'BAt'?<li>Is the ^str^ 'cat' greater than or equal to 'Bat'?
+</ol>
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+Remember to use quotations for each of your ^str^ datatypes
+________________________________
+$RIGHTPANEL_QUESTIONS$
+What are ASCII characters?
+What is the order of ASCII characters? Do upper-case or lower-case letters come first?
+Suggested reading: The "String Comparisons" section <a href = "http://thepythonguru.com/python-strings">on this page</a>.
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

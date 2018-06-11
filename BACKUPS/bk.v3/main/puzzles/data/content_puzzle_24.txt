@@ -1,0 +1,50 @@
+________________________________
+$LEFTPANEL_HEADING$
+My Favourite Things
+https://open.spotify.com/track/0MoZADdiiC9yzcWpBbNYAC
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+A list is yet another data type in Python. A list in Python could be thought of as a shelf, carrying items. You can store just about anything on this shelf - integers, floats, strings, variables... even another list!
+
+A Python list is enclosed in square brackets, with each element separated by a comma:
+<code class="demo">listName = [content0, content1, content2]</code>
+<p class="small">&nbsp;</p>
+
+You can also check within a list to see if it contains a particular element. For example:
+<code class="demo">print content1 in listName&emsp;&emsp;&emsp;&emsp;# would result in True</code>
+<code class="demo">print content5 in listName&emsp;&emsp;&emsp;&emsp;# would result in False</code>
+<p class="small">&nbsp;</p>
+________________________________
+$LEFTPANEL_QUESTION$
+Write three lines of code that do the following:
+<table>
+   <tr>
+      <td width="15%" valign="top"><u>Line 1:</u>  </td>
+      <td>Create a variable, <em>my_mood</em> and have it equal to "happy"</td>
+   </tr>
+   <tr>
+      <td width="15%" valign="top"><u>Line 2:</u>  </td>
+      <td>Create a list that contains the following elements, in this order: your name, your age, and your mood. Consider the most appropriate data type for each of those elements in the list.</td>
+   </tr>
+   <tr>
+      <td width="15%" valign="top"><u>Line 3:</u>  </td>
+      <td>Check within your created list to see if it contains your name in it. The result should be <em>True</em></td>
+   </tr>
+</table>
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+Your name should be a string, age should be an integer, and mood should be the variable you created on the first line.
+________________________________
+$RIGHTPANEL_TIME$
+2-3 minutes
+________________________________
+$RIGHTPANEL_QUESTIONS$
+Is it possible to have an empty list?
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

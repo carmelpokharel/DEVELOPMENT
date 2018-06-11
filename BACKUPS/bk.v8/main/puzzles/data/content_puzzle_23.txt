@@ -1,0 +1,38 @@
+________________________________
+$LEFTPANEL_HEADING$
+What If
+https://open.spotify.com/track/39qRdHcl2tizWbzlM9kUlN
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+Sometimes, you'll want to write code that runs only when a condition is met. An ^if^ statement helps you do just that. Here's the basic construct:
+<democodeblock>
+<code><comment># if conditional statement is True:</comment></code>
+<code><comment>#<tab>do something</comment></code>
+</democodeblock>
+
+And here's an example of how you'd use an ^if^ statement:
+
+<democodeblock>
+<code>finalGrade = 80</code>
+<code>^if^ finalGrade > 50:</code>
+<code><tab>^print^ 'You passed the course!'</code>
+</democodeblock>
+
+<b>Note</b>: ^if^ statements must always end with a colon (:).
+In the Python language, when the last character of a line is a colon (:), the next line <em>must</em> be indented. You can achieve the indentation with space characters.
+________________________________
+$LEFTPANEL_QUESTION$
+Add another ^if^ statement below the above example, which prints "You did not pass!" if finalGrade is less than 50.
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+The ^if^ statement you write should not be indented, but the ^print^ statement should.
+________________________________
+$RIGHTPANEL_QUESTIONS$
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

@@ -1,0 +1,32 @@
+________________________________
+$LEFTPANEL_HEADING$
+Operate
+https://open.spotify.com/track/7ri4jOlUUpAOivi56ONeTm
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+Brackets and exponents are two more examples of arithmetic <strong>operators</strong> available in Python.
+<democodeblock>
+<code>^print^ (10 + 2) - 5</code>
+<code>^print^ 10 ** 2</code>
+</democodeblock>
+Can Python handle BEDMAS?
+________________________________
+$LEFTPANEL_QUESTION$
+Write a statement which calculates and prints the result of the following expression:
+<mathexp>( 6 &divide; 2 )<sup> 2</sup> &times; 5 &ndash; 1</mathexp>
+If all goes well, your output should simply display:
+<outputcodeline>44</outputcodeline>
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+Try to write the expression exactly as shown, but in Python syntax.
+________________________________
+$RIGHTPANEL_QUESTIONS$
+What operation does ** represent?
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

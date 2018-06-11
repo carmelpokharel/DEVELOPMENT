@@ -1,0 +1,31 @@
+________________________________
+$LEFTPANEL_HEADING$
+Who's Afraid of 138?
+https://open.spotify.com/track/1kDwbjxdVDdBlozOPFffSC
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+Now for the ^keyword^int datatype, which represents integers in Python.
+
+If you recall from math class, an integer is any whole number that is positive, negative, or zero. Python's ^keyword^int datatype is much the same.
+
+Printing an integer is <em>almost</em> like printing a string, but with one difference: unlike strings, integers don't need quotation marks.
+________________________________
+$LEFTPANEL_QUESTION$
+Print the integers 138 and -138 on separate lines, so that the output looks like the following.
+<code>138</code>
+<code>-138</code>
+<p class="small">&nbsp;</p>
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+Write the statements as you would for strings, but omit the quotation marks.
+________________________________
+$RIGHTPANEL_QUESTIONS$
+You may have noticed that the outputs from printing 138 and "138" are identical. Try running the following statements from the Editor&#8212;what do you see?<p class="small"><code>^keyword^print ^keyword^type(138) ^keyword^is ^keyword^int</code><p class="small"><code>^keyword^print ^keyword^type("138") ^keyword^is ^keyword^int</code>
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

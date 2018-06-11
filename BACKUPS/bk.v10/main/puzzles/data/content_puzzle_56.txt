@@ -1,0 +1,53 @@
+________________________________
+$LEFTPANEL_HEADING$
+Catch and Release
+https://open.spotify.com/track/3CD8KmHBIcMO1wbZCxmesv 
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+________________________________
+$LEFTPANEL_QUESTION$
+Update your <def>divide</def>() function to account for any zeros that might appear in your input ^list^. For example, an input of [20,0,1] should return 'Error: Division by 0.' 
+________________________________
+$LEFTPANEL_EDITOR$
+def divide(input_list):
+________________________________
+$LEFTPANEL_HINTS$
+You'll need an ^if^/^else^ statement here.
+________________________________
+$RIGHTPANEL_QUESTIONS$
+Why is it important to return an error if your input ^list^ contains zeros?
+________________________________
+$RIGHTPANEL_TESTCASES$
+Remember, no ^print^ statements inside the function body.
+________________________________
+$ALLPANES_SUBMITCASES$
+print ""
+print "INPUT     | [0]"
+print "OUTPUT    |", divide([0])
+print "EXPECTED  | Error: Division by 0."
+if divide([0]) == "Error: Division by 0.":
+	print "PASSED!"
+else: 
+	print "FAILED"
+
+print ""
+print "INPUT     | [20,0,1]"
+print "OUTPUT    |", divide([20,0,1])
+print "EXPECTED  | Error: Division by 0."
+if divide([20,0,1]) == "Error: Division by 0.":
+	print "PASSED!"
+else: 
+	print "FAILED"
+
+print ""
+print "INPUT     | [20,1,2,2,1]"
+print "OUTPUT    |", divide([20,1,2,2,1])
+print "EXPECTED  | 5"
+if divide([20,1,2,2,1]) == 5:
+	print "PASSED!"
+else: 
+	print "FAILED"
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

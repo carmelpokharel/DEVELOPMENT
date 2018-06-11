@@ -1,0 +1,45 @@
+________________________________
+$LEFTPANEL_HEADING$
+Ceremonial (Burst Into Stars)
+https://open.spotify.com/track/3lEtlOqGWFfiHukZwRTCoV
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+________________________________
+$LEFTPANEL_QUESTION$
+Define a function, <def>histogram</def>(), whose input is a ^list^ of ^int^ datatypes, and output is a histogram of asterisks (*). For example, ^print^ <def>histogram</def>([4, 9, 7]) should display the following in the Output box:
+<outputcodeline>
+<code>****</code>
+<code>*********</code>
+<code>*******</code>
+</outputcodeline>
+The value your function returns should be a single ^str^, with each histogram row separated by a ^\n^ character. Note that the end of your ^str^, the final character, should <i>not</i> be ^\n^, however.
+________________________________
+$LEFTPANEL_EDITOR$
+def histogram(input_list):
+________________________________
+$LEFTPANEL_HINTS$
+Remember how to multiply a ^str^ by an ^int^?
+________________________________
+$RIGHTPANEL_QUESTIONS$
+How does your Output box deal with the overflow when your input ^list^ contains a large number, like 300?
+________________________________
+$RIGHTPANEL_TESTCASES$
+This square does not have a Submit button, as the results are self-explanatory. However, make sure to test your function on the following inputs:
+<cardcodeblock>
+list1 = [4,9,7,10]
+list2 = [3,0,1,2]
+list3 = []
+</cardcodeblock>
+________________________________
+$ALLPANES_SUBMITCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+$RIGHTPANEL_SOLUTION$
+def histogram(input_list):
+    answer = ''
+    for num in input_list:
+        answer += '*' * num + '\n'
+    return answer
+________________________________
+FIN

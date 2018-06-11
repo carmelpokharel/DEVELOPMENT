@@ -1,0 +1,48 @@
+________________________________
+$LEFTPANEL_HEADING$
+2 Become 1
+https://open.spotify.com/track/36AWdhZIGLUTkWpJDhe7va
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+All the things you are able to do with strings and integers, you're able to do with variables. When you set/create a variable, all you're really doing is giving a piece of data a "name". 
+For example, your piece of data can be an integer, 25, and the name of that piece of data (the variable) can be <em>my_age</em>. To create/set this variable, you would write:
+<code class="demo">my_age = 25</code>
+<p class="small">&nbsp;</p>
+Now, every time you reference the variable my_age in your code, what you are really saying is simply the number (integer) 25.
+
+In puzzle 4, you learned that using the plus sign (+) between two strings, fuses them together. (Revisit puzzle 4 if you don't remember).
+The same can be done with variables! 
+________________________________
+$LEFTPANEL_QUESTION$
+Write three lines of code that satisfies the following:
+<table>
+   <tr>
+      <td width="15%" valign="top"><u>Line 1:</u>  </td>
+      <td>Create a variable for the string "alpha"</td>
+   </tr>
+   <tr>
+      <td width="15%" valign="top"><u>Line 2:</u>  </td>
+      <td>Create a variable for the string "bet"</td>
+   </tr>
+   <tr>
+      <td width="15%" valign="top"><u>Line 3:</u>  </td>
+      <td>Create the word "alphabet" by adding only the variables</td>
+   </tr>
+</table>
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+Your third line should NOT contain any strings; only variables.
+________________________________
+$RIGHTPANEL_TIME$
+2-3 minutes
+________________________________
+$RIGHTPANEL_QUESTIONS$
+Is there a way to add a string to a variables? If so, how?
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

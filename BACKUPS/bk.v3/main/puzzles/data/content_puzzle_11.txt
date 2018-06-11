@@ -1,0 +1,34 @@
+________________________________
+$LEFTPANEL_HEADING$
+Word Problems
+https://open.spotify.com/track/5xu7YKEWSljtXXXAB8NVdS
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+Try printing the following in Python:
+<code class="demo">print 'I'm so glad to meet you!'</code>
+<p class="small">&nbsp;</p>
+Why do you think this doesn't work?
+________________________________
+$LEFTPANEL_QUESTION$
+Write a print statement where the outcome is: 
+<code>"Look over here," she said, "I'm learning Python!"</code>
+<p class="small">&nbsp;</p>
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+The entire string must be enclosed within a set of quotation marks. All other quotation marks must be preceded by the correct character. Make sure your script doesn't include spaces where they don't belong.
+________________________________
+$RIGHTPANEL_TIME$
+2-3 minutes
+________________________________
+$RIGHTPANEL_QUESTIONS$
+Where did your quotation marks start and end?
+Why do you think there should be an even number of quotation marks?
+How do you use quotation marks within a string?
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

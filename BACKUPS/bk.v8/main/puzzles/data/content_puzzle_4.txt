@@ -1,0 +1,30 @@
+________________________________
+$LEFTPANEL_HEADING$
+Jump in the Line
+https://open.spotify.com/track/70mAceS5ArAqVj2OwDE4db
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+What if you want to print multiple strings on the same line? Well, you have two options:
+1. Use a <u>comma</u>:
+<democodeline>^print^ 'one', 'two', 'three'</democodeline>
+2. Use a <u>plus sign</u>:
+<democodeline>^print^ 'one' + 'two' + 'three'</democodeline>
+Run each of these statements in the Editor and observe their outputs.
+________________________________
+$LEFTPANEL_QUESTION$
+Write a Python statement (consisting of five separate strings) which prints the following line to the output box:
+<outputcodeline>Alpha Bravo Charlie Delta Echo</outputcodeline>
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+Think about which of the two given methods produces a space between each ^str^.
+________________________________
+$RIGHTPANEL_QUESTIONS$
+Why do you think this statement doesn't work?<linespace><code>^print^ 1 2</code>
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

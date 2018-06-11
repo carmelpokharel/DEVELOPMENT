@@ -1,0 +1,31 @@
+________________________________
+$LEFTPANEL_FAQs$
+&#9656; Why is Python a good language to learn?
+Python is an incredibly powerful language which is easy to read, easy to write, natural, and aims aggressively towards simplicity. Whatever C++ or Java can do, Python aims to do in fewer lines of code.
+&#9656; When can I expect to complete Pythons and Ladders?
+For a complete beginner, the ideal completion time is intended to be from one to three months. This, of course, is proportionate to the activity and interest levels per individual.
+&#9656; Which version of Python is used in Pythons and Ladders?
+Pythons and Ladders makes use of the Python emulator from Skulpt.org, whose currently known supported version is Python 2.6+ (2016).
+&#9656; How can I install and set up Python on my computer?
+Here's a link which guides you through the setup process. We suggest Wing IDE 101 (student version) if you've never coded before, else: Sublime Text 3.
+&#9656; How can Python be relevant to my everyday work and lifestyle?
+We've attempted to cover real-world use cases in the last few squares of Pythons and Ladders, but here's an article which answers this question far better than we can.
+&#9656; Why is nothing happening when I run my code?
+The absence of error messages in the output box is a current limitation in emulator technology. Please see this page of the Tutorial for more information, or install Python on your local machine.
+&#9656; Why can't I use the tab key to indent code in my Editor?
+While we figure out a solution, try using spaces instead! When it comes to indentation, either 2 or 4 spaces are best. Whichever you pick, remember to stay consistent.
+&#9656; I think I've found a bug. How do I report it?
+Please use the Contact Us link in our navigation bar to submit feedback. A bug description, as well as your device OS and browser would be very useful to us.
+________________________________
+$LEFTPANEL_2$
+________________________________
+$RIGHTPANEL_1$
+________________________________
+$RIGHTPANEL_1$
+________________________________
+$RIGHTPANEL_SPONSORED$
+Sponsored1 $LINK$ www.stringsinpython.com
+Sponsored2 $LINK$ www.newlinecharacters.com
+Sponsored3 $LINK$ www.printstatements.com
+________________________________
+FIN

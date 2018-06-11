@@ -1,0 +1,45 @@
+________________________________
+$LEFTPANEL_HEADING$
+Form Follows Function
+https://open.spotify.com/track/3fJa6DWICn7ApDutXbz2WZ
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+You've encountered some built-in functions so far, like ^len^(), ^range^(), and ^type^(). In Python, you're also able to define your own functions, using the ^def^ keyword.
+Here's a simple example to get started:
+<democodeblock>
+<code>^def^ <def>exampleFunction</def>():</code>
+<code><tab>^return^ 'Testing, testing, 123'</tab></code>
+</democodeblock>
+Notice the use of the new keyword ^return^ here, which returns a value, but does not display it to the Output box. In order to see the results of <def>exampleFunction</def>(), you can <b>call</b> it with a ^print^ statement <em>outside</em> of the function body:
+<democodeblock>
+<code>^def^ <def>exampleFunction</def>():</code>
+<code><tab>^return^ 'Testing, testing, 123'</tab></code>
+<code>^print^ <def>exampleFunction</def>()</code>
+</democodeblock>
+________________________________
+$LEFTPANEL_QUESTION$
+Define a function, <def>myFirstFunction</def>(), and have it ^return^ 'Creating a function is easy!'. Then, ^print^ your function from outside the function body.
+Your output should look exactly like the following:
+<outputcodeline>Creating a function is easy!</outputcodeline>
+________________________________
+$LEFTPANEL_EDITOR$
+def myFirstFunction():
+________________________________
+$LEFTPANEL_HINTS$
+Do not forget to use ^def^, the brackets, the colon, and indentation. Note that your ^print^ statement should not be indented, as it is not part of your function body.
+________________________________
+$RIGHTPANEL_QUESTIONS$
+What is the purpose of a ^return^ statement?
+What do you think the brackets are for?
+Will you get an output if you call a function without a ^print^ statement? 
+________________________________
+$RIGHTPANEL_TESTCASES$
+For the entirety of Pythons and Ladders, <i>do not</i> include any ^print^ statements inside your function bodies.
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+$RIGHTPANEL_SOLUTION$
+def myFirstFunction():
+    return 'Creating a function is easy!'
+________________________________
+FIN

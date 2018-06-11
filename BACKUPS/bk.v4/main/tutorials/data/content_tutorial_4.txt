@@ -1,0 +1,44 @@
+________________________________
+$LEFTPANEL_MAIN$
+Syntax, Pt. II
+________________________________
+$LEFTPANEL_MAINAREA$
+Let's investigate more issues which may cause your output to refuse displaying anything.
+________________________________
+$LEFTPANEL_INSTRUCTIONSAREA$
+A sentence without spelling mistakes may also be syntactically incorrect. For example: "James want water."
+
+In fact, Python takes syntax errors so seriously that even <u>one</u> mistake somewhere in your editor will make Python refuse to run.
+
+Take a look at the four lines of code already in the editor. There are several syntax errors that needs to be fixed. Review and make the necessary changes to each line of code to output the following:
+
+<code>Hello World!</code>
+<code>Hello World!</code>
+<code>Hello World!</code>
+<code>Hello World!</code>
+<code>Hello World!</code>
+<p class="small">&nbsp;</p>
+________________________________
+$LEFTPANEL_TOOLBARAREA$
+________________________________
+$LEFTPANEL_EDITORAREA$
+________________________________
+$LEFTPANEL_EDITOR$
+print 'Hello World'!
+print "Hello World!'
+Print "Hello World!"
+print "Hello World!" 'Hello World!'
+________________________________
+$LEFTPANEL_HINT$
+You'll find your hints here!
+________________________________
+$LEFTPANEL_OUTPUTAREA$
+________________________________
+$RIGHTPANEL_TIME$
+2-3 minutes
+________________________________
+$RIGHTPANEL_QUESTIONS$
+When printing strings, is it better to use single quotations or double quotations? Is there a difference?
+________________________________
+$RIGHTPANEL_TESTCASES$
+FIN

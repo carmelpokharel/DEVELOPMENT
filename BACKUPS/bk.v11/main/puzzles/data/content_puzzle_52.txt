@@ -1,0 +1,80 @@
+________________________________
+$LEFTPANEL_HEADING$
+Dear Maria, Count Me In
+https://open.spotify.com/track/16BwcRV9FduBgNIXqN0zp6 
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+________________________________
+$LEFTPANEL_QUESTION$
+Define a function, <def>countLength</def>(), which uses a ^for^ loop to return the length of a given ^str^, but ignores space characters.
+________________________________
+$LEFTPANEL_EDITOR$
+def countLength(given_string):
+________________________________
+$LEFTPANEL_HINTS$
+Create a variable which acts as a &quot;counter&quot;, and increases by 1 at every iteration (except for spaces).
+________________________________
+$RIGHTPANEL_QUESTIONS$
+Does your function count spaces as part of your ^str^ length?
+How can you tweak your function to ignore spaces?
+________________________________
+$RIGHTPANEL_TESTCASES$
+You may use ^len^() to solve this square, but you'll still have to ignore the space characters.
+________________________________
+$ALLPANES_SUBMITCASES$
+print ""
+print "INPUT     | ''"
+print "OUTPUT    |", countLength("")
+print "EXPECTED  | 0"
+if countLength("") == 0:
+	print "PASSED!"
+else: 
+	print "FAILED"
+
+print ""
+print "INPUT     | ' '"
+print "OUTPUT    |", countLength("")
+print "EXPECTED  | 0"
+if countLength(" ") == 0:
+	print "PASSED!"
+else: 
+	print "FAILED"
+
+print ""
+print "INPUT     | 'Gaskarth'"
+print "OUTPUT    |", countLength("Gaskarth")
+print "EXPECTED  | 8"
+if countLength("Gaskarth") == 8:
+	print "PASSED!"
+else: 
+	print "FAILED"
+
+print ""
+print "INPUT     | 'Jack Barakat'"
+print "OUTPUT    |", countLength("Jack Barakat")
+print "EXPECTED  | 11"
+if countLength("Jack Barakat") == 11:
+	print "PASSED!"
+else: 
+	print "FAILED"
+
+print ""
+print "INPUT     | 'Dear Maria, Count Me In'"
+print "OUTPUT    |", countLength("Dear Maria, Count Me In")
+print "EXPECTED  | 19"
+if countLength("Dear Maria, Count Me In") == 19:
+	print "PASSED!"
+else: 
+	print "FAILED"
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+$RIGHTPANEL_SOLUTION$
+def countLength(given_string):
+    counter = 0
+    for letter in given_string:
+        if letter != ' ':
+            counter += 1    # should I avoid using += for solutions?
+    return counter
+________________________________
+FIN

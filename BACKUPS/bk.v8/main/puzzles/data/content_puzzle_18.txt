@@ -1,0 +1,47 @@
+________________________________
+$LEFTPANEL_HEADING$
+Side to Side
+https://open.spotify.com/track/1pKeFVVUOPjFsOABub0OaV
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+Run the following code and examine its results.
+<democodeblock>
+<code>my_age = 25</code>
+<code>your_age = 25</code>
+<code>^print^ my_age, your_age</code>
+</democodeblock>
+With those results in mind, do you think the following statement is valid?
+<democodeline>^print^ 25 = my_age</democodeline>
+________________________________
+$LEFTPANEL_QUESTION$
+Write three lines of code to do the following:
+<table>
+   <tr>
+      <td class="linecol">Line 1:</td>
+      <td class="codecol">Declare a variable, word_1, for the ^str^ 'Side'</td>
+   </tr>
+   <tr>
+      <td class="linecol">Line 2:</td>
+      <td class="codecol">Declare a variable, word_2, for the ^str^ 'to'</td>
+   </tr>
+   <tr>
+      <td class="linecol">Line 3:</td>
+      <td class="codecol">Declare a variable, word_3, for the ^str^ 'Side'</td>
+   </tr>
+   </table>
+Now, print the three variables so that your output displays the following:
+<outputcodeline>Side to Side</outputcodeline>
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+Your ^print^ statement should <em>not</em> contain any strings; only variables!
+________________________________
+$RIGHTPANEL_QUESTIONS$
+How would you modify your ^print^ statement to output the following?<linespace><code>SidetoSide</code>
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

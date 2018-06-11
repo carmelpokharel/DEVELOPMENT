@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html> 
+  <head>
+    <!-- **************** -->
+    <!--      SCRIPTS     -->
+    <!-- **************** -->
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!-- JAVASCRIPT -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" type="text/javascript"></script> 
+    <script src="http://www.skulpt.org/static/skulpt.min.js" type="text/javascript"></script> 
+    <script src="http://www.skulpt.org/static/skulpt-stdlib.js" type="text/javascript"></script>
+    <script src='js/console.js' type="text/javascript"></script>
+    <!-- FAVICON -->
+    <link href="./images/favicons/favicon.ico" rel="icon" type="image/x-icon" />
+  </head> 
+
+  <body style="margin-bottom:455px">
+
+    <!-- **************** -->
+    <!--    NAVIGATION    -->
+    <!-- **************** -->
+    <nav>
+      <ul>
+        <li>
+          <a href="index.html">
+            <img src="./images/headingtitle.png" alt="Pythons and Ladders" style="width: 75%; height: 18%;" >
+          </a>
+        </li>
+        <li>
+          <a href="index.html">
+            <img src="./images/board_icon.png" alt="m" style="width: 32%; height: 32%;" >
+          </a>
+          <a href="manual.html">
+            <img src="./images/manual_icon.png" alt="m" style="width: 30%; height: 30%;" >
+          </a>
+           <a href="faq.html">
+            <img src="./images/faq_icon.png" alt="m" style="width: 32%; height: 32%;" >
+          </a>
+          <a href="updates.html">
+            <img src="./images/updates_icon.png" alt="m" style="width: 32%; height: 32%;" >
+          </a>
+          <!--<a href="www.facebook.com">
+            <img src="./images/facebook_icon.png" alt="f" style="width: 25%; height: 25%;" >
+          </a>
+          <a href="www.twitter.com">
+            <img src="./images/twitter_icon.png" alt="t" style="width: 25%; height: 25%;" >
+          </a>
+          <a href="pagenotfound.html">
+            <img src="./images/donate_icon.png" alt="d" style="width: 35%; height: 35%;" >
+          </a>-->
+          <a href="mailto:pythonsandladders@gmail.com?subject=Attn: [ADMIN] Pythons and Ladders">
+            <img src="./images/mail_icon.png" alt="m" style="width: 35%; height: 35%;" >
+          </a>
+        </li>
+        <!--<li style="float:top"><a class="active" href="#about">profile</a></li>-->
+      </ul>
+    </nav>
+
+    <!-- **************** -->
+    <!--       TITLE      -->
+    <!-- **************** -->
+    <title>Puzzle 9</title
+    <div align="center">
+
+    <!-- **************** -->
+    <!--      HEADER      -->
+    <!-- **************** -->
+      <br><br>
+      <table align="center" style="width:1200px" cellspacing="0px" border="0">
+        <tr>
+          <!-- LEFT: EMPTY PADDING COLUMN -->
+          <td valign="top" width="20px">
+          </td>
+          <!-- CURRENT PAGE IMAGE -->
+          <td valign="top" width="90px">
+            <a href="puzzle_9.html">
+              <img src="./images/9.png" alt="INIT">
+            </a>
+          </td>
+          <!-- NAVIGATION IMAGES -->
+          <td valign="top" width="50px">
+            <a href="puzzle_8.html">
+              <img align="top" src="./images/back.png" alt="2" style="width:90%;height:48%">
+            </a>
+            <a href="pagenotfound.html">
+              <img align="top" src="./images/next.png" alt="3" style="width:90%;height:48%">
+            </a>
+          </td>
+          <!-- RIGHT: EMPTY PADDING COLUMN -->
+          <td valign="bottom">
+          </td>
+        </tr>
+      </table>
+      <!-- LINE BREAK -->
+      <br>
+      <hr>
+
+    <!-- **************** -->
+    <!--        BODY      -->
+    <!-- **************** -->
+      <table align="center" style="width:1200px" cellspacing="20px" border="0">
+        <tr>
+        <!-- LEFT: QUESTION AND EDITOR -->
+          <td align="left" valign="top" width="600px">
+            <h3>SQ. 9</h3>
+            <p class="small">&nbsp;</p>
+            <p class="small">So far, you've encountered four different built-in Python functions, which</p>
+            <p class="small">take in inputs, and magically output things you want: isinstance(), int(),</p>
+            <p class="small">str(), and len(). Now, what if you want to write your own function? You can!</p>
+            <p class="small">&nbsp;</p>
+            <p class="small">def myFunction(input1, input2):</p>
+            <p class="small">&nbsp;&nbsp;&nbsp;&nbsp;do something</p>
+            <p class="small">&nbsp;&nbsp;&nbsp;&nbsp;return something</p>
+            <p class="small">&nbsp;</p>
+            <p class="small">Run the sample code embedded in the editor, and analyze how the function</p>
+            <p class="small">generates the output at the bottom.</p>
+            <p class="small">&nbsp;</p>
+            <p class="small">Now, rewrite your solution to SQ. 2 by defining a function threeWords(), which</p>
+            <p class="small">takes in 3 strings as inputs, and returns them as one string, separated by</p>
+            <p class="small">spaces. Make sure to test your function with these strings as inputs, too:</p>
+            <p class="small">var1 = '', var2 = '', var3 = ''</p>
+            <p class="small">&nbsp;</p>
+            <p class="small">For example, if you print threeWords('Life', 'is', 'good!'), your output should be:</p>
+            <p class="small">&#9656; Life is good!</p>
+            <p class="small">&nbsp;</p>
+            <p class="small">Note: If the output string has an extra space at the end, it is considered incorrect.</p>
+            <p class="small">&nbsp;</p>
+            <form align="left"> 
+            <textarea id="yourcode" cols="80" rows="15">
+# Consider the example of a function below, which multiplies two numbers:
+def multiplyTwoNumbers(num1, num2):
+	numProduct = num1 * num2
+	return numProduct
+
+# To use the function, you need to call it.
+multiplyTwoNumbers(4, 3)
+
+# And in order to see what the function outputs, you need to print it.
+print multiplyTwoNumbers(5, 6)
+print multiplyTwoNumbers(5.1, 7.2)
+
+            </textarea>
+            <br>
+            <br>
+            <button type="button" onclick="runit()">Run</button>
+            <button type="button" onclick="sendEmail()">Feedback</button>
+            </form>
+          </td>
+        <!-- RIGHT: TIMES, QUESTIONS, AND SPONSORED -->
+          <td align="left"  valign="top">
+          <h3>Approximate learning time</h3>
+          <p>15-20 minutes</p>
+          <button type="button" onclick="requestSolution()">Request solution</button>
+          <h3><br>Questions for you</h3>
+          <ol>
+            <li>Why is there no output when you call your function without a print statement?<br>Does calling the built-in functions without printing them result in the same thing?</li><br>
+            <li>What if you unknowingly tried to call threeWords() with numbers as inputs? How would you update your function to take care of this case? In other words:<br>print threeWords('Life', 2, 'good')</li><br>
+            <li>Can you store the output of your function in a variable? If the following code is valid, could you do something similar with threeWords()?:<br>lengthOfList = len(list1)<br>print lengthOfList</li><br>
+            <li>What happens if you try to call multiplyTwoNumbers() with no inputs? Try running this code in your offline editor!</li><br>
+          </ol>
+          <h3>Sponsored</h3>
+          <ol>
+            <a href="www.stringsinpython.com" target="_blank"><li>Sponsored1</li></a>
+            <a href="www.newlinecharacters.com" target="_blank"><li>Sponsored2</li></a>
+            <a href="www.printstatements.com" target="_blank"><li>Sponsored3</li></a>
+          </ol>
+          </td>
+        </tr>
+      </table>
+
+    <!-- **************** -->
+    <!--     CONSOLE      -->
+    <!-- **************** -->
+     <table align="center" style="width:1200px;" cellspacing="20px" border="0s">
+      <tr>
+      <td>
+      <pre align="left" id="output"></pre>
+      </td>
+      </tr>
+      </table>
+    </div>
+  </body>
+  <footer align="center"><br>Copyright &copy; Shamil Pokharel 2016</footer>
+</html>

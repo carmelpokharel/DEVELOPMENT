@@ -1,0 +1,26 @@
+________________________________
+$LEFTPANEL_HEADING$
+Changing
+https://open.spotify.com/track/0ZdQuZmy12Mv6px1hjDjcQ
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+As it turns out, you can convert between numerical data types (^keyword^int to ^keyword^float, or ^keyword^float to ^keyword^int).
+________________________________
+$LEFTPANEL_QUESTION$
+Write a statement that converts and prints the ^keyword^int 4 to its respective ^keyword^float representation. Your output box should show:
+<code>4.0</code>
+<p class="small">&nbsp;</p>
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+Look at the Question for You section, then try something similar!
+________________________________
+$RIGHTPANEL_QUESTIONS$
+Try running the following statement from the Editor&#8212;what does Python do here?<p class="small"><code>^keyword^print ^keyword^int(4.8)</code>
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

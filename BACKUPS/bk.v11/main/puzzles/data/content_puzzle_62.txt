@@ -1,0 +1,66 @@
+________________________________
+$LEFTPANEL_HEADING$
+The Fox (What Does the Fox Say?)
+https://open.spotify.com/track/5HOpkTTVcmZHnthgyxrIL8
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+A pangram is a sentence which contains all the letters of the English alphabet at least once. Here's one you may have seen before:
+"The quick brown fox jumps over the lazy dog."
+________________________________
+$LEFTPANEL_QUESTION$
+Define a function, <def>isPangram</def>(), which checks if a sentence is a pangram. The input is a ^str^, and output is a ^bool^. 
+For this function, ignore punctuation, special characters, and letter cases.
+________________________________
+$LEFTPANEL_EDITOR$
+def isPangram(sentence):
+________________________________
+$LEFTPANEL_HINTS$
+Create a ^str^ that contains each letter of the alphabet. Then, use a ^for^ loop.
+________________________________
+$RIGHTPANEL_QUESTIONS$
+How can you update <def>isPangram</def>() to check for a perfect pangram (i.e. a string which contains each letter of the alphabet <i>exactly</i> once?)
+________________________________
+$RIGHTPANEL_TESTCASES$
+Test your function thoroughly before using the Submit button--you may find some unexpected results here.
+________________________________
+$ALLPANES_SUBMITCASES$
+print ""
+print "INPUT     | 'abaaaa'"
+print "OUTPUT    |", isPangram('abaaaa')
+print "EXPECTED  | False"
+if isPangram('abaaaa') == False:
+	print "PASSED!"
+else: 
+	print "FAILED"
+
+print ""
+print "INPUT     | 'The quick brown fox jumps over the lazy dog'"
+print "OUTPUT    |", isPangram('The quick brown fox jumps over the lazy dog')
+print "EXPECTED  | True"
+if isPangram('The quick brown fox jumps over the lazy dog') == True:
+	print "PASSED!"
+else: 
+	print "FAILED"
+
+print ""
+print "INPUT     | 'Sphinx of black quartz: judge my vow.'"
+print "OUTPUT    |", isPangram('Sphinx of black quartz: judge my vow.')
+print "EXPECTED  | True"
+if isPangram('Sphinx of black quartz: judge my vow.') == True:
+	print "PASSED!"
+else: 
+	print "FAILED"
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+$RIGHTPANEL_SOLUTION$
+def isPangram(sentence):
+    sentence = str.lower(sentence)
+    englishAlphabet = 'abcdefghijklmnopqrstuvwxyz'
+    letterCheck = ''
+    for char in englishAlphabet:
+        if char in sentence:
+            letterCheck = letterCheck + char
+    return letterCheck == englishAlphabet
+________________________________
+FIN

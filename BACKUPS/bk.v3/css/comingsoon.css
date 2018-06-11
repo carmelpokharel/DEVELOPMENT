@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+@import url('https://fonts.googleapis.com/css?family=Antic');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+
+.comingsoonheaderbar {
+    line-height: 180%;
+    background-color: #282f35;
+    position:fixed;
+    z-index:0;
+    color: #c59a6d;
+    width:100%;
+    height: 48px;               /* This is firm; should not be responsive */
+    overflow-y: hidden;
+    font-size: 80%;
+    font-family: 'Antic', sans-serif;
+    text-align: center;
+    cursor: pointer;
+}
+.comingsoonheaderbar h2:hover, .offcanvas h2:focus{
+    color: #e7e8e9; /* gold */
+    transition:0.4s;
+    cursor: pointer;
+}
+.comingsoonbody {
+    margin: 0;
+    font-family: 'Antic', sans-serif;
+    font-size: 90%;
+    background-color: #1e2429;
+    text-align: center;
+    color: #131516;
+}
+p.comingsoonsmall {
+    line-height: 0.2;
+    color: #e7e8e9;
+    font-size: 70%;
+}
+.comingsoonbutton {
+  margin: 5px;
+  width:250px;
+  height:46px;
+  border: 2px solid #696e71;
+  background-color: #696e71;
+  line-height: 275%;
+  font-family: 'Antic', sans-serif;
+  font-size: 120%;
+  color: #e7e8e9;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 6px;
+  transition-property: background, border-radius;
+  transition-duration: .25s;
+  transition-timing-function: linear;
+}
+.comingsoonbutton:hover {
+  background: #e7e8e9;
+  color: #696e71;
+}

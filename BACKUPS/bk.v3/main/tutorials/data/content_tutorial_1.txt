@@ -1,0 +1,39 @@
+________________________________
+$LEFTPANEL_MAIN$
+Interface
+________________________________
+$LEFTPANEL_MAINAREA$
+Welcome to Pythons and Ladders! First off, let's get you familiar with our interface.
+________________________________
+$LEFTPANEL_INSTRUCTIONSAREA$
+This area is is where you will find the instructions to complete your puzzle. Most of the time, it will also contain a quick lesson and provide you with expected results.
+________________________________
+$LEFTPANEL_TOOLBARAREA$
+The toolbar consists of a set of buttons which allow you to manipulate the Editor and Output boxes (see below). Currently, the available options are Run, Clear, Save, and Hint.
+________________________________
+$LEFTPANEL_EDITORAREA$
+The first grey box, right below the toolbar, is the editor. You can click inside this area and write Python code. Since this is a text input area, you can also resize the editor to see more of your code.
+________________________________
+$LEFTPANEL_EDITOR$
+print "Everything between these quotes will appear in the output box."
+________________________________
+$LEFTPANEL_OUTPUTAREA$
+The second grey box, below the editor, is the output. This box automatically expands to represent the output of your Python code when you click "Run" in your toolbar. Try it now, then click "Clear" to erase its content.
+________________________________
+$RIGHTPANEL_TIME$
+Here you will find our suggested completion time for each puzzle. The content in Pythons and Ladders is designed so that no puzzle should take more than 20 minutes to complete.
+However, if you find yourself unable to complete the puzzle after a long stretch of time, feel free to request our guidance using the button below.
+________________________________
+$RIGHTPANEL_QUESTIONS$
+This section will contain a list of questions to help you understand your current puzzle in greater detail. 
+Make sure to carefully examine this section, as the results of some questions help in completing subsequent puzzles!
+________________________________
+$RIGHTPANEL_TESTCASES$
+Further along in your puzzles, you will be writing Python functions, and will need to test your functions with a variety of inputs. 
+
+The test cases provided here will help you to determine whether your solution is thorough, as well as prepare you for subsequent puzzles.
+________________________________
+$RIGHTPANEL_HINTS$
+<Write your hint here>
+________________________________
+FIN

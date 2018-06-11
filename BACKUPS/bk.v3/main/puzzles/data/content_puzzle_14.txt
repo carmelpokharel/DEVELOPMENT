@@ -1,0 +1,56 @@
+________________________________
+$LEFTPANEL_HEADING$
+Greater Than 84
+https://open.spotify.com/track/4X2Cl1m6a7NmJkvnlZb5yB
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+A Boolean is a data type which is either True or False. Note that a Boolean is not a string of the words "True" and "False", but its own data type. 
+
+To obtain Booleans, we can perform comparison operations, such as greater than, less than, or equal to (>, <, ==). For example, test the following code and observe the result:
+<code class="demo">print 5 < 10</code>
+<p class="small">&nbsp;</p>
+Now play around with the other comparison operators mentioned above, to get a feel of how Booleans work. Then, research and understand other comparison operators, such as "!=", ">=", and "<=".
+________________________________
+$LEFTPANEL_QUESTION$
+Write only four lines of code, each containing a comparison operator, that returns the following outputs:
+<table>
+   <tr>
+      <td><b>Comparison Operator</b></td>
+      <td><b>Output</b></td>
+   </tr>
+   <tr>
+      <td>Equality comparison</td>
+      <td>True</td>
+   </tr>
+   <tr>
+      <td>'Less than' comparison</td>
+      <td>False</td>
+   </tr>
+   <tr>
+      <td>'Greater than' comparison</td>
+      <td>False</td>
+   </tr>
+   <tr>
+      <td>'Does not equal to' comparison&emsp;</td>
+      <td>True</td>
+   </tr>
+</table>
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+Don’t forget to write print before each statement and make sure you’re using the right symbols (>, <, ==, !=)
+________________________________
+$RIGHTPANEL_TIME$
+2-3 minutes
+________________________________
+$RIGHTPANEL_QUESTIONS$
+How is the double equal sign "==" different from a single "=" one?
+What is the "!=" comparison operator?
+Are you able to compare floating points against integers? Do you have to do anything differently?
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

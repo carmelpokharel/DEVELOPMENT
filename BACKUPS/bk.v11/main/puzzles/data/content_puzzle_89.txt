@@ -1,0 +1,35 @@
+________________________________
+$LEFTPANEL_HEADING$
+Complete
+https://open.spotify.com/track/47IhLgSl95PuKfIR1SneYH
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+A <b>complete graph</b> is one in which every pair of vertices is connected by an edge. If we were to produce a complete graph with the vertices a-f from the previous square, we would end up with the following:
+<img style="width:80%;height:80%;max-width:300px" src="../../../images/example_graph2.png">
+________________________________
+$LEFTPANEL_QUESTION$
+Define a function, <def>completeGraph</def>(), whose input is a graph (^dict^), and output is a complete graph with all its vertices. Before returning your final graph, make sure all of your value lists are sorted in alphabetic order. 
+________________________________
+$LEFTPANEL_EDITOR$
+def completeGraph(graph):
+________________________________
+$LEFTPANEL_HINTS$
+Once again, use a ^for^ loop to generate a list of all the edges, then reuse some code from <def>reverse</def>() to remove duplicates.
+________________________________
+$RIGHTPANEL_QUESTIONS$
+What would be a way to double-check your outputs are complete graphs?
+________________________________
+$RIGHTPANEL_TESTCASES$
+This square does not have a Submit button, as the results are self-explanatory. However, make sure to test your function on <var>graph1</var> from the previous square.
+Note that you must be checking for duplicates inside every value list, too. For instance, this key:value pair is invalid:
+<cardcodeline>'a' : ['b','c','d','e,'f','f','g']</cardcodeline>
+________________________________
+$ALLPANES_SUBMITCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+$RIGHTPANEL_SOLUTION$
+________________________________
+FIN
+
+

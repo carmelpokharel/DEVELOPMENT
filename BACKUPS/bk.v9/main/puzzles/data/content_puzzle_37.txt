@@ -1,0 +1,38 @@
+________________________________
+$LEFTPANEL_HEADING$
+What Is Love
+https://open.spotify.com/track/0bgkE357h56UcH4tyAnzil
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+You can use the .^append^() and .^extend^() methods within ^for^ loops as well. 
+________________________________
+$LEFTPANEL_QUESTION$
+<table>
+   <tr>
+      <td class="linecol">Line 1</td>
+      <td class="codecol">Declare the following ^list^: couples = [['Rose','Jack'], ['Bella','Edward'], ['Sandy','Danny']]</td>
+   </tr>
+   <tr>
+      <td class="linecol">Line 2-3</td>
+      <td class="codecol">Write a ^for^ loop that iterates through each sublist within the couples ^list^, and adds the ^str^ 'Paired' to the sublist</td>
+   </tr>
+   <tr>
+      <td class="linecol">Line 4</td>
+      <td class="codecol">Print your new couples ^list^</td>
+   </tr>
+</table>
+Your output should look like this:
+<outputcodeline>couples = [['Rose', 'Jack', 'Paired'], ['Bella', 'Edward', 'Paired'], ['Sandy', 'Danny', 'Paired']]</outputcodeline>
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+Your ^print^ statement must be outside of your ^for^ loop
+________________________________
+$RIGHTPANEL_QUESTIONS$
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

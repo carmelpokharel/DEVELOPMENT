@@ -1,0 +1,33 @@
+________________________________
+$LEFTPANEL_HEADING$
+Skeptics and True Believers
+https://open.spotify.com/track/7pQUHNh2KfHTIYIVthjjya
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+A <b>Boolean</b>, or ^bool^, is yet another Python datatype which can only hold one of two values: ^True^ or ^False^. Note that a ^bool^ does <em>not</em> contain the words 'True' and 'False' as strings, but is a datatype of its own with no quotations.
+
+When we perform comparison operations, the resulting datatype is a ^bool^. Run the following code and observe the results:
+<democodeblock>
+<code>^print^ 5 < 10<tab><tab><comment># Should be True</comment></code>
+<code>^print^ 5 > 10<tab><tab><comment># Should be False</comment></code>
+<code>^print^ 5 == 10<3sp><tab><comment># Should be True</comment></code>
+<code>^print^ 5 ^is^ 5<tab><tab><comment># Should be True</comment></code>
+<code>^print^ 5 ^is^ ^not^ 5<2sp><2sp><comment># Should be False</comment></code>
+</democodeblock>
+________________________________
+$LEFTPANEL_QUESTION$
+Write a print statement which checks if the ^int^ 5 is equal to the ^float^ 5.0, and outputs a ^bool^ value.
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+The equality comparison operator is '==' (or the keyword ^is^)
+________________________________
+$RIGHTPANEL_QUESTIONS$
+Try running the following statements from the Editor--what do you see?<linespace><code>^print^ ^type^(^True^) ^is^ ^str^</code><linespace><code>^print^ ^type^(^True^) ^is^ ^bool^</code>
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

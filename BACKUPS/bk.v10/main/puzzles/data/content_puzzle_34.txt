@@ -1,0 +1,38 @@
+________________________________
+$LEFTPANEL_HEADING$
+For a Better Day
+https://open.spotify.com/track/2DCwYnfOqAiPfzSBwqQHhd
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+In programming, a ^for^ loop is a technique used to repeat code multiple times. This is also known as <b>iteration</b>. 
+Run the following code, and examine its output:
+<democodeblock>
+<code>^for^ x ^in^ 'magic':</code>
+<code><tab>^print^ x</tab></code>
+</democodeblock>
+<b>Note</b>: Remember to include the indentation on the second line, or your code won't run.
+________________________________
+$LEFTPANEL_QUESTION$
+Write a ^for^ loop that iterates through every letter of the ^str^ 'dogs' and prints the ^str^ 'woof' for each iteration. Your output should be:
+<outputcodeline>
+<code>woof</code>
+<code>woof</code>
+<code>woof</code>
+<code>woof</code>
+</outputcodeline>
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+In the example above, replace ^print^ x with ^print^ 'muggle' -- what does this do?
+________________________________
+$RIGHTPANEL_QUESTIONS$
+How many times did your code iterate? 
+What does x represent in the ^for^ statement?
+If you remove the colon (:) from your ^for^ statement, does your code still run?
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

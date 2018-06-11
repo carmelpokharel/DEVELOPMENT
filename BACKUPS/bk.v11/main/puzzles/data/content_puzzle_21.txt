@@ -1,0 +1,53 @@
+________________________________
+$LEFTPANEL_HEADING$
+Piece of Me
+https://open.spotify.com/track/2EvwLVrnYbCZEG6Kx5DCRy
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+<b>Substring</b> is a term used to refer to a piece of a ^str^. For example, 'gym' is a substring of 'gymnastics', and 'rain' is a substring of 'drains'.
+To check if a substring is part of a ^str^, you can use Python's ^in^ keyword:
+<democodeblock>
+<code>^print^ 'put' ^in^ 'computer'</code>
+<code>^print^ 'come' ^in^ 'computer'</code>
+</democodeblock>
+To access particular characters in a ^str^, we use a concept called <b>indexes</b>, which represent a character's position in the ^str^.
+Carefully examine the outputs of the following code:
+<democodeblock>
+<code class="demoblock">
+<code>^print^ 'computer'[2]</code>
+<code>^print^ 'computer'[5]</code>
+</democodeblock>
+________________________________
+$LEFTPANEL_QUESTION$
+Write three lines of code to do the following:
+<table>
+   <tr>
+      <td class="linecol">Line 1</td>
+      <td class="codecol">Declare a variable, <var>Apple</var>, which stores the ^str^ 'Macbook Pro'</td>
+   </tr>
+   <tr>
+      <td class="linecol">Line 2</td>
+      <td class="codecol">Print the substring 'M' from <var>Apple</var></td>
+   </tr>
+   <tr>
+      <td class="linecol">Line 3</td>
+      <td class="codecol">Print the substring ' ' (space character) from <var>Apple</var></td>
+   </tr>
+</table>
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+To access the first element of a ^str^, use an index value of 0.
+________________________________
+$RIGHTPANEL_QUESTIONS$
+Why did 'computer'[2] return the substring 'm' and not 'o'?
+Why did 'computer'[5] return the substring 't' and not 'u'?
+Why doesn't this work?
+<cardcodeline>^print^ 'computer'[8]</cardcodeline>
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

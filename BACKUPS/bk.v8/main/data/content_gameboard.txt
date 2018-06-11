@@ -1,0 +1,10 @@
+________________________________
+$LEFTPANEL_WELCOME$
+Pythons and Ladders is a free, interactive, and self-paced resource for beginners to programming.
+________________________________
+$RIGHTPANEL_SPONSORED$
+Sponsored1 $LINK$ www.stringsinpython.com
+Sponsored2 $LINK$ www.newlinecharacters.com
+Sponsored3 $LINK$ www.printstatements.com
+________________________________
+FIN

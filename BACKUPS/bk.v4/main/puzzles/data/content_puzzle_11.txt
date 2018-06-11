@@ -1,0 +1,30 @@
+________________________________
+$LEFTPANEL_HEADING$
+Word Problems
+https://open.spotify.com/track/5xu7YKEWSljtXXXAB8NVdS
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+Try printing the following in the Shell:
+<code class="demo">print 'I don't think we have met yet!'</code>
+<p class="small">&nbsp;</p>
+You'll notice that this doesn't work. This is because your string has been interrupted at the apostrophe in the word <u>don't</u>. How do you force Python to recognize your single quote as an apostrophe instead of a string boundary?
+________________________________
+$LEFTPANEL_QUESTION$
+Write a print statement where the outcome is: 
+<code>"Look over here," she said, "I'm learning Python!"</code>
+<p class="small">&nbsp;</p>
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+You will need to 'escape' all of the single and double quotes within the string. Research how you might be able to do that. Also, make sure you don't use extra spaces.
+________________________________
+$RIGHTPANEL_QUESTIONS$
+How many quotation marks did you use in that print statement? Why do you think there should be an even number of quotation marks?
+Research how to use quotation marks within a string in Python.
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

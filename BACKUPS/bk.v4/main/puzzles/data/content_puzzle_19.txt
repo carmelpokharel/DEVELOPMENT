@@ -1,0 +1,41 @@
+________________________________
+$LEFTPANEL_HEADING$
+Five Becomes Four
+https://open.spotify.com/track/2REfznWvZEa7eT9VUpxIqn
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+After creating a variable, you can always update its contents to something new. (That's why it's called a variable!) Going back to our box analogy&#8212; it would be like emptying your box and putting new stuff inside it.
+________________________________
+$LEFTPANEL_QUESTION$
+Write three lines of code that satisfy the following:
+<table>
+   <tr>
+      <td width="15%" valign="top"><u>Line 1:</u></td>
+      <td>Create a variable called var1 that is equal to the string "hello"</td>
+   </tr>
+   <tr>
+      <td width="15%" valign="top"><u>Line 2:</u></td>
+      <td>Update the value of var1 to now equal to the integer 12345</td>
+   </tr>
+   <tr>
+      <td width="15%" valign="top"><u>Line 3:</u></td>
+      <td>Print your variable so that it outputs the new integer</td>
+   </tr>
+</table>
+Your output should be:
+<code>12345</code>
+<p class="small">&nbsp;</p>
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+When updating/changing a declared variable, you are simply redefining what the variable equals to.
+________________________________
+$RIGHTPANEL_QUESTIONS$
+How can you change/update a declared variable?
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

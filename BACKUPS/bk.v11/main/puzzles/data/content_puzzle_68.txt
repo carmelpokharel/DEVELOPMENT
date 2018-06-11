@@ -1,0 +1,64 @@
+________________________________
+$LEFTPANEL_HEADING$
+Maps
+https://open.spotify.com/track/1VANwx71N1sSRAugkfDYXj
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+In programming, the term <b>mapping</b> is used to refer to the transformation of one entity to another, as specified by a rule.
+________________________________
+$LEFTPANEL_QUESTION$
+Define a function, <def>mapLengths</def>(), which takes in a ^list^ of words, and maps it into a ^list^ of numbers representing the lengths of the respective words.
+
+For example, with an input of ['Cristiano', 'Toni', 'Karim', 'James', 'Gareth'], your output should be:
+<outputcodeline>[9, 4, 5, 5, 6]</outputcodeline>
+Both your input and output are ^list^ datatypes.
+________________________________
+$LEFTPANEL_EDITOR$
+def mapLengths(list_of_words):
+________________________________
+$LEFTPANEL_HINTS$
+Create a new ^list^ to store the lengths, then use a ^for^ loop in combination with ^len^() to populate it.
+________________________________
+$RIGHTPANEL_QUESTIONS$
+What do you think is an appropriate way to handle the length of a ^str^ with a non-alphabetic character, as in "Jean-Pierre"?
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$ALLPANES_SUBMITCASES$
+print ""
+print "INPUT     | ['', ' ', '']"
+print "OUTPUT    |", mapLengths(['', ' ', ''])
+print "EXPECTED  | [0, 1, 0]"
+if mapLengths(['', ' ', '']) == [0, 1, 0]:
+	print "PASSED!"
+else: 
+	print "FAILED"
+
+print ""
+print "INPUT     | ['Mario', '', 'Marco']"
+print "OUTPUT    |", mapLengths(['Mario', '', 'Marco'])
+print "EXPECTED  | [5, 0, 5]"
+if mapLengths(['Mario', '', 'Marco']) == [5, 0, 5]:
+	print "PASSED!"
+else: 
+	print "FAILED"
+
+print ""
+print "INPUT     | ['Andres', 'Luis', 'Leo']"
+print "OUTPUT    |", mapLengths(['Andres', 'Luis', 'Leo'])
+print "EXPECTED  | [6, 4, 3]"
+if mapLengths(['Andres', 'Luis', 'Leo']) == [6, 4, 3]:
+	print "PASSED!"
+else: 
+	print "FAILED"
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+$RIGHTPANEL_SOLUTION$
+def mapLengths(list_of_words):
+    final_list = []
+    for word in list_of_words:
+        final_list.append(len(word))
+    return final_list
+________________________________
+FIN

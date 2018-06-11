@@ -1,0 +1,43 @@
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+
+To access an element in a list, we use a concept called indexes. Each element in a Python list is assigned an index. These indices start at 0, and increment with each subsequent element.
+
+In the list ['2', '4', '3', '1', '5'], the element at index 4 is '5'.
+
+To grab the element at a particular index, we use square brackets at the end of the list, and include the index we'd like to read (see examples in the 
+editor). We can also grab multiple elements from a list at once, and determine its length using the built-in Python function len().
+
+Write a single-line statement that prints the last element of a givenlist. The list may be of any length. If the list is empty, return the string 'N/A'. Test your code on the following cases:
+[]
+['1']
+[1,4,6,1,5,6]
+
+For example, if you are testing on the list [1,4,5], your code should output should output exactly the following:
+&#9656; The last element is: 5
+________________________________
+$LEFTPANEL_EDITOR$
+exampleList = ['2', '4', '3', '1', '5']
+print exampleList[4]
+print ['a', 'b', 'c'][1]
+print exampleList[2:4]
+print exampleList[:4]
+print exampleList[2:]
+print len(exampleList)
+print len(exampleList[2:])
+________________________________
+$RIGHTPANEL_TIME$
+20-25 minutes
+________________________________
+$RIGHTPANEL_QUESTIONS$
+There's another built-in function in Python called .pop(). Check out how it's used. Can you solve this square using .pop?
+How would you access an element of a list that's enclosed in a list? In other words, how would you print "Ladders" from the list below?<br>list1 = [1, 2, ['a', 'b'], ['Pythons', 'and', 'Ladders']]
+If you initialize an element, then append another element to it, does the length of the list change?
+There is another way to add data to a list, called extend. What is the difference in output between the following two statements?<br>list1 = [1,2,3]<br>print list1.append([7,6])<br>list.extend([7,6])
+________________________________
+$RIGHTPANEL_SPONSORED$
+Sponsored1 $LINK$ www.stringsinpython.com
+Sponsored2 $LINK$ www.newlinecharacters.com
+Sponsored3 $LINK$ www.printstatements.com
+________________________________
+FIN

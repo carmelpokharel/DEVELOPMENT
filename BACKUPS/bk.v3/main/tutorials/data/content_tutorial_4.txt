@@ -1,0 +1,35 @@
+________________________________
+$LEFTPANEL_MAIN$
+Syntax, Pt. II
+________________________________
+$LEFTPANEL_MAINAREA$
+Let's investigate more issues which may cause your output to refuse displaying anything.
+________________________________
+$LEFTPANEL_INSTRUCTIONSAREA$
+A sentence without spelling mistakes may also be syntactically incorrect. For example: "James want water."
+
+In fact, Python takes syntax errors so seriously that even <u>one</u> mistake somewhere in your editor will make Python refuse to run.
+________________________________
+$LEFTPANEL_TOOLBARAREA$
+________________________________
+$LEFTPANEL_EDITORAREA$
+________________________________
+$LEFTPANEL_EDITOR$
+print 'Hello World'!
+print "Hello World!'
+print "Hello World!" 'Hello World!'
+________________________________
+$LEFTPANEL_OUTPUTAREA$
+________________________________
+$RIGHTPANEL_TIME$
+2-3 minutes
+________________________________
+$RIGHTPANEL_QUESTIONS$
+Think about why the last print statement doesn't work. How <em>would</em> you print two strings on the same line?
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_HINTS$
+Check out the first page of this tutorial!
+________________________________
+FIN

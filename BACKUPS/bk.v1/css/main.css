@@ -1,0 +1,125 @@
+
+body {
+    margin: 0;
+    background-color: #F5FAFA;
+    text-align: center;
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    height: 100%;
+    width: 11%;
+    position: fixed;
+    overflow: auto;
+    background-color: #333;
+}
+
+
+li a {
+    display: block;
+    font-family: sans-serif;
+    font-size: 17px;
+    font-variant: small-caps;
+    color: white;
+    text-align: left;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #B13D3B;
+
+}
+
+.square1 {
+    background-color: #B13D3B;
+    color: #F1ECBC;
+    display: inline-block;
+    width: 3%;
+    padding-bottom: 0.4%; /* = width for a 1:1 aspect ratio */
+    margin:0.05%;
+    vertical-align: top;
+    font-family: "Book Antiqua";
+    font-weight: bold;
+    font-size: 20;
+    line-height: 3;
+    cursor: hand;
+}
+.square1:hover {
+  background-color: #6E6E6E;
+}
+.square2 {
+    background-color: #BAD6A5;
+    color: #6E6E6E;
+    display: inline-block;
+    width: 3%;
+    padding-bottom: 0.4%; /* = width for a 1:1 aspect ratio */
+    margin:0.05%;
+    vertical-align: top;
+    font-family: "Book Antiqua";
+    font-weight: bold;
+    font-size: 20;
+    line-height: 3;
+    cursor: hand;
+}
+.square2:hover {
+  background-color: #F5FAFA;
+}
+.square3 {
+    background-color: #ACD1E9;
+    color: #6E6E6E;
+    display: inline-block;
+    width: 3%;
+    padding-bottom: 0.4%; /* = width for a 1:1 aspect ratio */
+    margin:0.05%;
+    vertical-align: top;
+    font-family: "Book Antiqua";
+    font-weight: bold;
+    font-size: 20;
+    line-height: 3;
+    cursor: hand;
+}
+.square3:hover {
+  background-color: #F5FAFA;
+}
+.square4 {
+    background-color: #9DC6C7;
+    color: #F1ECBC;
+    display: inline-block;
+    width: 3%;
+    padding-bottom: 0.4%; /* = width for a 1:1 aspect ratio */
+    margin:0.05%;
+    vertical-align: top;
+    font-family: "Book Antiqua";
+    font-weight: bold;
+    font-size: 20;
+    line-height: 3;
+    cursor: hand;
+}
+.square4:hover {
+  background-color: #6E6E6E;
+}
+.square5 {
+    background-color: #F1ECBC;
+    color: #6E6E6E;
+    display: inline-block;
+    width: 3%;
+    padding-bottom: 0.4%; /* = width for a 1:1 aspect ratio */
+    margin:0.05%;
+    vertical-align: top;
+    font-family: "Book Antiqua";
+    font-weight: bold;
+    font-size: 20;
+    line-height: 3;
+    cursor: hand;
+}
+.square5:hover {
+  background-color: #F5FAFA;
+}

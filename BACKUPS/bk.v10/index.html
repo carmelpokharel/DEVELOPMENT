@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html> 
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- **************** -->
+    <!--      SCRIPTS     -->
+    <!-- **************** -->
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap-tooltip-and-popover.css">
+    <link rel="stylesheet" type="text/css" href="./css/buttons.css">
+    <link rel="stylesheet" type="text/css" href="./css/editors.css">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <link rel="stylesheet" type="text/css" href="./css/media-queries.css">
+    <link rel="stylesheet" type="text/css" href="./css/modal.css">
+    <link rel="stylesheet" type="text/css" href="./css/variables.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+
+    <!-- JAVASCRIPT -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" ></script> 
+    <script type="text/javascript" src="http://www.skulpt.org/static/skulpt.min.js"></script>
+    <script type="text/javascript" src="http://www.skulpt.org/static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="./js/bootstrap-tooltip-and-popover.min.js"></script>
+    <script type="text/javascript" src="./js/codemirror.js"></script>
+    <script type="text/javascript" src="./js/python.js"></script>
+    <!-- JAVASCRIPT: POPOVERS -->
+    <script type="text/javascript">
+      $(document).ready(function() {
+        // Placement can be top, right, left, bottom
+        $('.bootstrap-popover').popover({placement: 'top', delay: {show: 10, hide: 10}})
+      })
+    </script>
+    <!-- JAVASCRIPT: GOOGLE ANALYTICS -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-85355151-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <!-- JAVASCRIPT: TWITTER -->
+    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <!-- JAVASCRIPT: SKULPT + CODEMIRROR -->
+    <script type="text/javascript">
+        var editor;
+        function outf(text) {
+            var mypre = document.getElementById("dynamicframe");
+            mypre.innerHTML = mypre.innerHTML + text;
+        }
+        function builtinRead(x) {
+            if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
+                throw "File not found: '" + x + "'";
+            return Sk.builtinFiles["files"][x];
+        }
+        function runit() {
+                var prog = editor.getDoc().getValue();
+                var mypre = document.getElementById("dynamicframe");
+                mypre.innerHTML = '';
+                Sk.pre = "dynamicframe";
+                Sk.configure({
+                    output: outf,
+                    read: builtinRead
+                });
+                (Sk.TurtleGraphics || (Sk.TurtleGraphics = {})).target = 'canvas';
+                var myPromise = Sk.misceval.asyncToPromise(function() {
+                    return Sk.importMainWithBody("<stdin>", false, prog, true);
+                });
+                myPromise.then(function(mod) {
+                        console.log('success');
+                    },
+                    function(err) {
+                        console.log(err.toString());
+                    });
+            }
+            //<![CDATA[
+        window.onload = function() {
+                editor = CodeMirror.fromTextArea(document.getElementById('textbox'), {
+                    mode: {
+                        name: "python",
+                        version: 2,
+                        singleLineStringErrors: false
+                    },
+                    lineNumbers: true,
+                    indentUnit: 4
+                });
+            } //]]>
+      // --------------------------------
+      // Clear feature for the output div
+      // --------------------------------
+      function clearBox() {
+          document.getElementById('dynamicframe').innerHTML = "";
+      }
+      // --------------------------------
+      // Save as feature for the textarea
+      // --------------------------------
+      function saveTextAsFile() {
+          var textToWrite = document.getElementById('textbox').value;
+          var textFileAsBlob = new Blob([textToWrite], {
+              type: 'text/plain'
+          });
+          var fileNameToSaveAs = "progress_pythonsandladders.txt";
+
+          var downloadLink = document.createElement("a");
+          downloadLink.download = fileNameToSaveAs;
+          downloadLink.innerHTML = "Download File";
+          if (window.webkitURL != null) {
+              // Chrome allows the link to be clicked
+              // without actually adding it to the DOM.
+              downloadLink.href = window.webkitURL.createObjectURL(textFileAsBlob);
+          } else {
+              // Firefox requires the link to be added to the DOM
+              // before it can be clicked.
+              downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
+              downloadLink.onclick = destroyClickedElement;
+              downloadLink.style.display = "none";
+              document.body.appendChild(downloadLink);
+          }
+          downloadLink.click();
+      }
+      var button = document.getElementById('save');
+      button.addEventListener('click', saveTextAsFile);
+      function destroyClickedElement(event) {
+          // remove the link from the DOM
+          document.body.removeChild(event.target);
+      }
+      function sendEmail() {
+        window.location = "mailto:pythonsandladders@gmail.com?subject=[FEEDBACK]&Body=Square number: %0d%0dIssue or Suggestion: %0d%0dExpected behaviour: ";
+      }
+      function reportBug() {
+        window.location = "mailto:pythonsandladders@gmail.com?subject=[REPORT BUG]&Body=Date encountered: %0d%0dBug description: %0d%0dExpected behaviour: ";
+      }
+      // --------------------------------
+    </script>
+  </head> 
+
+  <body>
+    <div id="wrapper">
+
+      <header>
+          <!-- SLIDE OUT NAV FOR MOBILE -->
+          <div class="slideoutnav">
+            <input type="checkbox" id="menuToggle">
+            <label for="menuToggle" class="menuicon">&equiv;</label>
+            <nav class="menu">
+              <div class="sidenavlogo">
+                <a href="./index.html">
+                  <img src="./images/headingtitle.png" alt="Pythons and Ladders" style="width: 75%; height: 18%;">
+                </a>
+              </div>
+                <p><a href="./index.html">home</a></p>
+                <p><a href="./overview.html">overview</a></p>
+                <p><a href="./main/updates/pages/updates_0.html">updates</a></p>
+                <p><a href="./faq.html">questions</a></p>
+                <p><a href="mailto:pythonsandladders@gmail.com?subject=Attn: [ADMIN] Pythons and Ladders">contact us</a></p>
+            </nav>
+          </div><!-- slideoutnav -->
+          <a href="./index.html" onclick="">pythons and ladders</a>
+      </header>
+
+      <div class="allpanes_new">
+        <!-- SIDENAV -->
+        <div class="sidenavpane">
+          <div class="sidenavlogo">
+            <a href="index.html">
+              <img src="./images/headingtitle.png" alt="Pythons and Ladders" style="width: 75%; height: 18%;" onmouseover="this.src='./images/headingtitle_snake.png'" onmouseout="this.src='./images/headingtitle.png'">
+            </a>
+          </div><!-- sidenavlogo -->
+            <br>
+            <br>
+            <br>
+            <br>
+            <a href="index.html">home</a>
+            <a href="overview.html">overview</a>
+            <a href="./main/updates/pages/updates_0.html">updates</a>
+            <a href="faq.html">questions</a>
+            <a href="mailto:pythonsandladders@gmail.com?subject=Attn: [ADMIN] Pythons and Ladders">contact us</a>
+        </div><!-- sidenavpane -->
+
+        <!-- BANNER -->
+        <div class="bannerpane-home">
+          <div class="banneritems-home">
+            <h2 class="bannertitle-home">w e l c o m e</h2>
+            <p class="bannertext-home">Pythons and Ladders is a free, interactive, and self-paced resource for beginners to programming.</p>
+            <!-- Boxes: Take the tutorial and Learn more -->
+            <a href="./main/tutorials/pages/tutorial_1.html">
+              <button class="red" onclick="">Take the tutorial &rang;</button>
+            </a>
+            <a href="overview.html">
+              <button class="clear" onclick="">Learn more</button>
+            </a>
+          </div><!-- banneritems-home -->
+        </div><!-- bannerpane-home -->
+
+        <!-- LEFT PANE -->
+        <div class="leftpane-home">
+          <div class="gameboard">
+            <div>
+              <a href="./main/puzzles/pages/puzzle_1.html" alt="1"><div class="box"><div class="box-grid-home-start" onclick="">GO</div></div></a>
+              <a href="./main/puzzles/pages/puzzle_2.html" alt="2"><div class="box"><div class="box-grid-home" onclick="">2</div></div></a>
+              <a href="./main/puzzles/pages/puzzle_3.html" alt="3"><div class="box"><div class="box-grid-home" onclick="">3</div></div></a>
+              <a href="./main/puzzles/pages/puzzle_4.html" alt="4"><div class="box"><div class="box-grid-home" onclick="">4</div></div></a>
+              <a href="./main/puzzles/pages/puzzle_5.html" alt="5"><div class="box"><div class="box-grid-home" onclick="">5</div></div></a>
+              <a href="./main/puzzles/pages/puzzle_6.html" alt="6"><div class="box"><div class="box-grid-home" onclick="">6</div></div></a>
+              <a href="./main/puzzles/pages/puzzle_7.html" alt="7"><div class="box"><div class="box-grid-home" onclick="">7</div></div></a>
+              <a href="./main/puzzles/pages/puzzle_8.html" alt="8"><div class="box"><div class="box-grid-home" onclick="">8</div></div></a>
+              <a href="./main/puzzles/pages/puzzle_9.html" alt="9"><div class="box"><div class="box-grid-home" onclick="">9</div></div></a>
+              <a href="./main/puzzles/pages/puzzle_10.html" alt="10"><div class="box"><div class="box-grid-home" onclick="">10</div></div></a>
+            </div><!-- anonymous div -->
+            <div>
+              <a href="./main/puzzles/pages/puzzle_20.html" alt="20"><div class="box"><div class="box-grid-home" onclick="">20</div></div></a>
+              <a href="./main/puzzles/pages/puzzle_19.html" alt="19"><div class="box"><div class="box-grid-home" onclick="">19</div></div></a>
+              <a href="./main/puzzles/pages/puzzle_18.html" alt="18"><div class="box"><div class="box-grid-home" onclick="">18</div></div></a>
+              <a href="./main/puzzles/pages/puzzle_17.html" alt="17"><div class="box"><div class="box-grid-home" onclick="">17</div></div></a>
+              <a href="./main/puzzles/pages/puzzle_16.html" alt="16"><div class="box"><div class="box-grid-home" onclick="">16</div></div></a>
+              <a href="./main/puzzles/pages/puzzle_15.html" alt="15"><div class="box"><div class="box-grid-home" onclick="">15</div></div></a>
+              <a href="./main/puzzles/pages/puzzle_14.html" alt="14"><div class="box"><div class="box-grid-home" onclick="">14</div></div></a>
+              <a href="./main/puzzles/pages/puzzle_13.html" alt="13"><div class="box"><div class="box-grid-home" onclick="">13</div></div></a>
+              <a href="./main/puzzles/pages/puzzle_12.html" alt="12"><div class="box"><div class="box-grid-home" onclick="">12</div></div></a>
+              <a href="./main/puzzles/pages/puzzle_11.html" alt="11"><div class="box"><div class="box-grid-home" onclick="">11</div></div></a>
+            </div><!-- anonymous div -->
+            <div>
+              <a href="./main/puzzles/pages/puzzle_21.html" alt="21"><div class="box"><div class="box-grid-home" onclick="">21</div></div></a>
+              <a href="./main/puzzles/pages/puzzle_22.html" alt="22"><div class="box"><div class="box-grid-home" onclick="">22</div></div></a>
+              <a href="./main/puzzles/pages/puzzle_23.html" alt="23"><div class="box"><div class="box-grid-home" onclick="">23</div></div></a>
+              <a href="./main/puzzles/pages/puzzle_24.html" alt="24"><div class="box"><div class="box-grid-home" onclick="">24</div></div></a>
+              <a href="./main/puzzles/pages/puzzle_25.html" alt="25"><div class="box"><div class="box-grid-home" onclick="">25</div></div></a>
+              <a href="./main/puzzles/pages/puzzle_26.html" alt="26"><div class="box"><div class="box-grid-home" onclick="">26</div></div></a>
+              <a href="./main/puzzles/pages/puzzle_27.html" alt="27"><div class="box"><div class="box-grid-home" onclick="">27</div></div></a>
+              <a href="./main/puzzles/pages/puzzle_28.html" alt="28"><div class="box"><div class="box-grid-home" onclick="">28</div></div></a>
+              <a href="./main/puzzles/pages/puzzle_29.html" alt="29"><div class="box"><div class="box-grid-home" onclick="">29</div></div></a>
+              <a href="./main/puzzles/pages/puzzle_30.html" alt="30"><div class="box"><div class="box-grid-home" onclick="">30</div></div></a>
+            </div><!-- anonymous div -->
+            <div>
+              <a href="./main/puzzles/pages/puzzle_40.html" alt="40"><div class="box"><div class="box-grid-home" onclick="">40</div></div></a>
+              <a href="./main/puzzles/pages/puzzle_39.html" alt="39"><div class="box"><div class="box-grid-home" onclick="">39</div></div></a>
+              <a href="./main/puzzles/pages/puzzle_38.html" alt="38"><div class="box"><div class="box-grid-home" onclick="">38</div></div></a>
+              <a href="./main/puzzles/pages/puzzle_37.html" alt="37"><div class="box"><div class="box-grid-home" onclick="">37</div></div></a>
+              <a href="./main/puzzles/pages/puzzle_36.html" alt="36"><div class="box"><div class="box-grid-home" onclick="">36</div></div></a>
+              <a href="./main/puzzles/pages/puzzle_35.html" alt="35"><div class="box"><div class="box-grid-home" onclick="">35</div></div></a>
+              <a href="./main/puzzles/pages/puzzle_34.html" alt="34"><div class="box"><div class="box-grid-home" onclick="">34</div></div></a>
+              <a href="./main/puzzles/pages/puzzle_33.html" alt="33"><div class="box"><div class="box-grid-home" onclick="">33</div></div></a>
+              <a href="./main/puzzles/pages/puzzle_32.html" alt="32"><div class="box"><div class="box-grid-home" onclick="">32</div></div></a>
+              <a href="./main/puzzles/pages/puzzle_31.html" alt="31"><div class="box"><div class="box-grid-home" onclick="">31</div></div></a>
+            </div><!-- anonymous div -->
+            <div>
+              <a href="./main/puzzles/pages/puzzle_41.html" alt="41"><div class="box"><div class="box-grid-home" onclick="">41</div></div></a>
+              <a href="./main/puzzles/pages/puzzle_42.html" alt="42"><div class="box"><div class="box-grid-home" onclick="">42</div></div></a>
+              <a href="./main/puzzles/pages/puzzle_43.html" alt="43"><div class="box"><div class="box-grid-home" onclick="">43</div></div></a>
+              <a href="./main/puzzles/pages/puzzle_44.html" alt="44"><div class="box"><div class="box-grid-home" onclick="">44</div></div></a>
+              <a href="./main/puzzles/pages/puzzle_45.html" alt="45"><div class="box"><div class="box-grid-home" onclick="">45</div></div></a>
+              <a href="./main/puzzles/pages/puzzle_46.html" alt="46"><div class="box"><div class="box-grid-home" onclick="">46</div></div></a>
+              <a href="./main/puzzles/pages/puzzle_47.html" alt="47"><div class="box"><div class="box-grid-home" onclick="">47</div></div></a>
+              <a href="./main/puzzles/pages/puzzle_48.html" alt="48"><div class="box"><div class="box-grid-home" onclick="">48</div></div></a>
+              <a href="./main/puzzles/pages/puzzle_49.html" alt="49"><div class="box"><div class="box-grid-home" onclick="">49</div></div></a>
+              <a href="./main/puzzles/pages/puzzle_50.html" alt="50"><div class="box"><div class="box-grid-home" onclick="">50</div></div></a>
+            </div><!-- anonymous div -->
+            <div>
+              <a href="./main/puzzles/pages/puzzle_60.html" alt="60"><div class="box"><div class="box-grid-home" onclick="">60</div></div></a>
+              <a href="./main/puzzles/pages/puzzle_59.html" alt="59"><div class="box"><div class="box-grid-home" onclick="">59</div></div></a>
+              <a href="./main/puzzles/pages/puzzle_58.html" alt="58"><div class="box"><div class="box-grid-home" onclick="">58</div></div></a>
+              <a href="./main/puzzles/pages/puzzle_57.html" alt="57"><div class="box"><div class="box-grid-home" onclick="">57</div></div></a>
+              <a href="./main/puzzles/pages/puzzle_56.html" alt="56"><div class="box"><div class="box-grid-home" onclick="">56</div></div></a>
+              <a href="./main/puzzles/pages/puzzle_55.html" alt="55"><div class="box"><div class="box-grid-home" onclick="">55</div></div></a>
+              <a href="./main/puzzles/pages/puzzle_54.html" alt="54"><div class="box"><div class="box-grid-home" onclick="">54</div></div></a>
+              <a href="./main/puzzles/pages/puzzle_53.html" alt="53"><div class="box"><div class="box-grid-home" onclick="">53</div></div></a>
+              <a href="./main/puzzles/pages/puzzle_52.html" alt="52"><div class="box"><div class="box-grid-home" onclick="">52</div></div></a>
+              <a href="./main/puzzles/pages/puzzle_51.html" alt="51"><div class="box"><div class="box-grid-home" onclick="">51</div></div></a>
+            </div><!-- anonymous div -->
+            <div>
+              <a href="./main/puzzles/pages/puzzle_61.html" alt="61"><div class="box"><div class="box-grid-home" onclick="">61</div></div></a>
+              <a href="./main/puzzles/pages/puzzle_62.html" alt="62"><div class="box"><div class="box-grid-home" onclick="">62</div></div></a>
+              <a href="./main/puzzles/pages/puzzle_63.html" alt="63"><div class="box"><div class="box-grid-home" onclick="">63</div></div></a>
+              <a href="./main/puzzles/pages/puzzle_64.html" alt="64"><div class="box"><div class="box-grid-home" onclick="">64</div></div></a>
+              <a href="./main/puzzles/pages/puzzle_65.html" alt="65"><div class="box"><div class="box-grid-home" onclick="">65</div></div></a>
+              <a href="./main/puzzles/pages/puzzle_66.html" alt="66"><div class="box"><div class="box-grid-home" onclick="">66</div></div></a>
+              <a href="./main/puzzles/pages/puzzle_67.html" alt="67"><div class="box"><div class="box-grid-home" onclick="">67</div></div></a>
+              <a href="./main/puzzles/pages/puzzle_68.html" alt="68"><div class="box"><div class="box-grid-home" onclick="">68</div></div></a>
+              <a href="./main/puzzles/pages/puzzle_69.html" alt="69"><div class="box"><div class="box-grid-home" onclick="">69</div></div></a>
+              <a href="./main/puzzles/pages/puzzle_70.html" alt="70"><div class="box"><div class="box-grid-home" onclick="">70</div></div></a>
+            </div><!-- anonymous div -->
+            <div>
+              <a href="./main/puzzles/pages/puzzle_80.html" alt="80"><div class="box"><div class="box-grid-home" onclick="">80</div></div></a>
+              <a href="./main/puzzles/pages/puzzle_79.html" alt="79"><div class="box"><div class="box-grid-home" onclick="">79</div></div></a>
+              <a href="./main/puzzles/pages/puzzle_78.html" alt="78"><div class="box"><div class="box-grid-home" onclick="">78</div></div></a>
+              <a href="./main/puzzles/pages/puzzle_77.html" alt="77"><div class="box"><div class="box-grid-home" onclick="">77</div></div></a>
+              <a href="./main/puzzles/pages/puzzle_76.html" alt="76"><div class="box"><div class="box-grid-home" onclick="">76</div></div></a>
+              <a href="./main/puzzles/pages/puzzle_75.html" alt="75"><div class="box"><div class="box-grid-home" onclick="">75</div></div></a>
+              <a href="./main/puzzles/pages/puzzle_74.html" alt="74"><div class="box"><div class="box-grid-home" onclick="">74</div></div></a>
+              <a href="./main/puzzles/pages/puzzle_73.html" alt="73"><div class="box"><div class="box-grid-home" onclick="">73</div></div></a>
+              <a href="./main/puzzles/pages/puzzle_72.html" alt="72"><div class="box"><div class="box-grid-home" onclick="">72</div></div></a>
+              <a href="./main/puzzles/pages/puzzle_71.html" alt="71"><div class="box"><div class="box-grid-home" onclick="">71</div></div></a>
+            </div><!-- anonymous div -->
+            <div>
+              <a href="pagenotfound.html" alt="81"><div class="box"><div class="box-grid-home" onclick="">81</div></div></a>
+              <a href="pagenotfound.html" alt="82"><div class="box"><div class="box-grid-home" onclick="">82</div></div></a>
+              <a href="pagenotfound.html" alt="83"><div class="box"><div class="box-grid-home" onclick="">83</div></div></a>
+              <a href="pagenotfound.html" alt="84"><div class="box"><div class="box-grid-home" onclick="">84</div></div></a>
+              <a href="pagenotfound.html" alt="85"><div class="box"><div class="box-grid-home" onclick="">85</div></div></a>
+              <a href="pagenotfound.html" alt="86"><div class="box"><div class="box-grid-home" onclick="">86</div></div></a>
+              <a href="pagenotfound.html" alt="87"><div class="box"><div class="box-grid-home" onclick="">87</div></div></a>
+              <a href="pagenotfound.html" alt="88"><div class="box"><div class="box-grid-home" onclick="">88</div></div></a>
+              <a href="pagenotfound.html" alt="89"><div class="box"><div class="box-grid-home" onclick="">89</div></div></a>
+              <a href="pagenotfound.html" alt="90"><div class="box"><div class="box-grid-home" onclick="">90</div></div></a>
+            </div><!-- anonymous div -->
+            <div>
+              <a href="pagenotfound.html" alt="100"><div class="box"><div class="box-grid-home" onclick="">100</div></div></a>
+              <a href="pagenotfound.html" alt="99"><div class="box"><div class="box-grid-home" onclick="">99</div></div></a>
+              <a href="pagenotfound.html" alt="98"><div class="box"><div class="box-grid-home" onclick="">98</div></div></a>
+              <a href="pagenotfound.html" alt="97"><div class="box"><div class="box-grid-home" onclick="">97</div></div></a>
+              <a href="pagenotfound.html" alt="96"><div class="box"><div class="box-grid-home" onclick="">96</div></div></a>
+              <a href="pagenotfound.html" alt="95"><div class="box"><div class="box-grid-home" onclick="">95</div></div></a>
+              <a href="pagenotfound.html" alt="94"><div class="box"><div class="box-grid-home" onclick="">94</div></div></a>
+              <a href="pagenotfound.html" alt="93"><div class="box"><div class="box-grid-home" onclick="">93</div></div></a>
+              <a href="pagenotfound.html" alt="92"><div class="box"><div class="box-grid-home" onclick="">92</div></div></a>
+              <a href="pagenotfound.html" alt="91"><div class="box"><div class="box-grid-home" onclick="">91</div></div></a>
+            </div><!-- anonymous div -->
+          </div><!-- gameboard -->
+          <div class="minigameboard-home">
+            <div>
+          <label class="minigameboard-home-row" for="_1">Puzzles 1 to 20</label>
+          <input id="_1" type="checkbox">
+          <div class="minigameboard-home-box-contain">
+          <a href="./main/puzzles/pages/puzzle_1.html"><div class="minigameboard-home-box-start" onclick="">GO</div></a>
+          <a href="./main/puzzles/pages/puzzle_2.html"><div class="minigameboard-home-box" onclick="">2</div></a>
+          <a href="./main/puzzles/pages/puzzle_3.html"><div class="minigameboard-home-box" onclick="">3</div></a>
+          <a href="./main/puzzles/pages/puzzle_4.html"><div class="minigameboard-home-box" onclick="">4</div></a>
+          <a href="./main/puzzles/pages/puzzle_5.html"><div class="minigameboard-home-box" onclick="">5</div></a>
+          <a href="./main/puzzles/pages/puzzle_6.html"><div class="minigameboard-home-box" onclick="">6</div></a>
+          <a href="./main/puzzles/pages/puzzle_7.html"><div class="minigameboard-home-box" onclick="">7</div></a>
+          <a href="./main/puzzles/pages/puzzle_8.html"><div class="minigameboard-home-box" onclick="">8</div></a>
+          <a href="./main/puzzles/pages/puzzle_9.html"><div class="minigameboard-home-box" onclick="">9</div></a>
+          <a href="./main/puzzles/pages/puzzle_10.html"><div class="minigameboard-home-box" onclick="">10</div></a>
+          <a href="./main/puzzles/pages/puzzle_11.html"><div class="minigameboard-home-box" onclick="">11</div></a>
+          <a href="./main/puzzles/pages/puzzle_12.html"><div class="minigameboard-home-box" onclick="">12</div></a>
+          <a href="./main/puzzles/pages/puzzle_13.html"><div class="minigameboard-home-box" onclick="">13</div></a>
+          <a href="./main/puzzles/pages/puzzle_14.html"><div class="minigameboard-home-box" onclick="">14</div></a>
+          <a href="./main/puzzles/pages/puzzle_15.html"><div class="minigameboard-home-box" onclick="">15</div></a>
+          <a href="./main/puzzles/pages/puzzle_16.html"><div class="minigameboard-home-box" onclick="">16</div></a>
+          <a href="./main/puzzles/pages/puzzle_17.html"><div class="minigameboard-home-box" onclick="">17</div></a>
+          <a href="./main/puzzles/pages/puzzle_18.html"><div class="minigameboard-home-box" onclick="">18</div></a>
+          <a href="./main/puzzles/pages/puzzle_19.html"><div class="minigameboard-home-box" onclick="">19</div></a>
+          <a href="./main/puzzles/pages/puzzle_20.html"><div class="minigameboard-home-box" onclick="">20</div></a>
+          </div><!-- minigameboard-home-box-contain -->
+          <label class="minigameboard-home-row" for="_2">Puzzles 21 to 40</label>
+          <input id="_2" type="checkbox">
+          <div class="minigameboard-home-box-contain">
+          <a href="./main/puzzles/pages/puzzle_21.html"><div class="minigameboard-home-box" onclick="">21</div></a>
+          <a href="./main/puzzles/pages/puzzle_22.html"><div class="minigameboard-home-box" onclick="">22</div></a>
+          <a href="./main/puzzles/pages/puzzle_23.html"><div class="minigameboard-home-box" onclick="">23</div></a>
+          <a href="./main/puzzles/pages/puzzle_24.html"><div class="minigameboard-home-box" onclick="">24</div></a>
+          <a href="./main/puzzles/pages/puzzle_25.html"><div class="minigameboard-home-box" onclick="">25</div></a>
+          <a href="./main/puzzles/pages/puzzle_26.html"><div class="minigameboard-home-box" onclick="">26</div></a>
+          <a href="./main/puzzles/pages/puzzle_27.html"><div class="minigameboard-home-box" onclick="">27</div></a>
+          <a href="./main/puzzles/pages/puzzle_28.html"><div class="minigameboard-home-box" onclick="">28</div></a>
+          <a href="./main/puzzles/pages/puzzle_29.html"><div class="minigameboard-home-box" onclick="">29</div></a>
+          <a href="./main/puzzles/pages/puzzle_30.html"><div class="minigameboard-home-box" onclick="">30</div></a>
+          <a href="./main/puzzles/pages/puzzle_31.html"><div class="minigameboard-home-box" onclick="">31</div></a>
+          <a href="./main/puzzles/pages/puzzle_32.html"><div class="minigameboard-home-box" onclick="">32</div></a>
+          <a href="./main/puzzles/pages/puzzle_33.html"><div class="minigameboard-home-box" onclick="">33</div></a>
+          <a href="./main/puzzles/pages/puzzle_34.html"><div class="minigameboard-home-box" onclick="">34</div></a>
+          <a href="./main/puzzles/pages/puzzle_35.html"><div class="minigameboard-home-box" onclick="">35</div></a>
+          <a href="./main/puzzles/pages/puzzle_36.html"><div class="minigameboard-home-box" onclick="">36</div></a>
+          <a href="./main/puzzles/pages/puzzle_37.html"><div class="minigameboard-home-box" onclick="">37</div></a>
+          <a href="./main/puzzles/pages/puzzle_38.html"><div class="minigameboard-home-box" onclick="">38</div></a>
+          <a href="./main/puzzles/pages/puzzle_39.html"><div class="minigameboard-home-box" onclick="">39</div></a>
+          <a href="./main/puzzles/pages/puzzle_40.html"><div class="minigameboard-home-box" onclick="">40</div></a>
+          </div><!-- minigameboard-home-box-contain -->
+          <label class="minigameboard-home-row" for="_3">Puzzles 41 to 60</label>
+          <input id="_3" type="checkbox">
+          <div class="minigameboard-home-box-contain">
+          <a href="./main/puzzles/pages/puzzle_41.html"><div class="minigameboard-home-box" onclick="">41</div></a>
+          <a href="./main/puzzles/pages/puzzle_42.html"><div class="minigameboard-home-box" onclick="">42</div></a>
+          <a href="./main/puzzles/pages/puzzle_43.html"><div class="minigameboard-home-box" onclick="">43</div></a>
+          <a href="./main/puzzles/pages/puzzle_44.html"><div class="minigameboard-home-box" onclick="">44</div></a>
+          <a href="./main/puzzles/pages/puzzle_45.html"><div class="minigameboard-home-box" onclick="">45</div></a>
+          <a href="./main/puzzles/pages/puzzle_46.html"><div class="minigameboard-home-box" onclick="">46</div></a>
+          <a href="./main/puzzles/pages/puzzle_47.html"><div class="minigameboard-home-box" onclick="">47</div></a>
+          <a href="./main/puzzles/pages/puzzle_48.html"><div class="minigameboard-home-box" onclick="">48</div></a>
+          <a href="./main/puzzles/pages/puzzle_49.html"><div class="minigameboard-home-box" onclick="">49</div></a>
+          <a href="./main/puzzles/pages/puzzle_50.html"><div class="minigameboard-home-box" onclick="">50</div></a>
+          <a href="./main/puzzles/pages/puzzle_51.html"><div class="minigameboard-home-box" onclick="">51</div></a>
+          <a href="./main/puzzles/pages/puzzle_52.html"><div class="minigameboard-home-box" onclick="">52</div></a>
+          <a href="./main/puzzles/pages/puzzle_53.html"><div class="minigameboard-home-box" onclick="">53</div></a>
+          <a href="./main/puzzles/pages/puzzle_54.html"><div class="minigameboard-home-box" onclick="">54</div></a>
+          <a href="./main/puzzles/pages/puzzle_55.html"><div class="minigameboard-home-box" onclick="">55</div></a>
+          <a href="./main/puzzles/pages/puzzle_56.html"><div class="minigameboard-home-box" onclick="">56</div></a>
+          <a href="./main/puzzles/pages/puzzle_57.html"><div class="minigameboard-home-box" onclick="">57</div></a>
+          <a href="./main/puzzles/pages/puzzle_58.html"><div class="minigameboard-home-box" onclick="">58</div></a>
+          <a href="./main/puzzles/pages/puzzle_59.html"><div class="minigameboard-home-box" onclick="">59</div></a>
+          <a href="./main/puzzles/pages/puzzle_60.html"><div class="minigameboard-home-box" onclick="">60</div></a>
+          </div><!-- minigameboard-home-box-contain -->
+          <label class="minigameboard-home-row" for="_4">Puzzles 61 to 80</label>
+          <input id="_4" type="checkbox">
+          <div class="minigameboard-home-box-contain">
+          <a href="./main/puzzles/pages/puzzle_61.html"><div class="minigameboard-home-box" onclick="">61</div></a>
+          <a href="./main/puzzles/pages/puzzle_62.html"><div class="minigameboard-home-box" onclick="">62</div></a>
+          <a href="./main/puzzles/pages/puzzle_63.html"><div class="minigameboard-home-box" onclick="">63</div></a>
+          <a href="./main/puzzles/pages/puzzle_64.html"><div class="minigameboard-home-box" onclick="">64</div></a>
+          <a href="./main/puzzles/pages/puzzle_65.html"><div class="minigameboard-home-box" onclick="">65</div></a>
+          <a href="./main/puzzles/pages/puzzle_66.html"><div class="minigameboard-home-box" onclick="">66</div></a>
+          <a href="./main/puzzles/pages/puzzle_67.html"><div class="minigameboard-home-box" onclick="">67</div></a>
+          <a href="./main/puzzles/pages/puzzle_68.html"><div class="minigameboard-home-box" onclick="">68</div></a>
+          <a href="./main/puzzles/pages/puzzle_69.html"><div class="minigameboard-home-box" onclick="">69</div></a>
+          <a href="./main/puzzles/pages/puzzle_70.html"><div class="minigameboard-home-box" onclick="">70</div></a>
+          <a href="./main/puzzles/pages/puzzle_71.html"><div class="minigameboard-home-box" onclick="">71</div></a>
+          <a href="./main/puzzles/pages/puzzle_72.html"><div class="minigameboard-home-box" onclick="">72</div></a>
+          <a href="./main/puzzles/pages/puzzle_73.html"><div class="minigameboard-home-box" onclick="">73</div></a>
+          <a href="./main/puzzles/pages/puzzle_74.html"><div class="minigameboard-home-box" onclick="">74</div></a>
+          <a href="./main/puzzles/pages/puzzle_75.html"><div class="minigameboard-home-box" onclick="">75</div></a>
+          <a href="./main/puzzles/pages/puzzle_76.html"><div class="minigameboard-home-box" onclick="">76</div></a>
+          <a href="./main/puzzles/pages/puzzle_77.html"><div class="minigameboard-home-box" onclick="">77</div></a>
+          <a href="./main/puzzles/pages/puzzle_78.html"><div class="minigameboard-home-box" onclick="">78</div></a>
+          <a href="./main/puzzles/pages/puzzle_79.html"><div class="minigameboard-home-box" onclick="">79</div></a>
+          <a href="./main/puzzles/pages/puzzle_80.html"><div class="minigameboard-home-box" onclick="">80</div></a>
+          </div><!-- minigameboard-home-box-contain -->
+          <label class="minigameboard-home-row" for="_5">Puzzles 81 to 100</label>
+          <input id="_5" type="checkbox">
+          <div class="minigameboard-home-box-contain">
+          <a href="./pagenotfound.html"><div class="minigameboard-home-box" onclick="">81</div></a>
+          <a href="./pagenotfound.html"><div class="minigameboard-home-box" onclick="">82</div></a>
+          <a href="./pagenotfound.html"><div class="minigameboard-home-box" onclick="">83</div></a>
+          <a href="./pagenotfound.html"><div class="minigameboard-home-box" onclick="">84</div></a>
+          <a href="./pagenotfound.html"><div class="minigameboard-home-box" onclick="">85</div></a>
+          <a href="./pagenotfound.html"><div class="minigameboard-home-box" onclick="">86</div></a>
+          <a href="./pagenotfound.html"><div class="minigameboard-home-box" onclick="">87</div></a>
+          <a href="./pagenotfound.html"><div class="minigameboard-home-box" onclick="">88</div></a>
+          <a href="./pagenotfound.html"><div class="minigameboard-home-box" onclick="">89</div></a>
+          <a href="./pagenotfound.html"><div class="minigameboard-home-box" onclick="">90</div></a>
+          <a href="./pagenotfound.html"><div class="minigameboard-home-box" onclick="">91</div></a>
+          <a href="./pagenotfound.html"><div class="minigameboard-home-box" onclick="">92</div></a>
+          <a href="./pagenotfound.html"><div class="minigameboard-home-box" onclick="">93</div></a>
+          <a href="./pagenotfound.html"><div class="minigameboard-home-box" onclick="">94</div></a>
+          <a href="./pagenotfound.html"><div class="minigameboard-home-box" onclick="">95</div></a>
+          <a href="./pagenotfound.html"><div class="minigameboard-home-box" onclick="">96</div></a>
+          <a href="./pagenotfound.html"><div class="minigameboard-home-box" onclick="">97</div></a>
+          <a href="./pagenotfound.html"><div class="minigameboard-home-box" onclick="">98</div></a>
+          <a href="./pagenotfound.html"><div class="minigameboard-home-box" onclick="">99</div></a>
+          <a href="./pagenotfound.html"><div class="minigameboard-home-box" onclick="">100</div></a>
+          </div><!-- minigameboard-home-box-contain -->
+            </div><!-- anonymous div -->
+          </div><!-- minigameboard-home -->
+        </div><!-- leftpane-home -->
+
+        <!-- RIGHT PANE -->
+        <div class="rightpane-home">
+          <div class="infocard-home">
+            <h4 class="greyheading">VERSION</h4>
+            <p>0.1.1.7 (BETA)</p>
+            <hr>
+            <h4 class="greyheading">RECENT UPDATES</h4>
+            <h4 class="h4goldsmall">November 16, 2016</h4>
+            <ul>
+              <li class="small">HTML is now fully minified across all pages</li>
+              <li class="small">Removed px references in responsive elements</li>
+              <li class="small">Removed support for devices >2670px and <320px (1:1 ratio)</li>
+            </ul>
+            <h4 class="h4goldsmall">November 15, 2016</h4>
+            <ul>
+              <li class="small">Reviewed and added content until square 80</li>
+              <li class="small">Added solutions to questions with functions</li>
+              <li class="small">Added support for large screen devices >1280px</li>
+            </ul>
+            <h4 class="h4goldsmall">November 14, 2016</h4>
+            <ul>
+              <li class="small">Fixed bug which caused the Output box to overflow into adjacent divs when strings exceeded the max-width</li>
+              <li class="small">Reviewed content from 42-70 for Submit cases</li>
+              <li class="small">Renamed 'Test Cases' section to 'Notes'</li>
+            </ul>
+          </div><!-- infocard-home -->
+        </div><!-- rightpane-home -->
+
+      </div><!-- allpanes_new -->
+
+      <div class="footer">
+        Copyright &copy; Pythons and Ladders 2016
+      </div><!-- footer -->
+
+    </div><!-- wrapper -->
+
+    <title>Welcome! | Pythons and Ladders</title>
+  </body>
+</html>

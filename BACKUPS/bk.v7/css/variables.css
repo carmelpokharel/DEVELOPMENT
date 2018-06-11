@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css?family=Antic');
+@import url('https://fonts.googleapis.com/css?family=Open Sans');
+@import url('https://fonts.googleapis.com/css?family=Droid Serif');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu Mono');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+:root {
+/*-------------------
+  ANIMATION VARIABLES 
+--------------------*/
+  --animation-transition-std:             0.25s;
+  --animation-transition-long:            1s;
+  --animation-rotation-Z:                 rotateZ(360deg);
+/*-------------
+  BOX VARIABLES 
+--------------*/
+  --grid-box-border:                      2px;
+  --grid-box-margins:                     5px;
+  --grid-box-width:                       35px;
+  --grid-box-height:                      var(--grid-box-width);
+  --grid-box-font-size-std:               110%;
+
+  --mini-grid-box-border:                 2px;
+  --mini-grid-box-margins:                2px;
+  --mini-grid-box-width:                  24px;
+  --mini-grid-box-height:                 var(--mini-grid-box-width);
+  --mini-grid-box-font-size-std:          90%;
+/*----------------
+  CIRCLE VARIABLES 
+-----------------*/
+  --circle-feedback-diameter:             60px;
+  --circle-feedback-padding:              15px;
+  --circle-tutorial-border:               2px;
+  --circle-tutorial-diameter:             24px;
+  --circle-tutorial-font-size:            92%;
+  --circle-tutorial-margins:              5px;
+/*----------------
+  COLOUR VARIABLES 
+-----------------*/
+  --colour-orange:                        #c59a6d;
+  --colour-lighter-orange:                #d19b61;
+  --colour-bright-orange:                 #ff9000;
+
+  --colour-blue-one:                      #282f35;
+  --colour-lighter-blue-one:              #323b43;
+
+  --colour-blue-two:                      #1e2429;
+
+  --colour-absolute-white:                #fcfcfc;
+  --colour-off-white:                     #e7e8e9;
+
+  --colour-absolute-black:                #000000;
+
+  --colour-text-grey:                     #696e71;
+
+  --colour-red:                           #7a0026;
+  --colour-lighter-red:                   #9f0026;
+
+  --colour-highlighter-blue:              #dbe5f1;
+  --colour-highlighter-darkblue:          #b8cce4;
+  --colour-highlighter-red:               #f2dcdb;
+  --colour-highlighter-orange:            #fdeada;
+  --colour-highlighter-grey:              #eeeeee;
+  --colour-highlighter-green:             #ebf1dd;
+  --colour-highlighter-darkgreen:         #d7e3bc;
+
+/*--------------
+  FONT VARIABLES 
+---------------*/
+  --font-style-antic:                     'Antic', sans-serif;
+  --font-style-sourcesanspro:             'Roboto', sans-serif;
+  --font-style-mono:                      'Ubuntu Mono', monospace;
+/*----------------
+  DEVICE VARIABLES
+-----------------*/
+  --headerbar-height:                     48px;
+  --headerbar-midspace:                   25px;
+  --mobile-headerbar-height:              48px;
+
+  --iphone6-headerbar-height:             48px;
+  --iphone6-allpanes-width:               100vw;
+  --iphone6-portrait-page-padding:        1vw 0 0 0;
+  --iphone6-portrait-box-margin:          0.78vw;
+  --iphone6-portrait-box-size:            6.5vw;
+  --iphone6-box-border:                   0.3vw;
+
+  --ipad-landscape-headerbar-height:      48px;
+  --ipad-landscape-allpanes-width:        96vw;
+  --ipad-landscape-page-padding:          1.25vw 2vw 2vw 2vw;
+  --ipad-landscape-box-margin:            0.514vw;
+  --ipad-landscape-box-size:              3.65vw;
+  --ipad-landscape-box-border:            0.2vw;
+/*--------------------
+  NAVIGATION VARIABLES 
+---------------------*/
+  --nav-box-border:                       2px;
+/*----------------
+  SHADOW VARIABLES 
+-----------------*/
+  --shadow-small:                         0 1px 5px 0 rgba(0,0,0,0.24), 0 1px 5px 0 rgba(0,0,0,0.19);
+/*---------------
+  SHAPE VARIABLES 
+----------------*/
+  --shape-rounded-corners:                5px;
+  --shape-circle-corners:                 50%;
+}

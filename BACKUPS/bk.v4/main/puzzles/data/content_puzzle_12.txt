@@ -1,0 +1,31 @@
+________________________________
+$LEFTPANEL_HEADING$
+Nothing Special
+https://open.spotify.com/track/5Bm68GvwmiOJOBnnTNElf7
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+Sometimes, you might not want to use multiple print statements on different lines. Instead, you can use a <strong>newline character</strong> ^keyword^\n to achieve the same thing. Try this out in the <u>Editor</u>:
+<code class="demo">print "First line\nSecond line"</code>
+Research what an <b>escape character</b> is and take note of some escape characters that might come in useful in the future.
+________________________________
+$LEFTPANEL_QUESTION$
+Using only one line, write a script that outputs the following:
+<code>This is a normal line</code>
+<code>&emsp;&emsp;&emsp;&emsp;This is a tabbed line</code>
+<p class="small">&nbsp;</p>
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+You should only be using one print statement, one newline, and one tab.
+________________________________
+$RIGHTPANEL_QUESTIONS$
+What are <b>Escape Characters</b>?
+How can you print a tabbed line in Python?
+How can you print a backslash within a string?
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

@@ -1,0 +1,30 @@
+________________________________
+$LEFTPANEL_MAIN$
+Tutorial: Interface (II)
+________________________________
+$LEFTPANEL_MAINAREA$
+You may have noticed <b>Clear</b> or <b>Save</b> buttons next to <b>Run</b> on the previous two pages. In each Pythons and Ladders puzzle, there's one more: the <b>Hint</b> button.
+These buttons represent what we'll call the <strong>Toolbar</strong>&#8212;a set of controls which allow you to manipulate the Editor and Output boxes.
+Play around with the buttons below, and get a feel for how they work.
+________________________________
+$LEFTPANEL_INSTRUCTIONSAREA$
+________________________________
+$LEFTPANEL_TOOLBARAREA$
+________________________________
+$LEFTPANEL_EDITORAREA$
+________________________________
+$LEFTPANEL_EDITOR$
+print 'Pythons and Ladders'
+________________________________
+$LEFTPANEL_HINT$
+If you're on a touch-interface, click on the Clear button to close me!
+________________________________
+$LEFTPANEL_OUTPUTAREA$
+________________________________
+$RIGHTPANEL_PYTHONSHELL$
+________________________________
+$RIGHTPANEL_QUESTIONS$
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+FIN

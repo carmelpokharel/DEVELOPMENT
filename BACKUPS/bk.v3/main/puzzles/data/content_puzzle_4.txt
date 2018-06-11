@@ -1,0 +1,34 @@
+________________________________
+$LEFTPANEL_HEADING$
+Jump in the Line
+https://open.spotify.com/track/70mAceS5ArAqVj2OwDE4db
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+On the second square, you learned how to print strings on separate lines. But what if you want to print separate strings on the same line? Well, you have two options:
+1. Use a <u>comma</u>:
+&emsp;<code class="demo">print "one", "two", "three"</code>
+<p class="small">&nbsp;</p>
+2. Use a <u>plus sign</u> (+):
+&emsp;<code class="demo">print "one" + "two" + "three"</code>
+<p class="small">&nbsp;</p>
+________________________________
+$LEFTPANEL_QUESTION$
+Write a Python statement, consisting of five separate strings ("Alpha", "Bravo", ... etc.), which prints the following to the output box:
+<code>Alpha Charlie Bravo Delta Echo</code>
+<p class="small">&nbsp;</p>
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+Think about which of the two given methods produces a space between each string.
+________________________________
+$RIGHTPANEL_TIME$
+1-2 minutes
+________________________________
+$RIGHTPANEL_QUESTIONS$
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

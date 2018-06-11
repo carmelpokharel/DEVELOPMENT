@@ -1,0 +1,32 @@
+________________________________
+$LEFTPANEL_HEADING$
+Space Travel
+https://open.spotify.com/track/3vpZDiFgxatshUtZJYlzo9
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+Remember how we were able to access substrings from ^str^ datatypes? Well, there are also <b>sublists</b> for the ^list^ datatype:
+<democodeblock>
+<code>planets = ['mercury','venus','mars']</code>
+<code>^print^ planets[1]</code>
+</democodeblock>
+________________________________
+$LEFTPANEL_QUESTION$
+Declare the following ^list^ variable:
+<outputcodeline>outer_space = ['sun','moon','earth', ['stars','constellations'],'asteroids']</outputcodeline>
+Now, write a ^print^ statement which accesses and outputs the following sublist from <var>outer_space</var>:
+<outputcodeline>['stars','constellations']</outputcodeline>
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+The expected output is really only one item (a ^list^ containing two ^str^ datatypes). Find its position in <var>outer_space</var>.
+________________________________
+$RIGHTPANEL_QUESTIONS$
+Look up and understand what 'list slicing' is in Python.
+How does slicing a list compare to slicing a string?
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

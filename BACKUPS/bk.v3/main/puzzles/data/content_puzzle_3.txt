@@ -1,0 +1,31 @@
+________________________________
+$LEFTPANEL_HEADING$
+155
+https://open.spotify.com/track/3DPBEiVe1lzl8MP0NDVM7R
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+So far, you've printed strings in a couple of different ways. Now, you will be introduced to a new datatype&#8212;integers. An integer is any whole number, positive or negative, that is not followed by a decimal point. 
+In Python, printing an integer is just as easy as printing a string. The  difference? You don't need to enclose integers in quotations.
+________________________________
+$LEFTPANEL_QUESTION$
+Print the integers 155 and -155 on separate lines, so that the output looks like the following:
+<p class="small">&nbsp;</p>
+<code>155</code>
+<code>-155</code>
+<p class="small">&nbsp;</p>
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+Write the statements as you would for strings, but omit the quotation marks.
+________________________________
+$RIGHTPANEL_TIME$
+Less than a minute
+________________________________
+$RIGHTPANEL_QUESTIONS$
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

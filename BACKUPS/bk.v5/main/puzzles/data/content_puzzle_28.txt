@@ -1,0 +1,29 @@
+________________________________
+$LEFTPANEL_HEADING$
+ABC
+https://open.spotify.com/track/6wDviYDtmSDZ0S6TVMM9Vc
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+Here's a slightly different way to add to a ^keyword^list:
+<code class="demoblock">~countries1 = ['Canada', 'Spain']~countries2 = ['France', 'Australia']~countries3 = countries1 + countries2~^keyword^print countries3~</code>
+
+And yet another method, using .^keyword^extend():
+<code class="demoblock">~greetings = ['hello', 'bonjour', 'hola']~greetings.^keyword^extend('ciao')~^keyword^print greetings~more_greetings = ['namaste', 'salaam']~greetings.^keyword^extend(more_greetings)~^keyword^print greetings~</code>
+________________________________
+$LEFTPANEL_QUESTION$
+Initialize a ^keyword^list variable, the_alphabet, which contains the first three letters of the English alphabet. Using the .^keyword^extend() method, add the remaining letters of the English alphabet to your ^keyword^list. 
+<b>Note</b>: There are a couple of ways to do this, but one is much easier than the other!
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+What happened when we extended the ^keyword^list greetings with 'ciao'?
+________________________________
+$RIGHTPANEL_QUESTIONS$
+What is the difference between appending to a list and extending a list?
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

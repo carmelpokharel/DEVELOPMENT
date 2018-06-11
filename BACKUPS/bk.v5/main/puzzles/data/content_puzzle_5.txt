@@ -1,0 +1,31 @@
+________________________________
+$LEFTPANEL_HEADING$
+Come Together
+https://open.spotify.com/track/2EqlS6tkEnglzr7tkKAAYD
+________________________________
+$LEFTPANEL_INSTRUCTIONS$
+Let's try the same thing, but this time throw an ^keyword^int datatype into the mix.
+1. Using a <u>comma</u>:
+<code class="demo">^keyword^print "one", 2, "three"</code>
+2. Using a <u>plus sign</u>:
+<code class="demo">^keyword^print "one" + 2 + "three"</code>
+Interestingly, one of these methods no longer works!
+________________________________
+$LEFTPANEL_QUESTION$
+Write a single-line Python statement which prints the following to the output box:
+<code>one2three4five</code>
+<p class="small">&nbsp;</p>
+________________________________
+$LEFTPANEL_EDITOR$
+________________________________
+$LEFTPANEL_HINTS$
+How would you represent an <b> ^keyword^int </b>as a ^keyword^str?
+________________________________
+$RIGHTPANEL_QUESTIONS$
+Why didn't one of the above methods work with the ^keyword^int datatype?
+________________________________
+$RIGHTPANEL_TESTCASES$
+________________________________
+$RIGHTPANEL_SPONSORED$
+________________________________
+FIN

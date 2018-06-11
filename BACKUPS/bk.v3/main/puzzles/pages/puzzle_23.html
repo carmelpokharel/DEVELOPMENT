@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html> 
+  <head>
+    <!-- **************** -->
+    <!--      SCRIPTS     -->
+    <!-- **************** -->
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="../../../css/boxes.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-tooltip-and-popover.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/comingsoon.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/donate.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/editor.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/feedback.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/modal.css">
+    <!-- CSS: SKULPT -->
+    <link rel="stylesheet" type="text/css" media="all" href="../../../css/skulpt/codemirror.css">
+    <link rel="stylesheet" type="text/css" media="all" href="../../../css/skulpt/solarized.css">
+    <link rel="stylesheet" type="text/css" media="all" href="../../../css/skulpt/skulpt_main.css">
+    <!-- JAVASCRIPT -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" ></script> 
+    <script type="text/javascript" src="http://www.skulpt.org/static/skulpt.min.js"></script>
+    <script type="text/javascript" src="http://www.skulpt.org/static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src='../../../js/console.js'></script>
+    <script type="text/javascript" src="../../../js/bootstrap-tooltip-and-popover.min.js"></script>
+    <!-- JAVASCRIPT: POPOVERS -->
+    <script type="text/javascript">
+      $(document).ready(function() {
+        // Placement can be top, right, left, bottom
+        $('.bootstrap-popover').popover({placement: 'top', delay: {show: 10, hide: 10}});
+      })
+    </script>
+    <!-- JAVASCRIPT: GOOGLE ANALYTICS -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-85355151-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <!-- JAVASCRIPT: SKULPT SHELL -->
+    <script type="text/javascript" src="../../../js/skulpt/codemirrorepl.js.download"></script>
+    <script type="text/javascript" src="../../../js/skulpt/repl.js.download"></script>
+    <script type="text/javascript" src="../../../js/skulpt/python.js.download"></script>
+    <script type="text/javascript" src="../../../js/skulpt/skulpt.min.js.download"></script>
+    <script type="text/javascript" src="../../../js/skulpt/skulpt-stdlib.js.download" ></script>
+  </head> 
+
+  <div class="headerbar">
+      <!-- **************** -->
+      <!--      HEADER      -->
+      <!-- **************** -->
+      <div onclick="window.scrollTo(0, 0);" class="headerspacingleftedge">
+      </div>
+      <div class="headerlogo">
+        <a href="../../index.html"><h2>pythons and ladders</h2>
+        </a>
+      </div>
+      <div onclick="window.scrollTo(0, 0);" class="headerspacingmiddle">
+        <div class="headersocialmedia">
+          <img src="../../../images/facebook_icon.png" class="socialmediabuttons" />
+          <img src="../../../images/twitter_icon.png" class="socialmediabuttons" />
+        </div>
+      </div>
+      <div class="headersearch">
+          <!-- SEARCH BOX -->
+          <form method="get" action="http://www.google.com/search">
+            <div class="searchbox">
+              <input class="searchbox"type="text" name="q" size="32" maxlength="255" value="Search Pythons and Ladders" onfocus="if(this.value==this.defaultValue)this.value=''; this.style.color='#bbb';" onblur="if(this.value=='')this.value=this.defaultValue; "/>
+              <input class="gobutton" type="image" src="../../../images/search.png" value="Go!" />
+              <input type="hidden" name="sitesearch" value="pythonsandladders.com" />
+            </div>
+          </form>
+        </div>
+      <div onclick="window.scrollTo(0, 0);" class="headerspacingrightedge">
+      </div>
+    </div>
+
+  <body>
+    <div class="allpanes"> 
+    <!-- **************** -->
+    <!--    NAVIGATION    -->
+    <!-- **************** -->
+    <div class="sidenav">
+      <div class="headerspacingleft">
+      </div>
+      <div class="sidenavlogo">
+        <a href="../../index.html">
+          <img src="../../../images/headingtitle.png" alt="Pythons and Ladders" style="width: 75%; height: 18%;" onmouseover="this.src='../../../images/headingtitle_snake.png'" onmouseout="this.src='../../../images/headingtitle.png'">
+        </a>
+      </div>
+      <div class="sidenavcontentemptytop">
+      </div>
+      <div class="sidenavcontentmiddle">
+        <a href="../../index.html">home</a>
+        <a href="../../overview.html">overview</a>
+        <a href="../../updates/pages/updates_0.html">updates</a>
+        <a href="../../faq.html">questions</a>
+        <a href="#openModal">contribute</a>
+        <div id="openModal" class="modalDialog">
+          <div>
+            <a href="#close" title="Close" class="close">X</a>
+                <h2>Contribute to Pythons and Ladders</h2>
+              <p>Pythons and Ladders is free to use, and we intend for it to remain so.</p>
+              </p>However, if you feel that Pythons and Ladders has added value to your life in any meaningful way, please consider contributing to its continued development and presence on the web.</p>
+              <p>With your support, we hope to initiate many more students into the world of programming, many of whom cannot afford to pay for a learning experience.</p>
+              <p>Thank you for your kindness.</p>
+              <a href="#"><div class="donatenowbutton" alt="Donate Now">DONATE NOW</div></a>
+          </div>
+        </div>
+
+        <a href="mailto:pythonsandladders@gmail.com?subject=Attn: [ADMIN] Pythons and Ladders">contact us</a>
+      </div>
+      <div class="sidenavcontentemptybottom">
+      </div>
+      <!-- FOOTER -->
+      <div class="footer"><p>Copyright &copy; Pythons and Ladders 2016</p>
+      </div>
+    </div>
+
+
+    <!-- **************** -->
+    <!--        BODY      -->
+    <!-- **************** -->
+    <div class="middlepane">
+    </div>
+    <!-- LEFT PANE -->
+    <div class="leftpane">
+      <div align="right">
+        <a href="puzzle_23.html"><div class="puzzlebox">23</div></a>
+        <a href="puzzle_22.html"><div class="box3">&lang;</div></a>
+        <a href="puzzle_24.html"><div class="box3">&rang;</div></a>
+      </div>
+        <!-- LEFT: QUESTION AND EDITOR -->
+        <br><br><br>
+        <a class="songheading" target="_blank" href="https://open.spotify.com/track/39qRdHcl2tizWbzlM9kUlN"">
+        <h3>What If</h3>
+        </a>
+        <p>Sometimes, you will want to write code that will only do something if a condition is met. If/else statements help you do that. Make sure you have a good understanding of Booleans before continuing with this puzzle.</p>
+        <p></p>
+        <p>Here's the basic construct of an if/else statement:</p>
+        <p>if (conditional statement is True):</p>
+        <p>&emsp;&emsp;do something</p>
+        <p>else:</p>
+        <p>&emsp;&emsp;do something else</p>
+        <p></p>
+        <p>Try the following and observe the results to get a better understanding of if/else statements:</p>
+        <p><code class="demo">first_mark = 88</code></p>
+        <p><code class="demo">second_mark = 92</code></p>
+        <p><code class="demo">if first_mark > second_mark:</code></p>
+        <p><code class="demo">&emsp;&emsp;&emsp;&emsp;print "You did better on your first test!"</code></p>
+        <p><code class="demo">else:</code></p>
+        <p><code class="demo">&emsp;&emsp;&emsp;&emsp;print "You did better on your second test!"</code></p>
+        <p><p class="small">&nbsp;</p></p>
+          <h4 class="h4gold">Task Twenty-Three</h4>
+        <p>Create three variables, <em>first_name</em>, <em>middle_initial</em>, <em>last_name</em>, and have each equal to a string with your own name details. Now, Write an if/else statement that checks your name details and outputs a sentence that declares whether or not you have a middle name. You should have 7 lines of code, in total.</p>
+          <div class="editor">
+            <div class="edi	tortoolbar">
+              <div class="editortoolbaritems" onclick="runit()">RUN</div>
+              <div class="editortoolbaritems" onclick="clearBox()">CLEAR</div>
+              <div class="editortoolbaritems" id="save" onclick="saveTextAsFile()">SAVE</div>
+              <div class="editortoolbaritems">
+                <a href="#" class="bootstrap-popover" title="battered and bruised?" data-content="<p>If you don't have a middle name, your middle initial will be an empty string (<em>middle_initial = ''</em>). Also, you don't need to use your <em>first_name</em> and <em>last_name</em> variables in the if/else statement.
+</p>">
+                HINT
+                </a>
+              </div>
+            </div>
+          <form align="left"> 
+            <textarea id="yourcode" class="editortextarea" rows="4"></textarea>
+          </form>
+          <!-- **************** -->
+          <!--     OUTPUT       -->
+          <!-- **************** -->
+          <div class="editoroutput">
+          <pre align="left" id="output"></pre>
+          </div>
+
+        </div>
+      </div>
+      <div class="middlepane">
+      </div>
+      <!-- RIGHT PANEL -->
+      <div class="rightpane">
+            <h4 class="greyheading">PYTHON SHELL</h4>
+            <textarea id="interactive" cols="85" rows="1" style="display: none;">
+            </textarea>
+          <h4 class="greyheading">QUESTIONS FOR YOU</h4>
+          <ol>
+            <li class="small">Update the variable <em>first_mark</em> to equal to 95. What does your code output now?</li>
+            <li class="small">Update the variable <em>first_mark</em> to equal to 92 (same as <em>second_mark</em>). Why does your output say you did better on your second test if the two marks are equal? Knowing this, consider how you can improve your if/else statement to correct this issue.</li>
+            <li class="small">What if you want to do something "if it's True", but do nothing "if it's False"? Can an if statement exist without an else statement?</li>
+            <li class="small">Can an else statement exist without an if statement?</li>
+          </ol>
+          <button type="button" onclick="requestGuidance()">Request guidance</button>
+        <p class="small">&nbsp;</p>
+        <p class="small">&nbsp;</p>
+      </div>
+    </div>
+
+    <!-- **************** -->
+    <!--       TITLE      -->
+    <!-- **************** -->
+    <title>Puzzle 23 | Pythons and Ladders</title>
+
+  </body>
+	<a href="mailto:pythonsandladders@gmail.com?subject=Feedback: [ADMIN] Pythons and Ladders">
+  	  <div class="feedback">
+  	  <br>
+  	  FEEDBACK
+  	  </div>
+  	</a>
+</html>

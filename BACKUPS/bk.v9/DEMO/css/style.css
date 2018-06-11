@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css?family=Antic');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+@import url('https://fonts.googleapis.com/css?family=Droid Serif');
+@import url('https://fonts.googleapis.com/css?family=Exo 2');
+
+* { 
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+     box-sizing: border-box; 
+}
+
+:root {
+
+/*-------------------
+  ANIMATION VARIABLES 
+--------------------*/
+--animation-transition-std:             0.25s;
+--animation-transition-long:            1s;
+--animation-rotation-Z:                 rotateZ(360deg);
+
+/*----------------
+  COLOUR VARIABLES 
+-----------------*/
+--colour-blue1: #161a1d;
+--colour-blue2: #1e2429;
+--colour-blue3: #282f35;
+--colour-blue4: #323b43;
+
+--colour-gold1: #c59a6d;
+
+--colour-grey-pane: #e7e8e9;
+--colour-grey-text: #696e71;
+
+--colour-red1:                   #7a0026;
+--colour-red2:                   #9f0026;
+
+--padding-left-1280PLUS: 50px;
+--padding-left-1280MINUS: 4vw;
+
+
+/*----------------
+  SHADOW VARIABLES 
+-----------------*/
+  --shadow-small:                         0 1px 5px 0 rgba(0,0,0,0.24), 0 1px 5px 0 rgba(0,0,0,0.19);
+/*---------------
+  SHAPE VARIABLES 
+----------------*/
+  --shape-rounded-corners:                5px;
+  --shape-circle-corners:                 50%;
+}
+
+
+
+body {
+    background-color: var(--colour-blue2);
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+button {
+  background-color:     var(--colour-blue4);
+  border:               none;
+  color:                var(--colour-grey-pane);
+  padding:              10px 15px;
+  border-radius:        var(--shape-rounded-corners);
+  margin-right:         var(--shape-rounded-corners);
+  margin-top:           5px;
+}
+button.start {
+  background-color:     var(--colour-red1);
+}
+button:hover, button:active {
+  background-color:     var(--colour-blue3);
+  box-shadow:           var(--shadow-small);
+  cursor:               pointer;
+}
+button.start:hover, button.start:active{
+  background-color:     var(--colour-red1);
+}
+button.clear {
+  width:                156px;
+  height:               35px;
+  margin-right:         10px;
+  margin-top:           7px;
+  padding:              0;
+  border:               2px solid #bbb;
+  background:           none;
+  float:                left;
+  font-size:            75%;
+  font-weight:          100;
+  font-family:          "Exo 2";
+  color:                var(--colour-grey-pane);
+  text-align:           center;
+  vertical-align:       middle;
+  border-radius:        var(--shape-rounded-corners);
+  transition-duration:  var(--animation-transition-std);
+}
+button.clear:hover, button.clear:active {
+  background-color:     rgba(0,0,0,0.6);
+}
+button.red {
+  width:                156px;
+  height:               35px;
+  margin-right:         10px;
+  margin-top:           7px;
+  padding:              0;
+  border:               2px solid var(--colour-red1);
+  background-color:     var(--colour-red1);
+  float:                left;
+  font-size:            75%;
+  font-weight:          100;
+  font-family:          "Exo 2";
+  color:                var(--colour-grey-pane);
+  text-align:           center;
+  vertical-align:       middle;
+  border-radius:        var(--shape-rounded-corners);
+  transition-duration:  var(--animation-transition-std);
+}
+button.red:hover, button.red:active {
+  background-color:     var(--colour-red2);
+  border:               2px solid var(--colour-red2);
+  box-shadow:           var(--shadow-small);
+}
+
+header {
+    background-color: var(--colour-blue1);
+    width: 100%;
+    max-width: 1280px;
+    height: 48px;
+    line-height: 48px;
+    margin: 0 auto;
+    font-family: 'Antic', sans-serif;
+    color: var(--colour-gold1);
+    padding-left: calc(215px + var(--padding-left-1280PLUS));
+}
+
+#wrapper {
+    min-height:100%;
+    position:relative;
+}
+.allpanes_new {
+    background-color: white;
+    width: 100%;
+    max-width: 1280px;
+    border: 0px solid white;
+    margin: 0 auto;
+    padding-bottom:50px; /* Height of the footer element */
+    overflow: hidden;
+    display: table;
+}
+.sidenavpane {
+    background-color: var(--colour-blue1);
+    width: 215px;
+    height: 100px;
+    max-width: 1280px;
+    border: 0px solid blue;
+    float: none;
+    padding-left: var(--padding-left-1280PLUS);
+    display: table-cell;
+}
+.bannerpane-home {
+    width: 100%;
+    max-width: 1280px;
+    border: 0px solid red;
+    margin: 0 auto;
+    float: left;
+    padding-left: var(--padding-left-1280PLUS);
+    font-family: 'Exo 2', sans-serif;
+    color: white;
+    height: 315px;
+    background:
+        linear-gradient(
+          rgba(0, 0, 0, 0.4), 
+          rgba(0, 0, 0, 0.4)
+        ),
+        repeating-linear-gradient(
+            50deg,
+            #1e2429,
+            #1e2429 2em,
+            #323b43 2em,
+            #323b43 4em,
+            #7a0026 4em,
+            #7a0026 6em,
+            #c59a6d 6em,
+            #c59a6d 8em,
+            #696e71 8em,
+            #696e71 10em,
+            #e7e8e9 10em,
+            #e7e8e9 6em
+        ),
+        repeating-linear-gradient(
+            -50deg,
+            #1e2429,
+            #1e2429 2em,
+            #323b43 2em,
+            #323b43 4em,
+            #7a0026 4em,
+            #7a0026 6em,
+            #c59a6d 6em,
+            #c59a6d 8em,
+            #696e71 8em,
+            #696e71 10em,
+            #e7e8e9 10em,
+            #e7e8e9 6em
+        );
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    font-size: 230%;
+}
+.banneritems-home {
+    width: 100%;
+    max-width: 443px;
+    color: #ccc;
+    position: relative;
+    z-index: 2;
+    font-size: 50%;
+}
+h2.bannertitle-home {
+  color:                    #ccc;
+  margin-top:               30px;
+  margin-bottom:            -5px;
+  font-size:                120%;
+  font-variant:             small-caps;
+  font-family:              "Exo 2";
+}
+p.bannertext-home {
+    font-family: "Exo 2";
+    font-weight: 100;
+    font-size: 80%;
+}
+.leftpane-home {
+    background: #eee;
+    width: 61.8%;
+    max-width: 1280px;
+    border: 0px solid blue;
+    float: left;
+    padding-left: var(--padding-left-1280PLUS);
+}
+
+.rightpane-home {
+    background: #ccc;
+    width: 38.2%;
+    max-width: 1280px;
+    border: 0px solid green;
+    float: left;
+    padding-left: var(--padding-left-1280PLUS);
+
+}
+.footer {
+    /* These four lines ensure it's centered in the middle */
+    left:0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+
+    color: #777;
+    background: var(--colour-blue1);
+    width:100%;
+    max-width: 1280px;
+    height: 50px;
+    line-height: 50px;
+    position:absolute;
+    text-align: center;
+    bottom:0;
+    border: 0px solid red;
+    font-size: 70%;
+    font-weight: 100;
+    font-family: 'Roboto', sans-serif;
+}
+/*--------------
+  Mobile-generic
+---------------*/
+@media all
+and (min-width:                 1px) 
+and (max-width:                 1279px) 
+{
+    header {
+        padding: 0 var(--padding-left-1280MINUS);
+    }
+    .bannerpane-home {
+        padding: 0 var(--padding-left-1280MINUS);
+    }
+    .leftpane-home {
+        padding: 0 var(--padding-left-1280MINUS);
+    }
+    .sidenavpane {
+        display: none
+    }
+}
+
+/*-------------
+  1px to 1023px
+  CASE: PHONES
+--------------*/
+@media all
+and (min-width:                 1px) 
+and (max-width:                 1023px) 
+{
+    .leftpane-home {
+        width: 100%;
+    }
+    .rightpane-home {
+        display: none;
+    }
+}

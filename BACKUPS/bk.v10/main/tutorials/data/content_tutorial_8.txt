@@ -1,0 +1,36 @@
+________________________________
+$LEFTPANEL_MAIN$
+Syntax
+________________________________
+$LEFTPANEL_MAINAREA$
+________________________________
+$LEFTPANEL_INSTRUCTIONSAREA$
+In Pythons and Ladders, your Output box may sometimes refuse to populate. More often than not, this is a result of improperly written code, broadly known as <strong>syntax</strong>.
+In the English language, examples of bad syntax are sentences like "I am giong to ym friend huose." or "Iam going to .bed" These sentences are considered syntactically incorrect, as they contain spelling mistakes and punctuation errors, thus being improperly written.
+In the editor below, there are three Python statements with bad syntax. Identify the issues, and modify the code so that you can generate the following output:
+<code>Hello World!</code>
+<code>Hello World!</code>
+<code>Hello World!</code>
+<p class="small">&nbsp;</p>
+________________________________
+$LEFTPANEL_TOOLBARAREA$
+________________________________
+$LEFTPANEL_EDITORAREA$
+________________________________
+$LEFTPANEL_HINT$
+Examine each statement, character by character.
+________________________________
+$LEFTPANEL_EDITOR$
+print'Hello World!'
+print ''Hello World!
+prnit "Hello World!"
+________________________________
+$LEFTPANEL_OUTPUTAREA$
+________________________________
+$RIGHTPANEL_TIME$
+________________________________
+$RIGHTPANEL_QUESTIONS$
+In the English language, is the sentence "Putera flows leaves!" syntactically correct? 
+If it is, why does it sound wrong?
+________________________________
+FIN
